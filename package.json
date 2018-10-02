@@ -1,0 +1,41 @@
+{
+  "name": "metis-ah-frontend",
+  "version": "1.0.0",
+  "description": "An App to create a community of like minded authors to foster inspiration and innovation",
+  "main": "/server/app.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "test:coverage": "jest --verbose --coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela/metis-ah-frontend.git"
+  },
+  "keywords": [
+    "articles",
+    "information sharing",
+    "reading",
+    "innovation",
+    "ideas"
+  ],
+  "author": "Metis Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/andela/metis-ah-frontend/issues"
+  },
+  "homepage": "https://github.com/andela/metis-ah-frontend#readme",
+  "dependencies": {
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^23.6.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
+  }
+}

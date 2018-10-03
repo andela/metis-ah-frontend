@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const autoprefixer = require('autoprefixer');
 
 module.exports = {
   mode: 'development',
@@ -12,48 +13,48 @@ module.exports = {
   },
   module: {
     rules: [{
-        test: /\.jsx?$/,
-        loader: 'babel-loader',
-        exclude: /node_modules/,
+      test: /\.jsx?$/,
+      loader: 'babel-loader',
+      exclude: /node_modules/,
+    },
+    {
+      test: /\.s?css$/,
+      use: [{
+        loader: 'style-loader'
       },
       {
-        test: /\.s?css$/,
-        use: [{
-            loader: 'style-loader'
-          },
-          {
-            loader: 'css-loader',
-            options: {
-              importLoaders: 2,
-              modules: true,
-              localIdentName: '[name]__[local]__[hash:base64:5]'
-            }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              ident: 'postcss',
-              plugins: () => [
-                autoprefixer({
-                  browsers: ['>1%', 'last 2 versions']
-                })
-              ]
-            }
-          },
-          {
-            loader: 'sass-loader'
-          }
-        ]
+        loader: 'css-loader',
+        options: {
+          importLoaders: 2,
+          modules: true,
+          localIdentName: '[name]__[local]__[hash:base64:5]'
+        }
       },
       {
-        test: /\.(jpe?g|gif|png)$/i,
-        use: [{
-          loader: 'url-loader',
-          options: {
-            limit: 8192
-          }
-        }]
+        loader: 'postcss-loader',
+        options: {
+          ident: 'postcss',
+          plugins: () => [
+            autoprefixer({
+              browsers: ['>1%', 'last 2 versions']
+            })
+          ]
+        }
+      },
+      {
+        loader: 'sass-loader'
       }
+      ]
+    },
+    {
+      test: /\.(jpe?g|gif|png)$/i,
+      use: [{
+        loader: 'url-loader',
+        options: {
+          limit: 8192
+        }
+      }]
+    }
     ]
   },
   resolve: {

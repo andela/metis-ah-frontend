@@ -3,13 +3,17 @@
   "version": "1.0.0",
   "description": "A Social platform for the creative at heart",
   "main": "app.js",
+  "directories": {
+    "test": "tests"
+  },
   "scripts": {
     "build": "webpack",
     "heroku-build": "rimraf dist && npm run build",
     "dev": "webpack-dev-server --watch --open",
     "start": "node --require @babel/register ./src/server/index.js",
-    "test": "jest --coverage --verbose",
-    "test:watch": "jest --watchAll --verbose"
+    "test": "jest --verbose",
+    "test:watch": "jest --watchAll --verbose",
+    "test:coverage": "jest --verbose --coverage"
   },
   "repository": {
     "type": "git",
@@ -26,6 +30,17 @@
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/andela/metis-ah-frontend/issues"
+  },
+  "keywords": [
+    "articles",
+    "information sharing",
+    "reading",
+    "innovation",
+    "ideas"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andela/metis-ah-frontend.git"
   },
   "homepage": "https://github.com/andela/metis-ah-frontend#readme",
   "devDependencies": {
@@ -52,11 +67,15 @@
     "eslint-loader": "^2.1.1",
     "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1",
-    "webpack-dev-server": "^3.1.9"
+    "webpack-dev-server": "^3.1.9",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "jest": "^23.6.0"
   },
   "dependencies": {
     "@babel/register": "^7.0.0",
     "babel-polyfill": "^6.26.0",
+    "rimraf": "^2.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "rimraf": "^2.6.2",

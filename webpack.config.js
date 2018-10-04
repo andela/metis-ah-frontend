@@ -7,22 +7,57 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: 'bundle.js',
+    chunkFilename: '[id].js',
+    publicPath: '/',
   },
   module: {
-    rules: [
-      {
+    rules: [{
         test: /\.jsx?$/,
-        use: [
-          'babel-loader',
-          'eslint-loader',
-        ],
+        loader: 'babel-loader',
         exclude: /node_modules/,
       },
-      { test: /\.s?css$/, use: 'css-loader' },
-    ],
+      {
+        test: /\.s?css$/,
+        use: [{
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+              modules: true,
+              localIdentName: '[name]__[local]__[hash:base64:5]'
+            }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              ident: 'postcss',
+              plugins: () => [
+                autoprefixer({
+                  browsers: ['>1%', 'last 2 versions']
+                })
+              ]
+            }
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      },
+      {
+        test: /\.(jpe?g|gif|png)$/i,
+        use: [{
+          loader: 'url-loader',
+          options: {
+            limit: 8192
+          }
+        }]
+      }
+    ]
   },
   resolve: {
-    extensions: ['.jsx', '.js'],
+    extensions: ['.jsx', '.js', '.css', '.scss'],
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

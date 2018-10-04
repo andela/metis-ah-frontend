@@ -8,8 +8,8 @@
   },
   "scripts": {
     "build": "webpack",
-    "cypress:open": "npm run dev & cypress open",
-    "cypress:onci": "webpack-dev-server & $(npm bin)/cypress run",
+    "cypress:open": "concurrently --kill-others \"npm run dev\" \"cypress open\"",
+    "cypress:onci": "webpack-dev-server",
     "heroku-build": "rimraf dist && npm run build",
     "dev": "webpack-dev-server --watch --open",
     "start": "node --require @babel/register ./src/server/index.js",
@@ -42,6 +42,7 @@
     "babel-core": "^7.0.0-bridge.0",
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
+    "concurrently": "^4.0.1",
     "css-loader": "^1.0.0",
     "cypress": "^3.1.0",
     "enzyme": "^3.6.0",
@@ -61,11 +62,6 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "url-loader": "^1.1.1",
-<<<<<<< HEAD
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-jest": "^23.6.0",
-=======
->>>>>>> chore(tests): setup e2e testing with cypress
     "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"
@@ -73,11 +69,6 @@
   "dependencies": {
     "@babel/register": "^7.0.0",
     "babel-polyfill": "^6.26.0",
-<<<<<<< HEAD
-=======
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
->>>>>>> chore(tests): setup e2e testing with cypress
     "enzyme": "^3.6.0",
     "enzyme-adapter-react-16": "^1.5.0",
     "jest": "^23.6.0",

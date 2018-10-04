@@ -31,17 +31,6 @@
   "bugs": {
     "url": "https://github.com/andela/metis-ah-frontend/issues"
   },
-  "keywords": [
-    "articles",
-    "information sharing",
-    "reading",
-    "innovation",
-    "ideas"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/andela/metis-ah-frontend.git"
-  },
   "homepage": "https://github.com/andela/metis-ah-frontend#readme",
   "devDependencies": {
     "@babel/cli": "^7.1.0",
@@ -75,7 +64,6 @@
   "dependencies": {
     "@babel/register": "^7.0.0",
     "babel-polyfill": "^6.26.0",
-    "rimraf": "^2.6.2",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
     "rimraf": "^2.6.2",

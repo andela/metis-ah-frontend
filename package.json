@@ -4,13 +4,12 @@
   "description": "A Social platform for the creative at heart",
   "main": "app.js",
   "scripts": {
-    "test": "jest --verbose",
-    "test:watch": "jest --watchAll --verbose",
-    "test:coverage": "jest --verbose --coverage",
     "build": "webpack",
     "heroku-build": "rimraf dist && npm run build",
     "dev": "webpack-dev-server --watch --open",
-    "start": "node --require @babel/register ./src/server/index.js"
+    "start": "node --require @babel/register ./src/server/index.js",
+    "test": "jest --coverage --verbose",
+    "test:watch": "jest --watchAll --verbose"
   },
   "repository": {
     "type": "git",
@@ -25,7 +24,6 @@
   ],
   "author": "Andela Simulations Programme",
   "license": "ISC",
-
   "bugs": {
     "url": "https://github.com/andela/metis-ah-frontend/issues"
   },
@@ -49,6 +47,9 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.0",
     "url-loader": "^1.1.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-jest": "^23.6.0",
+    "eslint-loader": "^2.1.1",
     "webpack": "^4.20.1",
     "webpack-cli": "^3.1.1",
     "webpack-dev-server": "^3.1.9"

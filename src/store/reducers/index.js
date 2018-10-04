@@ -1,3 +1,8 @@
 import { combineReducers } from 'redux';
+import mock from './mockReducer';
 
-export default combineReducers({});
+const rootReducer = combineReducers({
+  mock
+});
+
+export default rootReducer;

@@ -59,6 +59,9 @@ module.exports = {
   },
   resolve: {
     extensions: ['.jsx', '.js', '.css', '.scss'],
+    alias: {
+      Pages: path.resolve(__dirname, 'src/pages/')
+    }
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

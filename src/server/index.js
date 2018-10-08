@@ -3,7 +3,7 @@ import { readFile } from 'fs';
 import { extname as _extname, resolve } from 'path';
 
 
-const Port = process.env.Port || 3000;
+const Port = process.env.PORT || 3000;
 
 // Create nodejs server
 createServer((request, response) => {

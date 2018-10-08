@@ -1,3 +1,6 @@
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const autoprefixer = require('autoprefixer');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
@@ -10,7 +13,7 @@ module.exports = merge(common, {
       {
         test: /\.s?css$/,
         use: [{
-          loader: 'style-loader'
+          loader: MiniCssExtractPlugin.loader
         },
         {
           loader: 'css-loader',
@@ -37,5 +40,18 @@ module.exports = merge(common, {
       }
     ]
   },
-  devtool: 'source-map',
+  optimization: {
+    minimizer: [
+      new UglifyJsPlugin({
+        cache: true,
+        parallel: true,
+        extractComments: 'all'
+      }),
+      new OptimizeCSSAssetsPlugin({})
+    ]
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+    })
+  ]
 });

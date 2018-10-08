@@ -2,11 +2,17 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/node:8
+      - image: cypress/base:8
+        environment:
+          ## this enables colors in the output
+          TERM: xterm
+    working_directory: ~/app
     steps:
       - checkout
-      - restore_cache: # special step to restore the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+      - restore_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
+          key: v1-deps-{{ .Branch }}
+          key: v1-deps
       - run:
           name: Setup Dependencies
           command: npm install
@@ -15,9 +21,11 @@ jobs:
           command: |
             curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
             chmod +x ./cc-test-reporter
-      - save_cache: # special step to save the dependency cache
-          key: dependency-cache-{{ checksum "package.json" }}
+      - save_cache:
+          key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
+            - ~/.npm
+            - ~/.cache
             - ./node_modules
       - run: # run tests
           name: Run Test and Coverage
@@ -25,3 +33,4 @@ jobs:
             ./cc-test-reporter before-build
             npm test
             ./cc-test-reporter after-build --exit-code $?
+      - run: npm run cypress:onci & $(npm bin)/cypress run --record --key $CYPRESS_KEY

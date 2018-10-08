@@ -1,10 +1,12 @@
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 
-import rootReducer from './reducers';
+import rootReducer from './reducers/index';
 
-// eslint-disable-next-line
-const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose;
+let composeEnhancers = compose;
+if (process.env.NODE_ENV === 'development') {
+  composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+}
 
 const middleware = [thunk];
 

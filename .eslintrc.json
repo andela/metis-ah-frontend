@@ -1,7 +1,11 @@
 {
   "extends": "airbnb",
+  "plugins": [
+    "cypress"
+  ],
   "env": {
-      "browser": true
+      "browser": true,
+      "cypress/globals": true
   },
   "parserOptions": {
       "ecmaVersion": 2018,
@@ -34,5 +38,8 @@
         "ClassDeclaration": true
       }
     }]
+  },
+  "settings":{
+   "import/resolver": "webpack"
   }
 }

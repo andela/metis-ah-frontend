@@ -1,0 +1,14 @@
+
+.item {
+  margin: 0 2.5%;
+  text-align: center;
+  color: black;
+}
+
+.selected {
+  color: #4dd6a5;
+}
+
+.item:hover {
+  color: #4dd6a5;
+}

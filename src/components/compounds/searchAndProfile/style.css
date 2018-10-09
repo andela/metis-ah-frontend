@@ -1,0 +1,29 @@
+.block {
+  box-shadow: none;
+}
+
+@media screen and (min-width: 426px) {
+  .block {
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 904px) {
+  .block {
+    display: none;
+    width: fit-content;
+    margin: 0 auto;
+  }
+  
+  .isActive {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1088px) {
+  .block {
+    width: fit-content;
+  }
+}

@@ -1,9 +1,12 @@
 import React from 'react';
 
+// Components
+import Header from 'Components/HOC/header';
+
 const Landing = () => (
-  <h1>
-    This is the Landing page of Authors' Haven.
-  </h1>
+  <div>
+    <Header />
+  </div>
 );
 
 export default Landing;

@@ -12,3 +12,9 @@
 .item:hover {
   color: #4dd6a5;
 }
+
+.footItem {
+  color: white;
+  margin: 0 2.5%;
+  text-align: center;
+}

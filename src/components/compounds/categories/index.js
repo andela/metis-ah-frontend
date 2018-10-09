@@ -4,9 +4,21 @@ import { connect } from 'react-redux';
 
 import classes from './style.css';
 
+const setClasses = (selected, isFooter, item) => {
+  if (!isFooter) {
+    return (`${classes.item} ${selected === item ? classes.selected : ''}`);
+  }
+
+  return (`${classes.footItem}`);
+};
+
 const categories = props => (
   props.categories.map(item => (
-    <Link key={item} className={`${classes.item} ${props.selected === item ? classes.selected : ''}`} to="/">
+    <Link
+      key={item}
+      className={setClasses(props.selected, props.footer, item)}
+      to="/"
+    >
       {item}
     </Link>
   ))

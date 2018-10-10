@@ -1,0 +1,59 @@
+
+ .ArticleCard__banner {
+  border-top-left-radius: 7px;
+  border-top-right-radius: 7px;
+  color: white;
+ }
+ .ArticleCard__banner {
+  height: 300px;
+  display: flex;
+  align-items: flex-end;
+  padding: 16px;
+  background-size: cover;
+  background-repeat-x: no-repeat;
+  position: relative;
+ }
+ .ArticleCard__BannerTitle {
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  margin-bottom: 22px;
+ }
+ .ArticleCard__BannerDescription {
+   display: none;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.9px;
+  margin-bottom: 22px;
+ }
+ .ArticleCard__date {
+  font-family: Roboto;
+  font-size: 12px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+ }
+
+ .ArticleCard__banner:hover  {
+  display: block;
+  background-color: white;
+  opacity: 1;
+  color: black;
+  border: solid 1px #e0e0e0;
+}
+
+/* #article-card-banner {
+  .banner-content {
+    ...
+  }
+} */

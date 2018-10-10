@@ -1,0 +1,32 @@
+ .ArticleCard__footer {
+  padding: 13px 20px;
+  border: solid 1px #e0e0e0;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 7px;
+ }
+ .ArticleCard__FooterThumbnail img {
+  height: 47px;
+  border-radius: 50%;
+ }
+ .ArticleCard__FooterName {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  color: #000000;
+ }
+ .ArticleCard__FooterLikes  {
+  font-size: 1em;
+ }
+ .ArticleCard__FooterLikes svg {
+  color: #13B47A;
+ }
+ .ArticleCard__FooterLikes span {
+  color: #000000;
+ }
+ .Margin__Auto {
+  margin: auto;
+}

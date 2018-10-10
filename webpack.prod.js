@@ -1,13 +1,9 @@
-const path = require('path');
 const autoprefixer = require('autoprefixer');
-const {
-  BundleAnalyzerPlugin
-} = require('webpack-bundle-analyzer');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
 
 module.exports = merge(common, {
-  mode: 'development',
+  mode: 'production',
 
   module: {
     rules: [{
@@ -20,7 +16,6 @@ module.exports = merge(common, {
         options: {
           importLoaders: 2,
           modules: true,
-          localIdentName: '[name]__[local]__[hash:base64:5]'
         }
       },
       {
@@ -39,14 +34,5 @@ module.exports = merge(common, {
       }
       ]
     }]
-  },
-  devtool: 'cheap-module-eval-source-map',
-  devServer: {
-    contentBase: path.join(__dirname, './src/static/'),
-    port: 3500,
-    historyApiFallback: true
-  },
-  plugins: [
-    new BundleAnalyzerPlugin()
-  ]
+  }
 });

@@ -1,13 +1,14 @@
-import React, { Component } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 
 import ProfileNav from 'Components/compounds/profileNav';
 import Search from 'Components/atoms/search';
-import classes from './style.css';
+import './style.scss';
 
 const SearchAndProfile = (props) => {
   const { menu } = props;
   return (
-    <div id="profile-nav" className={`navbar-menu ${menu ? classes.isActive : ''} ${classes.block}`}>
+    <div id="profile-nav" className={`navbar-menu ${menu ? 'SearchAndProfile-isActive' : ''} 'block'`}>
       <Search />
       <div className="navbar-end">
         <div className="navbar-item">
@@ -16,6 +17,10 @@ const SearchAndProfile = (props) => {
       </div>
     </div>
   );
+};
+
+SearchAndProfile.propTypes = {
+  menu: PropTypes.bool.isRequired,
 };
 
 export default SearchAndProfile;

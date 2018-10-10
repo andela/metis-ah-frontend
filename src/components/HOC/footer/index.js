@@ -2,10 +2,10 @@ import React from 'react';
 
 import FooterCategories from 'Components/compounds/footerCategories';
 import FooterBrand from 'Components/compounds/footerBrand';
-import classes from './style.css';
+import './style.scss';
 
 const footer = () => (
-  <footer className={classes.footer}>
+  <footer className="Main-Footer">
     <FooterCategories />
     <FooterBrand />
   </footer>

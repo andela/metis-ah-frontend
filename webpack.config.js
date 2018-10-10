@@ -19,7 +19,7 @@ module.exports = merge(common, {
         loader: 'css-loader',
         options: {
           importLoaders: 2,
-          modules: true,
+          // modules: true,
         }
       },
       {
@@ -37,29 +37,7 @@ module.exports = merge(common, {
         loader: 'sass-loader'
       }
       ]
-<<<<<<< HEAD
     }]
-=======
-    },
-    {
-      test: /\.(jpe?g|gif|png)$/i,
-      use: [{
-        loader: 'url-loader',
-        options: {
-          limit: 8192
-        }
-      }]
-    }
-    ]
-  },
-  resolve: {
-    extensions: ['.jsx', '.js', '.css', '.scss'],
-    alias: {
-      Images: path.resolve(__dirname, 'src/static/images'),
-      Pages: path.resolve(__dirname, 'src/pages/'),
-      Components: path.resolve(__dirname, 'src/components')
-    }
->>>>>>> feat(landing-page): add the header
   },
   devtool: 'cheap-module-eval-source-map',
   devServer: {

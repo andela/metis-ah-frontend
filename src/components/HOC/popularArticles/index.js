@@ -1,17 +1,17 @@
 import React from 'react';
 
 import PopularCards from 'Components/compounds/popularCards';
-import classes from './style.css';
+import './style.scss';
 
 const popular = () => (
-  <div className={classes.wrapper}>
-    <h2 className={classes.heading}>POPULAR ON AUTHOR'S HAVEN</h2>
+  <div className="popular-articles-wrapper">
+    <h2 className="heading">POPULAR ON AUTHOR'S HAVEN</h2>
     <div className="columns">
       <PopularCards />
     </div>
-    <div className={classes.more}>
+    <div className="more">
       <span>SEE ALL POPULAR</span>
-      <i className={`fas fa-chevron-right ${classes.right}`} />
+      <i className="fas fa-chevron-right right" />
     </div>
   </div>
 );

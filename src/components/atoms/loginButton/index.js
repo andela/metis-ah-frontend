@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classes from './style';
+import './style.scss';
 
 const Button = () => (
-  <Link role="button" className={`button ${classes.btn}`} to="\">
+  <Link role="button" className="button login-button" to="\">
     Login
   </Link>
 );

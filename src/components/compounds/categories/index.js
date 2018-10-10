@@ -2,14 +2,14 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import classes from './style.css';
+import './style';
 
 const setClasses = (selected, isFooter, item) => {
   if (!isFooter) {
-    return (`${classes.item} ${selected === item ? classes.selected : ''}`);
+    return (`Categories-item ${selected === item ? 'Categories-selected' : ''}`);
   }
 
-  return (`${classes.footItem}`);
+  return ('Categories-footItem');
 };
 
 const categories = props => (

@@ -1,8 +1,8 @@
 import React from 'react';
-import classes from './style.css';
+import './style.scss';
 
 const Search = () => (
-  <input className={`input is-primary ${classes.search}`} type="text" placeholder="Search" aria-label="search author's haven" />
+  <input className="input is-primary app-search" type="text" placeholder="Search" aria-label="search author's haven" />
 );
 
 export default Search;

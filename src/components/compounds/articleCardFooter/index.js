@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './style.css';
+import './style';
 
 const computeLikes = (likes) => {
   if (likes >= 1000) {
@@ -16,20 +16,20 @@ const computeLikes = (likes) => {
 const articleCardFooter = (props) => {
   const { item } = props;
   return (
-    <div className={classes.ArticleCard__footer}>
+    <div className="ArticleCard__footer">
       <div className="columns">
         <div className="column is-one-fifth PaddingRight--0 Margin--auto">
-          <div className={classes.ArticleCard__FooterThumbnail}>
+          <div className="ArticleCard__FooterThumbnail">
             <img src={item.authorImg} alt="Article author" />
           </div>
         </div>
-        <div className={`column is-paddingless ${classes.Margin__Auto} is-three-fifths`}>
-          <div className={classes.ArticleCard__FooterName}>
+        <div className="column is-paddingless Margin__Auto is-three-fifths">
+          <div className="ArticleCard__FooterName">
             {item.author}
           </div>
         </div>
-        <div className={`column ${classes.Margin__Auto} is-paddingless`}>
-          <div className={classes.ArticleCard__FooterLikes}>
+        <div className="column Margin__Auto is-paddingless">
+          <div className="ArticleCard__FooterLikes">
             <i className="fas fa-thumbs-up fa-2x" />
             <span>{computeLikes(item.likes)}</span>
           </div>

@@ -1,11 +1,11 @@
 import React from 'react';
 
 import Categories from 'Components/compounds/categories';
-import classes from './style.css';
+import './style';
 
 const minorNav = () => (
-  <nav className={`${classes.categories}`} role="navigation" aria-label="categories navigation">
-    <div className={`${classes.container} container`}>
+  <nav className="nav-Categories" role="navigation" aria-label="categories navigation">
+    <div className="Categories-container container">
       <Categories />
     </div>
   </nav>

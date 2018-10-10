@@ -1,14 +1,14 @@
 import React from 'react';
 
 import FeaturedCards from 'Components/compounds/featuredCards';
-import classes from './style.css';
+import './style.scss';
 
 const featuredArticles = () => (
-  <div className={classes.wrapper}>
+  <div className="Featured-ArticlesWrapper">
     <FeaturedCards />
-    <div className={classes.more}>
+    <div className="more">
       <span>SEE ALL FEATURED</span>
-      <i className={`fas fa-chevron-right ${classes.right}`} />
+      <i className="fas fa-chevron-right right" />
     </div>
   </div>
 );

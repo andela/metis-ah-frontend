@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import classes from './style.css';
+import './style.scss';
 
 const style = image => ({
   background: `linear-gradient(to bottom, transparent, transparent, #000000), url('${image}')`
@@ -33,23 +33,22 @@ class ArticleCardBanner extends Component {
     const { item } = this.props;
     return (
       <div
-        id="article-card-banner"
-        className={classes.ArticleCard__banner}
+        className="ArticleCard__banner article-card-banner"
         style={hover ? {} : style(item.banner)}
         onMouseEnter={this.clearStyle}
         onMouseLeave={this.returnStyle}
       >
-        <div className={classes.ArticleCard__BannerContent}>
-          <h3 className={classes.ArticleCard__BannerTitle}>
+        <div className="ArticleCard__BannerContent">
+          <h3 className="ArticleCard__BannerTitle">
             {item.title}
           </h3>
           <p
-            className={classes.ArticleCard__BannerDescription}
+            className="ArticleCard__BannerDescription"
             style={!hover ? {} : descriptionStyle()}
           >
             {item.description}
           </p>
-          <p className={classes.ArticleCard__date}>
+          <p className="ArticleCard__date">
             {item.date}
           </p>
         </div>

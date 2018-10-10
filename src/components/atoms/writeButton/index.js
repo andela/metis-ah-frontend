@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import classes from './style.css';
+import './style.scss';
 
 const Button = () => (
-  <Link role="button" className={`button btn ${classes.btnprimary}`} to="\">
+  <Link id="app-write-button" role="button" className="button btn app-general-button" to="\">
     <strong>WRITE</strong>
   </Link>
 );

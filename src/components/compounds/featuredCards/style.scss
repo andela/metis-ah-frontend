@@ -1,9 +1,3 @@
-.featCards {
-  color: white;
-  border-radius: 2%;
-  display: flex;
-}
-
 .bigcard {
   height: 344px;
   margin-bottom: 1.5%;
@@ -24,13 +18,29 @@
   margin-right: 0;
 }
 
-.info {
-  width: 100%;
-  align-self: flex-end;
-  padding: 5%;
+.featCards {
+  color: white;
+  border-radius: 2%;
+  display: flex;
+
+  .info {
+    width: 100%;
+    align-self: flex-end;
+    padding: 5%;
+  }
 }
 
 @media screen and (max-width: 600px) {
+  .featCards {
+    height: 150px;
+    width: 47%;
+    margin: 1%;
+  }
+
+  .featCards:first-of-type {
+    width: 96%;
+  }
+
   .bigcard:first-of-type {
     margin-right: 1%;
   }
@@ -41,16 +51,6 @@
 
   .smallcard:last-of-type {
     margin-right: 1%;
-  }
-
-  .featCards {
-    height: 150px;
-    width: 47%;
-    margin: 1%;
-  }
-
-  .featCards:first-of-type {
-    width: 96%;
   }
 }
 

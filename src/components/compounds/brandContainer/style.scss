@@ -1,0 +1,36 @@
+.header-brand-container {
+  #logo {
+    color: #4dd6a5;
+    width: 44px;
+    max-height: 44px;
+    margin-right: 5px;
+  }
+  
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    margin-right: 10px;
+    color: black;
+  }
+  
+  .title:hover {
+    text-decoration: none;
+    color: black;
+  }
+  
+  @media screen and (min-width: 426px) {
+    .bug {
+      display: none;
+    }
+  }
+  
+  @media screen and (max-width: 904px) {
+    .bug {
+      display: block;
+    }
+  
+    .brand {
+      width: 100%;
+    }
+  }
+}

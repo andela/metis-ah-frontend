@@ -31,7 +31,9 @@ module.exports = {
   resolve: {
     extensions: ['.jsx', '.js', '.css', '.scss'],
     alias: {
-      Pages: path.resolve(__dirname, 'src/pages/')
+      Images: path.resolve(__dirname, 'src/static/images'),
+      Pages: path.resolve(__dirname, 'src/pages/'),
+      Components: path.resolve(__dirname, 'src/components')
     }
   },
   plugins: [new HtmlWebpackPlugin({

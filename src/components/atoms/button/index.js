@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import classes from './style.css';
+import './style.scss';
 
 const Button = (props) => {
   const { text } = props;
   return (
-    <button type="button" className={`${classes.btn}`}>
+    <button type="button" className="App__Button">
       {text}
     </button>
   );

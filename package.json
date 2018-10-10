@@ -61,6 +61,7 @@
     "babel-jest": "^23.6.0",
     "babel-loader": "^8.0.2",
     "babel-polyfill": "^6.26.0",
+    "compression-webpack-plugin": "^2.0.0",
     "css-loader": "^1.0.0",
     "eslint-loader": "^2.1.1",
     "file-loader": "^2.0.0",

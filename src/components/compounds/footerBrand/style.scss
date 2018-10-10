@@ -9,15 +9,34 @@
   line-height: normal;
   letter-spacing: 1.2px;
   color: #ffffff;
+  padding: 0 12%;
 
   .Footer-brand {
     padding: 37px 0;
     display: flex;
     justify-content: space-between;
-  
+    text-align: center;
   
     .space {
       margin: 0 5px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    height: 120px;
+
+    .Footer-brand {
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 462px) {
+    height: 140px;
+
+    .Footer-brand {
+      font-size: 80%;
     }
   }
 }

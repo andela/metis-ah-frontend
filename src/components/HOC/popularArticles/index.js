@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import PopularCards from 'Components/compounds/popularCards';
 import './style.scss';
@@ -6,12 +7,14 @@ import './style.scss';
 const popular = () => (
   <div className="popular-articles-wrapper">
     <h2 className="heading">POPULAR ON AUTHOR'S HAVEN</h2>
-    <div className="columns">
+    <div className="Popular-Cards-Wrapper">
       <PopularCards />
     </div>
     <div className="more">
-      <span>SEE ALL POPULAR</span>
-      <i className="fas fa-chevron-right right" />
+      <Link className="more-popular" to="/">
+        <span>SEE ALL POPULAR</span>
+        <i className="fas fa-chevron-right right" />
+      </Link>
     </div>
   </div>
 );

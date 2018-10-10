@@ -3,7 +3,7 @@ import React from 'react';
 import Button from 'Components/atoms/button';
 import './style.scss';
 
-const hero = () => (
+const Hero = () => (
   <div className="hero">
     <h1 className="title">AUTHOR&apos;S HAVEN</h1>
     <p className="text">A community where readers and writers come together to share and discuss knowledge and ideas.</p>
@@ -11,4 +11,4 @@ const hero = () => (
   </div>
 );
 
-export default hero;
+export default Hero;

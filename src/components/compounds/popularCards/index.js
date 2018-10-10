@@ -11,11 +11,9 @@ class PopularCard extends Component {
     const { popular } = this.props;
     return (
       popular.map(item => (
-        <div key={item.title} className="column is-one-third">
-          <div className="Popular-ArticleCard">
-            <ArticleCardBanner item={item} />
-            <ArticleCardFooter item={item} />
-          </div>
+        <div key={item.title} className="Popular-ArticleCard">
+          <ArticleCardBanner item={item} />
+          <ArticleCardFooter item={item} />
         </div>
       ))
     );

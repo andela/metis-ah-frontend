@@ -3,6 +3,7 @@
   border: solid 1px #e0e0e0;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
+  display: flex;
 
   .ArticleCard__FooterThumbnail img {
     height: 47px;
@@ -17,9 +18,11 @@
     line-height: normal;
     letter-spacing: 0.8px;
     color: #000000;
+    margin: auto 0 auto 5%;
   }
   .ArticleCard__FooterLikes  {
     font-size: 1em;
+    margin: auto 0 auto auto;
   }
   .ArticleCard__FooterLikes svg {
     color: #13B47A;

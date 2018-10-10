@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import FeaturedCards from 'Components/compounds/featuredCards';
 import './style.scss';
@@ -6,10 +7,10 @@ import './style.scss';
 const featuredArticles = () => (
   <div className="Featured-ArticlesWrapper">
     <FeaturedCards />
-    <div className="more">
+    <Link className="more" to="/">
       <span>SEE ALL FEATURED</span>
       <i className="fas fa-chevron-right right" />
-    </div>
+    </Link>
   </div>
 );
 

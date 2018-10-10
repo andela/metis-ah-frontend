@@ -1,10 +1,22 @@
+.green {
+  border: solid 1px #13b47a;
+  color: #13b47a;
+}
+
+.white {
+  border: solid 1px #ffffff;
+  color: white;
+}
+
 .App__Button {
   width: 157px;
   height: 48px;
   border-radius: 30px;
   background-color: rgba(196, 196, 196, 0);
-  border: solid 1px #ffffff;
   font-size: 15px;
-  color: white;
   margin: 0 auto 2.5% auto;
+}
+
+.App__Button:hover {
+  cursor: pointer;
 }

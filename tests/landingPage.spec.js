@@ -3,7 +3,7 @@ import Enzyme, { shallow, mount, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 
 // Component to be tested
-import Hero from '../src/components/compounds/hero';
+import Hero from '../src/components/compounds/Hero';
 
 
 Enzyme.configure({ adapter: new Adapter() });

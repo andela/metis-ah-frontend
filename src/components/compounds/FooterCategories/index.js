@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Categories from 'Components/compounds/categories';
+import Categories from 'Components/compounds/Categories';
 import './style.scss';
 
 const Footer = () => (

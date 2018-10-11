@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 
-import ArticleCardBanner from 'Components/compounds/articleCardBanner';
-import ArticleCardFooter from 'Components/compounds/articleCardFooter';
+import ArticleCardBanner from 'Components/compounds/ArticleCardBanner';
+import ArticleCardFooter from 'Components/compounds/ArticleCardFooter';
 import './style.scss';
 
 class PopularCard extends Component {

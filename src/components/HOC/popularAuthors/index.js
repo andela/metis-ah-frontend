@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import PopularAuthorsCards from 'Components/compounds/popularAuthorsCards';
+import PopularAuthorsCards from 'Components/compounds/PopularAuthorsCards';
 
-import './style';
+import './style.scss';
 
-const popularAuthors = (props) => {
+const PopularAuthors = (props) => {
   const { popularAuths } = props;
   return (
     <div className="Popular-Authors-Container">
@@ -17,7 +17,7 @@ const popularAuthors = (props) => {
   );
 };
 
-popularAuthors.propTypes = {
+PopularAuthors.propTypes = {
   popularAuths: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
@@ -25,4 +25,4 @@ const mapStateToProps = state => ({
   popularAuths: state.popularAuthors.popularAuthors,
 });
 
-export default connect(mapStateToProps)(popularAuthors);
+export default connect(mapStateToProps)(PopularAuthors);

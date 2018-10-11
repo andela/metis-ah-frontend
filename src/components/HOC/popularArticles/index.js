@@ -1,10 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import PopularCards from 'Components/compounds/popularCards';
+import PopularCards from 'Components/compounds/PopularCards';
 import './style.scss';
 
-const popular = () => (
+const Popular = () => (
   <div className="popular-articles-wrapper">
     <h2 className="heading">POPULAR ON AUTHOR'S HAVEN</h2>
     <div className="Popular-Cards-Wrapper">
@@ -19,4 +19,4 @@ const popular = () => (
   </div>
 );
 
-export default popular;
+export default Popular;

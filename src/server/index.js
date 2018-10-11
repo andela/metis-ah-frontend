@@ -3,7 +3,7 @@ import { readFile } from 'fs';
 import { extname as _extname, resolve } from 'path';
 
 
-const Port = process.env.Port || 3000;
+const Port = process.env.PORT || 3000;
 
 // Create nodejs server
 createServer((request, response) => {
@@ -40,12 +40,19 @@ createServer((request, response) => {
 
   // read file being requested from the server
   readFile(filePath, (error, content) => {
-    if (error) {
-      response.writeHead(500);
-      response.end(`Sorry, check with the site admin for error: ${error.code} ..\n`);
-      return response.end();
-    }
     response.writeHead(200, { 'Content-Type': contentType });
     return response.end(content, 'utf-8');
   });
 }).listen(Port);
+
+// import express from 'express';
+// import path from 'path';
+
+// const app = express();
+// const port = process.env.PORT || 8500;
+
+// app.use(express.static(path.join(__dirname, '../../dist')));
+
+// app.get('/*', (req, res) => res.sendFile(path.resolve(__dirname, '../../dist/index.html')));
+
+// app.listen(port, () => console.log('Server running'));

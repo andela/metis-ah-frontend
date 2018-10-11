@@ -1,0 +1,11 @@
+.nav-Categories {
+  background-color: #ffffff;
+  border: solid 1px #4dd6a5;
+
+  .Categories-container {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+  }
+}

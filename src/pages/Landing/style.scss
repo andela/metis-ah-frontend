@@ -1,0 +1,15 @@
+.Landing-Flex-Wrap {
+  display: flex;
+  flex-direction: column;
+
+  .body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+
+    .gap {
+      margin: 100px auto;
+    }
+  }
+}

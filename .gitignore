@@ -35,7 +35,6 @@ dist
 # Dependency directories
 node_modules/
 jspm_packages/
-package-lock.json
 
 # TypeScript v1 declaration files
 typings/
@@ -67,4 +66,3 @@ typings/
 .env.development.local
 .env.test.local
 .env.production.local
-package-lock.json

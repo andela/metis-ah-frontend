@@ -6,7 +6,7 @@ import Footer from 'Components/HOC/footer';
 import FeaturedArticles from 'Components/HOC/featuredArticles';
 import PopularArticles from 'Components/HOC/popularArticles';
 import PopularAuthors from 'Components/HOC/popularAuthors';
-import Button from 'Components/atoms/button';
+import Button from 'Components/atoms/Button';
 import './style.scss';
 
 const Landing = () => (

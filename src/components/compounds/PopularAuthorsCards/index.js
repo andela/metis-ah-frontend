@@ -10,7 +10,7 @@ const convertLikes = (likes) => {
   }
 };
 
-const popularAuthorsCards = props => (
+const PopularAuthorsCards = props => (
   props.popular.map(item => (
     <div key={item.name} className="Popular-Authors-Card">
       <img src={item.image} alt="Author" className="image" />
@@ -20,4 +20,4 @@ const popularAuthorsCards = props => (
   ))
 );
 
-export default popularAuthorsCards;
+export default PopularAuthorsCards;

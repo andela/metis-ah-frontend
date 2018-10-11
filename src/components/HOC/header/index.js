@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 
 // Components
-import Hero from 'Components/compounds/hero';
-import CategoriesNav from 'Components/compounds/categoriesNav';
-import SearchAndProfile from 'Components/compounds/searchAndProfile';
-import BrandContainer from 'Components/compounds/brandContainer';
+import Hero from 'Components/compounds/Hero';
+import CategoriesNav from 'Components/compounds/CategoriesNav';
+import SearchAndProfile from 'Components/compounds/SearchAndProfile';
+import BrandContainer from 'Components/compounds/BrandContainer';
 import './style.scss';
 
 class Header extends Component {

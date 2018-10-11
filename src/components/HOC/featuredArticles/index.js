@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-import FeaturedCards from 'Components/compounds/featuredCards';
+import FeaturedCards from 'Components/compounds/FeaturedCards';
 import './style.scss';
 
 const featuredArticles = () => (

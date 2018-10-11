@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './style';
+import './style.scss';
 
 const computeLikes = (likes) => {
   if (likes >= 1000) {
@@ -13,7 +13,7 @@ const computeLikes = (likes) => {
   }
 };
 
-const articleCardFooter = (props) => {
+const ArticleCardFooter = (props) => {
   const { item } = props;
   return (
     <div className="ArticleCard__footer">
@@ -31,7 +31,7 @@ const articleCardFooter = (props) => {
   );
 };
 
-articleCardFooter.propTypes = {
+ArticleCardFooter.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
@@ -43,4 +43,4 @@ articleCardFooter.propTypes = {
   }).isRequired,
 };
 
-export default articleCardFooter;
+export default ArticleCardFooter;

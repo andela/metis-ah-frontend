@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from 'Components/atoms/button';
+import Button from 'Components/atoms/Button';
 import './style.scss';
 
 const Hero = () => (

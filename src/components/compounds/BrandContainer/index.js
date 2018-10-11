@@ -5,7 +5,7 @@ import logo from 'Images/logo.png';
 
 import './style.scss';
 
-const brandContainer = (props) => {
+const BrandContainer = (props) => {
   const { showMenu, menu } = props;
   return (
     <div className="navbar-brand brand header-brand-container">
@@ -29,9 +29,9 @@ const brandContainer = (props) => {
   );
 };
 
-brandContainer.propTypes = {
+BrandContainer.propTypes = {
   showMenu: PropTypes.func.isRequired,
   menu: PropTypes.bool.isRequired,
 };
 
-export default brandContainer;
+export default BrandContainer;

@@ -1,20 +1,37 @@
 import React from 'react';
-import Enzyme, { shallow, mount, render } from 'enzyme';
+import Enzyme, { mount } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
+import { Provider } from 'react-redux';
+import store from '../src/store';
 
 // Component to be tested
-import Hero from '../src/components/compounds/hero';
-
+import Header from '../src/App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 
-describe('<Hero />', () => {
-  describe('render()', () => {
-    test('renders the component', () => {
-      const wrapper = mount(<Hero />);
+describe('Landing Page', () => {
+  describe('<Header />', () => {
+    const landingWrapper = mount(<Provider store={store}><Header /></Provider>);
 
-      expect(wrapper.exists()).toBe(true);
+    test('renders the titles', () => {
+      const brand = landingWrapper.find('h1').first().text();
+      const brand1 = landingWrapper.find('h1').last().text();
+
+      expect(brand1).toEqual('AUTHOR\'S HAVEN');
+      expect(brand).toEqual('Author\'s Haven');
+    });
+
+    test('renders the Buttons', () => {
+      const buttonContent = landingWrapper.find('button').last().text();
+
+      expect(buttonContent).toEqual('GET STARTED');
+    });
+
+    test('renders categories', () => {
+      const categories = landingWrapper.find('.Categories-container').children();
+
+      expect(categories.find('a').length).toEqual(10);
     });
   });
 });

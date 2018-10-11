@@ -1,7 +1,7 @@
 import React from 'react';
 
-import FooterCategories from 'Components/compounds/footerCategories';
-import FooterBrand from 'Components/compounds/footerBrand';
+import FooterCategories from 'Components/compounds/FooterCategories';
+import FooterBrand from 'Components/compounds/FooterBrand';
 import './style.scss';
 
 const footer = () => (

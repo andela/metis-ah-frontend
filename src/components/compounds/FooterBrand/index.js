@@ -2,7 +2,7 @@ import React from 'react';
 
 import './style.scss';
 
-const brand = () => (
+const Brand = () => (
   <div className="brandFooter">
     <div className="container Footer-brand">
       <p>2018 Copyright of metis team</p>
@@ -15,4 +15,4 @@ const brand = () => (
   </div>
 );
 
-export default brand;
+export default Brand;

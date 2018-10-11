@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-import './style';
+import './style.scss';
 
 const setClasses = (selected, isFooter, item) => {
   if (!isFooter) {
@@ -12,7 +12,7 @@ const setClasses = (selected, isFooter, item) => {
   return ('Categories-footItem');
 };
 
-const categories = props => (
+const Categories = props => (
   props.categories.map(item => (
     <Link
       key={item}
@@ -29,4 +29,4 @@ const mapStateToProps = state => ({
   selected: state.categories.selected,
 });
 
-export default connect(mapStateToProps)(categories);
+export default connect(mapStateToProps)(Categories);

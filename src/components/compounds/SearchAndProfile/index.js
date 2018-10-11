@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import ProfileNav from 'Components/compounds/profileNav';
-import Search from 'Components/atoms/search';
+import ProfileNav from 'Components/compounds/ProfileNav';
+import Search from 'Components/atoms/Search';
 import './style.scss';
 
 const SearchAndProfile = (props) => {

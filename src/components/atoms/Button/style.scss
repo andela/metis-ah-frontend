@@ -17,6 +17,15 @@
   margin: 0 auto 2.5% auto;
 }
 
-.App__Button:hover {
+.App__Button:hover,
+.App__Button:focus {
   cursor: pointer;
+  background-color: #13b47a;
+  color: #ffffff;
+  box-shadow: 1px 1px 2px #333;
+}
+
+.App__Button:active, 
+.App__Button:focus {
+  outline: none;
 }

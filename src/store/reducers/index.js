@@ -4,6 +4,7 @@ import categories from './categories';
 import featuredArticles from './featuredArticles';
 import popularArticles from './popularArticles';
 import popularAuthors from './popularAuthors';
+import authUser from './authUser';
 
 const rootReducer = combineReducers({
   mock,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   featuredArticles,
   popularArticles,
   popularAuthors,
+  authUser
 });
 
 export default rootReducer;

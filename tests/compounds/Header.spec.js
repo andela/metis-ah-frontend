@@ -4,7 +4,7 @@ import { createStore } from 'redux';
 import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 
-import Header from '../../src/components/compounds/header';
+import Header from '../../src/components/compounds/Header';
 
 describe('Header', () => {
   const initStore = {
@@ -16,6 +16,9 @@ describe('Header', () => {
       ],
       selected: 'HOME',
     },
+    authUser: {
+      isAuthenticated: false
+    }
   };
 
   const store = createStore(() => initStore);

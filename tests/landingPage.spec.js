@@ -5,14 +5,14 @@ import { Provider } from 'react-redux';
 import store from '../src/store';
 
 // Component to be tested
-import Header from '../src/App';
+import App from '../src/App';
 
 Enzyme.configure({ adapter: new Adapter() });
 
 
 describe('Landing Page', () => {
-  describe('<Header />', () => {
-    const landingWrapper = mount(<Provider store={store}><Header /></Provider>);
+  describe('<App />', () => {
+    const landingWrapper = mount(<Provider store={store}><App /></Provider>);
 
     test('renders the titles', () => {
       const brand = landingWrapper.find('h1').first().text();

@@ -8,7 +8,7 @@ import './style.scss';
 const SearchAndProfile = (props) => {
   const { menu } = props;
   return (
-    <div id="profile-nav" className={`navbar-menu ${menu ? 'SearchAndProfile-isActive' : ''} 'block'`}>
+    <div id={`${!menu ? 'profile-nav' : 'profile-nav-is-active'}`} className={`navbar-menu ${menu ? 'SearchAndProfile-isActive' : ''}'block'`}>
       <Search />
       <div className="navbar-end">
         <div className="navbar-item">

@@ -1,6 +1,7 @@
 .popular-articles-wrapper {
   width: 100%;
-  padding: 4% 10% 2% 10%;
+  padding: 6% 10% 2% 10%;
+  margin: 1px;
 
   .right {
     margin-left: 7px;
@@ -9,7 +10,7 @@
   .more {
     width: 100%;
     text-align: end;
-    
+
     .more-popular {
       color: #4DD6A5;
       margin: 2% 52px 0 auto;
@@ -31,8 +32,15 @@
   }
 
   .Popular-Cards-Wrapper {
+    width: 100%;
+    display: -webkit-box;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    overflow-x: scroll;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .popular-articles-wrapper {
+    padding: 6% 3% 2%;
   }
 }

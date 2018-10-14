@@ -6,11 +6,17 @@
   flex-wrap: wrap;
 
   .right {
-  margin-left: 7px;
+    margin-left: 7px;
   }
 
   .more {
   margin: 2% 20px 0 auto;
   color: #4DD6A5;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Featured-ArticlesWrapper {
+    padding: 4% 3% 2%;
   }
 }

@@ -1,42 +1,19 @@
-import aImg1 from 'Images/john.jpg';
-import image1 from 'Images/learning.png';
-import image2 from 'Images/phone.jpg';
-import image3 from 'Images/brain.jpg';
+import actionTypes from '../constants';
 
-const initialState = {
-  popularArticles: [
-    {
-      title: 'Learning to Learn',
-      description: 'Have you ever wondered how people seem to learn it all so fast? Well you can do it too.',
-      date: 'Aug 30',
-      likes: 2300,
-      banner: image1,
-      author: 'John Obi',
-      authorImg: aImg1,
-    },
-    {
-      title: 'Phone Addiction',
-      description: 'Your phone is training you to be it\'s servant. Here is how to fight back',
-      date: 'Aug 30',
-      likes: 2300,
-      banner: image2,
-      author: 'John Obi',
-      authorImg: aImg1,
-    },
-    {
-      title: 'The Human Brain',
-      description: 'It\'s not all about muscle but neurons',
-      date: 'Aug 30',
-      likes: 2300,
-      banner: image3,
-      author: 'John Obi',
-      authorImg: aImg1,
-    }
-  ]
-};
+const {
+  UPDATE_POPULAR_SUCCESS,
+  UPDATE_POPULAR_FAILURE
+} = actionTypes;
 
-const popularArticles = (state = initialState, action) => {
-  return state;
+const popularArticles = (state = [], action) => {
+  switch (action.type) {
+    case UPDATE_POPULAR_SUCCESS:
+      return action.payload;
+    case UPDATE_POPULAR_FAILURE:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default popularArticles;

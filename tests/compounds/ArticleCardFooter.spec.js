@@ -5,9 +5,10 @@ import ArticleCardFooter from '../../src/components/compounds/ArticleCardFooter'
 
 describe('ArcicleCardFooter', () => {
   const item = {
-    authorImg: 'A mock image',
-    author: 'A mock author',
-    likes: 2300,
+    likesCount: '2300',
+    firstname: 'mockfirst',
+    lastname: 'mocklast',
+    image: 'A mock image'
   };
   const wrapper = shallow(<ArticleCardFooter item={item} />);
 
@@ -23,7 +24,7 @@ describe('ArcicleCardFooter', () => {
   });
 
   it('should render the right content', () => {
-    expect(wrapper.find('.ArticleCard__FooterName').text()).toEqual('A mock author');
+    expect(wrapper.find('.ArticleCard__FooterName').text()).toEqual('mockfirst mocklast');
     expect(wrapper.find('.ArticleCard__FooterLikes').text()).toEqual('2.3K');
   });
 });

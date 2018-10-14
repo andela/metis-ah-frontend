@@ -1,41 +1,19 @@
-import image1 from 'Images/environment.jpg';
-import image2 from 'Images/making-money.jpg';
-import image3 from 'Images/tech.jpg';
-import image4 from 'Images/pollution.jpeg';
-import image5 from 'Images/family.jpg';
+import actionTypes from '../constants';
 
-const initialState = {
-  featuredArticles: [
-    {
-      title: 'The Nature of Nature',
-      date: 'Aug 30',
-      img: image1,
-    },
-    {
-      title: 'The Art of Making Money',
-      date: 'Aug 30',
-      img: image2,
-    },
-    {
-      title: 'Our Future on Earth',
-      date: 'Aug 30',
-      img: image3,
-    },
-    {
-      title: 'The Dangers of Pollution',
-      date: 'Aug 30',
-      img: image4,
-    },
-    {
-      title: 'The family',
-      date: 'Aug 30',
-      img: image5,
-    }
-  ]
-};
+const {
+  UPDATE_FEATURED_SUCCESS,
+  UPDATE_FEATURED_FAILURE
+} = actionTypes;
 
-const featArticlesReducer = (state = initialState, action) => {
-  return state;
+const featArticlesReducer = (state = [], action) => {
+  switch (action.type) {
+    case UPDATE_FEATURED_SUCCESS:
+      return action.payload;
+    case UPDATE_FEATURED_FAILURE:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default featArticlesReducer;

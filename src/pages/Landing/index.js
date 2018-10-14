@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
 // Components
-import Header from 'Components/compounds/header';
-import Footer from 'Components/compounds/footer';
-import FeaturedArticles from 'Components/compounds/featuredArticles';
-import PopularArticles from 'Components/compounds/popularArticles';
-import PopularAuthors from 'Components/compounds/popularAuthors';
+import Header from 'Components/compounds/Header';
+import Footer from 'Components/compounds/Footer';
+import FeaturedArticles from 'Components/compounds/FeaturedArticles';
+import PopularArticles from 'Components/compounds/PopularArticles';
+import PopularAuthors from 'Components/compounds/PopularAuthors';
 import Button from 'Components/atoms/Button';
 import './style.scss';
 

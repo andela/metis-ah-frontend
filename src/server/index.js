@@ -1,12 +1,15 @@
 import { createServer } from 'http';
 import { readFile } from 'fs';
 import { extname as _extname, resolve } from 'path';
-
+import historyFallback from 'connect-history-api-fallback';
+import connect from 'connect';
 
 const Port = process.env.PORT || 3000;
+const app = connect();
+app.use(historyFallback());
 
 // Create nodejs server
-createServer((request, response) => {
+app.use((request, response) => {
   // set the static file path
   let filePath = `./dist${request.url}`;
   // send back index.html if file path is exact
@@ -48,4 +51,6 @@ createServer((request, response) => {
     response.writeHead(200, { 'Content-Type': contentType });
     return response.end(content, 'utf-8');
   });
-}).listen(Port);
+});
+createServer(app)
+  .listen(Port);

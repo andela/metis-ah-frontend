@@ -17,7 +17,7 @@ const Landing = () => (
       <PopularArticles />
       <PopularAuthors />
       <div className="gap">
-        <Button text="GET STARTED" green />
+        <Button color="green">GET STARTED</Button>
       </div>
     </div>
     <Footer />

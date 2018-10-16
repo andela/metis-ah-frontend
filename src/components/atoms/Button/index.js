@@ -2,19 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './style.scss';
 
-const Button = ({ text, green }) => (
-  <button type="button" className={`App__Button ${green ? 'green' : 'white'} `}>
-    {text}
+const Button = ({
+  children,
+  color = 'white',
+  className = '',
+  ...props
+}) => (
+  <button {...props} type="button" className={`App__Button ${color} ${className}`}>
+    {children}
   </button>
 );
 
 Button.propTypes = {
-  green: PropTypes.bool,
-  text: PropTypes.string.isRequired,
-};
-
-Button.defaultProps = {
-  green: false,
+  color: PropTypes.string.isRequired,
 };
 
 export default Button;

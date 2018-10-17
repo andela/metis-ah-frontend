@@ -1,0 +1,32 @@
+.tab_register_button,
+.tab_login_button {
+    padding: 16px;
+    color: #0c0cf7;
+    border: none;
+    background: transparent;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.tab_register_button:active,
+.tab_register_button:focus,
+.tab_login_button:active,
+.tab_login_button:focus {
+    outline: none;
+    border-bottom: 1px solid #2323ff;
+}
+
+.tab_register_button:active,
+.tab_register_button:focus, {
+    border-right: 1px solid #2323ff;
+}
+
+.tab_login_button:active,
+.tab_login_button:focus {
+    border-left: 1px solid #2323ff;
+}
+
+.form_tab{
+    flex: 3;
+    margin-top:50px;
+}

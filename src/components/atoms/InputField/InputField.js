@@ -6,5 +6,4 @@ const input = ({ name, label, ...props }) => (
     <input name={name} {...props} />
   </label>
 );
-
 export default input;

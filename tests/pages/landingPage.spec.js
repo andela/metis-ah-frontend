@@ -3,11 +3,11 @@ import Enzyme, { shallow, mount, render } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { StaticRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
-import store from '../src/store';
+import store from '../../src/store';
 
 // Component to be tested
-import Hero from '../src/components/compounds/Hero';
-import Landing from '../src/pages/Landing';
+import Hero from '../../src/components/compounds/Hero';
+import Landing from '../../src/pages/Landing';
 
 
 Enzyme.configure({ adapter: new Adapter() });

@@ -6,11 +6,11 @@ import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 import configureMockStore from 'redux-mock-store';
-import { createUser } from '../src/store/actions/authUser';
-import Signup from '../src/components/compounds/Signup/Signup';
-import Modal from '../src/components/atoms/Modal';
-import formValid from '../src/util/helpers/formValid';
-import BASE_URL from '../url.json';
+import { createUser } from '../../src/store/actions/authUser';
+import Signup from '../../src/components/compounds/Signup/Signup';
+import Modal from '../../src/components/atoms/Modal';
+import formValid from '../../src/util/helpers/formValid';
+import BASE_URL from '../../url.json';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -90,7 +90,6 @@ describe('<Signup />', () => {
       expect(wrapper.find('form').exists()).toBe(true);
       expect(wrapper.find('input').exists()).toBe(true);
       expect(wrapper.find('button').exists()).toBe(true);
-      expect(wrapper.find('mediaButtonSection').exists()).toBe(true);
     });
   });
 

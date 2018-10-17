@@ -11,7 +11,6 @@
     left: (50% - (60%/2));
     border-radius: 5px;
     animation: fallIn linear 500ms;
-    
 }
 .Backdrop {
     position: fixed;
@@ -53,6 +52,8 @@
         top: 0;
         left: 0;
         height: 100%;
+        flex-direction: column;
+        overflow-y: scroll;
     }
 }
 

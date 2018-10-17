@@ -2,7 +2,8 @@ import React, { Component } from 'react';
 import Button from 'Components/atoms/Button';
 import './style.scss';
 import { connect } from 'react-redux';
-import Signup from '../Signup/Signup';
+import ToggleForm from '../../atoms/ToggleForm';
+import MediaSignupSection from '../../atoms/Button/Media';
 import Modal from '../../atoms/Modal';
 import { showModal, closeModal, userFail } from '../../../store/actions/authUser';
 
@@ -32,8 +33,9 @@ class Hero extends Component {
         }
         {
           modalOpen && (
-            <Modal onClick={this.closeModalHandler}>
-              <Signup closeModalHandler={this.closeModalHandler} />
+            <Modal>
+              <MediaSignupSection />
+              <ToggleForm />
             </Modal>
           )
         }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
 // Components
 import Header from 'Components/compounds/Header';
 import Footer from 'Components/compounds/Footer';
@@ -11,17 +12,18 @@ import bannerImage from 'Images/hero.jpg';
 import { setHeroContent } from '../../store/actions/article';
 import './style.scss';
 
-
 class Landing extends React.Component {
   componentDidMount() {
     const heroContent = {
       poster: bannerImage,
       name: 'AUTHOR\'S HAVEN',
       description:
-      'A community where readers and writers come together to share and discuss knowledge and ideas.'
+      'A community where readers and writers come together to share and discuss knowledge and ideas.',
+      buttonIsVisible: true,
+      className: 'hero'
     };
-    const { setHeroContent } = this.props;
-    setHeroContent(heroContent);
+    const { setHeroContentNow } = this.props;
+    setHeroContentNow(heroContent);
   }
 
   render() {
@@ -46,13 +48,18 @@ class Landing extends React.Component {
   }
 }
 
-const mapDispatchToProps = dispatch => ({
-  setHeroContent: banner => dispatch(setHeroContent(banner))
-});
-
 const mapStateToProps = state => ({
+  heroContent: state.article.heroContent,
   isAuth: state.authUser.isAuthenticated
 });
+
+const mapDispatchToProps = dispatch => ({
+  setHeroContentNow: heroContent => dispatch(setHeroContent(heroContent))
+});
+
+Landing.propTypes = {
+  setHeroContentNow: PropTypes.func.isRequired
+};
 
 export default connect(
   mapStateToProps,

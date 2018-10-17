@@ -5,7 +5,7 @@ import {
 
 export const setHeroContent = category => ({
   type: SET_HERO_CONTENT,
-  category
+  heroContent: category,
 });
 
 export const getArticleStarted = () => ({
@@ -29,10 +29,15 @@ export const getArticle = category => (dispatch) => {
     .then((response) => {
       const { data } = response.data;
       dispatch(getArticleSuccess(data.articles));
-      dispatch(setHeroContent(data.category));
+      dispatch(setHeroContent({
+        ...data.category,
+        buttonIsVisible: false,
+        className: 'article-hero'
+}));
     })
     .catch((error) => {
-      dispatch(getArticleFail(error.response.data.data.message));
+      const { data: { data: message } } = error.response;
+      dispatch(getArticleFail(message));
       console.log(error.response);
     });
 };

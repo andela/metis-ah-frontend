@@ -17,7 +17,6 @@ describe('<Hero />', () => {
   describe('render()', () => {
     test('renders the component', () => {
       const wrapper = mount(<Provider store={store}><Hero /></Provider>);
-
       expect(wrapper.exists()).toBe(true);
     });
   });

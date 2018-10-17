@@ -7,11 +7,13 @@ import {
 } from 'Constants';
 
 const initialState = {
-  category: {
+  heroContent: {
     poster: banner,
     name: 'AUTHOR\'S HAVEN',
     description:
-			'A community where readers and writers come together to share and discuss knowledge and ideas.'
+      'A community where readers and writers come together to share and discuss knowledge and ideas.',
+    buttonIsVisible: true,
+    className: 'hero'
   },
   loading: false,
   articles: [],
@@ -24,13 +26,11 @@ const article = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        articles: []
       };
     case FETCH_ARTICLE_SUCCESS:
       return {
         ...state,
         articles: action.articles,
-        error: '',
         loading: false
       };
     case FETCH_ARTICLE_FAIL:
@@ -43,7 +43,10 @@ const article = (state = initialState, action) => {
     case SET_HERO_CONTENT:
       return {
         ...state,
-        category: action.category
+        heroContent: {
+          ...state.heroContent,
+          ...action.heroContent
+        },
       };
     default:
       return state;

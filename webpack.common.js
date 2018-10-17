@@ -34,7 +34,8 @@ module.exports = {
       Images: path.resolve(__dirname, 'src/static/images'),
       Pages: path.resolve(__dirname, 'src/pages/'),
       Components: path.resolve(__dirname, 'src/components'),
-      Constants: path.resolve(__dirname, 'src/store/constants')
+      Constants: path.resolve(__dirname, 'src/store/constants/'),
+      Actions: path.resolve(__dirname, 'src/store/actions/')
     }
   },
   plugins: [new HtmlWebpackPlugin({

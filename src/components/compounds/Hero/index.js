@@ -21,25 +21,31 @@ class Hero extends Component {
     const { closeModalHandle, userfail } = this.props;
     closeModalHandle();
     userfail();
-  }
+  };
 
   render() {
+    const {
+      heroContent: {
+        name, description, poster, buttonIsVisible, className
+      }
+    } = this.props;
     const { modalOpen, isAuth, showModalHandler } = this.props;
     const { category } = this.props;
-    const url = `linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(${category.poster})`;
+    const url = `linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(${poster})`;
 
     return (
       <div
-        className="hero"
+        className={`${className}`}
         style={{
           background: url
         }}
       >
-        <h1 className="title">{category.name}</h1>
-        <p className="text">{category.description}</p>
-        {isAuth
-          ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
-          : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>
+        <h1 className="title">{name}</h1>
+        <p className="text">{description}</p>
+        {
+          buttonIsVisible && isAuth
+            ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
+            : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>
         }
         {
           modalOpen && (
@@ -57,7 +63,8 @@ class Hero extends Component {
 const mapStateToProps = state => ({
   modalOpen: state.authUser.modalOpen,
   isAuth: state.authUser.isAuthenticated,
-  category: state.article.category
+  category: state.article.category,
+  heroContent: state.article.heroContent
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -67,7 +74,8 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Hero.propTypes = {
-  category: PropTypes.object.isRequired // Of(PropTypes.string).isRequired
+  category: PropTypes.object.isRequired, // Of(PropTypes.string).isRequired
+  heroContent: PropTypes.object.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Radium(Hero));

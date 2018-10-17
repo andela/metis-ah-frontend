@@ -20,26 +20,25 @@ const redirect = (url) => {
   window.location.href = url;
 };
 
-const SocialLogin = ({ backEndLoginURL, type, ...props }) => (
+const SocialLogin = ({ backEndLoginURL, media, ...props }) => (
   <button
     type="button"
-    onClick={() => redirect(backEndLoginURL, type)}
+    onClick={() => redirect(backEndLoginURL, media)}
     {...props}
-    aria-label={`${type} social login `}
+    aria-label={`${media} social login `}
   >
     <div className="icon inline">
-      {injectIcon(type)}
+      {injectIcon(media)}
     </div>
     <div className="font inline">
-      {type}
+      {media}
     </div>
   </button>
 );
 
 SocialLogin.propTypes = {
   backEndLoginURL: PropTypes.string.isRequired,
-  type: PropTypes.string.isRequired,
-  className: PropTypes.string.isRequired,
+  media: PropTypes.string.isRequired
 };
 
 export default SocialLogin;

@@ -4,17 +4,17 @@ import SocialLoginButton from 'Components/atoms/Button/SocialLoginButton';
 const SocialLogin = () => (
   <div>
     <SocialLoginButton
-      type="Google"
+      media="Google"
       className="google Social-Login"
       backEndLoginURL="http://localhost:3000/api/v1/users/auth/google"
     />
     <SocialLoginButton
-      type="Facebook"
+      media="Facebook"
       className="facebook Social-Login"
       backEndLoginURL="http://localhost:3000/api/v1/users/auth/facebook"
     />
     {/* <SocialLoginButton
-      type="Twitter"
+      media="Twitter"
       className="twitter Social-Login"
       backEndLoginURL="http://localhost:3000/api/v1/users/auth/twitter"
     /> */}

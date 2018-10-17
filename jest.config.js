@@ -1,5 +1,5 @@
 module.exports = {
-  verbose: true,
+  // verbose: true,
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx}',

@@ -1,10 +1,10 @@
 import axios from 'axios';
 import constants from '../constants';
 import checkError from '../../util/helpers/error';
-import axiosInstance from '../../util/axiosInstance';
 
 const {
-  SET_CURRENT_USER, USER_SIGNUP_FAILED,
+  SET_CURRENT_USER,
+  USER_SIGNUP_FAILED,
   USER_SIGNUP_STARTED,
   MODAL_SHOW,
   MODAL_CLOSE,
@@ -72,7 +72,7 @@ export const socialAuth = (media, code) => (dispatch) => {
   switch (media) {
     case ('twitter'):
       if (code.oauth_token && code.oauth_verifier) {
-        return axiosInstance.get(`users/auth/${media}/redirect?oauth_token=${code.oauth_token}&oauth_verifier=${code.oauth_verifier}`)
+        return axios.get(`/users/auth/${media}/redirect?oauth_token=${code.oauth_token}&oauth_verifier=${code.oauth_verifier}`)
           .then((response) => {
             console.log(response);
             dispatch(setCurrentUser(response.data));
@@ -83,9 +83,8 @@ export const socialAuth = (media, code) => (dispatch) => {
       }
       return;
     default:
-      console.log(media);
       if (code.code) {
-        return axiosInstance.get(`users/auth/${media}/redirect?code=${code.code}`)
+        return axios.get(`/users/auth/${media}/redirect?code=${code.code}`)
           .then((response) => {
             console.log(response);
             dispatch(setCurrentUser(response.data));

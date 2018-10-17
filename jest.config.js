@@ -1,6 +1,3 @@
-
-const path = require('path');
-
 module.exports = {
   verbose: true,
   collectCoverage: true,
@@ -34,4 +31,5 @@ module.exports = {
     '^Pages(.*)$': '<rootDir>/src/pages$1',
     '^Components(.*)$': '<rootDir>/src/components$1'
   },
+  setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js',
 };

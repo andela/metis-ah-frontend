@@ -6,23 +6,23 @@ import PopularAuthorsCards from 'Components/compounds/PopularAuthorsCards';
 import './style.scss';
 
 const PopularAuthors = (props) => {
-  const { popularAuths } = props;
+  const { authors } = props;
   return (
     <div className="Popular-Authors-Container">
       <h2 className="title">BEST AUTHORS OF THE WEEK</h2>
       <div className="Popular-Authors">
-        <PopularAuthorsCards popular={popularAuths} />
+        <PopularAuthorsCards popular={authors} />
       </div>
     </div>
   );
 };
 
 PopularAuthors.propTypes = {
-  popularAuths: PropTypes.arrayOf(PropTypes.object).isRequired,
+  authors: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = state => ({
-  popularAuths: state.popularAuthors.popularAuthors,
+  authors: state.popularAuthors.popularAuthors,
 });
 
 export default connect(mapStateToProps)(PopularAuthors);

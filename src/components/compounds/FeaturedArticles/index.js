@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import FeaturedCards from 'Components/compounds/FeaturedCards';
 import './style.scss';
 
-const featuredArticles = () => (
+const FeaturedArticles = () => (
   <div className="Featured-ArticlesWrapper">
     <FeaturedCards />
     <Link className="more" to="/">
@@ -14,4 +14,4 @@ const featuredArticles = () => (
   </div>
 );
 
-export default featuredArticles;
+export default FeaturedArticles;

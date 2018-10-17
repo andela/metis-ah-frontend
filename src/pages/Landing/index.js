@@ -1,11 +1,11 @@
 import React from 'react';
 
 // Components
-import Header from 'Components/HOC/header';
-import Footer from 'Components/HOC/footer';
-import FeaturedArticles from 'Components/HOC/featuredArticles';
-import PopularArticles from 'Components/HOC/popularArticles';
-import PopularAuthors from 'Components/HOC/popularAuthors';
+import Header from 'Components/compounds/header';
+import Footer from 'Components/compounds/footer';
+import FeaturedArticles from 'Components/compounds/featuredArticles';
+import PopularArticles from 'Components/compounds/popularArticles';
+import PopularAuthors from 'Components/compounds/popularAuthors';
 import Button from 'Components/atoms/Button';
 import './style.scss';
 
@@ -17,7 +17,7 @@ const Landing = () => (
       <PopularArticles />
       <PopularAuthors />
       <div className="gap">
-        <Button text="GET STARTED" green />
+        <Button color="green">GET STARTED</Button>
       </div>
     </div>
     <Footer />

@@ -62,10 +62,7 @@ ArticleCardBanner.propTypes = {
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     date: PropTypes.string.isRequired,
-    likes: PropTypes.number.isRequired,
     banner: PropTypes.string.isRequired,
-    author: PropTypes.string.isRequired,
-    authorImg: PropTypes.string.isRequired,
   }).isRequired,
 };
 

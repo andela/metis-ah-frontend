@@ -1,18 +1,27 @@
-.block {
+#profile-nav {
   box-shadow: none;
 }
 
 @media screen and (min-width: 426px) {
-  .block {
+  #profile-nav {
     display: flex;
   }
 }
 
-@media screen and (max-width: 904px) {
-  .block {
+@media screen and (max-width: 902px) {
+  #profile-nav {
     display: none;
     width: fit-content;
     margin: 0 auto;
+  }
+  
+  #profile-nav-is-active {
+    display: flex;
+    width: fit-content;
+    margin: 0 auto;
+    box-shadow: none;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   
   .SearchAndProfile-isActive {
@@ -22,8 +31,14 @@
   }
 }
 
-@media screen and (min-width: 904px) and (max-width: 1088px) {
-  .block {
+@media screen and (min-width: 902px) and (max-width: 1088px) {
+  #profile-nav {
+    width: fit-content;
+  }
+  
+  #profile-nav-is-active {
+    box-shadow: none;
+    display: flex;
     width: fit-content;
   }
 }

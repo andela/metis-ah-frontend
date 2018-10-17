@@ -1,6 +1,7 @@
 import axios from 'axios';
 import constants from '../constants';
 import checkError from '../../util/helpers/error';
+import axiosInstance from '../../util/axiosInstance';
 
 const {
   SET_CURRENT_USER, USER_SIGNUP_FAILED,
@@ -23,15 +24,19 @@ const signupSuccessful = user => ({
 export const userFail = () => ({
   type: USER_SIGNUP_FAILED
 });
+
 export const closeModal = () => ({
   type: MODAL_CLOSE
 });
+
 export const showModal = () => ({
   type: MODAL_SHOW
 });
+
 export const userStarted = () => ({
   type: USER_SIGNUP_STARTED
 });
+
 export const createUser = (postData, history) => (dispatch) => {
   dispatch(userStarted());
   return axios.post('/users/auth/signup', postData)
@@ -61,4 +66,33 @@ export const loginUser = postData => (dispatch) => {
       checkError(error);
       dispatch(userFail());
     });
+};
+
+export const socialAuth = (media, code) => (dispatch) => {
+  switch (media) {
+    case ('twitter'):
+      if (code.oauth_token && code.oauth_verifier) {
+        return axiosInstance.get(`users/auth/${media}/redirect?oauth_token=${code.oauth_token}&oauth_verifier=${code.oauth_verifier}`)
+          .then((response) => {
+            console.log(response);
+            dispatch(setCurrentUser(response.data));
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+      return;
+    default:
+      console.log(media);
+      if (code.code) {
+        return axiosInstance.get(`users/auth/${media}/redirect?code=${code.code}`)
+          .then((response) => {
+            console.log(response);
+            dispatch(setCurrentUser(response.data));
+          })
+          .catch((error) => {
+            console.log(error);
+          });
+      }
+  }
 };

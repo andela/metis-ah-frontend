@@ -6466,6 +6466,11 @@ move-concurrently@^1.0.1:
     rimraf "^2.5.4"
     run-queue "^1.0.3"
 
+moxios@^0.4.0:
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/moxios/-/moxios-0.4.0.tgz#fc0da2c65477d725ca6b9679d58370ed0c52f53b"
+  integrity sha1-/A2ixlR31yXKa5Z51YNw7QxS9Ts=
+
 ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
@@ -9310,11 +9315,6 @@ time_past@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/time_past/-/time_past-1.0.2.tgz#9b01d9150bc3dee1911993d9cbec3e119cef467c"
   integrity sha512-mo4jrJHyBVwknKD8MQwl95qHqMic1/ybDjHatTGOGEnp50xgDAApD80JnNLV5B/n2TY2nuBIz+5i1FL7IUfV3A==
-
-time_past_in_words@^1.0.4:
-  version "1.0.4"
-  resolved "https://registry.yarnpkg.com/time_past_in_words/-/time_past_in_words-1.0.4.tgz#2883d84ae634b1b006ff1432575afd7b2261babc"
-  integrity sha512-fw4rKCGp9FyQ2gHiqT21yJOq1sNGpeVPiOrQtJ7RntvRuQNnZwc1ynQYb/U3AsbXcqOOSbApsQT4HQ1n1M+eeQ==
 
 timers-browserify@^2.0.4:
   version "2.0.10"

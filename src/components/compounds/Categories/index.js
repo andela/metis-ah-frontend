@@ -1,38 +1,46 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import { getCategories } from '../../../store/actions/categories';
+import { getCategories } from 'Actions/categories';
+
 import './style.scss';
-
-const setClasses = (selected, isFooter, item) => {
-  if (!isFooter) {
-    return (`Categories-item ${selected === item ? 'Categories-selected' : ''}`);
-  }
-
-  return ('Categories-footItem');
-};
 
 class Categories extends React.Component {
   componentDidMount() {
     const { categories, getCategoriesData } = this.props;
-    if (categories.length < 1) {
+    if (!categories.length) {
       getCategoriesData();
     }
   }
 
   render() {
-    const { categories, footer, selected } = this.props;
+    const { footer, categories } = this.props;
+    const navCategories = categories.map(item => (
+      <NavLink
+        key={item.id}
+        className={footer ? 'categories-footItem' : 'categories-item'}
+        activeClassName={footer ? 'categories-footItem-selected' : 'categories-selected'}
+        exact
+        to={`/articles/${item.id}`}
+      >
+        {item.name}
+      </NavLink>
+    ));
     return (
-      categories.map(item => (
-        <Link
-          key={item.id}
-          className={setClasses(selected, footer, item)}
-          to="/"
-        >
-          {item.name}
-        </Link>
-      ))
+      <React.Fragment>
+        {
+          <NavLink
+            to="/"
+            className={footer ? 'categories-footItem' : 'categories-item'}
+            activeClassName={footer ? 'categories-footItem-selected' : 'categories-selected'}
+            exact
+          >
+            HOME
+          </NavLink>
+        }
+        {navCategories}
+      </React.Fragment>
     );
   }
 }
@@ -46,11 +54,15 @@ const mapDispatchToProps = dispatch => ({
   getCategoriesData: () => dispatch(getCategories())
 });
 
-Categories.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  selected: PropTypes.string.isRequired,
-  footer: PropTypes.bool.isRequired,
-  getCategoriesData: PropTypes.func.isRequired
+
+Categories.defaultProps = {
+  footer: false,
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Categories);
+Categories.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getCategoriesData: PropTypes.func.isRequired,
+  footer: PropTypes.bool,
+};
+
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Categories));

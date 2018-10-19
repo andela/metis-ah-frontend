@@ -3,8 +3,7 @@ import Constants from '../constants';
 const { FETCH_CATEGORIES } = Constants;
 
 const initialState = {
-  categories: [],
-  selected: 'HOME',
+  categories: []
 };
 
 const categoriesReducer = (state = initialState, action) => {

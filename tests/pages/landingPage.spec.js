@@ -1,5 +1,5 @@
 import React from 'react';
-import Enzyme, { shallow, mount, render } from 'enzyme';
+import Enzyme from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import { StaticRouter } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -11,7 +11,6 @@ import Landing from '../../src/pages/Landing';
 
 
 Enzyme.configure({ adapter: new Adapter() });
-
 
 describe('<Hero />', () => {
   describe('render()', () => {

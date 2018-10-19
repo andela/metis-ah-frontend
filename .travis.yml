@@ -10,4 +10,3 @@ cache:
   - npm ci
 script:
   - webpack-dev-server & $(npm bin)/cypress run --record --key $CYPRESS_KEY
-    

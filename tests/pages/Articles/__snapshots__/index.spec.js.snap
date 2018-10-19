@@ -224,167 +224,160 @@ exports[`article page test should render the article page correctly 1`] = `
                   <div
                     className="Categories-container container"
                   >
-                    <Connect(Categories)>
-                      <Categories
-                        categories={
-                          Array [
-                            "HOME",
-                            "CULTURE",
-                            "FASHION",
-                            "BUSINESS",
-                            "MATHEMATICS",
-                            "PROGRAMMING",
-                            "ENTERTAINMENT",
-                            "SCIENCE",
-                            "POPULAR",
-                            "MORE",
-                          ]
-                        }
-                        dispatch={[Function]}
-                        selected="HOME"
-                      >
-                        <Link
-                          className="Categories-item Categories-selected"
-                          key="HOME"
-                          replace={false}
-                          to="/articles/HOME"
+                    <withRouter(Connect(Categories))>
+                      <Route>
+                        <Connect(Categories)
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
                         >
-                          <a
-                            className="Categories-item Categories-selected"
-                            href="/articles/HOME"
-                            onClick={[Function]}
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={false}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
                           >
-                            HOME
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="CULTURE"
-                          replace={false}
-                          to="/articles/CULTURE"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/CULTURE"
-                            onClick={[Function]}
-                          >
-                            CULTURE
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="FASHION"
-                          replace={false}
-                          to="/articles/FASHION"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/FASHION"
-                            onClick={[Function]}
-                          >
-                            FASHION
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="BUSINESS"
-                          replace={false}
-                          to="/articles/BUSINESS"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/BUSINESS"
-                            onClick={[Function]}
-                          >
-                            BUSINESS
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="MATHEMATICS"
-                          replace={false}
-                          to="/articles/MATHEMATICS"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/MATHEMATICS"
-                            onClick={[Function]}
-                          >
-                            MATHEMATICS
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="PROGRAMMING"
-                          replace={false}
-                          to="/articles/PROGRAMMING"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/PROGRAMMING"
-                            onClick={[Function]}
-                          >
-                            PROGRAMMING
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="ENTERTAINMENT"
-                          replace={false}
-                          to="/articles/ENTERTAINMENT"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/ENTERTAINMENT"
-                            onClick={[Function]}
-                          >
-                            ENTERTAINMENT
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="SCIENCE"
-                          replace={false}
-                          to="/articles/SCIENCE"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/SCIENCE"
-                            onClick={[Function]}
-                          >
-                            SCIENCE
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="POPULAR"
-                          replace={false}
-                          to="/articles/POPULAR"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/POPULAR"
-                            onClick={[Function]}
-                          >
-                            POPULAR
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-item "
-                          key="MORE"
-                          replace={false}
-                          to="/articles/MORE"
-                        >
-                          <a
-                            className="Categories-item "
-                            href="/articles/MORE"
-                            onClick={[Function]}
-                          >
-                            MORE
-                          </a>
-                        </Link>
-                      </Categories>
-                    </Connect(Categories)>
+                            <NavLink
+                              activeClassName="categories-selected"
+                              aria-current="page"
+                              className="categories-item"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-item categories-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-item categories-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-selected"
+                              aria-current="page"
+                              className="categories-item"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-item"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-item"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
                   </div>
                 </nav>
               </MinorNav>
@@ -432,6 +425,16 @@ exports[`article page test should render the article page correctly 1`] = `
               >
                 <ArticleContainer
                   articles={Array []}
+                  categories={
+                    Array [
+                      Object {
+                        "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                        "id": 1,
+                        "name": "FASHION",
+                        "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                      },
+                    ]
+                  }
                   getArticles={[Function]}
                   history={
                     Object {
@@ -500,170 +503,163 @@ exports[`article page test should render the article page correctly 1`] = `
                   <div
                     className="container container"
                   >
-                    <Connect(Categories)
+                    <withRouter(Connect(Categories))
                       footer={true}
                     >
-                      <Categories
-                        categories={
-                          Array [
-                            "HOME",
-                            "CULTURE",
-                            "FASHION",
-                            "BUSINESS",
-                            "MATHEMATICS",
-                            "PROGRAMMING",
-                            "ENTERTAINMENT",
-                            "SCIENCE",
-                            "POPULAR",
-                            "MORE",
-                          ]
-                        }
-                        dispatch={[Function]}
-                        footer={true}
-                        selected="HOME"
-                      >
-                        <Link
-                          className="Categories-footItem"
-                          key="HOME"
-                          replace={false}
-                          to="/articles/HOME"
+                      <Route>
+                        <Connect(Categories)
+                          footer={true}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
                         >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/HOME"
-                            onClick={[Function]}
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={true}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
                           >
-                            HOME
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="CULTURE"
-                          replace={false}
-                          to="/articles/CULTURE"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/CULTURE"
-                            onClick={[Function]}
-                          >
-                            CULTURE
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="FASHION"
-                          replace={false}
-                          to="/articles/FASHION"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/FASHION"
-                            onClick={[Function]}
-                          >
-                            FASHION
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="BUSINESS"
-                          replace={false}
-                          to="/articles/BUSINESS"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/BUSINESS"
-                            onClick={[Function]}
-                          >
-                            BUSINESS
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="MATHEMATICS"
-                          replace={false}
-                          to="/articles/MATHEMATICS"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/MATHEMATICS"
-                            onClick={[Function]}
-                          >
-                            MATHEMATICS
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="PROGRAMMING"
-                          replace={false}
-                          to="/articles/PROGRAMMING"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/PROGRAMMING"
-                            onClick={[Function]}
-                          >
-                            PROGRAMMING
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="ENTERTAINMENT"
-                          replace={false}
-                          to="/articles/ENTERTAINMENT"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/ENTERTAINMENT"
-                            onClick={[Function]}
-                          >
-                            ENTERTAINMENT
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="SCIENCE"
-                          replace={false}
-                          to="/articles/SCIENCE"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/SCIENCE"
-                            onClick={[Function]}
-                          >
-                            SCIENCE
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="POPULAR"
-                          replace={false}
-                          to="/articles/POPULAR"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/POPULAR"
-                            onClick={[Function]}
-                          >
-                            POPULAR
-                          </a>
-                        </Link>
-                        <Link
-                          className="Categories-footItem"
-                          key="MORE"
-                          replace={false}
-                          to="/articles/MORE"
-                        >
-                          <a
-                            className="Categories-footItem"
-                            href="/articles/MORE"
-                            onClick={[Function]}
-                          >
-                            MORE
-                          </a>
-                        </Link>
-                      </Categories>
-                    </Connect(Categories)>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
                   </div>
                 </div>
               </Footer>

@@ -22,7 +22,9 @@ module.exports = {
     // Images: path.resolve(__dirname, './src/static/images'),
     '^Pages(.*)$': '<rootDir>/src/pages$1',
     '^Components(.*)$': '<rootDir>/src/components$1',
-    'Actions(.*)$': '<rootDir>/src/store/actions$1'
+    'Actions(.*)$': '<rootDir>/src/store/actions$1',
+    'Constants(.*)$': '<rootDir>/src/store/constants$1',
+    'Reducers(.*)$': '<rootDir>/src/store/reducers$1'
   },
-  setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js',
+  setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js'
 };

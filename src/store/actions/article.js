@@ -1,4 +1,4 @@
-import axios from '../../util/axiosInstance';
+import axios from 'axios';
 import {
   SET_HERO_CONTENT, FETCH_ARTICLE_START, FETCH_ARTICLE_SUCCESS, FETCH_ARTICLE_FAIL
 } from '../constants';
@@ -22,22 +22,28 @@ export const getArticleFail = error => ({
   error
 });
 
-export const getArticle = category => (dispatch) => {
+export const getArticle = (categoryId, heroContent) => (dispatch) => {
   dispatch(getArticleStarted());
-  axios
-    .get(`/categories/${category}`)
+  dispatch(setHeroContent({
+    ...heroContent,
+    buttonIsVisible: false,
+    className: 'article-hero'
+  }));
+  return axios
+    .get(`/categories/${categoryId}`)
     .then((response) => {
       const { data } = response.data;
       dispatch(getArticleSuccess(data.articles));
-      dispatch(setHeroContent({
-        ...data.category,
-        buttonIsVisible: false,
-        className: 'article-hero'
-}));
+      if (!heroContent) {
+        dispatch(setHeroContent({
+          ...data.category,
+          buttonIsVisible: false,
+          className: 'article-hero'
+        }));
+      }
     })
     .catch((error) => {
       const { data: { data: message } } = error.response;
       dispatch(getArticleFail(message));
-      console.log(error.response);
     });
 };

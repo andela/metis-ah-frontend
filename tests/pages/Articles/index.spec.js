@@ -22,16 +22,12 @@ const initialState = {
   },
   categories: {
     categories: [
-      'HOME',
-      'CULTURE',
-      'FASHION',
-      'BUSINESS',
-      'MATHEMATICS',
-      'PROGRAMMING',
-      'ENTERTAINMENT',
-      'SCIENCE',
-      'POPULAR',
-      'MORE'
+      {
+        description: 'It has become appallingly obvious that our technology has exceeded our humanity.',
+        id: 1,
+        name: 'FASHION',
+        poster: 'https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png'
+      }
     ],
     selected: 'HOME',
   }

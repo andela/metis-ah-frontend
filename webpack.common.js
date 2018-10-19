@@ -35,7 +35,8 @@ module.exports = {
       Pages: path.resolve(__dirname, 'src/pages/'),
       Components: path.resolve(__dirname, 'src/components'),
       Constants: path.resolve(__dirname, 'src/store/constants/'),
-      Actions: path.resolve(__dirname, 'src/store/actions/')
+      Actions: path.resolve(__dirname, 'src/store/actions/'),
+      Reducers: path.resolve(__dirname, 'src/store/reducers/')
     }
   },
   plugins: [new HtmlWebpackPlugin({

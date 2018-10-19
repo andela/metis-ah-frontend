@@ -60,6 +60,7 @@ class Hero extends Component {
   }
 }
 
+
 const mapStateToProps = state => ({
   modalOpen: state.authUser.modalOpen,
   isAuth: state.authUser.isAuthenticated,

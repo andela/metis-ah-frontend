@@ -4,45 +4,54 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ArticleCard from 'Components/atoms/ArticleCard';
 import { getArticle } from 'Actions/article';
+import sortArrayContent from '../../util/helper';
 import './style.scss';
 
 class ArticleContainer extends Component {
   constructor(props) {
     super(props);
-    const { match: { params: category } } = this.props;
+    const {
+      match: { params: category }
+    } = this.props;
     this.state = {
       category
     };
   }
 
   componentDidMount() {
-    const { getArticles, match } = this.props;
-    getArticles(match.params.category);
+    const { getArticles, match, categories } = this.props;
+    const heroContent = sortArrayContent(categories, match.params.category);
+    getArticles(match.params.category, heroContent);
   }
 
-  componentWillReceiveProps(nextProps) {
-    const { match } = this.props;
-    if (match.params.category !== nextProps.match.params.category) {
-      this.setState({
-        category: nextProps.match.params.category
-      });
+  static getDerivedStateFromProps(nextProps, prevState) {
+    const {
+      match: {
+        params: { category }
+      }
+    } = nextProps;
+    const { categories } = nextProps;
+    const heroContent = sortArrayContent(categories, category);
+    if (prevState.category.category !== nextProps.match.params.category) {
+      nextProps.getArticles(category, heroContent);
+      return {
+        category: { category }
+      };
     }
-  }
-
-  componentDidUpdate(prevProps, prevState) {
-    const { getArticles } = this.props;
-    const { category } = this.state;
-    if (category !== prevState.category) {
-      getArticles(category);
-    }
+    return null;
   }
 
   render() {
-    const	{	articles,	loading	}	=	this.props;
+    const { articles, loading } = this.props;
 
     const mappedArticleCards = articles.map((article) => {
       const {
-        imageUrl, slug, title, description, createdAt, User: { firstname, lastname }
+        imageUrl,
+        slug,
+        title,
+        description,
+        createdAt,
+        User: { firstname, lastname }
       } = article;
       return (
         <ArticleCard
@@ -59,15 +68,13 @@ class ArticleContainer extends Component {
       <div className="container article-inner-container">
         {mappedArticleCards}
         {articles.length < 1 && (loading && <div className="article-loader" />)}
-        {articles.length < 1 && (
-          !loading
-					&& (
-					<div className="article-container-card">
-            <i className="fas fa-exclamation notification-icon" />
-            <p>This category has no articles</p>
-					</div>
-					)
-        )}
+        {articles.length < 1
+					&& (!loading && (
+						<div className="article-container-card">
+  <i className="fas fa-exclamation notification-icon" />
+  <p>This category has no articles</p>
+						</div>
+					))}
       </div>
     );
   }
@@ -75,18 +82,20 @@ class ArticleContainer extends Component {
 
 const mapStateToProps = state => ({
   loading: state.article.loading,
-  articles: state.article.articles
+  articles: state.article.articles,
+  categories: state.categories.categories
 });
 
 const mapDispatchToProps = dispatch => ({
-  getArticles: category => dispatch(getArticle(category))
+  getArticles: (categoryId, heroContent) => dispatch(getArticle(categoryId, heroContent))
 });
 
 ArticleContainer.propTypes = {
   articles: PropTypes.array.isRequired,
   loading: PropTypes.bool.isRequired,
   match: PropTypes.object.isRequired,
-  getArticles: PropTypes.func.isRequired
+  getArticles: PropTypes.func.isRequired,
+  categories: PropTypes.array.isRequired
 };
 
 export default withRouter(

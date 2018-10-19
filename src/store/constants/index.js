@@ -15,3 +15,9 @@ const constants = {
 };
 
 export default constants;
+export const EXAMPLE_TYPE = 'EXAMPLE_TYPE';
+export const FETCH_ARTICLE_START = 'FETCH_ARTICLE_START';
+export const FETCH_ARTICLE_SUCCESS = 'FETCH_ARTICLE_SUCCESS';
+export const FETCH_ARTICLE_FAIL = 'FETCH_ARTICLE_FAIL';
+export const SET_HERO_CONTENT = 'SET_HERO_CONTENT';
+export const FETCH_CATEGORIES = 'FETCH_CATEGORIES';

@@ -1,21 +1,20 @@
+import { FETCH_CATEGORIES } from 'Constants';
+
 const initialState = {
-  categories: [
-    'HOME',
-    'CULTURE',
-    'TECH',
-    'BUSINESS',
-    'SELF',
-    'POLITICS',
-    'DESIGN',
-    'SCIENCE',
-    'POPULAR',
-    'MORE'
-  ],
+  categories: [],
   selected: 'HOME',
 };
 
 const categoriesReducer = (state = initialState, action) => {
-  return state;
+  switch (action.type) {
+    case FETCH_CATEGORIES:
+      return {
+        ...state,
+        categories: action.categories,
+      };
+    default:
+      return state;
+  }
 };
 
 export default categoriesReducer;

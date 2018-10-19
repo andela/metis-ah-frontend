@@ -9,6 +9,7 @@ const {
   MODAL_SHOW,
   MODAL_CLOSE,
   SIGNUP_SUCCESS,
+  RESET_CURRENT_USER,
 } = constants;
 
 export const setCurrentUser = user => ({
@@ -35,6 +36,11 @@ export const showModal = () => ({
 
 export const userStarted = () => ({
   type: USER_SIGNUP_STARTED
+});
+
+export const resetCurrentUser = user => ({
+  type: RESET_CURRENT_USER,
+  payload: user,
 });
 
 export const createUser = (postData, history) => (dispatch) => {
@@ -74,7 +80,7 @@ export const socialAuth = (media, code) => (dispatch) => {
       if (code.oauth_token && code.oauth_verifier) {
         return axios.get(`/users/auth/${media}/redirect?oauth_token=${code.oauth_token}&oauth_verifier=${code.oauth_verifier}`)
           .then((response) => {
-            console.log(response);
+            sessionStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
           })
           .catch((error) => {
@@ -86,7 +92,7 @@ export const socialAuth = (media, code) => (dispatch) => {
       if (code.code) {
         return axios.get(`/users/auth/${media}/redirect?code=${code.code}`)
           .then((response) => {
-            console.log(response);
+            sessionStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
           })
           .catch((error) => {

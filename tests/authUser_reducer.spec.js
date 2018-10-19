@@ -21,6 +21,7 @@ describe('authUser reducer', () => {
       }
     })).toEqual({
       isAuthenticated: true,
+      loading: false,
       user: {
         stuff: 'hello',
       }

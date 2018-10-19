@@ -6,6 +6,7 @@ const {
   MODAL_SHOW,
   MODAL_CLOSE,
   SIGNUP_SUCCESS,
+  RESET_CURRENT_USER,
 } = constants;
 
 const initialState = {
@@ -27,6 +28,12 @@ const authUserReducer = (state = initialState, action) => {
         user: action.payload,
         isAuthenticated: true,
         loading: false,
+      };
+    case RESET_CURRENT_USER:
+      return {
+        ...state,
+        user: action.payload,
+        isAuthenticated: true,
       };
     case USER_SIGNUP_FAILED:
       return {

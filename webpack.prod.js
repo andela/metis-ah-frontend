@@ -41,11 +41,11 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      new UglifyJsPlugin({
-        cache: true,
-        parallel: true,
-        extractComments: 'all'
-      }),
+      // new UglifyJsPlugin({
+      //   cache: true,
+      //   parallel: true,
+      //   extractComments: 'all'
+      // }),
       new OptimizeCSSAssetsPlugin({})
     ]
   },

@@ -11,7 +11,7 @@ import PopularAuthors from 'Components/compounds/PopularAuthors';
 import Button from 'Components/atoms/Button';
 import bannerImage from 'Images/hero.jpg';
 import { setHeroContent } from '../../store/actions/article';
-import { socialAuth } from '../../store/actions/authUser';
+import { socialAuth, resetCurrentUser } from '../../store/actions/authUser';
 import './style.scss';
 
 class Landing extends Component {
@@ -27,10 +27,16 @@ class Landing extends Component {
     const { setHeroContentNow } = this.props;
     setHeroContentNow(heroContent);
 
-    const { socialAuthHandler } = this.props;
+    const { socialAuthHandler, resetUser } = this.props;
     const { match, history } = this.props;
     const media = match.params.type;
     const code = parse(history.location.search);
+
+    const user = JSON.parse(sessionStorage.getItem('user'));
+
+    if (user) {
+      resetUser(user);
+    }
 
     if (media) {
       socialAuthHandler(media, code);
@@ -66,7 +72,8 @@ const mapStateToProps = state => ({
 
 const mapDispatchToProps = dispatch => ({
   setHeroContentNow: heroContent => dispatch(setHeroContent(heroContent)),
-  socialAuthHandler: (media, code) => dispatch(socialAuth(media, code))
+  socialAuthHandler: (media, code) => dispatch(socialAuth(media, code)),
+  resetUser: user => dispatch(resetCurrentUser(user))
 });
 
 Landing.propTypes = {
@@ -78,8 +85,8 @@ Landing.propTypes = {
   }).isRequired,
   history: PropTypes.shape(historyPropTypes).isRequired,
   socialAuthHandler: PropTypes.func.isRequired,
-  isAuth: PropTypes.bool.isRequired,
-  setHeroContentNow: PropTypes.func.isRequired
+  setHeroContentNow: PropTypes.func.isRequired,
+  resetUser: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

@@ -6,15 +6,17 @@ const Button = ({
   children,
   color = 'white',
   className = '',
+  onClick,
   ...props
 }) => (
-  <button {...props} type="button" className={`App__Button ${color} ${className}`}>
+  <button {...props} type="button" className={`App__Button ${color} ${className}`} onClick={onClick}>
     {children}
   </button>
 );
 
 Button.propTypes = {
   color: PropTypes.string.isRequired,
+  onClick: PropTypes.func.isRequired
 };
 
 export default Button;

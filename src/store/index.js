@@ -5,7 +5,8 @@ import rootReducer from './reducers/index';
 
 let composeEnhancers = compose;
 if (process.env.NODE_ENV === 'development') {
-  composeEnhancers =  window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+  // eslint-disable-next-line
+  composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 }
 
 const middleware = [thunk];

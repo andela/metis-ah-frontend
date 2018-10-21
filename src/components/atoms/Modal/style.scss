@@ -6,7 +6,7 @@
     background-color: #fff;
     border: 1px solid #ccc;
     width: 60%;
-    height: 70%;
+    height: auto;
     top: (50% - (70%/2));
     left: (50% - (60%/2));
     border-radius: 5px;
@@ -61,5 +61,6 @@
     .Modal {
         width: 80%;
         left: (50% - (80%/2));
+        height: auto;
     }
 }

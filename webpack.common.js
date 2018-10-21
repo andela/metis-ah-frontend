@@ -1,6 +1,10 @@
 const path = require('path');
+const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
+
+const { definitions } = new Dotenv();
 
 module.exports = {
   mode: 'development',
@@ -42,8 +46,9 @@ module.exports = {
   plugins: [new HtmlWebpackPlugin({
     template: 'src/static/index.html',
     filename: 'index.html',
-    inject: 'body'
+    inject: 'body',
   }),
-  new CompressionPlugin()
+  new CompressionPlugin(),
+  new webpack.DefinePlugin({ ...definitions })
   ]
 };

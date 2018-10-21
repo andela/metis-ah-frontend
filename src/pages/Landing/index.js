@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { parse } from 'query-string';
 import PropTypes from 'prop-types';
-import { history as historyPropTypes } from 'history-prop-types';
 import Header from 'Components/compounds/Header';
 import Footer from 'Components/compounds/Footer';
 import FeaturedArticles from 'Components/compounds/FeaturedArticles';
@@ -26,21 +24,6 @@ class Landing extends Component {
     };
     const { setHeroContentNow } = this.props;
     setHeroContentNow(heroContent);
-
-    const { socialAuthHandler, resetUser } = this.props;
-    const { match, history } = this.props;
-    const media = match.params.type;
-    const code = parse(history.location.search);
-
-    const user = JSON.parse(sessionStorage.getItem('user'));
-
-    if (user) {
-      resetUser(user);
-    }
-
-    if (media) {
-      socialAuthHandler(media, code);
-    }
   }
 
   render() {
@@ -83,10 +66,7 @@ Landing.propTypes = {
       id: PropTypes.node,
     }).isRequired,
   }).isRequired,
-  history: PropTypes.shape(historyPropTypes).isRequired,
-  socialAuthHandler: PropTypes.func.isRequired,
   setHeroContentNow: PropTypes.func.isRequired,
-  resetUser: PropTypes.func.isRequired,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

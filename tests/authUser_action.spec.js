@@ -50,7 +50,7 @@ describe('authUser actions', () => {
     });
 
     store
-      .dispatch(socialAuth('google', { code: 'sijdnvsdkvjbdsvlasdkjv' }))
+      .dispatch(socialAuth('google', { code: 'sijdnvsdkvjbdsvlasdkjv' }, []))
       .then(() => {
         expect(store.getActions()).toEqual(expectedAction);
         done();
@@ -73,7 +73,7 @@ describe('authUser actions', () => {
       isAuthenticated: false,
     });
     store
-      .dispatch(socialAuth('facebook', { code: 'sijdnvsdkvjbdsvlasdkjv' }))
+      .dispatch(socialAuth('facebook', { code: 'sijdnvsdkvjbdsvlasdkjv' }, []))
       .then(() => {
         expect(store.getActions()).toEqual(expectedAction);
         done();

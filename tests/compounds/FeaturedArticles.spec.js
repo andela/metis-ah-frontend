@@ -12,7 +12,7 @@ import updateFeaturedArticles from '../../src/store/actions/featuredArticlesActi
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
-const url = 'https://metis-ah-staging.herokuapp.com/api/v1/articles/featured'
+const url = 'https://metis-ah-staging.herokuapp.com/api/v1/articles/featured';
 
 describe('Featured Articles', () => {
   beforeEach(() => {

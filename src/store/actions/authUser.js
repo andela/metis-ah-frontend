@@ -10,6 +10,8 @@ const {
   MODAL_CLOSE,
   SIGNUP_SUCCESS,
   RESET_CURRENT_USER,
+  TOGGLE_USER_MENU,
+  LOGOUT,
 } = constants;
 
 export const setCurrentUser = user => ({
@@ -43,9 +45,25 @@ export const resetCurrentUser = user => ({
   payload: user,
 });
 
+export const toggleMenu = () => ({
+  type: TOGGLE_USER_MENU,
+});
+
+export const logoutUser = (history) => {
+  localStorage.removeItem('user');
+  history.push('/');
+
+  return {
+    type: LOGOUT,
+  };
+};
+
 export const createUser = (postData, history) => (dispatch) => {
   dispatch(userStarted());
-  return axios.post('/users/auth/signup', postData)
+  return axios.post('/users/auth/signup', {
+    ...postData,
+    verifyURL: 'https://metis-ah-frontend-staging.herokuapp.com',
+  })
     .then((response) => {
       toastr.success(response.data.data.message);
       dispatch(signupSuccessful(response.data));
@@ -75,17 +93,15 @@ export const loginUser = postData => (dispatch) => {
     });
 };
 
-export const socialAuth = (media, code) => (dispatch) => {
+export const socialAuth = (media, code, history) => (dispatch) => {
   switch (media) {
     case ('twitter'):
       if (code.oauth_token && code.oauth_verifier) {
         return axios.get(`/users/auth/${media}/redirect?oauth_token=${code.oauth_token}&oauth_verifier=${code.oauth_verifier}`)
           .then((response) => {
-            sessionStorage.setItem('user', JSON.stringify(response.data.data));
+            localStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
-          })
-          .catch((error) => {
-            console.log(error);
+            history.push('/');
           });
       }
       return;
@@ -93,11 +109,9 @@ export const socialAuth = (media, code) => (dispatch) => {
       if (code.code) {
         return axios.get(`/users/auth/${media}/redirect?code=${code.code}`)
           .then((response) => {
-            sessionStorage.setItem('user', JSON.stringify(response.data.data));
+            localStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
-          })
-          .catch((error) => {
-            console.log(error);
+            history.push('/');
           });
       }
   }

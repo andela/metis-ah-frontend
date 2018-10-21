@@ -10,12 +10,10 @@ import { createUser } from '../../src/store/actions/authUser';
 import Signup from '../../src/components/compounds/Signup/Signup';
 import Modal from '../../src/components/atoms/Modal';
 import formValid from '../../src/util/helpers/formValid';
-import BASE_URL from '../../url.json';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-
-const url = `${BASE_URL}/users/auth/signup`;
+const url = `${process.env.BASE_URL}/users/auth/signup`;
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

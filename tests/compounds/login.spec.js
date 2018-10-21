@@ -8,12 +8,10 @@ import configureMockStore from 'redux-mock-store';
 import { createUser } from '../../src/store/actions/authUser';
 import Login from '../../src/components/compounds/LoginForm';
 import formValid from '../../src/util/helpers/LoginFormValid';
-import BASE_URL from '../../url.json';
 
 Enzyme.configure({ adapter: new Adapter() });
 
-
-const url = `${BASE_URL}/users/auth/login`;
+const url = `${process.env.BASE_URL}/users/auth/login`;
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

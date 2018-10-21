@@ -55,6 +55,7 @@ export const createUser = (postData, history) => (dispatch) => {
     .catch((error) => {
       checkError(error);
       dispatch(userFail());
+      console.log('failed');
     });
 };
 

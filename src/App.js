@@ -13,6 +13,7 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <Route path="/articles/:category" component={Articles} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
+        <Route path="/:type" component={Landing} />
       </Switch>
     </Fragment>
   </BrowserRouter>

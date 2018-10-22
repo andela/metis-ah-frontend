@@ -1,0 +1,35 @@
+
+.topLoader{
+  position: fixed;
+  width: 100%;
+  height: 5px;
+  top: 0;
+  z-index: 9000;
+  .innerLoader{
+    background-color: #4DD6A5;
+    background-image: linear-gradient(to right, #4DD6A5, #c8ec50, #fffdc9);
+    width: 0%;
+    height: 100%;
+    animation: load 2s linear infinite;
+  }
+}
+@keyframes load {
+  0%{
+    width: 0%
+  }
+  25%{
+    width: 100%
+  }
+  50%{
+    width:100%;
+    float: right;
+  }
+  75%{
+    width: 50%;
+    float: right;
+  }
+  100%{
+    float: right;
+    width: 0%;
+  }
+}

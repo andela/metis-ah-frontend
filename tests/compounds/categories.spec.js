@@ -11,9 +11,14 @@ describe('Categories', () => {
     const initStore = {
       categories: {
         categories: [
-          'Home',
-          'Tech',
-          'FOOD'
+          {id: 1, name:  "category 1"},
+          {id: 2, name:  "category 1"},
+          {id: 3, name:  "category 1"},
+          {id: 4, name:  "category 1"},
+          {id: 5, name:  "category 1"},
+          {id: 7, name:  "category 1"},
+          {id: 8, name:  "category 1"},
+          {id: 9, name:  "category 1"},
         ],
         selected: 'HOME',
       },

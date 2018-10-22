@@ -1,0 +1,16 @@
+.upload{
+  display: none;
+}
+
+.uploadLabel{
+  img{
+    height: 40px;
+    vertical-align: middle;
+  }
+  &:after{
+    content: 'Upload Article Banner';
+    color: #ccc;
+    position: relative;
+    bottom: -5px;
+  }
+}

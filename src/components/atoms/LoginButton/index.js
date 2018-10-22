@@ -40,13 +40,7 @@ class LoginButton extends Component {
         <button type="button" className="button login-button" onClick={this.showModalHandler}>
           Login
         </button>
-        {
-          modalOpen && (
-            <Modal onClick={this.closeModalHandler}>
-              <LoginForm closeModalHandler={this.closeModalHandler} />
-            </Modal>
-          )
-        }
+        
       </div>
     );
   }

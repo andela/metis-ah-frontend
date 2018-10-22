@@ -1,7 +1,7 @@
 {
 	"extends": "airbnb",
 	"parser": "babel-eslint",
-	"plugins": ["cypress"],
+	"plugins": ["cypress", "jest"],
 	"env": {
 		"browser": true,
 		"cypress/globals": true
@@ -14,7 +14,9 @@
 		}
 	},
 	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+		"react/jsx-filename-extension": [1, {
+			"extensions": [".js", ".jsx"]
+		}],
 		"one-var": 0,
 		"import/no-named-as-default": 0,
 		"one-var-declaration-per-line": 0,
@@ -24,7 +26,9 @@
 		"no-param-reassign": 0,
 		"comma-dangle": 0,
 		"curly": ["error", "multi-line"],
-		"import/no-unresolved": [2, { "commonjs": true }]
+		"import/no-unresolved": [2, {
+			"commonjs": true
+		}]
 	},
 	"settings": {
 		"import/resolver": "webpack"

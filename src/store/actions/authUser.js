@@ -1,4 +1,5 @@
 import axios from 'axios';
+import setAxiosHeader from 'Utils/helpers/setAxiosHeader';
 import constants from '../constants';
 import checkError from '../../util/helpers/error';
 
@@ -7,12 +8,14 @@ const {
   USER_SIGNUP_FAILED,
   USER_SIGNUP_STARTED,
   MODAL_SHOW,
-  MODAL_CLOSE,
   SIGNUP_SUCCESS,
+  MODAL_CLOSE,
   RESET_CURRENT_USER,
   TOGGLE_USER_MENU,
   LOGOUT,
 } = constants;
+const today = new Date();
+const expireAt = new Date(today.setFullYear(today.getFullYear() + 1))
 
 export const setCurrentUser = user => ({
   type: SET_CURRENT_USER,
@@ -50,7 +53,7 @@ export const toggleMenu = () => ({
 });
 
 export const logoutUser = (history) => {
-  localStorage.removeItem('user');
+  localStorage.clear();
   history.push('/');
 
   return {
@@ -73,7 +76,6 @@ export const createUser = (postData, history) => (dispatch) => {
     .catch((error) => {
       checkError(error);
       dispatch(userFail());
-      console.log('failed');
     });
 };
 
@@ -81,10 +83,14 @@ export const loginUser = postData => (dispatch) => {
   dispatch(userStarted());
   return axios.post('/users/auth/login', postData)
     .then((response) => {
-      const user = JSON.stringify(response.data.data);
+      const user = JSON.stringify(response.data);
       toastr.success(response.data.data.message);
       dispatch(setCurrentUser(response.data));
       localStorage.setItem('user', `${user}`);
+      setAxiosHeader(response.data.data.token);
+      localStorage.setItem('userToken', response.data.data.token);
+      localStorage.setItem('expireAt', expireAt);
+      console.log(expireAt);
       dispatch(closeModal());
     })
     .catch((error) => {
@@ -101,6 +107,9 @@ export const socialAuth = (media, code, history) => (dispatch) => {
           .then((response) => {
             localStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
+            setAxiosHeader(response.data.data.token);
+            localStorage.setItem('userToken', response.data.data.token);
+            localStorage.setItem('expireAt', expireAt);
             history.push('/');
           });
       }
@@ -111,6 +120,9 @@ export const socialAuth = (media, code, history) => (dispatch) => {
           .then((response) => {
             localStorage.setItem('user', JSON.stringify(response.data.data));
             dispatch(setCurrentUser(response.data));
+            setAxiosHeader(response.data.data.token);
+            localStorage.setItem('userToken', response.data.data.token);
+            localStorage.setItem('expireAt', expireAt);
             history.push('/');
           });
       }
@@ -120,6 +132,9 @@ export const verifyAccount = verifyToken => (dispatch) => {
   return axios.put(`/users/verify/${verifyToken}`)
     .then((response) => {
       localStorage.setItem('user', JSON.stringify(response.data.data));
+      setAxiosHeader(response.data.data.token);
+      localStorage.setItem('userToken', response.data.data.token);
+      localStorage.setItem('expireAt', expireAt);
       toastr.success('Your account has been verified');
       dispatch(setCurrentUser(response.data));
     })

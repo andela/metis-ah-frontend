@@ -12,4 +12,31 @@
       margin: 100px auto;
     }
   }
+  .loading {
+		display: flex;
+		flex:1;
+		width: 100%;
+    height: 64px;
+    justify-content: center;
+    align-items: center
+	}
+	.loading:after {
+		content: '';
+		display: block;
+		width: 56px;
+		height: 56px;
+		margin: 1px;
+		border-radius: 50%;
+		border: 5px solid #13b47a;
+		border-color: #13b47a transparent #13b47a transparent;
+		animation: loading 1.2s linear infinite;
+	}
+  @keyframes loading {
+		0% {
+			transform: rotate(0deg);
+		}
+		100% {
+			transform: rotate(360deg);
+		}
+	}
 }

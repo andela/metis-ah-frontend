@@ -1,17 +1,39 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
 
-import FeaturedCards from 'Components/compounds/FeaturedCards';
+import FeaturedCards from '../FeaturedCards';
+import updateFeaturedArticles from '../../../store/actions/featuredArticlesAction';
 import './style.scss';
 
-const FeaturedArticles = () => (
-  <div className="Featured-ArticlesWrapper">
-    <FeaturedCards />
-    <Link className="more" to="/">
-      <span>SEE ALL FEATURED</span>
-      <i className="fas fa-chevron-right right" />
-    </Link>
-  </div>
-);
+class FeaturedArticles extends React.Component {
+  componentDidMount() {
+    const { updateFeaturedArticlesAction } = this.props;
+    updateFeaturedArticlesAction();
+  }
 
-export default FeaturedArticles;
+  render() {
+    const { articlesFeatured } = this.props;
+
+    return (
+      <div className="Featured-ArticlesWrapper">
+        <FeaturedCards featured={articlesFeatured} />
+      </div>
+    );
+  }
+}
+
+FeaturedArticles.propTypes = {
+  updateFeaturedArticlesAction: PropTypes.func.isRequired,
+  articlesFeatured: PropTypes.arrayOf(PropTypes.object).isRequired
+};
+
+const mapStateToProps = state => ({
+  articlesFeatured: state.featuredArticles
+});
+
+const mapDispatchToProps = dispatch => ({
+  updateFeaturedArticlesAction: () => dispatch(updateFeaturedArticles())
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(FeaturedArticles);

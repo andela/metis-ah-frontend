@@ -1,21 +1,12 @@
 import React from 'react';
-
-const convertLikes = (likes) => {
-  if (likes >= 1000) {
-    let num = likes / 1000;
-    num = num.toString();
-    num += 'K';
-
-    return num;
-  }
-};
+import convertLikes from '../../util/convertLikes';
 
 const PopularAuthorsCards = props => (
-  props.popular.map(item => (
-    <div key={item.name} className="Popular-Authors-Card">
+  props.authors.map(item => (
+    <div key={item.id} className="Popular-Authors-Card">
       <img src={item.image} alt="Author" className="image" />
-      <p className="name">{item.name.toUpperCase()}</p>
-      <p className="likes">{`${convertLikes(item.likes)} Likes this week`}</p>
+      <p className="name">{`${item.firstname} ${item.lastname}`}</p>
+      <p className="likes">{`${convertLikes(item.likesCount)} Likes this week`}</p>
     </div>
   ))
 );

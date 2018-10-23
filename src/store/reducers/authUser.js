@@ -1,7 +1,12 @@
-import {
-  SET_CURRENT_USER, USER_SIGNUP_FAILED, USER_SIGNUP_STARTED,
-  MODAL_CLOSE, MODAL_SHOW, SIGNUP_SUCCESS
-} from '../constants';
+import constants from '../constants';
+
+const {
+  SET_CURRENT_USER, USER_SIGNUP_FAILED,
+  USER_SIGNUP_STARTED,
+  MODAL_SHOW,
+  MODAL_CLOSE,
+  SIGNUP_SUCCESS,
+} = constants;
 
 const initialState = {
   user: {},

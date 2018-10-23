@@ -18,7 +18,7 @@ const popularAuthors = [
 
 describe('PopularAuthorsCards', () => {
   it('should contain the required components', () => {
-    const wrapper = shallow(<PopularAuthorsCards popular={popularAuthors} />);
+    const wrapper = shallow(<PopularAuthorsCards authors={popularAuthors} />);
 
     expect(wrapper.getElements().length).toEqual(2);
   });

@@ -1,35 +1,19 @@
-import image1 from 'Images/john.jpg';
-import image2 from 'Images/jehonadab.jpg';
-import image3 from 'Images/orji.jpg';
-import image4 from 'Images/daniel.jpg';
+import actionTypes from '../constants';
 
-const initialState = {
-  popularAuthors: [
-    {
-      name: 'john obi',
-      likes: '3400',
-      image: image1,
-    },
-    {
-      name: 'jehonadab okpukoro',
-      likes: '3400',
-      image: image2,
-    },
-    {
-      name: 'Ikechukwu Orji',
-      likes: '3400',
-      image: image3,
-    },
-    {
-      name: 'Daniel Adekunle',
-      likes: '3400',
-      image: image4,
-    }
-  ]
-};
+const {
+  UPDATE_AUTHORS_SUCCESS,
+  UPDATE_AUTHORS_FAILURE
+} = actionTypes;
 
-const popularAuthors = (state = initialState, action) => {
-  return state;
+const popularAuthors = (state = [], action) => {
+  switch (action.type) {
+    case UPDATE_AUTHORS_SUCCESS:
+      return action.payload;
+    case UPDATE_AUTHORS_FAILURE:
+      return action.payload;
+    default:
+      return state;
+  }
 };
 
 export default popularAuthors;

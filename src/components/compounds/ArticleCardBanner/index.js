@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
+import timePast from 'time_past';
 
 import './style.scss';
 
@@ -31,10 +32,11 @@ class ArticleCardBanner extends Component {
   render() {
     const { hover } = this.state;
     const { item } = this.props;
+
     return (
       <div
         className="ArticleCard__banner article-card-banner"
-        style={hover ? {} : style(item.banner)}
+        style={hover ? {} : style(item.imageUrl)}
         onMouseEnter={this.clearStyle}
         onMouseLeave={this.returnStyle}
       >
@@ -49,7 +51,7 @@ class ArticleCardBanner extends Component {
             {item.description}
           </p>
           <p className="ArticleCard__date">
-            {item.date}
+            {timePast(item.createdAt)}
           </p>
         </div>
       </div>
@@ -61,8 +63,8 @@ ArticleCardBanner.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
-    date: PropTypes.string.isRequired,
-    banner: PropTypes.string.isRequired,
+    createdAt: PropTypes.string.isRequired,
+    imageUrl: PropTypes.string.isRequired,
   }).isRequired,
 };
 

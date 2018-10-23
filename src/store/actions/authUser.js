@@ -1,8 +1,14 @@
 import axios from 'axios';
-import {
-  SET_CURRENT_USER, USER_SIGNUP_FAILED, USER_SIGNUP_STARTED, MODAL_SHOW, MODAL_CLOSE, SIGNUP_SUCCESS,
-} from '../constants';
+import constants from '../constants';
 import checkError from '../../util/helpers/error';
+
+const {
+  SET_CURRENT_USER, USER_SIGNUP_FAILED,
+  USER_SIGNUP_STARTED,
+  MODAL_SHOW,
+  MODAL_CLOSE,
+  SIGNUP_SUCCESS,
+} = constants;
 
 const setCurrentUser = user => ({
   type: SET_CURRENT_USER,

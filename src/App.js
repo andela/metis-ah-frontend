@@ -5,6 +5,7 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Landing from 'Pages/Landing';
 import Articles from 'Pages/Articles';
 import SuccessSignupMessage from 'Pages/SignupInfo';
+import SearchPage from 'Pages/Search';
 
 const App = () => (
   <BrowserRouter>
@@ -13,6 +14,7 @@ const App = () => (
         <Route exact path="/" component={Landing} />
         <Route path="/articles/:category" component={Articles} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
+        <Route path="/search" component={SearchPage} />
       </Switch>
     </Fragment>
   </BrowserRouter>

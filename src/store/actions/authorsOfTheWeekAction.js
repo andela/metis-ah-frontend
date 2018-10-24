@@ -3,7 +3,7 @@ import constants from '../constants';
 import articlesCommonAction from './articlesCommonAction';
 
 const { success, failure } = articlesCommonAction;
-const url = 'http://metis-ah-staging.herokuapp.com/api/v1/authors/authors-of-the-week';
+const url = 'https://metis-ah-staging.herokuapp.com/api/v1/authors/authors-of-the-week';
 const {
   UPDATE_AUTHORS_SUCCESS,
   UPDATE_AUTHORS_FAILURE

@@ -73,7 +73,13 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Hero.propTypes = {
-  heroContent: PropTypes.object.isRequired,
+  heroContent: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    poster: PropTypes.string,
+    buttonIsVisible: PropTypes.bool,
+    className: PropTypes.string
+  }).isRequired,
   isAuth: PropTypes.bool.isRequired,
   modalOpen: PropTypes.bool.isRequired,
   showModalHandler: PropTypes.func.isRequired,

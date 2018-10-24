@@ -8,8 +8,6 @@ import App from './App';
 import setAxiosHeader from './util/helpers/setAxiosHeader';
 import { setCurrentUser } from './store/actions/authUser';
 
-axios.defaults.baseURL = BASE_URL;
-
 if (localStorage.user) {
   const user = JSON.parse(localStorage.getItem('user'));
   store.dispatch(setCurrentUser(user));

@@ -136,14 +136,25 @@ exports[`article page test should render the article page correctly 1`] = `
                                   </strong>
                                 </button>
                               </WriteButton>
-                              <Button>
-                                <button
-                                  className="button login-button"
-                                  type="button"
+                              <Connect(LoginButton)>
+                                <LoginButton
+                                  closeModalHandle={[Function]}
+                                  isAuth={false}
+                                  modalOpen={false}
+                                  showModalHandle={[Function]}
+                                  userfail={[Function]}
                                 >
-                                  Login
-                                </button>
-                              </Button>
+                                  <div>
+                                    <button
+                                      className="button login-button"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      Login
+                                    </button>
+                                  </div>
+                                </LoginButton>
+                              </Connect(LoginButton)>
                             </div>
                           </NavBar>
                         </Connect(NavBar)>

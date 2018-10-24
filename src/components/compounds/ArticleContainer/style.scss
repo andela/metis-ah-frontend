@@ -28,7 +28,7 @@
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
-		width: 280px;
+		width: 380px;
 		padding: 1%;
 		margin: auto;
 		align-items: center;
@@ -49,6 +49,20 @@
 		}
 		100% {
 			transform: rotate(360deg);
+		}
+	}
+}
+
+@media screen and (max-width: 425px) {
+	.article-inner-container {
+		.article-container-card {
+			width: 280px;
+			.notification-icon {
+				font-size: 25px;
+			}
+			p {
+				font-size: 17px;
+			}
 		}
 	}
 }

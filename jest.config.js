@@ -1,7 +1,13 @@
 module.exports = {
   verbose: true,
   collectCoverage: true,
-  collectCoverageFrom: ['src/**/*.{js,jsx}'],
+  collectCoverageFrom: [
+    'src/**/*.{js,jsx}',
+    '!**/node_modules/**',
+    '!**/src/server/**',
+    '!**/src/index.js',
+    '!**/src/App.js'
+  ],
   testMatch: ['<rootDir>/tests/**/?(*.)(spec|test).js?(x)'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   // testEnvironment: 'jsdom',

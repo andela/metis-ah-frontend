@@ -4,11 +4,10 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import Button from '../../atoms/Button/SignButton';
 import Input from '../../atoms/InputField/InputField';
-import { createUser } from '../../../store/actions/authUser';
+import { createUser, closeModal } from '../../../store/actions/authUser';
 import handleValidation from '../../../util/helpers/formValid';
-import MediaSignupSection from '../../atoms/Button/Media';
 
-import './Form.scss';
+import './style.scss';
 
 /**
  * @class Signup
@@ -86,12 +85,11 @@ class Signup extends Component {
    */
   render() {
     const { newUser, showPassword } = this.state;
-    const { loading, closeModalHandler } = this.props;
+    const { loading, closeModalAction } = this.props;
     return (
       <div>
-        <button type="button" onClick={closeModalHandler} className="closer">&times;</button>
+        <button type="button" onClick={closeModalAction} className="closer signup_close">&times;</button>
         <div className="FormGroup">
-          <MediaSignupSection />
           <form className="signupForm" onSubmit={this.handleSubmitEvent}>
             <div className="field control has-icons-right">
               <Input
@@ -151,7 +149,7 @@ class Signup extends Component {
                 </div>
               </div>
             </div>
-            <Button className="button is-fullWidth is-medium signBtn" disabled={loading}>
+            <Button className="button is-fullWidth is-medium signBtn signup_button" disabled={loading}>
                 REGISTER
               <i className={`${loading ? 'fas fa-spinner fa-spin' : ''} spin`} />
             </Button>
@@ -162,7 +160,7 @@ class Signup extends Component {
   }
 }
 
-Signup.prototypes = {
+Signup.proptype = {
   createUserAction: PropTypes.func.isRequired
 };
 
@@ -171,7 +169,8 @@ Signup.contextTypes = {
 };
 
 const mapDispatchToProps = dispatch => ({
-  createUserAction: (userData, history) => dispatch(createUser(userData, history))
+  createUserAction: (userData, history) => dispatch(createUser(userData, history)),
+  closeModalAction: () => dispatch(closeModal())
 });
 
 const mapStateToProps = state => ({

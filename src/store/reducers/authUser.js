@@ -14,7 +14,6 @@ const initialState = {
   loading: false,
   modalOpen: false
 };
-
 const authUserReducer = (state = initialState, action) => {
   switch (action.type) {
     case USER_SIGNUP_STARTED:

@@ -1,4 +1,6 @@
-import { FETCH_CATEGORIES } from 'Constants';
+import Constants from '../constants';
+
+const { FETCH_CATEGORIES } = Constants;
 
 const initialState = {
   categories: [],

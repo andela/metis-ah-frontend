@@ -16,7 +16,6 @@ if (localStorage.user) {
   setAxiosHeader(user);
 }
 
-const BASE_URL = 'https://metis-ah-staging.herokuapp.com/api/v1';
 axios.defaults.baseURL = BASE_URL;
 
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));

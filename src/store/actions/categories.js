@@ -1,5 +1,7 @@
 import axios from 'axios';
-import { FETCH_CATEGORIES } from '../constants';
+import constants from '../constants';
+
+const { FETCH_CATEGORIES } = constants;
 
 export const getCategoriesSuccess = categories => ({
   type: FETCH_CATEGORIES,

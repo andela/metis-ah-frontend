@@ -1,0 +1,94 @@
+.Popular-Authors-Container {
+  width: 100%;
+  padding: 5% 10% 5%;
+  text-align: center;
+
+  .Popular-Authors-Wrapper {
+    width: 100%;
+    overflow-x: scroll;
+
+    .title {
+      text-align: center;
+      font-size: 24px;
+      font-weight: bold;
+      font-style: normal;
+      font-stretch: normal;
+      letter-spacing: normal;
+      color: #000000;
+    }
+
+    .Popular-Authors {
+      display: flex;
+      width: 1012px;
+      margin: auto;
+    }
+
+    .Popular-Authors-Card {
+      flex: 0 0 210px;
+      height: 275px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      background-color: var(--white);
+      border: solid 1px #e0e0e0;
+      margin-right: 43px;
+      margin-bottom: 15px;
+
+      .image {
+        border-radius: 50%;
+        width: 130.1px;
+        height: 134px;
+        background-color: #c4c4c4;
+        border: solid 0 #e0e0e0;
+        margin: 43px auto 0 auto;
+      }
+
+      .name {
+        width: 100%;
+        font-family: Roboto;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.9px;
+        color: #000000;
+        margin-top: 14px;
+        text-align: center;
+      }
+
+      .likes {
+        width: 100%;
+        font-family: Roboto;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: 0.7px;
+        color: rgba(0, 0, 0, 0.54);
+        text-align: center;
+      }
+    }
+
+    .Popular-Authors-Card:last-of-type {
+      margin-right: 0;
+    }
+
+    @media screen and (max-width: 969px) {
+      .Popular-Authors-Card:last-of-type {
+        margin-right: 2%;
+      }
+
+      .Popular-Authors-Card {
+        margin-right: 2%;
+        margin-left: 2%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Popular-Authors-Container {
+    padding: 5% 3%;
+  }
+}

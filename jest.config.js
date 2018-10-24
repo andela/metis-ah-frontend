@@ -3,7 +3,6 @@ module.exports = {
   collectCoverage: true,
   collectCoverageFrom: ['src/**/*.{js,jsx}'],
   testMatch: ['<rootDir>/tests/**/?(*.)(spec|test).js?(x)'],
-  setupFiles: ['<rootDir>/tests/enz.js'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   // testEnvironment: 'jsdom',
   // testURL: 'http://localhost',
@@ -19,8 +18,8 @@ module.exports = {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':
 			'<rootDir>/__mocks__/fileMock.js',
-    // Images: path.resolve(__dirname, './src/static/images'),
     '^Pages(.*)$': '<rootDir>/src/pages$1',
+    '^Images(.*)$': '<rootDir>/src/static/images$1',
     '^Components(.*)$': '<rootDir>/src/components$1',
     'Actions(.*)$': '<rootDir>/src/store/actions$1',
     'Constants(.*)$': '<rootDir>/src/store/constants$1',

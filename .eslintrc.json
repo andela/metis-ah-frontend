@@ -23,8 +23,7 @@
 		"no-param-reassign": 0,
 		"comma-dangle": 0,
 		"curly": ["error", "multi-line"],
-		"import/no-unresolved": [2, { "commonjs": true }],
-		"react/forbid-prop-types": 0
+		"import/no-unresolved": [2, { "commonjs": true }]
 	},
 	"settings": {
 		"import/resolver": "webpack"

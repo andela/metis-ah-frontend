@@ -91,11 +91,11 @@ const mapDispatchToProps = dispatch => ({
 });
 
 ArticleContainer.propTypes = {
-  articles: PropTypes.array.isRequired,
-  loading: PropTypes.bool.isRequired,
-  match: PropTypes.object.isRequired,
-  getArticles: PropTypes.func.isRequired,
-  categories: PropTypes.array.isRequired
+  articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+	loading: PropTypes.bool.isRequired,
+	match: PropTypes.object.isRequired,
+	getArticles: PropTypes.func.isRequired,
+	categories: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
 export default withRouter(

@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import { mount } from 'enzyme';
 import thunk from 'redux-thunk';
 import configureStore from 'redux-mock-store';
-import Articles from 'Pages/Articles';
+import Articles from '../../../src/pages/Articles';
 
 const initialState = {
   article: {
@@ -19,6 +19,11 @@ const initialState = {
     loading: false,
     articles: [],
     error: ''
+  },
+  authUser: {
+    modalOpen: false,
+    isAuthenticated: false,
+    loading: false
   },
   categories: {
     categories: [

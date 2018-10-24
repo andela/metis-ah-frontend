@@ -1,7 +1,9 @@
 import axios from 'axios';
-import {
+import constants from 'Constants';
+
+const {
   SET_HERO_CONTENT, FETCH_ARTICLE_START, FETCH_ARTICLE_SUCCESS, FETCH_ARTICLE_FAIL
-} from '../constants';
+} = constants;
 
 export const setHeroContent = category => ({
   type: SET_HERO_CONTENT,

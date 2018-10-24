@@ -1,10 +1,12 @@
 import banner from 'Images/hero.jpg';
-import {
+import constants from 'Constants';
+
+const {
   FETCH_ARTICLE_START,
   FETCH_ARTICLE_SUCCESS,
   FETCH_ARTICLE_FAIL,
   SET_HERO_CONTENT
-} from 'Constants';
+} = constants;
 
 const initialState = {
   heroContent: {

@@ -100,7 +100,7 @@ exports[`article page test should render the article page correctly 1`] = `
                   menu={false}
                 >
                   <div
-                    className="navbar-menu  'block'"
+                    className="navbar-menu 'block'"
                     id="profile-nav"
                   >
                     <Search>
@@ -117,50 +117,36 @@ exports[`article page test should render the article page correctly 1`] = `
                       <div
                         className="navbar-item"
                       >
-                        <NavBar>
-                          <div
-                            className="buttons"
+                        <Connect(NavBar)>
+                          <NavBar
+                            dispatch={[Function]}
+                            isAuth={false}
                           >
-                            <Button>
-                              <Link
-                                className="button login-button"
-                                replace={false}
-                                role="button"
-                                to="\\\\"
-                              >
-                                <a
-                                  className="button login-button"
-                                  href="/\\\\"
-                                  onClick={[Function]}
-                                  role="button"
-                                >
-                                  Login
-                                </a>
-                              </Link>
-                            </Button>
-                            <Button>
-                              <Link
-                                className="button btn app-general-button"
-                                id="app-write-button"
-                                replace={false}
-                                role="button"
-                                to="\\\\"
-                              >
-                                <a
+                            <div
+                              className="buttons"
+                            >
+                              <WriteButton>
+                                <button
                                   className="button btn app-general-button"
-                                  href="/\\\\"
                                   id="app-write-button"
-                                  onClick={[Function]}
-                                  role="button"
+                                  type="button"
                                 >
                                   <strong>
                                     WRITE
                                   </strong>
-                                </a>
-                              </Link>
-                            </Button>
-                          </div>
-                        </NavBar>
+                                </button>
+                              </WriteButton>
+                              <Button>
+                                <button
+                                  className="button login-button"
+                                  type="button"
+                                >
+                                  Login
+                                </button>
+                              </Button>
+                            </div>
+                          </NavBar>
+                        </Connect(NavBar)>
                       </div>
                     </div>
                   </div>
@@ -168,7 +154,7 @@ exports[`article page test should render the article page correctly 1`] = `
               </nav>
               <Connect(Hero)>
                 <Hero
-                  dispatch={[Function]}
+                  closeModalHandle={[Function]}
                   heroContent={
                     Object {
                       "buttonIsVisible": true,
@@ -178,6 +164,10 @@ exports[`article page test should render the article page correctly 1`] = `
                       "poster": "banner",
                     }
                   }
+                  isAuth={false}
+                  modalOpen={false}
+                  showModalHandler={[Function]}
+                  userfail={[Function]}
                 >
                   <div
                     className="hero"
@@ -201,12 +191,13 @@ exports[`article page test should render the article page correctly 1`] = `
                       A community where readers and writers come together to share and discuss knowledge and ideas.
                     </p>
                     <Button
-                      green={false}
+                      color="white"
                       key=".2"
-                      text="GET STARTED"
+                      onClick={[Function]}
                     >
                       <button
                         className="App__Button white "
+                        onClick={[Function]}
                         type="button"
                       >
                         GET STARTED
@@ -492,7 +483,7 @@ exports[`article page test should render the article page correctly 1`] = `
               </Connect(ArticleContainer)>
             </Route>
           </withRouter(Connect(ArticleContainer))>
-          <footer>
+          <Footer>
             <footer
               className="Main-Footer"
             >
@@ -688,7 +679,7 @@ exports[`article page test should render the article page correctly 1`] = `
                 </div>
               </Brand>
             </footer>
-          </footer>
+          </Footer>
         </div>
       </Articles>
     </Router>

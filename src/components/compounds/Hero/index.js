@@ -26,11 +26,10 @@ class Hero extends Component {
   render() {
     const {
       heroContent: {
-        name, description, poster, buttonIsVisible, className
+        name, description, poster, buttonIsVisible, className,
       }
     } = this.props;
     const { modalOpen, isAuth, showModalHandler } = this.props;
-    const { category } = this.props;
     const url = `linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(${poster})`;
 
     return (
@@ -43,9 +42,9 @@ class Hero extends Component {
         <h1 className="title">{name}</h1>
         <p className="text">{description}</p>
         {
-          buttonIsVisible && isAuth
+          buttonIsVisible && (isAuth
             ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
-            : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>
+            : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>)
         }
         {
           modalOpen && (
@@ -64,7 +63,6 @@ class Hero extends Component {
 const mapStateToProps = state => ({
   modalOpen: state.authUser.modalOpen,
   isAuth: state.authUser.isAuthenticated,
-  category: state.article.category,
   heroContent: state.article.heroContent
 });
 
@@ -75,8 +73,12 @@ const mapDispatchToProps = dispatch => ({
 });
 
 Hero.propTypes = {
-  category: PropTypes.object.isRequired, // Of(PropTypes.string).isRequired
-  heroContent: PropTypes.object.isRequired
+  heroContent: PropTypes.object.isRequired,
+  isAuth: PropTypes.bool.isRequired,
+  modalOpen: PropTypes.bool.isRequired,
+  showModalHandler: PropTypes.func.isRequired,
+  closeModalHandle: PropTypes.func.isRequired,
+  userfail: PropTypes.func.isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Radium(Hero));

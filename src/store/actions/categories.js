@@ -1,5 +1,5 @@
 import axios from 'axios';
-import constants from '../constants';
+import constants from 'Constants';
 
 const { FETCH_CATEGORIES } = constants;
 

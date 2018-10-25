@@ -20,7 +20,7 @@ const App = () => (
         <Route path="/social/:type" component={SocialAuthPage} />
         <Route exact path="/auth/reset-password" component={ResetPassword} />
         <Route exact path="/auth/reset-password/:token" component={UpdatePassword} />
-        <Route path="/verifyemail" component={VerifyEmail} />
+        <Route path="/verifyemail/:token" component={VerifyEmail} />
       </Switch>
     </Fragment>
   </BrowserRouter>

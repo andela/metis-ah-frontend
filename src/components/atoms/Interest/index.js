@@ -1,11 +1,33 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 import './style.scss';
 
-const Interest = ({ children, className, ...props }) => (
-  <div {...props} className={`interest ${className}`}>
-    {children}
-  </div>
-);
+class Interest extends Component {
+  state = {
+    selected: false,
+  }
+
+  render() {
+    const {
+      click, children, index, ...props
+    } = this.props;
+    const { selected } = this.state;
+    return (
+      <button
+        type="button"
+        {...props}
+        className={`interest ${selected ? 'selected' : 'not-selected'}`}
+        onClick={() => {
+          this.setState({
+            selected: !selected,
+          });
+          click(index);
+        }}
+      >
+        {children}
+      </button>
+    );
+  }
+}
 
 export default Interest;

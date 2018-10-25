@@ -116,3 +116,14 @@ export const socialAuth = (media, code, history) => (dispatch) => {
       }
   }
 };
+export const verifyAccount = verifyToken => (dispatch) => {
+  return axios.put(`/users/verify/${verifyToken}`)
+    .then((response) => {
+      localStorage.setItem('user', JSON.stringify(response.data.data));
+      toastr.success('Your account has been verified');
+      dispatch(setCurrentUser(response.data));
+    })
+    .catch(() => {
+      toastr.error('Could not verify you account at this time');
+    });
+};

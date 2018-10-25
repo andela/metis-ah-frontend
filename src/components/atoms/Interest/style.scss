@@ -4,10 +4,25 @@
   margin: 2px;
   text-align: center;
   border-radius: 3px;
+  border: none;
+  min-height: 70px;
+  font-size: 16px;
+}
+
+.interest:focus {
+  outline: none;
+  font-weight: bold;
+}
+
+.interest:hover {
+  outline: none;
+  box-shadow: 1px 1px 2px #333;
+  cursor: pointer;
 }
 
 .selected {
   background: #4dd6a5;
+  box-shadow: 1px 1px 2px #333;
 }
 
 .not-selected {

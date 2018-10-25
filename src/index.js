@@ -16,4 +16,6 @@ if (localStorage.user) {
   setAxiosHeader(user);
 }
 
+axios.defaults.baseURL = BASE_URL;
+
 ReactDOM.render(<Provider store={store}><App /></Provider>, document.getElementById('root'));

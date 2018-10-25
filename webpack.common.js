@@ -33,7 +33,8 @@ module.exports = {
     alias: {
       Images: path.resolve(__dirname, 'src/static/images'),
       Pages: path.resolve(__dirname, 'src/pages/'),
-      Components: path.resolve(__dirname, 'src/components')
+      Components: path.resolve(__dirname, 'src/components'),
+      Constants: path.resolve(__dirname, 'src/store/constants')
     }
   },
   plugins: [new HtmlWebpackPlugin({

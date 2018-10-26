@@ -1,5 +1,6 @@
 import React from 'react';
 import Enzyme, { mount } from 'enzyme';
+import { BrowserRouter } from 'react-router-dom';
 import Adapter from 'enzyme-adapter-react-16';
 import moxios from 'moxios';
 import thunk from 'redux-thunk';
@@ -75,7 +76,9 @@ describe('<Login />', () => {
       });
       const wrapper = mount(
         <Provider store={store}>
-          <Login />
+          <BrowserRouter>
+            <Login />
+          </BrowserRouter>
         </Provider>
       );
 

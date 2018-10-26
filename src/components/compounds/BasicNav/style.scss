@@ -1,0 +1,25 @@
+#navbar-plain {
+  background-color: white !important;
+  box-shadow: 0 2px 1px 0 rgba(0,0,0,0.08);
+
+  a {
+    color: black;
+  }
+  h1 {
+    display: inline-block;
+    color: black;
+    font-size: 30px;
+    margin-top: 0;
+    margin-left: 8px;
+    font-weight: bold;
+    position: absolute;
+    left: 55px;
+    width: 230px;
+    font-family: Roboto;
+  }
+
+  img {
+    max-height: 44px;
+    width: 44px;
+  }
+}

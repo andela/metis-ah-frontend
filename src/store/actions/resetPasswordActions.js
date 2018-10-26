@@ -1,38 +1,59 @@
 import axios from 'axios';
 
-import { STORE_PASSWORD_RESET_SUCCESS_MESSAGE, STORE_PASSWORD_RESET_ERROR_MESSAGE } from '../constants';
+import Alert from 'Utils/helpers/alert';
+import {
+  VERIFY_USER_EMAIL_SUCCESS,
+  VERIFY_USER_EMAIL_STARTED,
+  VERIFY_USER_EMAIL_FAILED,
+  RESET_PASSWORD_STARTED,
+  RESET_PASSWORD_FAILED,
+  RESET_PASSWORD_SUCCESS
+} from '../constants';
 
-const baseUrl = 'http://localhost:8000/api/v1';
+const clientUrl = 'https://metis-ah-frontend-staging.herokuapp.com';
 
 
 export const resetPassword = email => async (dispatch) => {
-  try {
-    const response = await axios.post(`${baseUrl}/users/auth/reset-password`, { email });
+  dispatch({
+    type: VERIFY_USER_EMAIL_STARTED
+  });
 
+  try {
+    const response = await axios.post('/users/auth/reset-password', { email, callbackUrl: clientUrl });
+
+    Alert.success(`${response.data.data.message}`);
     return dispatch({
-      type: STORE_PASSWORD_RESET_SUCCESS_MESSAGE,
+      type: VERIFY_USER_EMAIL_SUCCESS,
       message: response.data.data.message
     });
   } catch (error) {
+    Alert.error(error.response.data.message);
     return dispatch({
-      type: STORE_PASSWORD_RESET_ERROR_MESSAGE,
+      type: VERIFY_USER_EMAIL_FAILED,
       message: error.response.data.message
     });
   }
 };
 
-export const resetVerifiedUserPassword = (userInfo, token) => async (dispatch) => {
-  try {
-    const response = await axios.post(`${baseUrl}/users/auth/reset-password/${token}`, { userInfo });
+export const resetVerifiedUserPassword = (newPassword, token, history) => async (dispatch) => {
+  dispatch({
+    type: RESET_PASSWORD_STARTED
+  });
 
-    return dispatch({
-      type: STORE_PASSWORD_RESET_SUCCESS_MESSAGE,
+  try {
+    const response = await axios.put(`/users/auth/reset-password/${token}`, { password: newPassword, callbackUrl: clientUrl });
+
+    Alert.success(response.data.data.message);
+    dispatch({
+      type: RESET_PASSWORD_SUCCESS,
       message: response.data.data.message
     });
+    return history.push('/');
   } catch (error) {
+    Alert.error(error.response.data.data.message);
     return dispatch({
-      type: STORE_PASSWORD_RESET_ERROR_MESSAGE,
-      message: error.response.data.message
+      type: RESET_PASSWORD_FAILED,
+      message: error.response.data.data.message
     });
   }
 };

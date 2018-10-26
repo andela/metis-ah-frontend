@@ -1,0 +1,2476 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ProfileHero /> showing loading 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(ProfileHero)>
+    <ProfileHero
+      articles={Array []}
+      bio="Hello, I am a senior software developer who lives in toronto canada"
+      bookmarks={Array []}
+      createdAt="2018-10-26T11:38:51.791Z"
+      email="joeeasy@gmail.com"
+      fetchUserProfile={[Function]}
+      firstname="jehonadab"
+      followed={Array []}
+      follower={Array []}
+      id={14}
+      image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+      interests={
+        Array [
+          "runing",
+          " singing",
+          " climbing",
+          " jumping",
+        ]
+      }
+      isVerified={true}
+      lastname="Okpukoro"
+      loading={false}
+      premium={null}
+      profile={Object {}}
+      ratings={Array []}
+      roleId={2}
+      updateUserProfile={[Function]}
+      updatedAt="2018-10-28T11:01:55.505Z"
+      username="joeeasy"
+    >
+      <div
+        className="Profile"
+      >
+        <div
+          className="columns is-half-desktop"
+        >
+          <div
+            className="column is-three-fifths"
+          >
+            <div
+              className="Profile__content"
+            >
+              <div
+                className="columns"
+              >
+                <div
+                  className="column is-one-quarter is-paddingless MarginRight--25"
+                >
+                  <div
+                    className="Profile__img"
+                  >
+                    <img
+                      alt="Author's profile"
+                      src="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                    />
+                  </div>
+                </div>
+                <div
+                  className="column is-paddingless"
+                >
+                  <div
+                    className="Profile__info"
+                  >
+                    <h1
+                      className="Profile__name"
+                    >
+                      jehonadab Okpukoro
+                    </h1>
+                    <h5
+                      className="Profile__email"
+                    >
+                      joeeasy@gmail.com
+                    </h5>
+                    <h5
+                      className="Profile__username"
+                    >
+                      @
+                      joeeasy
+                    </h5>
+                  </div>
+                  <div
+                    className="Profile__action MarginTop--10"
+                  >
+                    <button
+                      className="btn btn-primary Profile__edit"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <i
+                        className="far fa-edit"
+                      />
+                      <span>
+                        Edit
+                      </span>
+                    </button>
+                    <UpdateProfile
+                      bio="Hello, I am a senior software developer who lives in toronto canada"
+                      closeModal={[Function]}
+                      email="joeeasy@gmail.com"
+                      firstname="jehonadab"
+                      handleUpdateUser={[Function]}
+                      image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                      interests={
+                        Array [
+                          "runing",
+                          " singing",
+                          " climbing",
+                          " jumping",
+                        ]
+                      }
+                      lastname="Okpukoro"
+                      modalIsOpen={false}
+                      readUrl={[Function]}
+                      username="joeeasy"
+                    >
+                      <div
+                        className="modal false"
+                      >
+                        <div
+                          className="modal-background"
+                        />
+                        <form
+                          className="modal-card"
+                          onSubmit={[Function]}
+                        >
+                          <header
+                            className="modal-card-head"
+                          >
+                            <p
+                              className="modal-card-title"
+                            >
+                              Update Profile
+                            </p>
+                            <button
+                              aria-label="close"
+                              className="delete"
+                              onClick={[Function]}
+                              type="button"
+                            />
+                          </header>
+                          <section
+                            className="modal-card-body"
+                          >
+                            <div
+                              className="container centerlized"
+                            >
+                              <div
+                                className="UpdateProfile"
+                                onSubmit={[Function]}
+                              >
+                                <div
+                                  className="field"
+                                >
+                                  <div
+                                    className="Upload__image"
+                                  >
+                                    <img
+                                      alt="update profile"
+                                      id="js__picturepreview"
+                                      src="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                                    />
+                                    <div
+                                      className="Upload__overlay"
+                                    >
+                                      <i
+                                        className="fas fa-camera fa-2x"
+                                      />
+                                    </div>
+                                    <input
+                                      id="fileUpload"
+                                      name="image"
+                                      onChange={[Function]}
+                                      type="file"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column"
+                                  >
+                                    <div
+                                      className="field"
+                                    >
+                                      <div
+                                        className="control"
+                                      >
+                                        <input
+                                          className="input"
+                                          defaultValue="jehonadab"
+                                          name="firstname"
+                                          placeholder="first name"
+                                          type="text"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="column"
+                                  >
+                                    <div
+                                      className="field"
+                                    >
+                                      <div
+                                        className="control"
+                                      >
+                                        <input
+                                          className="input"
+                                          defaultValue="Okpukoro"
+                                          name="lastname"
+                                          placeholder="lastname"
+                                          type="text"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column"
+                                  >
+                                    <div
+                                      className="field"
+                                    >
+                                      <div
+                                        className="control"
+                                      >
+                                        <input
+                                          className="input"
+                                          defaultValue="joeeasy"
+                                          name="username"
+                                          placeholder="username"
+                                          type="text"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div
+                                    className="column"
+                                  >
+                                    <div
+                                      className="field"
+                                    >
+                                      <div
+                                        className="control"
+                                      >
+                                        <input
+                                          className="input"
+                                          defaultValue="joeeasy@gmail.com"
+                                          name="email"
+                                          placeholder="email"
+                                          type="email address"
+                                        />
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div
+                                  className="field"
+                                >
+                                  <div
+                                    className="control"
+                                  >
+                                    <input
+                                      className="input"
+                                      defaultValue="runing, singing, climbing, jumping"
+                                      name="interests"
+                                      placeholder="interest: separate with comma(,)"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="field"
+                                >
+                                  <div
+                                    className="control"
+                                  >
+                                    <textarea
+                                      className="textarea"
+                                      defaultValue="Hello, I am a senior software developer who lives in toronto canada"
+                                      name="bio"
+                                      placeholder="Bio"
+                                      row="10"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  className="columns is-mobile Modal__action"
+                                />
+                              </div>
+                            </div>
+                          </section>
+                          <footer
+                            className="modal-card-foot"
+                          >
+                            <button
+                              className="button is-primary"
+                              type="submit"
+                            >
+                              Save
+                            </button>
+                            <button
+                              className="button i is-default is-right"
+                              onClick={[Function]}
+                              type="button"
+                            >
+                              Cancel
+                            </button>
+                          </footer>
+                        </form>
+                      </div>
+                    </UpdateProfile>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            className="column"
+          >
+            <ProfileStats
+              articles={Array []}
+              bookmarks={Array []}
+              followed={Array []}
+              follower={Array []}
+              ratings={Array []}
+            >
+              <div
+                className="Profile__stat MarginLeft__20"
+              >
+                <div
+                  className="ProfileStat__item"
+                >
+                  <div
+                    className="columns is-mobile"
+                  >
+                    <div
+                      className="column is-two-fifths"
+                    >
+                      <i
+                        className="fas fa-users ProfileStat--icon"
+                      />
+                      <span
+                        className="ProfileStat--label"
+                      >
+                        Followers:
+                      </span>
+                    </div>
+                    <div
+                      className="column ProfileStat--value"
+                    >
+                      0
+                       
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="ProfileStat__item"
+                >
+                  <div
+                    className="columns is-mobile"
+                  >
+                    <div
+                      className="column is-two-fifths"
+                    >
+                      <i
+                        className="fas fa-users ProfileStat--icon"
+                      />
+                      <span
+                        className="ProfileStat--label"
+                      >
+                        Following:
+                      </span>
+                    </div>
+                    <div
+                      className="column ProfileStat--value"
+                    >
+                      0
+                       
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="ProfileStat__item"
+                >
+                  <div
+                    className="columns is-mobile"
+                  >
+                    <div
+                      className="column is-two-fifths"
+                    >
+                      <i
+                        className="fas fa-bookmark ProfileStat--icon"
+                      />
+                      <span
+                        className="ProfileStat--label"
+                      >
+                        Bookmarks:
+                      </span>
+                    </div>
+                    <div
+                      className="column ProfileStat--value"
+                    >
+                      0
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="ProfileStat__item"
+                >
+                  <div
+                    className="columns is-mobile"
+                  >
+                    <div
+                      className="column is-two-fifths"
+                    >
+                      <i
+                        className="fas fa-newspaper ProfileStat--icon"
+                      />
+                      <span
+                        className="ProfileStat--label"
+                      >
+                        Articles:
+                      </span>
+                    </div>
+                    <div
+                      className="column ProfileStat--value"
+                    >
+                      0
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="ProfileStat__item"
+                >
+                  <div
+                    className="columns is-mobile"
+                  >
+                    <div
+                      className="column is-two-fifths"
+                    >
+                      <i
+                        className="far fa-star ProfileStat--icon"
+                      />
+                      <span
+                        className="ProfileStat--label"
+                      >
+                        Ratings:
+                      </span>
+                    </div>
+                    <div
+                      className="column ProfileStat--value"
+                    >
+                      0
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ProfileStats>
+          </div>
+        </div>
+      </div>
+    </ProfileHero>
+  </Connect(ProfileHero)>
+</Provider>
+`;
+
+exports[`Profile page test profile page to 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <ProfilePage
+        match={
+          Object {
+            "params": Object {
+              "userId": "1",
+            },
+          }
+        }
+      >
+        <div
+          className="profile"
+          id="profile"
+        >
+          <header>
+            <NavbarTop>
+              <nav
+                aria-label="main navigation"
+                className="navbar container Landing-Page-Header"
+                role="navigation"
+              >
+                <BrandContainer
+                  menu={false}
+                  showMenu={[Function]}
+                >
+                  <div
+                    className="navbar-brand brand header-brand-container"
+                  >
+                    <Link
+                      className="navbar-item"
+                      replace={false}
+                      to="/"
+                    >
+                      <a
+                        className="navbar-item"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="Authors haven logo"
+                          id="logo"
+                          src="test-file-stub"
+                        />
+                        <h1
+                          className="title"
+                        >
+                          Author's Haven
+                        </h1>
+                      </a>
+                    </Link>
+                    <button
+                      aria-expanded="false"
+                      aria-label="menu"
+                      className="navbar-burger burger' ' bug"
+                      data-target="profile-nav"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                    </button>
+                  </div>
+                </BrandContainer>
+                <SearchAndProfile
+                  menu={false}
+                >
+                  <div
+                    className="navbar-menu 'block'"
+                    id="profile-nav"
+                  >
+                    <Search>
+                      <input
+                        aria-label="search author's haven"
+                        className="input is-primary app-search"
+                        placeholder="Search"
+                        type="text"
+                      />
+                    </Search>
+                    <div
+                      className="navbar-end"
+                    >
+                      <div
+                        className="navbar-item"
+                      >
+                        <Connect(withRouter(NavBar))>
+                          <withRouter(NavBar)
+                            dispatch={[Function]}
+                            history={[Function]}
+                            isAuth={false}
+                          >
+                            <Route>
+                              <NavBar
+                                dispatch={[Function]}
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "createHref": [Function],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
+                                      "hash": "",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    },
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                isAuth={false}
+                                location={
+                                  Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  }
+                                }
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/",
+                                    "url": "/",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="buttons"
+                                >
+                                  <WriteButton
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "createHref": [Function],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "pathname": "/",
+                                          "search": "",
+                                          "state": undefined,
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                  >
+                                    <button
+                                      className="button btn app-general-button write_button"
+                                      id="app-write-button"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <strong>
+                                        WRITE
+                                      </strong>
+                                    </button>
+                                  </WriteButton>
+                                  <Connect(LoginButton)>
+                                    <LoginButton
+                                      closeModalHandle={[Function]}
+                                      isAuth={false}
+                                      modalOpen={false}
+                                      showModalHandle={[Function]}
+                                      userfail={[Function]}
+                                    >
+                                      <div>
+                                        <button
+                                          className="button login-button"
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          Login
+                                        </button>
+                                      </div>
+                                    </LoginButton>
+                                  </Connect(LoginButton)>
+                                </div>
+                              </NavBar>
+                            </Route>
+                          </withRouter(NavBar)>
+                        </Connect(withRouter(NavBar))>
+                      </div>
+                    </div>
+                  </div>
+                </SearchAndProfile>
+              </nav>
+            </NavbarTop>
+            <Footer>
+              <div
+                className="footer-nav-categories"
+              >
+                <div
+                  className="container container"
+                >
+                  <withRouter(Connect(Categories))
+                    footer={true}
+                  >
+                    <Route>
+                      <Connect(Categories)
+                        footer={true}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "createHref": [Function],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                      >
+                        <Categories
+                          categories={
+                            Array [
+                              Object {
+                                "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                "id": 1,
+                                "name": "FASHION",
+                                "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                              },
+                            ]
+                          }
+                          footer={true}
+                          getCategoriesData={[Function]}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          selected="HOME"
+                        >
+                          <NavLink
+                            activeClassName="categories-footItem-selected"
+                            aria-current="page"
+                            className="categories-footItem"
+                            exact={true}
+                            to="/"
+                          >
+                            <Route
+                              exact={true}
+                              path="\\\\/"
+                            >
+                              <Link
+                                aria-current="page"
+                                className="categories-footItem categories-footItem-selected"
+                                replace={false}
+                                style={Object {}}
+                                to="/"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  href="/"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                >
+                                  HOME
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="categories-footItem-selected"
+                            aria-current="page"
+                            className="categories-footItem"
+                            exact={true}
+                            key="1"
+                            to="/articles/1"
+                          >
+                            <Route
+                              exact={true}
+                              path="\\\\/articles\\\\/1"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="categories-footItem"
+                                replace={false}
+                                to="/articles/1"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  href="/articles/1"
+                                  onClick={[Function]}
+                                >
+                                  FASHION
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </Categories>
+                      </Connect(Categories)>
+                    </Route>
+                  </withRouter(Connect(Categories))>
+                </div>
+              </div>
+            </Footer>
+          </header>
+          <Connect(ProfileContainer)
+            userId="1"
+          >
+            <ProfileContainer
+              articles={Array []}
+              bio="Hello, I am a senior software developer who lives in toronto canada"
+              bookmarks={Array []}
+              createdAt="2018-10-26T11:38:51.791Z"
+              email="joeeasy@gmail.com"
+              firstname="jehonadab"
+              followed={Array []}
+              follower={Array []}
+              getUserInfo={[Function]}
+              id={14}
+              image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+              interests={
+                Array [
+                  "runing",
+                  " singing",
+                  " climbing",
+                  " jumping",
+                ]
+              }
+              isVerified={true}
+              lastname="Okpukoro"
+              loading={false}
+              premium={null}
+              profile={Object {}}
+              ratings={Array []}
+              roleId={2}
+              updatedAt="2018-10-28T11:01:55.505Z"
+              userId="1"
+              username="joeeasy"
+            >
+              <div
+                className="container ProfileContainer"
+              >
+                <Connect(ProfileHero)
+                  articles={Array []}
+                  bio="Hello, I am a senior software developer who lives in toronto canada"
+                  bookmarks={Array []}
+                  createdAt="2018-10-26T11:38:51.791Z"
+                  email="joeeasy@gmail.com"
+                  firstname="jehonadab"
+                  followed={Array []}
+                  follower={Array []}
+                  getUserInfo={[Function]}
+                  id={14}
+                  image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                  interests={
+                    Array [
+                      "runing",
+                      " singing",
+                      " climbing",
+                      " jumping",
+                    ]
+                  }
+                  isVerified={true}
+                  lastname="Okpukoro"
+                  loading={false}
+                  premium={null}
+                  profile={Object {}}
+                  ratings={Array []}
+                  roleId={2}
+                  updatedAt="2018-10-28T11:01:55.505Z"
+                  userId="1"
+                  username="joeeasy"
+                >
+                  <ProfileHero
+                    articles={Array []}
+                    bio="Hello, I am a senior software developer who lives in toronto canada"
+                    bookmarks={Array []}
+                    createdAt="2018-10-26T11:38:51.791Z"
+                    email="joeeasy@gmail.com"
+                    fetchUserProfile={[Function]}
+                    firstname="jehonadab"
+                    followed={Array []}
+                    follower={Array []}
+                    getUserInfo={[Function]}
+                    id={14}
+                    image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                    interests={
+                      Array [
+                        "runing",
+                        " singing",
+                        " climbing",
+                        " jumping",
+                      ]
+                    }
+                    isVerified={true}
+                    lastname="Okpukoro"
+                    loading={false}
+                    premium={null}
+                    profile={Object {}}
+                    ratings={Array []}
+                    roleId={2}
+                    updateUserProfile={[Function]}
+                    updatedAt="2018-10-28T11:01:55.505Z"
+                    userId="1"
+                    username="joeeasy"
+                  >
+                    <div
+                      className="Profile"
+                    >
+                      <div
+                        className="columns is-half-desktop"
+                      >
+                        <div
+                          className="column is-three-fifths"
+                        >
+                          <div
+                            className="Profile__content"
+                          >
+                            <div
+                              className="columns"
+                            >
+                              <div
+                                className="column is-one-quarter is-paddingless MarginRight--25"
+                              >
+                                <div
+                                  className="Profile__img"
+                                >
+                                  <img
+                                    alt="Author's profile"
+                                    src="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                className="column is-paddingless"
+                              >
+                                <div
+                                  className="Profile__info"
+                                >
+                                  <h1
+                                    className="Profile__name"
+                                  >
+                                    jehonadab Okpukoro
+                                  </h1>
+                                  <h5
+                                    className="Profile__email"
+                                  >
+                                    joeeasy@gmail.com
+                                  </h5>
+                                  <h5
+                                    className="Profile__username"
+                                  >
+                                    @
+                                    joeeasy
+                                  </h5>
+                                </div>
+                                <div
+                                  className="Profile__action MarginTop--10"
+                                >
+                                  <button
+                                    className="btn btn-primary Profile__edit"
+                                    onClick={[Function]}
+                                    type="button"
+                                  >
+                                    <i
+                                      className="far fa-edit"
+                                    />
+                                    <span>
+                                      Edit
+                                    </span>
+                                  </button>
+                                  <UpdateProfile
+                                    bio="Hello, I am a senior software developer who lives in toronto canada"
+                                    closeModal={[Function]}
+                                    email="joeeasy@gmail.com"
+                                    firstname="jehonadab"
+                                    handleUpdateUser={[Function]}
+                                    image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                                    interests={
+                                      Array [
+                                        "runing",
+                                        " singing",
+                                        " climbing",
+                                        " jumping",
+                                      ]
+                                    }
+                                    lastname="Okpukoro"
+                                    modalIsOpen={false}
+                                    readUrl={[Function]}
+                                    username="joeeasy"
+                                  >
+                                    <div
+                                      className="modal false"
+                                    >
+                                      <div
+                                        className="modal-background"
+                                      />
+                                      <form
+                                        className="modal-card"
+                                        onSubmit={[Function]}
+                                      >
+                                        <header
+                                          className="modal-card-head"
+                                        >
+                                          <p
+                                            className="modal-card-title"
+                                          >
+                                            Update Profile
+                                          </p>
+                                          <button
+                                            aria-label="close"
+                                            className="delete"
+                                            onClick={[Function]}
+                                            type="button"
+                                          />
+                                        </header>
+                                        <section
+                                          className="modal-card-body"
+                                        >
+                                          <div
+                                            className="container centerlized"
+                                          >
+                                            <div
+                                              className="UpdateProfile"
+                                              onSubmit={[Function]}
+                                            >
+                                              <div
+                                                className="field"
+                                              >
+                                                <div
+                                                  className="Upload__image"
+                                                >
+                                                  <img
+                                                    alt="update profile"
+                                                    id="js__picturepreview"
+                                                    src="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                                                  />
+                                                  <div
+                                                    className="Upload__overlay"
+                                                  >
+                                                    <i
+                                                      className="fas fa-camera fa-2x"
+                                                    />
+                                                  </div>
+                                                  <input
+                                                    id="fileUpload"
+                                                    name="image"
+                                                    onChange={[Function]}
+                                                    type="file"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="columns is-mobile"
+                                              >
+                                                <div
+                                                  className="column"
+                                                >
+                                                  <div
+                                                    className="field"
+                                                  >
+                                                    <div
+                                                      className="control"
+                                                    >
+                                                      <input
+                                                        className="input"
+                                                        defaultValue="jehonadab"
+                                                        name="firstname"
+                                                        placeholder="first name"
+                                                        type="text"
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  className="column"
+                                                >
+                                                  <div
+                                                    className="field"
+                                                  >
+                                                    <div
+                                                      className="control"
+                                                    >
+                                                      <input
+                                                        className="input"
+                                                        defaultValue="Okpukoro"
+                                                        name="lastname"
+                                                        placeholder="lastname"
+                                                        type="text"
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="columns is-mobile"
+                                              >
+                                                <div
+                                                  className="column"
+                                                >
+                                                  <div
+                                                    className="field"
+                                                  >
+                                                    <div
+                                                      className="control"
+                                                    >
+                                                      <input
+                                                        className="input"
+                                                        defaultValue="joeeasy"
+                                                        name="username"
+                                                        placeholder="username"
+                                                        type="text"
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                                <div
+                                                  className="column"
+                                                >
+                                                  <div
+                                                    className="field"
+                                                  >
+                                                    <div
+                                                      className="control"
+                                                    >
+                                                      <input
+                                                        className="input"
+                                                        defaultValue="joeeasy@gmail.com"
+                                                        name="email"
+                                                        placeholder="email"
+                                                        type="email address"
+                                                      />
+                                                    </div>
+                                                  </div>
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="field"
+                                              >
+                                                <div
+                                                  className="control"
+                                                >
+                                                  <input
+                                                    className="input"
+                                                    defaultValue="runing, singing, climbing, jumping"
+                                                    name="interests"
+                                                    placeholder="interest: separate with comma(,)"
+                                                    type="text"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="field"
+                                              >
+                                                <div
+                                                  className="control"
+                                                >
+                                                  <textarea
+                                                    className="textarea"
+                                                    defaultValue="Hello, I am a senior software developer who lives in toronto canada"
+                                                    name="bio"
+                                                    placeholder="Bio"
+                                                    row="10"
+                                                    type="text"
+                                                  />
+                                                </div>
+                                              </div>
+                                              <div
+                                                className="columns is-mobile Modal__action"
+                                              />
+                                            </div>
+                                          </div>
+                                        </section>
+                                        <footer
+                                          className="modal-card-foot"
+                                        >
+                                          <button
+                                            className="button is-primary"
+                                            type="submit"
+                                          >
+                                            Save
+                                          </button>
+                                          <button
+                                            className="button i is-default is-right"
+                                            onClick={[Function]}
+                                            type="button"
+                                          >
+                                            Cancel
+                                          </button>
+                                        </footer>
+                                      </form>
+                                    </div>
+                                  </UpdateProfile>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div
+                          className="column"
+                        >
+                          <ProfileStats
+                            articles={Array []}
+                            bookmarks={Array []}
+                            followed={Array []}
+                            follower={Array []}
+                            ratings={Array []}
+                          >
+                            <div
+                              className="Profile__stat MarginLeft__20"
+                            >
+                              <div
+                                className="ProfileStat__item"
+                              >
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column is-two-fifths"
+                                  >
+                                    <i
+                                      className="fas fa-users ProfileStat--icon"
+                                    />
+                                    <span
+                                      className="ProfileStat--label"
+                                    >
+                                      Followers:
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="column ProfileStat--value"
+                                  >
+                                    0
+                                     
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="ProfileStat__item"
+                              >
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column is-two-fifths"
+                                  >
+                                    <i
+                                      className="fas fa-users ProfileStat--icon"
+                                    />
+                                    <span
+                                      className="ProfileStat--label"
+                                    >
+                                      Following:
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="column ProfileStat--value"
+                                  >
+                                    0
+                                     
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="ProfileStat__item"
+                              >
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column is-two-fifths"
+                                  >
+                                    <i
+                                      className="fas fa-bookmark ProfileStat--icon"
+                                    />
+                                    <span
+                                      className="ProfileStat--label"
+                                    >
+                                      Bookmarks:
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="column ProfileStat--value"
+                                  >
+                                    0
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="ProfileStat__item"
+                              >
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column is-two-fifths"
+                                  >
+                                    <i
+                                      className="fas fa-newspaper ProfileStat--icon"
+                                    />
+                                    <span
+                                      className="ProfileStat--label"
+                                    >
+                                      Articles:
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="column ProfileStat--value"
+                                  >
+                                    0
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                className="ProfileStat__item"
+                              >
+                                <div
+                                  className="columns is-mobile"
+                                >
+                                  <div
+                                    className="column is-two-fifths"
+                                  >
+                                    <i
+                                      className="far fa-star ProfileStat--icon"
+                                    />
+                                    <span
+                                      className="ProfileStat--label"
+                                    >
+                                      Ratings:
+                                    </span>
+                                  </div>
+                                  <div
+                                    className="column ProfileStat--value"
+                                  >
+                                    0
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </ProfileStats>
+                        </div>
+                      </div>
+                    </div>
+                  </ProfileHero>
+                </Connect(ProfileHero)>
+                <ProfileBio
+                  articles={Array []}
+                  bio="Hello, I am a senior software developer who lives in toronto canada"
+                  bookmarks={Array []}
+                  createdAt="2018-10-26T11:38:51.791Z"
+                  email="joeeasy@gmail.com"
+                  firstname="jehonadab"
+                  followed={Array []}
+                  follower={Array []}
+                  getUserInfo={[Function]}
+                  id={14}
+                  image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                  interests={
+                    Array [
+                      "runing",
+                      " singing",
+                      " climbing",
+                      " jumping",
+                    ]
+                  }
+                  isVerified={true}
+                  lastname="Okpukoro"
+                  loading={false}
+                  premium={null}
+                  profile={Object {}}
+                  ratings={Array []}
+                  roleId={2}
+                  updatedAt="2018-10-28T11:01:55.505Z"
+                  userId="1"
+                  username="joeeasy"
+                >
+                  <div
+                    className="ProfileBio"
+                  >
+                    <div
+                      className="ProfileBio__title"
+                    >
+                      Bio
+                    </div>
+                    <div
+                      className="ProfileBio__content"
+                    >
+                      <p>
+                        Hello, I am a senior software developer who lives in toronto canada
+                      </p>
+                    </div>
+                  </div>
+                </ProfileBio>
+                <Interests
+                  articles={Array []}
+                  bio="Hello, I am a senior software developer who lives in toronto canada"
+                  bookmarks={Array []}
+                  createdAt="2018-10-26T11:38:51.791Z"
+                  email="joeeasy@gmail.com"
+                  firstname="jehonadab"
+                  followed={Array []}
+                  follower={Array []}
+                  getUserInfo={[Function]}
+                  id={14}
+                  image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                  interests={
+                    Array [
+                      "runing",
+                      " singing",
+                      " climbing",
+                      " jumping",
+                    ]
+                  }
+                  isVerified={true}
+                  lastname="Okpukoro"
+                  loading={false}
+                  premium={null}
+                  profile={Object {}}
+                  ratings={Array []}
+                  roleId={2}
+                  updatedAt="2018-10-28T11:01:55.505Z"
+                  userId="1"
+                  username="joeeasy"
+                >
+                  <div
+                    className="ProfileInterest"
+                  >
+                    <div
+                      className="ProfileInterest__title"
+                    >
+                      Interests
+                    </div>
+                    <div
+                      className="ProfileInterest__tags"
+                    >
+                      <button
+                        className="btn btn-default btn--tag FontSize--18"
+                        title="runing"
+                        type="button"
+                      >
+                        runing
+                      </button>
+                      <button
+                        className="btn btn-default btn--tag FontSize--18"
+                        title=" singing"
+                        type="button"
+                      >
+                         singing
+                      </button>
+                      <button
+                        className="btn btn-default btn--tag FontSize--18"
+                        title=" climbing"
+                        type="button"
+                      >
+                         climbing
+                      </button>
+                      <button
+                        className="btn btn-default btn--tag FontSize--18"
+                        title=" jumping"
+                        type="button"
+                      >
+                         jumping
+                      </button>
+                    </div>
+                  </div>
+                </Interests>
+                <ArticleContainer
+                  articles={Array []}
+                  bio="Hello, I am a senior software developer who lives in toronto canada"
+                  bookmarks={Array []}
+                  createdAt="2018-10-26T11:38:51.791Z"
+                  email="joeeasy@gmail.com"
+                  firstname="jehonadab"
+                  followed={Array []}
+                  follower={Array []}
+                  getUserInfo={[Function]}
+                  id={14}
+                  image="http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg"
+                  interests={
+                    Array [
+                      "runing",
+                      " singing",
+                      " climbing",
+                      " jumping",
+                    ]
+                  }
+                  isVerified={true}
+                  lastname="Okpukoro"
+                  loading={false}
+                  premium={null}
+                  profile={Object {}}
+                  ratings={Array []}
+                  roleId={2}
+                  updatedAt="2018-10-28T11:01:55.505Z"
+                  userId="1"
+                  username="joeeasy"
+                >
+                  <div
+                    className="ProfileArticle"
+                  >
+                    <div
+                      className="ProfileArticle__title"
+                    >
+                      Articles
+                    </div>
+                    <div
+                      className="ProfileArticle__content"
+                    >
+                      <div
+                        className="columns"
+                      >
+                        <h1
+                          className="is-size-4 no--article"
+                        >
+                          You have not created any article yet
+                        </h1>
+                      </div>
+                    </div>
+                  </div>
+                </ArticleContainer>
+              </div>
+            </ProfileContainer>
+          </Connect(ProfileContainer)>
+          <Footer>
+            <footer
+              className="Main-Footer"
+            >
+              <Footer>
+                <div
+                  className="footer-nav-categories"
+                >
+                  <div
+                    className="container container"
+                  >
+                    <withRouter(Connect(Categories))
+                      footer={true}
+                    >
+                      <Route>
+                        <Connect(Categories)
+                          footer={true}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                        >
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={true}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
+                          >
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
+                  </div>
+                </div>
+              </Footer>
+              <Brand>
+                <div
+                  className="brandFooter"
+                >
+                  <div
+                    className="container Footer-brand"
+                  >
+                    <p>
+                      2018 Copyright of metis team
+                    </p>
+                    <div>
+                      <i
+                        className="fab fa-facebook-square space"
+                      />
+                      <i
+                        className="fab fa-twitter space"
+                      />
+                      <i
+                        className="fab fa-google-plus-g space"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Brand>
+            </footer>
+          </Footer>
+        </div>
+      </ProfilePage>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;
+
+exports[`Should show loader when fetching data showing loading 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <ProfilePage
+        match={
+          Object {
+            "params": Object {
+              "userId": "1",
+            },
+          }
+        }
+      >
+        <div
+          className="profile"
+          id="profile"
+        >
+          <header>
+            <NavbarTop>
+              <nav
+                aria-label="main navigation"
+                className="navbar container Landing-Page-Header"
+                role="navigation"
+              >
+                <BrandContainer
+                  menu={false}
+                  showMenu={[Function]}
+                >
+                  <div
+                    className="navbar-brand brand header-brand-container"
+                  >
+                    <Link
+                      className="navbar-item"
+                      replace={false}
+                      to="/"
+                    >
+                      <a
+                        className="navbar-item"
+                        href="/"
+                        onClick={[Function]}
+                      >
+                        <img
+                          alt="Authors haven logo"
+                          id="logo"
+                          src="test-file-stub"
+                        />
+                        <h1
+                          className="title"
+                        >
+                          Author's Haven
+                        </h1>
+                      </a>
+                    </Link>
+                    <button
+                      aria-expanded="false"
+                      aria-label="menu"
+                      className="navbar-burger burger' ' bug"
+                      data-target="profile-nav"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                    </button>
+                  </div>
+                </BrandContainer>
+                <SearchAndProfile
+                  menu={false}
+                >
+                  <div
+                    className="navbar-menu 'block'"
+                    id="profile-nav"
+                  >
+                    <Search>
+                      <input
+                        aria-label="search author's haven"
+                        className="input is-primary app-search"
+                        placeholder="Search"
+                        type="text"
+                      />
+                    </Search>
+                    <div
+                      className="navbar-end"
+                    >
+                      <div
+                        className="navbar-item"
+                      >
+                        <Connect(withRouter(NavBar))>
+                          <withRouter(NavBar)
+                            dispatch={[Function]}
+                            history={[Function]}
+                            isAuth={false}
+                          >
+                            <Route>
+                              <NavBar
+                                dispatch={[Function]}
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "createHref": [Function],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
+                                      "hash": "",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    },
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                isAuth={false}
+                                location={
+                                  Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  }
+                                }
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/",
+                                    "url": "/",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="buttons"
+                                >
+                                  <WriteButton
+                                    history={
+                                      Object {
+                                        "action": "POP",
+                                        "block": [Function],
+                                        "createHref": [Function],
+                                        "go": [Function],
+                                        "goBack": [Function],
+                                        "goForward": [Function],
+                                        "length": 1,
+                                        "listen": [Function],
+                                        "location": Object {
+                                          "hash": "",
+                                          "pathname": "/",
+                                          "search": "",
+                                          "state": undefined,
+                                        },
+                                        "push": [Function],
+                                        "replace": [Function],
+                                      }
+                                    }
+                                  >
+                                    <button
+                                      className="button btn app-general-button write_button"
+                                      id="app-write-button"
+                                      onClick={[Function]}
+                                      type="button"
+                                    >
+                                      <strong>
+                                        WRITE
+                                      </strong>
+                                    </button>
+                                  </WriteButton>
+                                  <Connect(LoginButton)>
+                                    <LoginButton
+                                      closeModalHandle={[Function]}
+                                      isAuth={false}
+                                      modalOpen={false}
+                                      showModalHandle={[Function]}
+                                      userfail={[Function]}
+                                    >
+                                      <div>
+                                        <button
+                                          className="button login-button"
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          Login
+                                        </button>
+                                      </div>
+                                    </LoginButton>
+                                  </Connect(LoginButton)>
+                                </div>
+                              </NavBar>
+                            </Route>
+                          </withRouter(NavBar)>
+                        </Connect(withRouter(NavBar))>
+                      </div>
+                    </div>
+                  </div>
+                </SearchAndProfile>
+              </nav>
+            </NavbarTop>
+            <Footer>
+              <div
+                className="footer-nav-categories"
+              >
+                <div
+                  className="container container"
+                >
+                  <withRouter(Connect(Categories))
+                    footer={true}
+                  >
+                    <Route>
+                      <Connect(Categories)
+                        footer={true}
+                        history={
+                          Object {
+                            "action": "POP",
+                            "block": [Function],
+                            "createHref": [Function],
+                            "go": [Function],
+                            "goBack": [Function],
+                            "goForward": [Function],
+                            "length": 1,
+                            "listen": [Function],
+                            "location": Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            },
+                            "push": [Function],
+                            "replace": [Function],
+                          }
+                        }
+                        location={
+                          Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          }
+                        }
+                        match={
+                          Object {
+                            "isExact": true,
+                            "params": Object {},
+                            "path": "/",
+                            "url": "/",
+                          }
+                        }
+                      >
+                        <Categories
+                          categories={
+                            Array [
+                              Object {
+                                "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                "id": 1,
+                                "name": "FASHION",
+                                "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                              },
+                            ]
+                          }
+                          footer={true}
+                          getCategoriesData={[Function]}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                          selected="HOME"
+                        >
+                          <NavLink
+                            activeClassName="categories-footItem-selected"
+                            aria-current="page"
+                            className="categories-footItem"
+                            exact={true}
+                            to="/"
+                          >
+                            <Route
+                              exact={true}
+                              path="\\\\/"
+                            >
+                              <Link
+                                aria-current="page"
+                                className="categories-footItem categories-footItem-selected"
+                                replace={false}
+                                style={Object {}}
+                                to="/"
+                              >
+                                <a
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  href="/"
+                                  onClick={[Function]}
+                                  style={Object {}}
+                                >
+                                  HOME
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                          <NavLink
+                            activeClassName="categories-footItem-selected"
+                            aria-current="page"
+                            className="categories-footItem"
+                            exact={true}
+                            key="1"
+                            to="/articles/1"
+                          >
+                            <Route
+                              exact={true}
+                              path="\\\\/articles\\\\/1"
+                            >
+                              <Link
+                                aria-current={null}
+                                className="categories-footItem"
+                                replace={false}
+                                to="/articles/1"
+                              >
+                                <a
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  href="/articles/1"
+                                  onClick={[Function]}
+                                >
+                                  FASHION
+                                </a>
+                              </Link>
+                            </Route>
+                          </NavLink>
+                        </Categories>
+                      </Connect(Categories)>
+                    </Route>
+                  </withRouter(Connect(Categories))>
+                </div>
+              </div>
+            </Footer>
+          </header>
+          <Connect(ProfileContainer)
+            userId="1"
+          >
+            <ProfileContainer
+              getUserInfo={[Function]}
+              loading={true}
+              profile={Object {}}
+              userId="1"
+            >
+              <div
+                className="container ProfileContainer"
+              >
+                <div
+                  className="loading"
+                >
+                  <Loader
+                    color="#4dd6a5"
+                    height="100"
+                    type="Triangle"
+                    width="100"
+                  >
+                    <div>
+                      <Triangle
+                        color="#4dd6a5"
+                        height="100"
+                        type="Triangle"
+                        width="100"
+                      >
+                        <svg
+                          height="100"
+                          id="triangle"
+                          viewBox="-3 -4 39 39"
+                          width="100"
+                        >
+                          <polygon
+                            fill="transparent"
+                            points="16,0 32,32 0,32"
+                            stroke="#4dd6a5"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </Triangle>
+                    </div>
+                  </Loader>
+                </div>
+              </div>
+            </ProfileContainer>
+          </Connect(ProfileContainer)>
+          <Footer>
+            <footer
+              className="Main-Footer"
+            >
+              <Footer>
+                <div
+                  className="footer-nav-categories"
+                >
+                  <div
+                    className="container container"
+                  >
+                    <withRouter(Connect(Categories))
+                      footer={true}
+                    >
+                      <Route>
+                        <Connect(Categories)
+                          footer={true}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                        >
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={true}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
+                          >
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
+                  </div>
+                </div>
+              </Footer>
+              <Brand>
+                <div
+                  className="brandFooter"
+                >
+                  <div
+                    className="container Footer-brand"
+                  >
+                    <p>
+                      2018 Copyright of metis team
+                    </p>
+                    <div>
+                      <i
+                        className="fab fa-facebook-square space"
+                      />
+                      <i
+                        className="fab fa-twitter space"
+                      />
+                      <i
+                        className="fab fa-google-plus-g space"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Brand>
+            </footer>
+          </Footer>
+        </div>
+      </ProfilePage>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

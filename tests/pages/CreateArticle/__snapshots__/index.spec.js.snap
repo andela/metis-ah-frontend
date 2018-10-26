@@ -127,6 +127,7 @@ exports[`create article page test should render the create article page correctl
                       <Connect(withRouter(NavBar))>
                         <withRouter(NavBar)
                           dispatch={[Function]}
+                          history={[Function]}
                           isAuth={true}
                         >
                           <Route>
@@ -173,7 +174,28 @@ exports[`create article page test should render the create article page correctl
                               <div
                                 className="buttons"
                               >
-                                <WriteButton>
+                                <WriteButton
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "createHref": [Function],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                >
                                   <button
                                     className="button btn app-general-button write_button"
                                     id="app-write-button"
@@ -286,6 +308,18 @@ exports[`create article page test should render the create article page correctl
                                                 aria-label="profile menu"
                                                 className="user-menu user-menu--hide"
                                               >
+                                                <UserMenuItem
+                                                  className="profile__menu__item"
+                                                  onClick={[Function]}
+                                                >
+                                                  <button
+                                                    className="profile__menu__item"
+                                                    onClick={[Function]}
+                                                    type="button"
+                                                  >
+                                                    Profile
+                                                  </button>
+                                                </UserMenuItem>
                                                 <UserMenuItem
                                                   className="profile__menu__item"
                                                   onClick={[Function]}
@@ -1009,35 +1043,6 @@ exports[`create article page test should render the create article page correctl
                                       onFocus={[Function]}
                                       spellCheck="false"
                                       tabIndex="0"
-                                      theme={
-                                        Object {
-                                          "borderRadius": 4,
-                                          "colors": Object {
-                                            "danger": "#DE350B",
-                                            "dangerLight": "#FFBDAD",
-                                            "neutral0": "hsl(0, 0%, 100%)",
-                                            "neutral10": "hsl(0, 0%, 90%)",
-                                            "neutral20": "hsl(0, 0%, 80%)",
-                                            "neutral30": "hsl(0, 0%, 70%)",
-                                            "neutral40": "hsl(0, 0%, 60%)",
-                                            "neutral5": "hsl(0, 0%, 95%)",
-                                            "neutral50": "hsl(0, 0%, 50%)",
-                                            "neutral60": "hsl(0, 0%, 40%)",
-                                            "neutral70": "hsl(0, 0%, 30%)",
-                                            "neutral80": "hsl(0, 0%, 20%)",
-                                            "neutral90": "hsl(0, 0%, 10%)",
-                                            "primary": "#2684FF",
-                                            "primary25": "#DEEBFF",
-                                            "primary50": "#B2D4FF",
-                                            "primary75": "#4C9AFF",
-                                          },
-                                          "spacing": Object {
-                                            "baseUnit": 4,
-                                            "controlHeight": 38,
-                                            "menuGutter": 8,
-                                          },
-                                        }
-                                      }
                                       type="text"
                                       value=""
                                     >
@@ -1074,35 +1079,6 @@ exports[`create article page test should render the create article page correctl
                                             }
                                           }
                                           tabIndex="0"
-                                          theme={
-                                            Object {
-                                              "borderRadius": 4,
-                                              "colors": Object {
-                                                "danger": "#DE350B",
-                                                "dangerLight": "#FFBDAD",
-                                                "neutral0": "hsl(0, 0%, 100%)",
-                                                "neutral10": "hsl(0, 0%, 90%)",
-                                                "neutral20": "hsl(0, 0%, 80%)",
-                                                "neutral30": "hsl(0, 0%, 70%)",
-                                                "neutral40": "hsl(0, 0%, 60%)",
-                                                "neutral5": "hsl(0, 0%, 95%)",
-                                                "neutral50": "hsl(0, 0%, 50%)",
-                                                "neutral60": "hsl(0, 0%, 40%)",
-                                                "neutral70": "hsl(0, 0%, 30%)",
-                                                "neutral80": "hsl(0, 0%, 20%)",
-                                                "neutral90": "hsl(0, 0%, 10%)",
-                                                "primary": "#2684FF",
-                                                "primary25": "#DEEBFF",
-                                                "primary50": "#B2D4FF",
-                                                "primary75": "#4C9AFF",
-                                              },
-                                              "spacing": Object {
-                                                "baseUnit": 4,
-                                                "controlHeight": 38,
-                                                "menuGutter": 8,
-                                              },
-                                            }
-                                          }
                                           type="text"
                                           value=""
                                         />
@@ -2091,35 +2067,6 @@ exports[`create article page test should render the create article page correctl
                                       onFocus={[Function]}
                                       spellCheck="false"
                                       tabIndex="0"
-                                      theme={
-                                        Object {
-                                          "borderRadius": 4,
-                                          "colors": Object {
-                                            "danger": "#DE350B",
-                                            "dangerLight": "#FFBDAD",
-                                            "neutral0": "hsl(0, 0%, 100%)",
-                                            "neutral10": "hsl(0, 0%, 90%)",
-                                            "neutral20": "hsl(0, 0%, 80%)",
-                                            "neutral30": "hsl(0, 0%, 70%)",
-                                            "neutral40": "hsl(0, 0%, 60%)",
-                                            "neutral5": "hsl(0, 0%, 95%)",
-                                            "neutral50": "hsl(0, 0%, 50%)",
-                                            "neutral60": "hsl(0, 0%, 40%)",
-                                            "neutral70": "hsl(0, 0%, 30%)",
-                                            "neutral80": "hsl(0, 0%, 20%)",
-                                            "neutral90": "hsl(0, 0%, 10%)",
-                                            "primary": "#2684FF",
-                                            "primary25": "#DEEBFF",
-                                            "primary50": "#B2D4FF",
-                                            "primary75": "#4C9AFF",
-                                          },
-                                          "spacing": Object {
-                                            "baseUnit": 4,
-                                            "controlHeight": 38,
-                                            "menuGutter": 8,
-                                          },
-                                        }
-                                      }
                                       type="text"
                                       value=""
                                     >
@@ -2156,35 +2103,6 @@ exports[`create article page test should render the create article page correctl
                                             }
                                           }
                                           tabIndex="0"
-                                          theme={
-                                            Object {
-                                              "borderRadius": 4,
-                                              "colors": Object {
-                                                "danger": "#DE350B",
-                                                "dangerLight": "#FFBDAD",
-                                                "neutral0": "hsl(0, 0%, 100%)",
-                                                "neutral10": "hsl(0, 0%, 90%)",
-                                                "neutral20": "hsl(0, 0%, 80%)",
-                                                "neutral30": "hsl(0, 0%, 70%)",
-                                                "neutral40": "hsl(0, 0%, 60%)",
-                                                "neutral5": "hsl(0, 0%, 95%)",
-                                                "neutral50": "hsl(0, 0%, 50%)",
-                                                "neutral60": "hsl(0, 0%, 40%)",
-                                                "neutral70": "hsl(0, 0%, 30%)",
-                                                "neutral80": "hsl(0, 0%, 20%)",
-                                                "neutral90": "hsl(0, 0%, 10%)",
-                                                "primary": "#2684FF",
-                                                "primary25": "#DEEBFF",
-                                                "primary50": "#B2D4FF",
-                                                "primary75": "#4C9AFF",
-                                              },
-                                              "spacing": Object {
-                                                "baseUnit": 4,
-                                                "controlHeight": 38,
-                                                "menuGutter": 8,
-                                              },
-                                            }
-                                          }
                                           type="text"
                                           value=""
                                         />

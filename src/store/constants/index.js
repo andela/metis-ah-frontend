@@ -39,6 +39,7 @@ const constants = {
   GET_ARTICLES: 'GET_ARTICLES',
   GET_ARTICLES_ERROR: 'GET_ARTICLES_ERROR',
   GET_ARTICLES_SUCCESS: 'GET_ARTICLES_SUCCESS',
+
 };
 
 export default constants;

@@ -42,171 +42,195 @@ exports[`article page test should render the article page correctly 1`] = `
         >
           <Header>
             <header>
-              <nav
-                aria-label="main navigation"
-                className="navbar container Landing-Page-Header"
-                role="navigation"
-              >
-                <BrandContainer
-                  menu={false}
-                  showMenu={[Function]}
+              <NavbarTop>
+                <nav
+                  aria-label="main navigation"
+                  className="navbar container Landing-Page-Header"
+                  role="navigation"
                 >
-                  <div
-                    className="navbar-brand brand header-brand-container"
+                  <BrandContainer
+                    menu={false}
+                    showMenu={[Function]}
                   >
-                    <Link
-                      className="navbar-item"
-                      replace={false}
-                      to="/"
-                    >
-                      <a
-                        className="navbar-item"
-                        href="/"
-                        onClick={[Function]}
-                      >
-                        <img
-                          alt="Authors haven logo"
-                          id="logo"
-                          src="test-file-stub"
-                        />
-                        <h1
-                          className="title"
-                        >
-                          Author's Haven
-                        </h1>
-                      </a>
-                    </Link>
-                    <button
-                      aria-expanded="false"
-                      aria-label="menu"
-                      className="navbar-burger burger' ' bug"
-                      data-target="profile-nav"
-                      onClick={[Function]}
-                      type="button"
-                    >
-                      <span
-                        aria-hidden="true"
-                      />
-                      <span
-                        aria-hidden="true"
-                      />
-                      <span
-                        aria-hidden="true"
-                      />
-                    </button>
-                  </div>
-                </BrandContainer>
-                <SearchAndProfile
-                  menu={false}
-                >
-                  <div
-                    className="navbar-menu 'block'"
-                    id="profile-nav"
-                  >
-                    <Search>
-                      <input
-                        aria-label="search author's haven"
-                        className="input is-primary app-search"
-                        placeholder="Search"
-                        type="text"
-                      />
-                    </Search>
                     <div
-                      className="navbar-end"
+                      className="navbar-brand brand header-brand-container"
                     >
-                      <div
+                      <Link
                         className="navbar-item"
+                        replace={false}
+                        to="/"
                       >
-                        <Connect(withRouter(NavBar))>
-                          <withRouter(NavBar)
-                            dispatch={[Function]}
-                            isAuth={false}
+                        <a
+                          className="navbar-item"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="Authors haven logo"
+                            id="logo"
+                            src="test-file-stub"
+                          />
+                          <h1
+                            className="title"
                           >
-                            <Route>
-                              <NavBar
-                                dispatch={[Function]}
-                                history={
-                                  Object {
-                                    "action": "POP",
-                                    "block": [Function],
-                                    "createHref": [Function],
-                                    "go": [Function],
-                                    "goBack": [Function],
-                                    "goForward": [Function],
-                                    "length": 1,
-                                    "listen": [Function],
-                                    "location": Object {
+                            Author's Haven
+                          </h1>
+                        </a>
+                      </Link>
+                      <button
+                        aria-expanded="false"
+                        aria-label="menu"
+                        className="navbar-burger burger' ' bug"
+                        data-target="profile-nav"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        />
+                        <span
+                          aria-hidden="true"
+                        />
+                        <span
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                  </BrandContainer>
+                  <SearchAndProfile
+                    menu={false}
+                  >
+                    <div
+                      className="navbar-menu 'block'"
+                      id="profile-nav"
+                    >
+                      <Search>
+                        <input
+                          aria-label="search author's haven"
+                          className="input is-primary app-search"
+                          placeholder="Search"
+                          type="text"
+                        />
+                      </Search>
+                      <div
+                        className="navbar-end"
+                      >
+                        <div
+                          className="navbar-item"
+                        >
+                          <Connect(withRouter(NavBar))>
+                            <withRouter(NavBar)
+                              dispatch={[Function]}
+                              history={[Function]}
+                              isAuth={false}
+                            >
+                              <Route>
+                                <NavBar
+                                  dispatch={[Function]}
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "createHref": [Function],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  isAuth={false}
+                                  location={
+                                    Object {
                                       "hash": "",
                                       "pathname": "/",
                                       "search": "",
                                       "state": undefined,
-                                    },
-                                    "push": [Function],
-                                    "replace": [Function],
+                                    }
                                   }
-                                }
-                                isAuth={false}
-                                location={
-                                  Object {
-                                    "hash": "",
-                                    "pathname": "/",
-                                    "search": "",
-                                    "state": undefined,
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/",
+                                      "url": "/",
+                                    }
                                   }
-                                }
-                                match={
-                                  Object {
-                                    "isExact": true,
-                                    "params": Object {},
-                                    "path": "/",
-                                    "url": "/",
-                                  }
-                                }
-                              >
-                                <div
-                                  className="buttons"
                                 >
-                                  <WriteButton>
-                                    <button
-                                      className="button btn app-general-button write_button"
-                                      id="app-write-button"
-                                      onClick={[Function]}
-                                      type="button"
+                                  <div
+                                    className="buttons"
+                                  >
+                                    <WriteButton
+                                      history={
+                                        Object {
+                                          "action": "POP",
+                                          "block": [Function],
+                                          "createHref": [Function],
+                                          "go": [Function],
+                                          "goBack": [Function],
+                                          "goForward": [Function],
+                                          "length": 1,
+                                          "listen": [Function],
+                                          "location": Object {
+                                            "hash": "",
+                                            "pathname": "/",
+                                            "search": "",
+                                            "state": undefined,
+                                          },
+                                          "push": [Function],
+                                          "replace": [Function],
+                                        }
+                                      }
                                     >
-                                      <strong>
-                                        WRITE
-                                      </strong>
-                                    </button>
-                                  </WriteButton>
-                                  <Connect(LoginButton)>
-                                    <LoginButton
-                                      closeModalHandle={[Function]}
-                                      isAuth={false}
-                                      modalOpen={false}
-                                      showModalHandle={[Function]}
-                                      userfail={[Function]}
-                                    >
-                                      <div>
-                                        <button
-                                          className="button login-button"
-                                          onClick={[Function]}
-                                          type="button"
-                                        >
-                                          Login
-                                        </button>
-                                      </div>
-                                    </LoginButton>
-                                  </Connect(LoginButton)>
-                                </div>
-                              </NavBar>
-                            </Route>
-                          </withRouter(NavBar)>
-                        </Connect(withRouter(NavBar))>
+                                      <button
+                                        className="button btn app-general-button write_button"
+                                        id="app-write-button"
+                                        onClick={[Function]}
+                                        type="button"
+                                      >
+                                        <strong>
+                                          WRITE
+                                        </strong>
+                                      </button>
+                                    </WriteButton>
+                                    <Connect(LoginButton)>
+                                      <LoginButton
+                                        closeModalHandle={[Function]}
+                                        isAuth={false}
+                                        modalOpen={false}
+                                        showModalHandle={[Function]}
+                                        userfail={[Function]}
+                                      >
+                                        <div>
+                                          <button
+                                            className="button login-button"
+                                            onClick={[Function]}
+                                            type="button"
+                                          >
+                                            Login
+                                          </button>
+                                        </div>
+                                      </LoginButton>
+                                    </Connect(LoginButton)>
+                                  </div>
+                                </NavBar>
+                              </Route>
+                            </withRouter(NavBar)>
+                          </Connect(withRouter(NavBar))>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </SearchAndProfile>
-              </nav>
+                  </SearchAndProfile>
+                </nav>
+              </NavbarTop>
               <Connect(withRouter(Hero))>
                 <withRouter(Hero)
                   closeModalHandle={[Function]}

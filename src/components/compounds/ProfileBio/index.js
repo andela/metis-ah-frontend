@@ -7,7 +7,7 @@ const ProfileBio = ({ bio }) => (
       Bio
     </div>
     <div className="ProfileBio__content">
-      <p>{ (bio) || 'Nothing here' }</p>
+      <p>{ bio || 'Nothing here' }</p>
     </div>
   </div>
 );

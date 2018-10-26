@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import Loader from 'react-loader-spinner';
 import ProfileHero from 'Components/compounds/ProfileHero';
 import ProfileBio from 'Components/compounds/ProfileBio';
-import Interest from 'Components/compounds/Interests';
+import ProfileInterest from 'Components/compounds/ProfileInterest';
 import ArticleContainer from 'Components/compounds/ProfileArticleContainer';
 import { getUser } from '../../../store/actions/users';
 import './index.scss';
@@ -25,7 +25,7 @@ class ProfileContainer extends Component {
               <React.Fragment>
                 <ProfileHero {...this.props} />
                 <ProfileBio {...this.props} />
-                <Interest {...this.props} />
+                <ProfileInterest {...this.props} />
                 <ArticleContainer {...this.props} />
               </React.Fragment>
             )

@@ -7,7 +7,7 @@ import Articles from 'Pages/Articles';
 import SuccessSignupMessage from 'Pages/SignupInfo';
 import SocialAuthPage from 'Pages/SocialAuth';
 import ResetPassword from 'Pages/ResetPassword';
-import ResetPasswords from 'Pages/ResetPasswords';
+import UpdatePassword from 'Pages/UpdatePassword';
 
 const App = () => (
   <BrowserRouter>
@@ -17,8 +17,8 @@ const App = () => (
         <Route path="/articles/:category" component={Articles} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
         <Route path="/social/:type" component={SocialAuthPage} />
-        <Route path="/reset-password" component={ResetPassword} />
-        <Route path="/api/v1/users/api/auth/reset-password/:token" component={ResetPasswords} />
+        <Route exact path="/auth/reset-password" component={ResetPassword} />
+        <Route exact path="/auth/reset-password/:token" component={UpdatePassword} />
       </Switch>
     </Fragment>
   </BrowserRouter>

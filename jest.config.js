@@ -15,6 +15,7 @@ module.exports = {
   transform: {
     '^.+\\.(js|jsx)$': '<rootDir>/node_modules/babel-jest'
   },
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
     '/index.js/'
@@ -36,7 +37,10 @@ module.exports = {
     '^Components(.*)$': '<rootDir>/src/components$1',
     'Actions(.*)$': '<rootDir>/src/store/actions$1',
     'Constants(.*)$': '<rootDir>/src/store/constants$1',
-    'Reducers(.*)$': '<rootDir>/src/store/reducers$1'
+    'Reducers(.*)$': '<rootDir>/src/store/reducers$1',
+    '^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
+    '^Compounds(.*)$': '<rootDir>/src/components/compounds$1',
+    '^Utils(.*)$': '<rootDir>/src/util$1',
   },
   setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js'
 };

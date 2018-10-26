@@ -38,10 +38,12 @@ module.exports = {
       Images: path.resolve(__dirname, 'src/static/images'),
       Pages: path.resolve(__dirname, 'src/pages/'),
       Components: path.resolve(__dirname, 'src/components'),
-      Constants: path.resolve(__dirname, 'src/store/constants/'),
-      Actions: path.resolve(__dirname, 'src/store/actions/'),
-      Reducers: path.resolve(__dirname, 'src/store/reducers/'),
-      Utils: path.resolve(__dirname, 'src/util')
+      Constants: path.resolve(__dirname, 'src/store/constants'),
+      Atoms: path.resolve(__dirname, 'src/components/atoms'),
+      Compounds: path.resolve(__dirname, 'src/components/compounds'),
+      Utils: path.resolve(__dirname, 'src/util'),
+      Actions: path.resolve(__dirname, 'src/store/actions'),
+      Reducers: path.resolve(__dirname, 'src/store/reducers')
     }
   },
   plugins: [new HtmlWebpackPlugin({

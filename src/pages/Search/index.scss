@@ -1,0 +1,424 @@
+.SearchContainer {
+  padding: 20px;
+}
+
+.Hero {
+  padding: 20px 0;
+}
+
+form {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  margin: 0 auto;
+}
+
+.Search__Title h1 {
+  text-align: center;
+  font-size: x-large;
+}
+
+.Search__Result h1 {
+  font-size: x-large;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.select {
+  select {
+    height: 50px;
+    padding-left: 20px;
+    border: 1px solid lightgray;
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    color: lightgrey;
+  }
+}
+
+.select:not(.is-multiple):not(.is-loading)::after {
+  top: 30px;
+  border-color: lightgrey;
+}
+
+.flex--1 {
+  flex: 1
+}
+
+form.Search__Form {
+  input[type='search'] {
+    width: 100%;
+    height: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+  }
+
+  button[type='submit'] {
+    color: #4DD6A5;
+    position: absolute;
+    top: 85px;
+    right: 121px;
+    border: none;
+    background: transparent
+  }
+}
+
+form.Search__Form {
+
+  .select select:focus,
+  input[type='search']:focus,
+  button[type='submit']:focus,
+  button[type='submit']:active {
+    border-color: lightgrey;
+    outline: none;
+  }
+}
+
+/* 
+=============
+Begining of custom styling
+=============
+ */
+
+/* 
+ =============
+ import fonts
+ =============
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/* 
+===========
+overwrite bulma styling here
+===========
+*/
+header {
+
+  background: #ffffff;
+}
+
+.navbar-link.is-active,
+.navbar-link:hover,
+.category-nav a.navbar-item.is-active,
+a.navbar-item:hover {
+  background-color: #fafafa;
+  color: #4cd6a5;
+}
+
+.PaddingRight--10 {
+  padding-right: 10px;
+}
+
+.PaddingRight--0 {
+  padding-right: 0;
+}
+
+.Margin--auto {
+  margin: auto;
+}
+
+.MarginRight--25 {
+  margin-right: 25px;
+}
+
+.MarginRight--10 {
+  margin-right: 10px;
+}
+
+.MarginTop--10 {
+  margin-top: 10px;
+}
+
+.MarginLeft--20 {
+  margin-left: 20px;
+}
+
+.MarginLeft--0 {
+  margin-left: 0;
+}
+
+.MarginRight--0 {
+  margin-right: 0;
+}
+
+.text--center {
+  text-align: center;
+}
+
+
+#Results {
+  .loading {
+    div {
+      text-align: center;
+    }
+  }
+  .ArticleCard {
+    height: auto;
+    border-radius: 7px;
+    background-color: #ffffff;
+  }
+
+  .ArticleCard__banner,
+  .ArticleCard__overlay {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+
+  .ArticleCard__banner {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    position: relative;
+
+  }
+
+  .ArticleCard__BannerTitle {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+
+  .ArticleCard__date {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+
+  .ArticleCard__footer {
+    padding: 13px 20px;
+    border: solid 1px #e0e0e0;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    display: block;
+  }
+
+  .ArticleCard__FooterThumbnail img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+  }
+
+  .ArticleCard__FooterName {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    color: #000000;
+  }
+
+  .ArticleCard__FooterLikes {
+    font-size: 1em;
+  }
+
+  .ArticleCard__FooterLikes svg.fa-2x {
+    color: #13B47A;
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .ArticleCard__FooterLikes span {
+    color: #000000;
+  }
+
+  .ArticleCard__overlay.is-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+
+  .ArticleCard__banner:hover .ArticleCard__overlay.is-overlay {
+    opacity: 1;
+  }
+
+  .ArticleCard__overlay {
+    padding: 32px 20px;
+    background-color: #ffffff;
+
+  }
+
+  .ArticleCard__overlay * {
+    font-family: 'Roboto', sans-serif;
+  }
+
+  .ArticleCard__OverlayTitle {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    color: #000000;
+    margin-bottom: 28px;
+  }
+
+  .ArticleCard__OverlayText {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+
+  .ArticlePagination.pagination ul {
+    justify-content: center;
+  }
+
+  .ArticlePagination.pagination ul.pagination-list .pagination-link.is-current {
+    background: #13B47A;
+    border-color: #13B47A;
+  }
+
+  .ArticlePagination {
+    margin-bottom: 20px;
+  }
+
+  .PaginationControl {
+    text-align: center;
+  }
+
+  .ProfileContainer {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }
+}
+
+@media(max-width: 1024px) {
+  #Results {
+    .Profile__img img {
+      border-radius: 50%;
+      height: 150px;
+    }
+  }
+}
+
+@media(max-width: 768px) {
+  #Results {
+    .Profile {
+      padding: 30px 10px;
+    }
+
+    .ProfileArticle__content {
+      .columns {
+        display: flex;
+      }
+    }
+
+    .Profile__stat {
+      display: flex;
+    }
+
+    .ProfileStat__item {
+      padding: 0 10px;
+      border-right: 1px solid lightgrey;
+    }
+
+    .ProfileStat__item:last-child {
+      border: none;
+    }
+
+    .ProfileContainer {
+      padding: 0 20px;
+    }
+
+    .Profile .columns .is-three-fifths {
+      border-right: 0;
+      text-align: center;
+    }
+
+    .columns.is-mobile>.column.is-two-fifths {
+      width: auto;
+    }
+
+    .ProfileInterest__tags button {
+      margin-bottom: 10px;
+    }
+
+    .ArticleCard__FooterThumbnail {
+      img {
+        height: 50px;
+        width: 50px;
+      }
+    }
+
+    .ArticleCard__FooterLikes {
+      text-align: center;
+    }
+
+    form.Search__Form {
+      width: 100%;
+    }
+  }
+}
+
+@media(max-width: 425px) {
+  #Results {
+    .ProfileArticle__content>.columns {
+      display: block;
+    }
+
+    .Profile__stat {
+      display: block;
+    }
+
+    .ProfileStat__item {
+      border: 0;
+    }
+
+  }
+
+  form.Search__Form {
+    width: 100%;
+
+    .select {
+      width: 100px;
+    }
+
+    button[type='submit'] {
+      color: #4DD6A5;
+      position: absolute;
+      top: 88px;
+      right: 28px;
+      border: none;
+    }
+  }
+}
+
+@media(max-width: 375px) {
+  form.Search__Form {
+    button[type='submit'] {
+      top: 19%;
+    }
+  }
+    
+}
+
+@media(max-width: 320px) {
+  form.Search__Form {
+    button[type='submit'] {
+      top: 19%;
+    }
+  }
+    
+}

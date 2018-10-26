@@ -1,6 +1,6 @@
 import React from 'react';
 import { mount } from 'enzyme';
-
+import { BrowserRouter } from 'react-router-dom';
 import PopularCards from '../../src/components/compounds/PopularCards';
 
 describe('', () => {
@@ -30,7 +30,7 @@ describe('', () => {
   ];
 
   it('should render all elements', () => {
-    const wrapper = mount(<PopularCards popular={popularArticles} />);
+    const wrapper = mount(<BrowserRouter><div> <PopularCards popular={popularArticles}/> </div></BrowserRouter>);
 
     expect(wrapper.exists()).toEqual(true);
   });

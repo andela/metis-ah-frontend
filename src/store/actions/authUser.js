@@ -15,7 +15,7 @@ const {
   LOGOUT,
 } = constants;
 const today = new Date();
-const expireAt = new Date(today.setFullYear(today.getFullYear() + 1))
+const expireAt = new Date(today.setFullYear(today.getFullYear() + 1));
 
 export const setCurrentUser = user => ({
   type: SET_CURRENT_USER,
@@ -128,8 +128,7 @@ export const socialAuth = (media, code, history) => (dispatch) => {
       }
   }
 };
-export const verifyAccount = verifyToken => (dispatch) => {
-  return axios.put(`/users/verify/${verifyToken}`)
+export const verifyAccount = verifyToken => (dispatch) => axios.put(`/users/verify/${verifyToken}`)
     .then((response) => {
       localStorage.setItem('user', JSON.stringify(response.data.data));
       setAxiosHeader(response.data.data.token);
@@ -141,4 +140,3 @@ export const verifyAccount = verifyToken => (dispatch) => {
     .catch(() => {
       toastr.error('Could not verify you account at this time');
     });
-};

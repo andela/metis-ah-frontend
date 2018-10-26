@@ -33,7 +33,7 @@ export const createArticle = (article, history) => (dispatch) => {
   return axios.post('/articles', article)
     .then((response) => {
       dispatch(saveArticleSuccess(response.data.data.message));
-      history.push(`/articles/${response.data.data.article.id}`);
+      history.push(`/articles/${response.data.data.article.id}/view`);
       AutoSave.clear('articleTitle');
       AutoSave.clear('articleDescription');
       AutoSave.clear('articleBody');

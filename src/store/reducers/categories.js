@@ -1,10 +1,9 @@
-import Constants from '../constants';
+import constants from 'Constants';
 
-const { FETCH_CATEGORIES } = Constants;
+const { FETCH_CATEGORIES } = constants;
 
 const initialState = {
-  categories: [],
-  selected: 'HOME',
+  categories: []
 };
 
 const categoriesReducer = (state = initialState, action) => {

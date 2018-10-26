@@ -14,16 +14,16 @@ class Popular extends React.Component {
   }
 
   render() {
-    const { popular } = this.props
+    const { popular } = this.props;
     return (
       <div className="popular-articles-wrapper">
         <h2 className="heading">POPULAR ON AUTHOR'S HAVEN</h2>
         <div className="Popular-Cards-Wrapper">
-          {
-            popular.length
-              ? <PopularCards popular={popular} />
-              : <div className="loader" />
-          }
+          {popular.length ? (
+            <PopularCards popular={popular} />
+          ) : (
+            <div className="loader" />
+          )}
         </div>
       </div>
     );
@@ -43,4 +43,7 @@ const mapDispatchToProps = dispatch => ({
   updatePopularArticles: () => dispatch(updatePopularArticlesAction())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Popular);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(Popular);

@@ -36,4 +36,7 @@ const mapDispatchToProps = dispatch => ({
   updateFeaturedArticlesAction: () => dispatch(updateFeaturedArticles())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(FeaturedArticles);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(FeaturedArticles);

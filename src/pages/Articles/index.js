@@ -1,9 +1,15 @@
 import React from 'react';
+import Footer from 'Components/compounds/Footer';
+import Header from 'Components/compounds/Header';
+import ArticleContainer from 'Components/compounds/ArticleContainer';
+import './style.scss';
 
 const Articles = () => (
-  <h1>
-    This is the Article page of Authors' Haven.
-  </h1>
+  <div className="articles-container">
+    <Header />
+    <ArticleContainer />
+    <Footer />
+  </div>
 );
 
 export default Articles;

@@ -16,6 +16,16 @@ describe('Hero', () => {
         isAuthenticated: false,
         loading: false
       },
+      article: {
+        heroContent: {
+          poster: 'banner',
+          name: "AUTHOR'S HAVEN",
+          description:
+            'A community where readers and writers come together to share and discuss knowledge and ideas.',
+          buttonIsVisible: false,
+          className: 'hero'
+        }
+      }
     });
     const wrapper = mount(<Provider store={store}><Hero /></Provider>);
 

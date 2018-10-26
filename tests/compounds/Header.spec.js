@@ -9,15 +9,26 @@ import Header from '../../src/components/compounds/Header';
 describe('Header', () => {
   const initStore = {
     categories: {
-      categories: [
-        'Home',
-        'Tech',
-        'FOOD'
-      ],
+      categories: [{
+        id: 1,
+        name: 'fashion',
+        description: 'fashion house',
+        poster: 'banner'
+      }],
       selected: 'HOME',
     },
     authUser: {
       isAuthenticated: false
+    },
+    article: {
+      heroContent: {
+        poster: 'banner',
+        name: "AUTHOR'S HAVEN",
+        description:
+          'A community where readers and writers come together to share and discuss knowledge and ideas.',
+        buttonIsVisible: false,
+        className: 'hero'
+      }
     }
   };
 

@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
-import Button from 'Components/atoms/Button';
-import './style.scss';
+import Radium from 'radium';
 import { connect } from 'react-redux';
+import PropTypes from 'prop-types';
+import Button from 'Components/atoms/Button';
 import ToggleForm from '../../atoms/ToggleForm';
 import MediaSignupSection from '../../atoms/Button/Media';
+import Signup from '../Signup/Signup';
 import Modal from '../../atoms/Modal';
 import { showModal, closeModal, userFail } from '../../../store/actions/authUser';
+import './style.scss';
 
 class Hero extends Component {
   /**
@@ -18,18 +21,30 @@ class Hero extends Component {
     const { closeModalHandle, userfail } = this.props;
     closeModalHandle();
     userfail();
-  }
+  };
 
   render() {
+    const {
+      heroContent: {
+        name, description, poster, buttonIsVisible, className,
+      }
+    } = this.props;
     const { modalOpen, isAuth, showModalHandler } = this.props;
+    const url = `linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(${poster})`;
 
     return (
-      <div className="hero">
-        <h1 className="title">AUTHOR&apos;S HAVEN</h1>
-        <p className="text">A community where readers and writers come together to share and discuss knowledge and ideas.</p>
-        {isAuth
-          ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
-          : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>
+      <div
+        className={`${className}`}
+        style={{
+          background: url
+        }}
+      >
+        <h1 className="title">{name}</h1>
+        <p className="text">{description}</p>
+        {
+          buttonIsVisible && (isAuth
+            ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
+            : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>)
         }
         {
           modalOpen && (
@@ -44,9 +59,11 @@ class Hero extends Component {
   }
 }
 
+
 const mapStateToProps = state => ({
   modalOpen: state.authUser.modalOpen,
-  isAuth: state.authUser.isAuthenticated
+  isAuth: state.authUser.isAuthenticated,
+  heroContent: state.article.heroContent
 });
 
 const mapDispatchToProps = dispatch => ({
@@ -55,4 +72,19 @@ const mapDispatchToProps = dispatch => ({
   userfail: () => dispatch(userFail())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Hero);
+Hero.propTypes = {
+  heroContent: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+    poster: PropTypes.string,
+    buttonIsVisible: PropTypes.bool,
+    className: PropTypes.string
+  }).isRequired,
+  isAuth: PropTypes.bool.isRequired,
+  modalOpen: PropTypes.bool.isRequired,
+  showModalHandler: PropTypes.func.isRequired,
+  closeModalHandle: PropTypes.func.isRequired,
+  userfail: PropTypes.func.isRequired
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(Radium(Hero));

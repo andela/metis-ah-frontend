@@ -1,19 +1,23 @@
-.Categories-item {
+.categories-item {
   margin: 0 2.5%;
   text-align: center;
   color: black;
 }
 
-.Categories-selected {
+.categories-selected {
   color: #4dd6a5;
 }
 
-.Categories-item:hover {
+.categories-item:hover {
   color: #4dd6a5;
 }
 
-.Categories-footItem {
+.categories-footItem {
   color: white;
   margin: 0 2.5%;
   text-align: center;
+}
+
+.categories-footItem-selected {
+  color: black;
 }

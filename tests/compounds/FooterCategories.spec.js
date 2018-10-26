@@ -8,11 +8,12 @@ import FooterCategories from '../../src/components/compounds/FooterCategories';
 
 const initStore = {
   categories: {
-    categories: [
-      'Home',
-      'Tech',
-      'FOOD'
-    ],
+    categories: [{
+      id: 1,
+      name: 'fashion',
+      description: 'fashion house',
+      poster: 'banner'
+    }],
     selected: 'HOME',
   },
 };

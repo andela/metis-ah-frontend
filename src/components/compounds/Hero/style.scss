@@ -42,6 +42,39 @@
   }
 }
 
+.article-hero {
+  width: 100%;
+  height: 340px;
+  background: linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url('../../../static/images/hero.jpg');
+  text-align: center;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  .title {
+    font-size: 32px;
+    font-weight: bold;
+    color: white;
+  }
+
+  .text {
+    width: 55%;
+    margin: 0 auto;
+    font-size: 20px;
+  }
+
+  @media screen and (max-width: 439px) {
+    .text {
+      font-size: 17px;
+    }
+
+    .title {
+      font-size: 150%;
+    }
+  }
+}
+
 @media screen and (max-width: 816px) {
   .hero {
     padding-top: 10%;

@@ -20,11 +20,11 @@ class PopularAuthors extends React.Component {
         <h2 className="title">BEST AUTHORS OF THE WEEK</h2>
         <div className="Popular-Authors-Wrapper">
           <div className="Popular-Authors">
-            {
-              authors.length
-                ? <PopularAuthorsCards authors={authors} />
-                : <div className="loader" />
-            }
+            {authors.length ? (
+              <PopularAuthorsCards authors={authors} />
+            ) : (
+              <div className="loader" />
+            )}
           </div>
         </div>
       </div>
@@ -38,11 +38,14 @@ PopularAuthors.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  authors: state.popularAuthors,
+  authors: state.popularAuthors
 });
 
 const mapDispatchToProps = dispatch => ({
   updateAuthorsAction: () => dispatch(updateAuthors())
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(PopularAuthors);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PopularAuthors);

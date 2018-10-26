@@ -1,0 +1,270 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`article container component test should render the article container correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <withRouter(Connect(ArticleContainer))
+        timeFormat={[MockFunction]}
+      >
+        <Route>
+          <Connect(ArticleContainer)
+            history={
+              Object {
+                "action": "POP",
+                "block": [Function],
+                "createHref": [Function],
+                "go": [Function],
+                "goBack": [Function],
+                "goForward": [Function],
+                "length": 1,
+                "listen": [Function],
+                "location": Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                },
+                "push": [Function],
+                "replace": [Function],
+              }
+            }
+            location={
+              Object {
+                "hash": "",
+                "pathname": "/",
+                "search": "",
+                "state": undefined,
+              }
+            }
+            match={
+              Object {
+                "isExact": true,
+                "params": Object {},
+                "path": "/",
+                "url": "/",
+              }
+            }
+            timeFormat={[MockFunction]}
+          >
+            <ArticleContainer
+              articles={
+                Array [
+                  Object {
+                    "User": Object {
+                      "firstname": "Tomi",
+                      "lastname": "Adebanjo",
+                    },
+                    "createdAt": "23-09-2018",
+                    "description": "We can't Keep blaming behavior on the robots",
+                    "imageUrl": "rectangle1",
+                    "slug": "asasa",
+                    "title": "The Internet's problems Can't Be solved with an Algorithm",
+                  },
+                  Object {
+                    "User": Object {
+                      "firstname": "Tomi",
+                      "lastname": "Adebanjo",
+                    },
+                    "createdAt": "23-09-2018",
+                    "description": "We can't Keep blaming behavior on the robots",
+                    "imageUrl": "rectangle2",
+                    "slug": "asasaa",
+                    "title": "The Internet's problems Can't Be solved with an Algorithm",
+                  },
+                ]
+              }
+              categories={
+                Array [
+                  Object {
+                    "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                    "id": 1,
+                    "name": "FASHION",
+                    "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                  },
+                ]
+              }
+              getArticles={[Function]}
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "createHref": [Function],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              loading={false}
+              location={
+                Object {
+                  "hash": "",
+                  "pathname": "/",
+                  "search": "",
+                  "state": undefined,
+                }
+              }
+              match={
+                Object {
+                  "isExact": true,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              timeFormat={[MockFunction]}
+            >
+              <div
+                className="container article-inner-container"
+              >
+                <ArticleCard
+                  description="We can't Keep blaming behavior on the robots"
+                  img="rectangle1"
+                  key="asasa"
+                  name="Tomi Adebanjo"
+                  time="23-09-2018"
+                  title="The Internet's problems Can't Be solved with an Algorithm"
+                >
+                  <div
+                    className="articleCard-container"
+                  >
+                    <div
+                      className="columns articleCard"
+                    >
+                      <div
+                        className="column is-one-fifth padding__0"
+                      >
+                        <img
+                          alt=""
+                          className="articleCard__img"
+                          src="rectangle1"
+                        />
+                      </div>
+                      <div
+                        className="column padding__0 articleCard__content"
+                      >
+                        <h2
+                          className="articleCard__title"
+                        >
+                          The Internet's problems Can't Be solved with an Algorithm
+                        </h2>
+                        <p
+                          className="articleCard__subtitle"
+                        >
+                          We can't Keep blaming behavior on the robots
+                        </p>
+                        <p
+                          className="articleCard__name"
+                        >
+                          Tomi Adebanjo
+                        </p>
+                        <p
+                          className="articleCard__time"
+                        >
+                          just now
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ArticleCard>
+                <ArticleCard
+                  description="We can't Keep blaming behavior on the robots"
+                  img="rectangle2"
+                  key="asasaa"
+                  name="Tomi Adebanjo"
+                  time="23-09-2018"
+                  title="The Internet's problems Can't Be solved with an Algorithm"
+                >
+                  <div
+                    className="articleCard-container"
+                  >
+                    <div
+                      className="columns articleCard"
+                    >
+                      <div
+                        className="column is-one-fifth padding__0"
+                      >
+                        <img
+                          alt=""
+                          className="articleCard__img"
+                          src="rectangle2"
+                        />
+                      </div>
+                      <div
+                        className="column padding__0 articleCard__content"
+                      >
+                        <h2
+                          className="articleCard__title"
+                        >
+                          The Internet's problems Can't Be solved with an Algorithm
+                        </h2>
+                        <p
+                          className="articleCard__subtitle"
+                        >
+                          We can't Keep blaming behavior on the robots
+                        </p>
+                        <p
+                          className="articleCard__name"
+                        >
+                          Tomi Adebanjo
+                        </p>
+                        <p
+                          className="articleCard__time"
+                        >
+                          just now
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </ArticleCard>
+              </div>
+            </ArticleContainer>
+          </Connect(ArticleContainer)>
+        </Route>
+      </withRouter(Connect(ArticleContainer))>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

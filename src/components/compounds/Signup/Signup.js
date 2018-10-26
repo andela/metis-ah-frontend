@@ -151,7 +151,6 @@ class Signup extends Component {
             </div>
             <Button className="button is-fullWidth is-medium signBtn signup_button" disabled={loading}>
                 REGISTER
-              <i className={`${loading ? 'fas fa-spinner fa-spin' : ''} spin`} />
             </Button>
           </form>
         </div>

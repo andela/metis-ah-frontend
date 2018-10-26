@@ -1,9 +1,23 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const input = ({ name, label, ...props }) => (
+
+const InputField = ({ name, label, ...props }) => (
   <label htmlFor={name}>
     {label}
     <input name={name} {...props} />
   </label>
 );
-export default input;
+
+InputField.defaultProps = {
+  label: '',
+  name: '',
+};
+
+InputField.propTypes = {
+  name: PropTypes.string,
+  label: PropTypes.string,
+  type: PropTypes.string.isRequired
+};
+
+export default InputField;

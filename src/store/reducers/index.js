@@ -8,6 +8,7 @@ import authUser from './authUser';
 import article from './article';
 import resetPasswordReducer from './resetPasswordReducer';
 import createArticle from './createArticle';
+import users from './users';
 
 const rootReducer = combineReducers({
   mock,
@@ -18,7 +19,8 @@ const rootReducer = combineReducers({
   authUser,
   article,
   passwordReset: resetPasswordReducer,
-  createArticle
+  createArticle,
+  users
 });
 
 export default rootReducer;

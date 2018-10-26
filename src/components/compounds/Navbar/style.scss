@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+* {
+  font-family: 'Roboto', sans-serif;
+}
+
+.Landing-Page-Header {
+  padding: 5px;
+}
+
+@media screen and (max-width: 904px) {
+  .Landing-Page-Header {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 904px) and (max-width: 1088px) {
+  .Landing-Page-Header {
+    width: fit-content;
+    display: flex;
+  }
+}

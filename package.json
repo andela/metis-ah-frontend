@@ -96,7 +96,12 @@
     "radium": "^0.25.0",
     "react": "^16.5.2",
     "react-dom": "^16.5.2",
+<<<<<<< HEAD
     "react-html-parser": "^2.0.2",
+=======
+    "react-loader-spinner": "^2.0.6",
+    "react-modal": "^3.6.1",
+>>>>>>> feat(users): can view and update their profile
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.3.1",
     "react-router-prop-types": "^1.0.4",

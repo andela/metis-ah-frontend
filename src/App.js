@@ -15,6 +15,13 @@ const ResetPassword = Async(() => import('Pages/ResetPassword'));
 const UpdatePassword = Async(() => import('Pages/UpdatePassword'));
 const VerifyEmail = Async(() => import('Pages/VerifyEmail'));
 const NotFound = Async(() => import('Pages/NotFound'));
+import Articles from 'Pages/Articles';
+import SuccessSignupMessage from 'Pages/SignupInfo';
+import SocialAuthPage from 'Pages/SocialAuth';
+import ResetPassword from 'Pages/ResetPassword';
+import UpdatePassword from 'Pages/UpdatePassword';
+import VerifyEmail from 'Pages/VerifyEmail';
+import ProfilePage from 'Pages/Profile';
 
 const App = () => (
   <BrowserRouter>
@@ -28,6 +35,7 @@ const App = () => (
         <ProtectedRoute path="/articles/new" component={AsyncCreateArticle} />
         <Route path="/articles/:category" exact component={AsyncArticles} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
+        <Route path="/users/:userId" component={ProfilePage} />
         <Route component={NotFound} />
       </Switch>
     </Fragment>

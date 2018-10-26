@@ -1,0 +1,441 @@
+/* 
+=============
+Begining of custom styling
+=============
+ */
+
+ /* 
+ =============
+ import fonts
+ =============
+ */
+ @import url('https://fonts.googleapis.com/css?family=Roboto');
+ @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+/* 
+===========
+overwrite bulma styling here
+===========
+*/
+header {
+
+  background: #ffffff;
+}
+.navbar-link.is-active,
+.navbar-link:hover,
+.category-nav a.navbar-item.is-active,
+a.navbar-item:hover {
+  background-color: #fafafa;
+  color: #4cd6a5;
+}
+
+.PaddingRight--10 {
+  padding-right: 10px;
+}
+.PaddingRight--0 {
+  padding-right: 0;
+}
+
+.Margin--auto {
+  margin: auto;
+}
+.MarginRight--25 {
+  margin-right: 25px;
+}
+.MarginRight--10 {
+  margin-right: 10px;
+}
+.MarginTop--10 {
+  margin-top: 10px;
+}
+.MarginLeft--20 {
+  margin-left: 20px;
+}
+.MarginLeft--0 {
+  margin-left: 0;
+}
+.MarginRight--0 {
+  margin-right: 0;
+}
+.text--center {
+  text-align: center;
+}
+/* 
+==========
+custom styling
+==========
+*/
+* {
+  font-family: 'Source Sans Pro', sans-serif;
+  word-wrap: break-word;
+}
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+body {
+  background-color: #F9F8F8;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+nav.navbar-top {
+  height: 87px;
+}
+
+.navbar-brand span.brand-name {
+  font-family: Roboto;
+  font-size: 30px;
+  font-weight: 600;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+.navbar-item img {
+  max-height: 44px;
+  padding-right: 8px;
+}
+form.navbar-item {
+  margin-left: 38px;
+}
+form.navbar-item .field .control input {
+  height: 44px;
+  width: 330px;
+}
+.btn {
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 5px 20px;
+  border-radius: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+.btn-primary {
+  background-color: #4dd6a5;
+  border: solid 1px #4dd6a5;
+}
+.btn-default {
+  background-color: #ffffff;
+  border: solid 1px #e0e0e0;
+  color: rgba(0, 0, 0, 0.54);
+}
+.FontSize--18 {
+  font-size: 18px;
+}
+
+.category-nav {
+  height: 55px;
+  background-color: #4dd6a5;
+}
+
+.category-nav .navbar-item {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #d9f8ed;
+  padding: 16px 25px;
+  text-transform: uppercase;
+}
+
+.navbar-link.is-active,
+.navbar-link:hover,
+a.navbar-item.is-active,
+a.navbar-item:hover {
+  background-color: #fafafa;
+  color: #4cd6a5;
+}
+
+  #profile {
+    .Profile {
+    padding: 40px 30px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0.1px 0.1px 8px 0 #f2f2f2;
+    margin: 60px 0;
+  }
+  .Profile .columns .is-three-fifths {
+    border-right: 1px solid #e0e0e0;
+  }
+
+  .Profile__img img {
+    border-radius: 50%;
+    height: 171px;
+  }
+
+  .Profile__name,
+  .Profile__email,
+  .Profile__username {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+
+  }
+  .Profile__name {
+    font-size: 36px;
+    color: rgba(51, 51, 51, 0.87);
+    margin-top: 30px;
+  }
+  .Profile__email,
+  .Profile__username {
+    font-size: 14px;
+    color: #aaa6a6;
+  }
+  .ProfileStat--icon {
+    width: 22px;
+    height: 16px;
+    color: rgba(117, 117, 117, 0.41);
+    margin-right: 5px;
+  }
+  .ProfileStat--label {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4e4e4e;
+  }
+
+  .ProfileStat--value {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+  }
+  .ProfileBio__content,
+  .ProfileInterest__tags {
+    font-size: 18px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #7e7e7e;
+    padding: 17px 13px;
+    border-radius: 4px;
+    background-color: #ffffff;
+    box-shadow: 0.1px 0.1px 8px 0 #f2f2f2;
+    margin-bottom: 26px;
+  }
+
+  .ProfileInterest__tags button {
+    margin-right: 10px;
+  }
+
+  .ProfileBio__title,
+  .ProfileInterest__title,
+  .ProfileArticle__title {
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #4e4e4e;
+    margin-bottom: 20px;
+  }
+  .ArticleCard {
+    height: auto;
+    border-radius: 7px;
+    background-color: #ffffff;
+  }
+  .ArticleCard__banner,
+  .ArticleCard__overlay {
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+  }
+  .ArticleCard__banner {
+    height: 300px;
+    display: flex;
+    align-items: flex-end;
+    padding: 16px;
+    background-size: cover;
+    background-repeat-x: no-repeat;
+    position: relative;
+
+  }
+  .ArticleCard__BannerTitle {
+    font-family: Roboto;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.9px;
+    color: #ffffff;
+    margin-bottom: 22px;
+  }
+  .ArticleCard__date {
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #ffffff;
+  }
+  .ArticleCard__footer {
+    padding: 13px 20px;
+    border: solid 1px #e0e0e0;
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    display: block;
+  }
+  .ArticleCard__FooterThumbnail img {
+    height: 47px;
+    border-radius: 50%;
+  }
+  .ArticleCard__FooterName {
+    font-family: Roboto;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: 0.8px;
+    color: #000000;
+  }
+  .ArticleCard__FooterLikes  {
+    font-size: 1em;
+  }
+  .ArticleCard__FooterLikes svg.fa-2x {
+    color: #13B47A;
+    font-size: 1em;
+    margin-right: 5px;
+  }
+
+  .ArticleCard__FooterLikes span {
+    color: #000000;
+  }
+  .ArticleCard__overlay.is-overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+  }
+  .ArticleCard__banner:hover .ArticleCard__overlay.is-overlay {
+    opacity: 1;
+  }
+  .ArticleCard__overlay {
+    padding: 32px 20px;
+    background-color: #ffffff;
+    
+  }
+  .ArticleCard__overlay * {
+    font-family: 'Roboto', sans-serif;
+  }
+  .ArticleCard__OverlayTitle {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.9px;
+    color: #000000;
+    margin-bottom: 28px;
+  }
+  .ArticleCard__OverlayText {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.54);
+    margin-bottom: 18px;
+    font-weight: 500;
+  }
+  .ArticlePagination.pagination ul {
+    justify-content: center;
+  }
+  .ArticlePagination.pagination ul.pagination-list .pagination-link.is-current {
+    background: #13B47A;
+    border-color: #13B47A;
+  }
+  .ArticlePagination {
+    margin-bottom: 20px;
+  }
+  .PaginationControl {
+    text-align: center;
+  }
+  .ProfileContainer {
+    padding: 0 20px;
+    margin-bottom: 30px;
+  }}
+@media(max-width: 1024px) {
+  #profile {
+    .Profile__img img {
+      border-radius: 50%;
+      height: 150px;
+    }
+  }
+}
+@media(max-width: 768px) {
+  #profile {
+    .Profile {
+      padding: 30px 10px;
+    }
+
+    .ProfileArticle__content {
+      .columns {
+        display: flex;
+      }
+    }
+    .Profile__stat {
+      display: flex;
+    }
+    .ProfileStat__item{
+      padding: 0 10px;
+      border-right: 1px solid lightgrey;
+    }
+    .ProfileStat__item:last-child {
+      border: none;
+    }
+    .ProfileContainer {
+      padding: 0 20px;
+    }
+    .Profile .columns .is-three-fifths {
+      border-right: 0;
+      text-align: center;
+    }
+    .columns.is-mobile>.column.is-two-fifths  {
+      width: auto;
+    }
+    .ProfileInterest__tags button {
+      margin-bottom: 10px;
+    }
+    .ArticleCard__FooterThumbnail {
+      img {
+        height: auto;
+      }
+    }
+    .ArticleCard__FooterLikes {
+      text-align: center;
+    }
+  }
+}
+
+@media(max-width: 425px) {
+  #profile {
+    .ProfileArticle__content > .columns {
+      display: block;
+    }
+    .Profile__stat {
+      display: block;
+    }
+    .ProfileStat__item {
+      border: 0;
+    }
+    
+  }
+}

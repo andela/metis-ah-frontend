@@ -10,7 +10,7 @@ import {
   RESET_PASSWORD_SUCCESS
 } from '../constants';
 
-const clientUrl = 'https://metis-ah-frontend-stagin-pr-23.herokuapp.com';
+const clientUrl = 'https://metis-ah-frontend-staging.herokuapp.com';
 
 
 export const resetPassword = email => async (dispatch) => {
@@ -48,7 +48,8 @@ export const resetVerifiedUserPassword = (newPassword, token, history) => async 
       type: RESET_PASSWORD_SUCCESS,
       message: response.data.data.message
     });
-    return history.push('/auth/login');
+    return history.push('/');
+
   } catch (error) {
     Alert.error(error.response.data.data.message);
     return dispatch({

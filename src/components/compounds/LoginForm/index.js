@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 import Button from '../../atoms/Button/SignupButton';
 import Input from '../../atoms/InputField/InputField';
@@ -107,6 +108,7 @@ class LoginForm extends Component {
                 />
               </div>
             </div>
+            <Link id="forget-password" to="/auth/reset-password">Forget password?</Link>
             <Button className="button is-fullWidth is-medium signBtn login_button" disabled={loading}>
                 LOGIN
               <i className={`${loading ? 'fas fa-spinner fa-spin' : ''} spin`} />

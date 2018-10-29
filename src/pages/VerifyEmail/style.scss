@@ -1,0 +1,110 @@
+.verify-email--fill-height {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.verify-email {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100%;
+  flex: 1;
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    min-height: 60px;
+    // border-bottom: 2px solid #4dd6a5;
+
+    #logo {
+      color: #4dd6a5;
+      width: 44px;
+      max-height: 44px;
+      margin:  auto 5px auto 0;
+    }
+
+    .title {
+      font-size: 32px;
+      font-weight: bold;
+      margin: auto 10px auto 0;
+      color: black;
+    }
+  }
+
+  .message {
+    width: 100%;
+    max-height: 200px;
+    border-radius: 0;
+    background: linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url('../../static/images/hero.jpg');
+    padding: 50px 10px;
+    margin: 0;
+
+    h2,
+    p {
+      font-family: Roboto;
+      color: white;
+      text-align: center;
+    }
+    
+    h2 {
+      font-size: 1.8em;
+      font-weight: bold;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+  }
+
+  .interests-section {
+    margin: 10px 2px 2px 2px;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    // This loader was gotten from https://loading.io/css/
+    .lds-circle {
+      display: inline-block;
+      width: 51px;
+      height: 51px;
+      margin: 6px;
+      border-radius: 50%;
+      background: #13b47a;
+      animation: lds-circle 2.4s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+    }
+
+    @keyframes lds-circle {
+      0%, 100% {
+        animation-timing-function: cubic-bezier(0.5, 0, 1, 0.5);
+      }
+      0% {
+        transform: rotateY(0deg);
+      }
+      50% {
+        transform: rotateY(1800deg);
+        animation-timing-function: cubic-bezier(0, 0.5, 0.5, 1);
+      }
+      100% {
+        transform: rotateY(3600deg);
+      }
+    }    
+  }
+
+  .central {
+    margin: 5% auto;
+  }
+
+  .central:disabled,
+  .central:hover:disabled {
+    background: none;
+    border: 1px solid rgb(221, 221, 221);
+    color: gray;
+    box-shadow: none;
+    cursor: default;
+  }
+}

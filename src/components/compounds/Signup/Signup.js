@@ -70,6 +70,7 @@ class Signup extends Component {
         username: newUser.username,
         email: newUser.email,
         password: newUser.password,
+        verifyURL: 'https://metis-ah-frontend-staging.herokuapp.com',
       };
       createUserAction(userData, history);
     } else {

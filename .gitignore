@@ -66,3 +66,13 @@ typings/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# editor
+.vscode
+
+src/components/compounds/featuredArticles
+src/components/compounds/footer
+src/components/compounds/header
+src/components/compounds/header
+src/components/compounds/popularArticles
+src/components/compounds/popularAuthors

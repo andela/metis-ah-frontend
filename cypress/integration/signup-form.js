@@ -1,6 +1,6 @@
 describe('THE FORM TEST', () => {
   it('Visit the Signup form', () => {
-    cy.visit('http://localhost:3500');
+    cy.visit('localhost:3500');
     cy.contains('GET STARTED').click();
 
     cy.get('input[name="username"]')

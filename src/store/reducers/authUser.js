@@ -5,12 +5,15 @@ const {
   USER_SIGNUP_STARTED,
   MODAL_SHOW,
   MODAL_CLOSE,
-  SIGNUP_SUCCESS,
+  RESET_CURRENT_USER,
+  TOGGLE_USER_MENU,
+  LOGOUT
 } = constants;
 
 const initialState = {
   user: {},
   isAuthenticated: false,
+  showUserMenu: false,
   loading: false,
   modalOpen: false
 };
@@ -28,12 +31,11 @@ const authUserReducer = (state = initialState, action) => {
         isAuthenticated: true,
         loading: false,
       };
-    case SIGNUP_SUCCESS:
+    case RESET_CURRENT_USER:
       return {
         ...state,
         user: action.payload,
-        isAuthenticated: false,
-        loading: false,
+        isAuthenticated: true,
       };
     case USER_SIGNUP_FAILED:
       return {
@@ -49,6 +51,18 @@ const authUserReducer = (state = initialState, action) => {
       return {
         ...state,
         modalOpen: true
+      };
+    case TOGGLE_USER_MENU:
+      return {
+        ...state,
+        showUserMenu: !state.showUserMenu
+      };
+    case LOGOUT:
+      return {
+        ...state,
+        user: {},
+        isAuthenticated: false,
+        showUserMenu: false,
       };
     default:
       return state;

@@ -1,5 +1,5 @@
 module.exports = {
-  verbose: true,
+  // verbose: true,
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx}',
@@ -19,7 +19,14 @@ module.exports = {
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
     '/index.js/'
   ],
-  moduleFileExtensions: ['web.js', 'js', 'json', 'web.jsx', 'jsx', 'node'],
+  moduleFileExtensions: [
+    'web.js',
+    'js',
+    'json',
+    'web.jsx',
+    'jsx',
+    'node'
+  ],
   moduleNameMapper: {
     '^.+\\.(css|less|scss)$': 'identity-obj-proxy',
     '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$':

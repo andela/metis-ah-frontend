@@ -24,7 +24,12 @@ describe('<Hero />', () => {
       const wrapper = mount(
         <Provider store={store}>
           <StaticRouter context={store}>
-            <Landing />
+            <Landing match={{
+              params: {
+                id: 1
+              }
+            }}
+            />
           </StaticRouter>
         </Provider>
       );

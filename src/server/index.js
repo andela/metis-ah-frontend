@@ -7,7 +7,6 @@ import connect from 'connect';
 const Port = process.env.PORT || 3000;
 const app = connect();
 app.use(historyFallback());
-
 // Create nodejs server
 app.use((request, response) => {
   // set the static file path
@@ -43,14 +42,8 @@ app.use((request, response) => {
 
   // read file being requested from the server
   readFile(filePath, (error, content) => {
-    if (error) {
-      response.writeHead(500);
-      response.end(`Sorry, check with the site admin for error: ${error.code} ..\n`);
-      return response.end();
-    }
     response.writeHead(200, { 'Content-Type': contentType });
     return response.end(content, 'utf-8');
   });
 });
-createServer(app)
-  .listen(Port);
+createServer(app).listen(Port);

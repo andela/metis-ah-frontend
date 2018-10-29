@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-// Components
 import Header from 'Components/compounds/Header';
 import Footer from 'Components/compounds/Footer';
 import FeaturedArticles from 'Components/compounds/FeaturedArticles';
@@ -10,9 +9,10 @@ import PopularAuthors from 'Components/compounds/PopularAuthors';
 import Button from 'Components/atoms/Button';
 import bannerImage from 'Images/hero.jpg';
 import { setHeroContent } from '../../store/actions/article';
+import { socialAuth, resetCurrentUser } from '../../store/actions/authUser';
 import './style.scss';
 
-class Landing extends React.Component {
+class Landing extends Component {
   componentDidMount() {
     const heroContent = {
       poster: bannerImage,
@@ -54,14 +54,19 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  setHeroContentNow: heroContent => dispatch(setHeroContent(heroContent))
+  setHeroContentNow: heroContent => dispatch(setHeroContent(heroContent)),
+  socialAuthHandler: (media, code) => dispatch(socialAuth(media, code)),
+  resetUser: user => dispatch(resetCurrentUser(user))
 });
 
 Landing.propTypes = {
-  setHeroContentNow: PropTypes.func.isRequired
+  isAuth: PropTypes.bool.isRequired,
+  match: PropTypes.shape({
+    params: PropTypes.shape({
+      id: PropTypes.node,
+    }).isRequired,
+  }).isRequired,
+  setHeroContentNow: PropTypes.func.isRequired,
 };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Landing);
+export default connect(mapStateToProps, mapDispatchToProps)(Landing);

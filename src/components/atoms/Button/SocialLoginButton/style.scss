@@ -1,0 +1,47 @@
+.Social-Login {
+  width: 250px;
+  height: 45px;
+  border-radius: 4px;
+  color: #ffffff;
+  font-family: Roboto;
+  font-size: 18px;
+  font-weight: bold;
+  text-decoration: none;
+  display: flex;
+  margin: 5px auto;
+}
+
+.facebook {
+  background-color: #4267b2;
+}
+
+.google {
+  background-color: #de5245;
+}
+
+.twitter {
+  background-color: #1dcaff;
+}
+
+.Social-Login {
+  .inline {
+    height: 100%;
+    margin: auto 0;
+  }
+
+  .icon {
+    width: 65px;
+    border-radius: 4px;
+    font-size: 27px;
+  }
+
+  .font {
+    width: 236px;
+    border-radius: 4px;
+  }
+}
+
+.Social-Login:hover {
+  cursor: pointer;
+  color: #95deff;
+}

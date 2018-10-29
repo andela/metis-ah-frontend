@@ -49,7 +49,6 @@ export const resetVerifiedUserPassword = (newPassword, token, history) => async 
       message: response.data.data.message
     });
     return history.push('/');
-
   } catch (error) {
     Alert.error(error.response.data.data.message);
     return dispatch({

@@ -1,0 +1,37 @@
+.notFound{
+  margin: 5%;
+  padding: 10%;
+  text-align: center;
+  .notFoundGroup{
+    display: flex;
+    h2{
+      font-size: 300%;
+    }
+    h1{
+      font-size: 700%;
+      font-weight: bolder;
+    }
+    .first{
+      margin: 5%;
+      box-shadow: 2px 2px 8px #4DD6A5;
+      padding: 2%;
+      border-radius: 5px;
+
+    }
+    .second{
+      margin: 10% 0;
+    }
+
+
+  }
+  .home{
+    border: 1px solid #4DD6A5;
+    width: 30%;
+    margin: 0 auto;
+    padding: 2%;
+    border-radius: 5px;
+    background-color: #4DD6A5;
+    a{color: #fff;
+    font-weight: bold;}
+  }
+}

@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 import Radium from 'radium';
+import Button from 'Components/atoms/Button';
+import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import Button from 'Components/atoms/Button';
 import ToggleForm from '../../atoms/ToggleForm';
 import MediaSignupSection from '../../atoms/Button/Media';
-import Signup from '../Signup/Signup';
 import Modal from '../../atoms/Modal';
 import { showModal, closeModal, userFail } from '../../../store/actions/authUser';
 import './style.scss';
@@ -26,7 +26,7 @@ class Hero extends Component {
   render() {
     const {
       heroContent: {
-        name, description, poster, buttonIsVisible, className,
+        name, description, poster, buttonIsVisible, className, history
       }
     } = this.props;
     const { modalOpen, isAuth, showModalHandler } = this.props;
@@ -43,7 +43,7 @@ class Hero extends Component {
         <p className="text">{description}</p>
         {
           buttonIsVisible && (isAuth
-            ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
+            ? <Button color="white" onClick={() => history.push('/articles/new')}>WRITE</Button>
             : <Button color="white" onClick={() => showModalHandler()}>GET STARTED</Button>)
         }
         {
@@ -84,7 +84,10 @@ Hero.propTypes = {
   modalOpen: PropTypes.bool.isRequired,
   showModalHandler: PropTypes.func.isRequired,
   closeModalHandle: PropTypes.func.isRequired,
-  userfail: PropTypes.func.isRequired
+  userfail: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Radium(Hero));
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Radium(Hero)));

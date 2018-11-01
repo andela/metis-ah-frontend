@@ -117,54 +117,98 @@ exports[`article page test should render the article page correctly 1`] = `
                       <div
                         className="navbar-item"
                       >
-                        <Connect(NavBar)>
-                          <NavBar
+                        <Connect(withRouter(NavBar))>
+                          <withRouter(NavBar)
                             dispatch={[Function]}
                             isAuth={false}
                           >
-                            <div
-                              className="buttons"
-                            >
-                              <WriteButton>
-                                <button
-                                  className="button btn app-general-button"
-                                  id="app-write-button"
-                                  type="button"
+                            <Route>
+                              <NavBar
+                                dispatch={[Function]}
+                                history={
+                                  Object {
+                                    "action": "POP",
+                                    "block": [Function],
+                                    "createHref": [Function],
+                                    "go": [Function],
+                                    "goBack": [Function],
+                                    "goForward": [Function],
+                                    "length": 1,
+                                    "listen": [Function],
+                                    "location": Object {
+                                      "hash": "",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    },
+                                    "push": [Function],
+                                    "replace": [Function],
+                                  }
+                                }
+                                isAuth={false}
+                                location={
+                                  Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  }
+                                }
+                                match={
+                                  Object {
+                                    "isExact": true,
+                                    "params": Object {},
+                                    "path": "/",
+                                    "url": "/",
+                                  }
+                                }
+                              >
+                                <div
+                                  className="buttons"
                                 >
-                                  <strong>
-                                    WRITE
-                                  </strong>
-                                </button>
-                              </WriteButton>
-                              <Connect(LoginButton)>
-                                <LoginButton
-                                  closeModalHandle={[Function]}
-                                  isAuth={false}
-                                  modalOpen={false}
-                                  showModalHandle={[Function]}
-                                  userfail={[Function]}
-                                >
-                                  <div>
+                                  <WriteButton>
                                     <button
-                                      className="button login-button"
+                                      className="button btn app-general-button write_button"
+                                      id="app-write-button"
                                       onClick={[Function]}
                                       type="button"
                                     >
-                                      Login
+                                      <strong>
+                                        WRITE
+                                      </strong>
                                     </button>
-                                  </div>
-                                </LoginButton>
-                              </Connect(LoginButton)>
-                            </div>
-                          </NavBar>
-                        </Connect(NavBar)>
+                                  </WriteButton>
+                                  <Connect(LoginButton)>
+                                    <LoginButton
+                                      closeModalHandle={[Function]}
+                                      isAuth={false}
+                                      modalOpen={false}
+                                      showModalHandle={[Function]}
+                                      userfail={[Function]}
+                                    >
+                                      <div>
+                                        <button
+                                          className="button login-button"
+                                          onClick={[Function]}
+                                          type="button"
+                                        >
+                                          Login
+                                        </button>
+                                      </div>
+                                    </LoginButton>
+                                  </Connect(LoginButton)>
+                                </div>
+                              </NavBar>
+                            </Route>
+                          </withRouter(NavBar)>
+                        </Connect(withRouter(NavBar))>
                       </div>
                     </div>
                   </div>
                 </SearchAndProfile>
               </nav>
-              <Connect(Hero)>
-                <Hero
+              <Connect(withRouter(Hero))>
+                <withRouter(Hero)
                   closeModalHandle={[Function]}
                   heroContent={
                     Object {
@@ -180,43 +224,98 @@ exports[`article page test should render the article page correctly 1`] = `
                   showModalHandler={[Function]}
                   userfail={[Function]}
                 >
-                  <div
-                    className="hero"
-                    data-radium={true}
-                    style={
-                      Object {
-                        "background": "linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(banner)",
+                  <Route>
+                    <Hero
+                      closeModalHandle={[Function]}
+                      heroContent={
+                        Object {
+                          "buttonIsVisible": true,
+                          "className": "hero",
+                          "description": "A community where readers and writers come together to share and discuss knowledge and ideas.",
+                          "name": "AUTHOR'S HAVEN",
+                          "poster": "banner",
+                        }
                       }
-                    }
-                  >
-                    <h1
-                      className="title"
-                      key=".0"
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      isAuth={false}
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      modalOpen={false}
+                      showModalHandler={[Function]}
+                      userfail={[Function]}
                     >
-                      AUTHOR'S HAVEN
-                    </h1>
-                    <p
-                      className="text"
-                      key=".1"
-                    >
-                      A community where readers and writers come together to share and discuss knowledge and ideas.
-                    </p>
-                    <Button
-                      color="white"
-                      key=".2"
-                      onClick={[Function]}
-                    >
-                      <button
-                        className="App__Button white "
-                        onClick={[Function]}
-                        type="button"
+                      <div
+                        className="hero"
+                        data-radium={true}
+                        style={
+                          Object {
+                            "background": "linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(banner)",
+                          }
+                        }
                       >
-                        GET STARTED
-                      </button>
-                    </Button>
-                  </div>
-                </Hero>
-              </Connect(Hero)>
+                        <h1
+                          className="title"
+                          key=".0"
+                        >
+                          AUTHOR'S HAVEN
+                        </h1>
+                        <p
+                          className="text"
+                          key=".1"
+                        >
+                          A community where readers and writers come together to share and discuss knowledge and ideas.
+                        </p>
+                        <Button
+                          color="white"
+                          key=".2"
+                          onClick={[Function]}
+                        >
+                          <button
+                            className="App__Button white "
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            GET STARTED
+                          </button>
+                        </Button>
+                      </div>
+                    </Hero>
+                  </Route>
+                </withRouter(Hero)>
+              </Connect(withRouter(Hero))>
               <MinorNav>
                 <nav
                   aria-label="categories navigation"

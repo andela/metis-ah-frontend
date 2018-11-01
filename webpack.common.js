@@ -1,13 +1,8 @@
 const path = require('path');
-const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
-const Dotenv = require('dotenv-webpack');
-
-const { definitions } = new Dotenv();
 
 module.exports = {
-  mode: 'development',
   entry: './src/index.js',
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -19,7 +14,7 @@ module.exports = {
     rules: [{
       test: /\.jsx?$/,
       loader: 'babel-loader',
-      exclude: /node_modules/,
+      exclude: /(node_modules|bower_components)/,
     },
     {
       test: /\.(jpe?g|gif|png)$/i,
@@ -43,15 +38,17 @@ module.exports = {
       Compounds: path.resolve(__dirname, 'src/components/compounds'),
       Utils: path.resolve(__dirname, 'src/util'),
       Actions: path.resolve(__dirname, 'src/store/actions'),
-      Reducers: path.resolve(__dirname, 'src/store/reducers')
+      Reducers: path.resolve(__dirname, 'src/store/reducers'),
+      HOC: path.resolve(__dirname, 'src/components/HOC'),
+      Store: path.resolve(__dirname, 'src/store')
     }
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'src/static/index.html',
-    filename: 'index.html',
-    inject: 'body',
-  }),
-  new CompressionPlugin(),
-  new webpack.DefinePlugin({ ...definitions })
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/static/index.html',
+      filename: 'index.html',
+      inject: 'body',
+    }),
+    new CompressionPlugin(),
   ]
 };

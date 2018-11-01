@@ -40,7 +40,7 @@ class VerifyEmail extends Component {
   }
 
   componentDidMount() {
-    axios.get('https://metis-ah-staging.herokuapp.com/api/v1/categories')
+    axios.get('/categories')
       .then((response) => {
         const formatedCategories = response.data.data.categories.map((item) => {
           item.selected = false;
@@ -131,7 +131,8 @@ class VerifyEmail extends Component {
 
 VerifyEmail.propTypes = {
   setUser: PropTypes.func.isRequired,
-  match: PropTypes.shape({ params: PropTypes.shape({ token: PropTypes.string.isRequired }) }).isRequired,
+  match: PropTypes
+    .shape({ params: PropTypes.shape({ token: PropTypes.string.isRequired }) }).isRequired,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
 };
 

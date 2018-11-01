@@ -6,9 +6,12 @@ module.exports = {
     '!**/node_modules/**',
     '!**/src/server/**',
     '!**/src/index.js',
-    '!**/src/App.js'
+    '!**/src/App.js',
+    '!**/src/components/HOC/**',
   ],
-  testMatch: ['<rootDir>/tests/**/?(*.)(spec|test).js?(x)'],
+  testMatch: [
+    '<rootDir>/tests/**/?(*.)(spec|test).js?(x)'
+  ],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   // testEnvironment: 'jsdom',
   // testURL: 'http://localhost',
@@ -18,7 +21,9 @@ module.exports = {
   snapshotSerializers: ['enzyme-to-json/serializer'],
   transformIgnorePatterns: [
     '[/\\\\]node_modules[/\\\\].+\\.(js|jsx)$',
-    '/index.js/'
+    '/index.js/',
+    '/AsyncComponent.js/',
+    '/ProtectedRoute\/index.js/'
   ],
   moduleFileExtensions: [
     'web.js',
@@ -41,6 +46,7 @@ module.exports = {
     '^Atoms(.*)$': '<rootDir>/src/components/atoms$1',
     '^Compounds(.*)$': '<rootDir>/src/components/compounds$1',
     '^Utils(.*)$': '<rootDir>/src/util$1',
+    '^Store(.*)$': '<rootDir>/src/store$1'
   },
   setupTestFrameworkScriptFile: '<rootDir>tests/setup/setupEnzyme.js'
 };

@@ -1,11 +1,13 @@
-import {
+import constants from '../constants';
+
+const {
   VERIFY_USER_EMAIL_SUCCESS,
   VERIFY_USER_EMAIL_STARTED,
   VERIFY_USER_EMAIL_FAILED,
   RESET_PASSWORD_STARTED,
   RESET_PASSWORD_FAILED,
   RESET_PASSWORD_SUCCESS
-} from '../constants';
+} = constants;
 
 const initialState = {
   successMessage: '',

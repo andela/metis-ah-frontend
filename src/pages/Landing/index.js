@@ -27,7 +27,7 @@ class Landing extends Component {
   }
 
   render() {
-    const { isAuth } = this.props;
+    const { isAuth, history } = this.props;
     return (
       <div className="Landing-Flex-Wrap">
         <Header />
@@ -37,7 +37,7 @@ class Landing extends Component {
           <PopularAuthors />
           <div className="gap">
             {isAuth
-              ? <Button color="green" onClick={() => toastr.success('comming soon...')}>WRITE</Button>
+              ? <Button color="green" onClick={() => history.push('/articles/new')}>WRITE</Button>
               : <Button color="green" onClick={() => toastr.success('comming soon...')}>GET STARTED</Button>
           }
           </div>
@@ -67,6 +67,9 @@ Landing.propTypes = {
     }).isRequired,
   }).isRequired,
   setHeroContentNow: PropTypes.func.isRequired,
+  history: PropTypes.shape({
+    push: PropTypes.func.isRequired
+  }).isRequired
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

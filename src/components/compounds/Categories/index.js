@@ -60,9 +60,11 @@ Categories.defaultProps = {
 };
 
 Categories.propTypes = {
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
-  getCategoriesData: PropTypes.func.isRequired,
+  categories: PropTypes.arrayOf(PropTypes.shape({
+    id: PropTypes.number, name: PropTypes.string
+  })).isRequired,
   footer: PropTypes.bool,
+  getCategoriesData: PropTypes.func.isRequired
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Categories));

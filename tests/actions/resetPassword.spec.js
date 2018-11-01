@@ -4,14 +4,16 @@ import thunk from 'redux-thunk';
 import configureMockStore from 'redux-mock-store';
 
 import { resetPassword, resetVerifiedUserPassword } from 'Actions/resetPasswordActions';
-import {
+import constants from '../../src/store/constants';
+
+const {
   VERIFY_USER_EMAIL_SUCCESS,
   VERIFY_USER_EMAIL_STARTED,
   VERIFY_USER_EMAIL_FAILED,
   RESET_PASSWORD_STARTED,
   RESET_PASSWORD_FAILED,
   RESET_PASSWORD_SUCCESS
-} from 'Constants';
+} = constants;
 
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);

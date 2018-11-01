@@ -5,4 +5,7 @@
   background-color: #4dd6a5;
   border: solid 1px #4dd6a5;
   color:  white;
+  &:hover, &:focus, &:active{
+    outline: none;
+  }
 }

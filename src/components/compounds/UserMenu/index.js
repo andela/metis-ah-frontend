@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
-import { history as historyPropTypes } from 'history-prop-types';
 import UserMenuItem from 'Components/atoms/UserMenuItem';
 import { logoutUser } from '../../../store/actions/authUser';
 
@@ -19,7 +18,7 @@ const UserMenu = (props) => {
 
 UserMenu.propTypes = {
   showUserMenu: PropTypes.bool.isRequired,
-  history: PropTypes.shape(historyPropTypes).isRequired,
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   logout: PropTypes.func.isRequired,
 };
 

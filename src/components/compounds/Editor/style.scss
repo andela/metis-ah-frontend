@@ -1,0 +1,33 @@
+.ArticleTitle{
+  margin: 10px auto;
+  font-size: 200%;
+  width: 100%;
+  outline: none;
+  border: 0px;
+  font-weight: 600;
+  line-height: 1.125;
+  &::placeholder{
+    color: #bbb;
+  }
+}
+
+.ArticleDesc{
+  margin: 10px auto;
+  font-size: 150%;
+  width: 100%;
+  outline: none;
+  border: 0px;
+  font-weight: 40;
+  line-height: 1.125;
+  resize: none;
+  overflow: auto;
+  &::placeholder{
+    color: #bbb;
+  }
+}
+
+.Inputs{
+  display: flex;
+  flex-direction: column;
+  min-height: 70vh;
+}

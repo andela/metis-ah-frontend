@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import { withRouter } from 'react-router-dom';
 import { parse } from 'query-string';
 import PropTypes from 'prop-types';
-import { history as historyPropTypes } from 'history-prop-types';
 import { socialAuth, resetCurrentUser } from '../../store/actions/authUser';
 
 class SocialAuth extends Component {
@@ -35,7 +34,7 @@ SocialAuth.propTypes = {
       id: PropTypes.node,
     }).isRequired,
   }).isRequired,
-  history: PropTypes.shape(historyPropTypes).isRequired,
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   socialAuthHandler: PropTypes.func.isRequired,
   resetUser: PropTypes.func.isRequired,
 };

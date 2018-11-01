@@ -1,12 +1,14 @@
 import resetPasswordReducer from 'Reducers/resetPasswordReducer';
-import {
+import constants from '../../src/store/constants';
+
+const {
   VERIFY_USER_EMAIL_SUCCESS,
   VERIFY_USER_EMAIL_STARTED,
   VERIFY_USER_EMAIL_FAILED,
   RESET_PASSWORD_STARTED,
   RESET_PASSWORD_FAILED,
   RESET_PASSWORD_SUCCESS
-} from 'Constants';
+} = constants;
 
 const initialState = {
   successMessage: '',

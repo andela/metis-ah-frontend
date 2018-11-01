@@ -29,7 +29,8 @@ module.exports = merge(common, {
               autoprefixer({
                 browsers: ['>1%', 'last 2 versions']
               })
-            ]
+            ],
+            minify: true
           }
         },
         {
@@ -41,11 +42,6 @@ module.exports = merge(common, {
   },
   optimization: {
     minimizer: [
-      // new UglifyJsPlugin({
-      //   cache: true,
-      //   parallel: true,
-      //   extractComments: 'all'
-      // }),
       new OptimizeCSSAssetsPlugin({})
     ]
   },

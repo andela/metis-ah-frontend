@@ -26,8 +26,8 @@ class Hero extends Component {
   render() {
     const {
       heroContent: {
-        name, description, poster, buttonIsVisible, className, history
-      }
+        name, description, poster, buttonIsVisible, className
+      }, history
     } = this.props;
     const { modalOpen, isAuth, showModalHandler } = this.props;
     const url = `linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(${poster})`;
@@ -90,4 +90,4 @@ Hero.propTypes = {
   }).isRequired
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(withRouter(Radium(Hero)));
+export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Radium(Hero)));

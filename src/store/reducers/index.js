@@ -1,4 +1,6 @@
-import { combineReducers } from 'redux';
+import {
+  combineReducers
+} from 'redux';
 import mock from './mockReducer';
 import categories from './categories';
 import featuredArticles from './featuredArticles';
@@ -9,6 +11,7 @@ import article from './article';
 import resetPasswordReducer from './resetPasswordReducer';
 import createArticle from './createArticle';
 import users from './users';
+import singleArticle from './singleArticle';
 
 const rootReducer = combineReducers({
   mock,
@@ -20,7 +23,8 @@ const rootReducer = combineReducers({
   article,
   passwordReset: resetPasswordReducer,
   createArticle,
-  users
+  users,
+  singleArticle
 });
 
 export default rootReducer;

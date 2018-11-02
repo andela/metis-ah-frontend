@@ -46,6 +46,7 @@ class ArticleContainer extends Component {
 
     const mappedArticleCards = articles.map((article) => {
       const {
+        id,
         imageUrl,
         slug,
         title,
@@ -56,6 +57,7 @@ class ArticleContainer extends Component {
       return (
         <ArticleCard
           key={slug}
+          id={id}
           img={imageUrl}
           title={title}
           description={description}

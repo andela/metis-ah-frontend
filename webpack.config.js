@@ -5,6 +5,7 @@ const {
 } = require('webpack-bundle-analyzer');
 const merge = require('webpack-merge');
 const common = require('./webpack.common.js');
+const webpack = require('webpack');
 
 module.exports = merge(common, {
   mode: 'development',
@@ -43,9 +44,11 @@ module.exports = merge(common, {
   devServer: {
     contentBase: path.join(__dirname, './src/static/'),
     port: 3500,
-    historyApiFallback: true
+    historyApiFallback: true,
+    hot: true
   },
   plugins: [
-    new BundleAnalyzerPlugin()
+    new BundleAnalyzerPlugin(),
+    new webpack.HotModuleReplacementPlugin()
   ]
 });

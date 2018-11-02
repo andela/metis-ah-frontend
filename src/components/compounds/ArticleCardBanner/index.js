@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import timePast from 'time_past';
-
+import { withRouter } from 'react-router-dom';
 import './style.scss';
 
 const style = image => ({
@@ -31,7 +31,7 @@ class ArticleCardBanner extends Component {
 
   render() {
     const { hover } = this.state;
-    const { item } = this.props;
+    const { item, history } = this.props;
 
     return (
       <div
@@ -39,6 +39,7 @@ class ArticleCardBanner extends Component {
         style={hover ? {} : style(item.imageUrl)}
         onMouseEnter={this.clearStyle}
         onMouseLeave={this.returnStyle}
+        onClick={() => history.push(`/articles/${item.id}/view`)}
       >
         <div className="ArticleCard__BannerContent">
           <h3 className="ArticleCard__BannerTitle">
@@ -68,4 +69,4 @@ ArticleCardBanner.propTypes = {
   }).isRequired,
 };
 
-export default ArticleCardBanner;
+export default withRouter(ArticleCardBanner);

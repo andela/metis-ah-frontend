@@ -159,7 +159,7 @@ exports[`article container component test should render the article container co
               <div
                 className="container article-inner-container"
               >
-                <ArticleCard
+                <withRouter(ArticleCard)
                   description="We can't Keep blaming behavior on the robots"
                   img="rectangle1"
                   key="asasa"
@@ -167,49 +167,96 @@ exports[`article container component test should render the article container co
                   time="23-09-2018"
                   title="The Internet's problems Can't Be solved with an Algorithm"
                 >
-                  <div
-                    className="articleCard-container"
-                  >
-                    <div
-                      className="columns articleCard"
+                  <Route>
+                    <ArticleCard
+                      description="We can't Keep blaming behavior on the robots"
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      img="rectangle1"
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      name="Tomi Adebanjo"
+                      time="23-09-2018"
+                      title="The Internet's problems Can't Be solved with an Algorithm"
                     >
                       <div
-                        className="column is-one-fifth padding__0"
+                        className="articleCard-container"
+                        onClick={[Function]}
                       >
-                        <img
-                          alt=""
-                          className="articleCard__img"
-                          src="rectangle1"
-                        />
+                        <div
+                          className="columns articleCard"
+                        >
+                          <div
+                            className="column is-one-fifth padding__0"
+                          >
+                            <img
+                              alt=""
+                              className="articleCard__img"
+                              src="rectangle1"
+                            />
+                          </div>
+                          <div
+                            className="column padding__0 articleCard__content"
+                          >
+                            <h2
+                              className="articleCard__title"
+                            >
+                              The Internet's problems Can't Be solved with an Algorithm
+                            </h2>
+                            <p
+                              className="articleCard__subtitle"
+                            >
+                              We can't Keep blaming behavior on the robots
+                            </p>
+                            <p
+                              className="articleCard__name"
+                            >
+                              Tomi Adebanjo
+                            </p>
+                            <p
+                              className="articleCard__time"
+                            >
+                              just now
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <div
-                        className="column padding__0 articleCard__content"
-                      >
-                        <h2
-                          className="articleCard__title"
-                        >
-                          The Internet's problems Can't Be solved with an Algorithm
-                        </h2>
-                        <p
-                          className="articleCard__subtitle"
-                        >
-                          We can't Keep blaming behavior on the robots
-                        </p>
-                        <p
-                          className="articleCard__name"
-                        >
-                          Tomi Adebanjo
-                        </p>
-                        <p
-                          className="articleCard__time"
-                        >
-                          just now
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </ArticleCard>
-                <ArticleCard
+                    </ArticleCard>
+                  </Route>
+                </withRouter(ArticleCard)>
+                <withRouter(ArticleCard)
                   description="We can't Keep blaming behavior on the robots"
                   img="rectangle2"
                   key="asasaa"
@@ -217,48 +264,95 @@ exports[`article container component test should render the article container co
                   time="23-09-2018"
                   title="The Internet's problems Can't Be solved with an Algorithm"
                 >
-                  <div
-                    className="articleCard-container"
-                  >
-                    <div
-                      className="columns articleCard"
+                  <Route>
+                    <ArticleCard
+                      description="We can't Keep blaming behavior on the robots"
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      img="rectangle2"
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      name="Tomi Adebanjo"
+                      time="23-09-2018"
+                      title="The Internet's problems Can't Be solved with an Algorithm"
                     >
                       <div
-                        className="column is-one-fifth padding__0"
+                        className="articleCard-container"
+                        onClick={[Function]}
                       >
-                        <img
-                          alt=""
-                          className="articleCard__img"
-                          src="rectangle2"
-                        />
+                        <div
+                          className="columns articleCard"
+                        >
+                          <div
+                            className="column is-one-fifth padding__0"
+                          >
+                            <img
+                              alt=""
+                              className="articleCard__img"
+                              src="rectangle2"
+                            />
+                          </div>
+                          <div
+                            className="column padding__0 articleCard__content"
+                          >
+                            <h2
+                              className="articleCard__title"
+                            >
+                              The Internet's problems Can't Be solved with an Algorithm
+                            </h2>
+                            <p
+                              className="articleCard__subtitle"
+                            >
+                              We can't Keep blaming behavior on the robots
+                            </p>
+                            <p
+                              className="articleCard__name"
+                            >
+                              Tomi Adebanjo
+                            </p>
+                            <p
+                              className="articleCard__time"
+                            >
+                              just now
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <div
-                        className="column padding__0 articleCard__content"
-                      >
-                        <h2
-                          className="articleCard__title"
-                        >
-                          The Internet's problems Can't Be solved with an Algorithm
-                        </h2>
-                        <p
-                          className="articleCard__subtitle"
-                        >
-                          We can't Keep blaming behavior on the robots
-                        </p>
-                        <p
-                          className="articleCard__name"
-                        >
-                          Tomi Adebanjo
-                        </p>
-                        <p
-                          className="articleCard__time"
-                        >
-                          just now
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                </ArticleCard>
+                    </ArticleCard>
+                  </Route>
+                </withRouter(ArticleCard)>
               </div>
             </ArticleContainer>
           </Connect(ArticleContainer)>

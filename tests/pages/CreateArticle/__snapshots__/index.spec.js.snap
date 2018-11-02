@@ -212,6 +212,7 @@ exports[`create article page test should render the create article page correctl
                                     className="atom__avatar"
                                     image="imageUrl.jpg"
                                     toggle={[Function]}
+                                    updatedImage={null}
                                   >
                                     <div>
                                       <button

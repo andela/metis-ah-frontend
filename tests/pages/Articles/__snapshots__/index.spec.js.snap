@@ -231,24 +231,46 @@ exports[`article page test should render the article page correctly 1`] = `
                   </SearchAndProfile>
                 </nav>
               </NavbarTop>
-              <Connect(withRouter(Hero))>
-                <withRouter(Hero)
-                  closeModalHandle={[Function]}
-                  heroContent={
-                    Object {
-                      "buttonIsVisible": true,
-                      "className": "hero",
-                      "description": "A community where readers and writers come together to share and discuss knowledge and ideas.",
-                      "name": "AUTHOR'S HAVEN",
-                      "poster": "banner",
+              <withRouter(Connect(Hero))>
+                <Route>
+                  <Connect(Hero)
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
                     }
-                  }
-                  isAuth={false}
-                  modalOpen={false}
-                  showModalHandler={[Function]}
-                  userfail={[Function]}
-                >
-                  <Route>
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                  >
                     <Hero
                       closeModalHandle={[Function]}
                       heroContent={
@@ -337,9 +359,9 @@ exports[`article page test should render the article page correctly 1`] = `
                         </Button>
                       </div>
                     </Hero>
-                  </Route>
-                </withRouter(Hero)>
-              </Connect(withRouter(Hero))>
+                  </Connect(Hero)>
+                </Route>
+              </withRouter(Connect(Hero))>
               <MinorNav>
                 <nav
                   aria-label="categories navigation"

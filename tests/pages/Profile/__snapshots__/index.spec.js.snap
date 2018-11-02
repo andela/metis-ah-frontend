@@ -163,7 +163,6 @@ exports[`<ProfileHero /> showing loading 1`] = `
                             >
                               <div
                                 className="UpdateProfile"
-                                onSubmit={[Function]}
                               >
                                 <div
                                   className="field"
@@ -1113,7 +1112,6 @@ exports[`Profile page test profile page to 1`] = `
                                           >
                                             <div
                                               className="UpdateProfile"
-                                              onSubmit={[Function]}
                                             >
                                               <div
                                                 className="field"

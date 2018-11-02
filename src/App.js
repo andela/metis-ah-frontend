@@ -15,6 +15,8 @@ const ResetPassword = Async(() => import('Pages/ResetPassword'));
 const UpdatePassword = Async(() => import('Pages/UpdatePassword'));
 const VerifyEmail = Async(() => import('Pages/VerifyEmail'));
 const NotFound = Async(() => import('Pages/NotFound'));
+const ProfilePage = Async(() => import('Pages/Profile'));
+
 
 const App = () => (
   <BrowserRouter>
@@ -28,6 +30,7 @@ const App = () => (
         <ProtectedRoute path="/articles/new" component={AsyncCreateArticle} />
         <Route path="/articles/:category" exact component={AsyncArticles} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
+        <ProtectedRoute path="/users/:userId" component={ProfilePage} />
         <Route component={NotFound} />
       </Switch>
     </Fragment>

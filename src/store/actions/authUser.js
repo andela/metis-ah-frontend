@@ -83,7 +83,7 @@ export const loginUser = postData => (dispatch) => {
   dispatch(userStarted());
   return axios.post('/users/auth/login', postData)
     .then((response) => {
-      const user = JSON.stringify(response.data);
+      const user = JSON.stringify(response.data.data);
       toastr.success(response.data.data.message);
       dispatch(setCurrentUser(response.data));
       localStorage.setItem('user', `${user}`);

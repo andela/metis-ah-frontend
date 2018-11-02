@@ -1,0 +1,12 @@
+.share-container {
+  display: flex;
+
+  .SocialMediaShareButton {
+    padding-left: 10px;
+    cursor: pointer;
+
+    &:hover {
+      padding-top: 5px;
+    }
+  }
+}

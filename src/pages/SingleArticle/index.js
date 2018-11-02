@@ -2,12 +2,15 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import BrandContainer from 'Components/compounds/BrandContainer';
 import SearchAndProfile from 'Components/compounds/SearchAndProfile';
-import Header from 'Components/atoms/singleArticleHeader';
+import Header from 'Components/atoms/SingleArticleHeader';
 import FooterBrand from 'Components/compounds/FooterBrand';
 import convert from 'react-html-parser';
 import Loader from 'Components/atoms/ArticleLoader';
 import { getSingleArticle } from 'Actions/singleArticle';
 import TagsDisplay from 'Components/atoms/TagsDisplay';
+import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
+import { SHARE_BASE_URL } from '../../../config.json';
+
 import './style.scss';
 /**
  * SingleArticle
@@ -33,7 +36,8 @@ export class SingleArticle extends Component {
    const {
      menu
    } = this.state;
-   const { article, loading } = this.props;
+   const { article, loading, location: { pathname } } = this.props;
+   const shareUrl = `${SHARE_BASE_URL}${pathname}`;
    return (
      <div className="single">
        <div className="navCover">
@@ -56,6 +60,11 @@ export class SingleArticle extends Component {
             <div className="Main container">
               {convert(article.articleData.body)}
               <TagsDisplay tags={article.metadata.tags} />
+              <ShareArticleDisplay
+                title={article.articleData.title}
+                shareUrl={shareUrl}
+                articleId={article.articleData.id}
+              />
             </div>
           </div>
           )
@@ -72,7 +81,6 @@ const mapStateToProps = state => ({
   article: state.singleArticle.article,
   error: state.singleArticle.error,
   loading: state.singleArticle.loading,
-
 });
 
 const mapDispatchToProps = dispatch => ({

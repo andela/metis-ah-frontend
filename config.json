@@ -1,5 +1,7 @@
 {
   "BASE_URL": "https://metis-ah-staging.herokuapp.com/api/v1",
   "CK_TOKEN_URL": "https://35340.cke-cs.com/token/dev/yRNNKituMZdoyc55k73dmbbuduzYRAcYVLe43epJpiw2egV8hB2YvMB02XL2",
-  "CK_UPLOAD_URL": "https://35340.cke-cs.com/easyimage/upload/"
+  "CK_UPLOAD_URL": "https://35340.cke-cs.com/easyimage/upload/",
+  "SHARE_BASE_URL": "https://metis-ah-stagin-pr-31.herokuapp.com/api/v1",
+  "LOCAL_SHARE_BASE_URL": "localhost:3500/api/v1"
 }

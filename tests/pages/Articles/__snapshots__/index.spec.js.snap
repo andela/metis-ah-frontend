@@ -1,0 +1,844 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`article page test should render the article page correctly 1`] = `
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <BrowserRouter>
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "createHref": [Function],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "pathname": "/",
+            "search": "",
+            "state": undefined,
+          },
+          "push": [Function],
+          "replace": [Function],
+        }
+      }
+    >
+      <Articles>
+        <div
+          className="articles-container"
+        >
+          <Header>
+            <header>
+              <NavbarTop>
+                <nav
+                  aria-label="main navigation"
+                  className="navbar container Landing-Page-Header"
+                  role="navigation"
+                >
+                  <BrandContainer
+                    menu={false}
+                    showMenu={[Function]}
+                  >
+                    <div
+                      className="navbar-brand brand header-brand-container"
+                    >
+                      <Link
+                        className="navbar-item"
+                        replace={false}
+                        to="/"
+                      >
+                        <a
+                          className="navbar-item"
+                          href="/"
+                          onClick={[Function]}
+                        >
+                          <img
+                            alt="Authors haven logo"
+                            id="logo"
+                            src="test-file-stub"
+                          />
+                          <h1
+                            className="title"
+                          >
+                            Author's Haven
+                          </h1>
+                        </a>
+                      </Link>
+                      <button
+                        aria-expanded="false"
+                        aria-label="menu"
+                        className="navbar-burger burger' ' bug"
+                        data-target="profile-nav"
+                        onClick={[Function]}
+                        type="button"
+                      >
+                        <span
+                          aria-hidden="true"
+                        />
+                        <span
+                          aria-hidden="true"
+                        />
+                        <span
+                          aria-hidden="true"
+                        />
+                      </button>
+                    </div>
+                  </BrandContainer>
+                  <SearchAndProfile
+                    menu={false}
+                  >
+                    <div
+                      className="navbar-menu 'block'"
+                      id="profile-nav"
+                    >
+                      <Search>
+                        <input
+                          aria-label="search author's haven"
+                          className="input is-primary app-search"
+                          placeholder="Search"
+                          type="text"
+                        />
+                      </Search>
+                      <div
+                        className="navbar-end"
+                      >
+                        <div
+                          className="navbar-item"
+                        >
+                          <Connect(withRouter(NavBar))>
+                            <withRouter(NavBar)
+                              dispatch={[Function]}
+                              history={[Function]}
+                              isAuth={false}
+                            >
+                              <Route>
+                                <NavBar
+                                  dispatch={[Function]}
+                                  history={
+                                    Object {
+                                      "action": "POP",
+                                      "block": [Function],
+                                      "createHref": [Function],
+                                      "go": [Function],
+                                      "goBack": [Function],
+                                      "goForward": [Function],
+                                      "length": 1,
+                                      "listen": [Function],
+                                      "location": Object {
+                                        "hash": "",
+                                        "pathname": "/",
+                                        "search": "",
+                                        "state": undefined,
+                                      },
+                                      "push": [Function],
+                                      "replace": [Function],
+                                    }
+                                  }
+                                  isAuth={false}
+                                  location={
+                                    Object {
+                                      "hash": "",
+                                      "pathname": "/",
+                                      "search": "",
+                                      "state": undefined,
+                                    }
+                                  }
+                                  match={
+                                    Object {
+                                      "isExact": true,
+                                      "params": Object {},
+                                      "path": "/",
+                                      "url": "/",
+                                    }
+                                  }
+                                >
+                                  <div
+                                    className="buttons"
+                                  >
+                                    <WriteButton
+                                      history={
+                                        Object {
+                                          "action": "POP",
+                                          "block": [Function],
+                                          "createHref": [Function],
+                                          "go": [Function],
+                                          "goBack": [Function],
+                                          "goForward": [Function],
+                                          "length": 1,
+                                          "listen": [Function],
+                                          "location": Object {
+                                            "hash": "",
+                                            "pathname": "/",
+                                            "search": "",
+                                            "state": undefined,
+                                          },
+                                          "push": [Function],
+                                          "replace": [Function],
+                                        }
+                                      }
+                                    >
+                                      <button
+                                        className="button btn app-general-button write_button"
+                                        id="app-write-button"
+                                        onClick={[Function]}
+                                        type="button"
+                                      >
+                                        <strong>
+                                          WRITE
+                                        </strong>
+                                      </button>
+                                    </WriteButton>
+                                    <Connect(LoginButton)>
+                                      <LoginButton
+                                        closeModalHandle={[Function]}
+                                        isAuth={false}
+                                        modalOpen={false}
+                                        showModalHandle={[Function]}
+                                        userfail={[Function]}
+                                      >
+                                        <div>
+                                          <button
+                                            className="button login-button"
+                                            onClick={[Function]}
+                                            type="button"
+                                          >
+                                            Login
+                                          </button>
+                                        </div>
+                                      </LoginButton>
+                                    </Connect(LoginButton)>
+                                  </div>
+                                </NavBar>
+                              </Route>
+                            </withRouter(NavBar)>
+                          </Connect(withRouter(NavBar))>
+                        </div>
+                      </div>
+                    </div>
+                  </SearchAndProfile>
+                </nav>
+              </NavbarTop>
+              <withRouter(Connect(Hero))>
+                <Route>
+                  <Connect(Hero)
+                    history={
+                      Object {
+                        "action": "POP",
+                        "block": [Function],
+                        "createHref": [Function],
+                        "go": [Function],
+                        "goBack": [Function],
+                        "goForward": [Function],
+                        "length": 1,
+                        "listen": [Function],
+                        "location": Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        },
+                        "push": [Function],
+                        "replace": [Function],
+                      }
+                    }
+                    location={
+                      Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      }
+                    }
+                    match={
+                      Object {
+                        "isExact": true,
+                        "params": Object {},
+                        "path": "/",
+                        "url": "/",
+                      }
+                    }
+                  >
+                    <Hero
+                      closeModalHandle={[Function]}
+                      heroContent={
+                        Object {
+                          "buttonIsVisible": true,
+                          "className": "hero",
+                          "description": "A community where readers and writers come together to share and discuss knowledge and ideas.",
+                          "name": "AUTHOR'S HAVEN",
+                          "poster": "banner",
+                        }
+                      }
+                      history={
+                        Object {
+                          "action": "POP",
+                          "block": [Function],
+                          "createHref": [Function],
+                          "go": [Function],
+                          "goBack": [Function],
+                          "goForward": [Function],
+                          "length": 1,
+                          "listen": [Function],
+                          "location": Object {
+                            "hash": "",
+                            "pathname": "/",
+                            "search": "",
+                            "state": undefined,
+                          },
+                          "push": [Function],
+                          "replace": [Function],
+                        }
+                      }
+                      isAuth={false}
+                      location={
+                        Object {
+                          "hash": "",
+                          "pathname": "/",
+                          "search": "",
+                          "state": undefined,
+                        }
+                      }
+                      match={
+                        Object {
+                          "isExact": true,
+                          "params": Object {},
+                          "path": "/",
+                          "url": "/",
+                        }
+                      }
+                      modalOpen={false}
+                      showModalHandler={[Function]}
+                      userfail={[Function]}
+                    >
+                      <div
+                        className="hero"
+                        data-radium={true}
+                        style={
+                          Object {
+                            "background": "linear-gradient(rgba(19, 180, 122, 0.51), rgba(19, 180, 122, 0.51)), url(banner)",
+                          }
+                        }
+                      >
+                        <h1
+                          className="title"
+                          key=".0"
+                        >
+                          AUTHOR'S HAVEN
+                        </h1>
+                        <p
+                          className="text"
+                          key=".1"
+                        >
+                          A community where readers and writers come together to share and discuss knowledge and ideas.
+                        </p>
+                        <Button
+                          color="white"
+                          key=".2"
+                          onClick={[Function]}
+                        >
+                          <button
+                            className="App__Button white "
+                            onClick={[Function]}
+                            type="button"
+                          >
+                            GET STARTED
+                          </button>
+                        </Button>
+                      </div>
+                    </Hero>
+                  </Connect(Hero)>
+                </Route>
+              </withRouter(Connect(Hero))>
+              <MinorNav>
+                <nav
+                  aria-label="categories navigation"
+                  className="nav-Categories"
+                  role="navigation"
+                >
+                  <div
+                    className="Categories-container container"
+                  >
+                    <withRouter(Connect(Categories))>
+                      <Route>
+                        <Connect(Categories)
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                        >
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={false}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
+                          >
+                            <NavLink
+                              activeClassName="categories-selected"
+                              aria-current="page"
+                              className="categories-item"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-item categories-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-item categories-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-selected"
+                              aria-current="page"
+                              className="categories-item"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-item"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-item"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
+                  </div>
+                </nav>
+              </MinorNav>
+            </header>
+          </Header>
+          <withRouter(Connect(ArticleContainer))>
+            <Route>
+              <Connect(ArticleContainer)
+                history={
+                  Object {
+                    "action": "POP",
+                    "block": [Function],
+                    "createHref": [Function],
+                    "go": [Function],
+                    "goBack": [Function],
+                    "goForward": [Function],
+                    "length": 1,
+                    "listen": [Function],
+                    "location": Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    },
+                    "push": [Function],
+                    "replace": [Function],
+                  }
+                }
+                location={
+                  Object {
+                    "hash": "",
+                    "pathname": "/",
+                    "search": "",
+                    "state": undefined,
+                  }
+                }
+                match={
+                  Object {
+                    "isExact": true,
+                    "params": Object {},
+                    "path": "/",
+                    "url": "/",
+                  }
+                }
+              >
+                <ArticleContainer
+                  articles={Array []}
+                  categories={
+                    Array [
+                      Object {
+                        "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                        "id": 1,
+                        "name": "FASHION",
+                        "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                      },
+                    ]
+                  }
+                  getArticles={[Function]}
+                  history={
+                    Object {
+                      "action": "POP",
+                      "block": [Function],
+                      "createHref": [Function],
+                      "go": [Function],
+                      "goBack": [Function],
+                      "goForward": [Function],
+                      "length": 1,
+                      "listen": [Function],
+                      "location": Object {
+                        "hash": "",
+                        "pathname": "/",
+                        "search": "",
+                        "state": undefined,
+                      },
+                      "push": [Function],
+                      "replace": [Function],
+                    }
+                  }
+                  loading={false}
+                  location={
+                    Object {
+                      "hash": "",
+                      "pathname": "/",
+                      "search": "",
+                      "state": undefined,
+                    }
+                  }
+                  match={
+                    Object {
+                      "isExact": true,
+                      "params": Object {},
+                      "path": "/",
+                      "url": "/",
+                    }
+                  }
+                >
+                  <div
+                    className="container article-inner-container"
+                  >
+                    <div
+                      className="article-container-card"
+                    >
+                      <i
+                        className="fas fa-exclamation notification-icon"
+                      />
+                      <p>
+                        This category has no articles
+                      </p>
+                    </div>
+                  </div>
+                </ArticleContainer>
+              </Connect(ArticleContainer)>
+            </Route>
+          </withRouter(Connect(ArticleContainer))>
+          <Footer>
+            <footer
+              className="Main-Footer"
+            >
+              <Footer>
+                <div
+                  className="footer-nav-categories"
+                >
+                  <div
+                    className="container container"
+                  >
+                    <withRouter(Connect(Categories))
+                      footer={true}
+                    >
+                      <Route>
+                        <Connect(Categories)
+                          footer={true}
+                          history={
+                            Object {
+                              "action": "POP",
+                              "block": [Function],
+                              "createHref": [Function],
+                              "go": [Function],
+                              "goBack": [Function],
+                              "goForward": [Function],
+                              "length": 1,
+                              "listen": [Function],
+                              "location": Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              },
+                              "push": [Function],
+                              "replace": [Function],
+                            }
+                          }
+                          location={
+                            Object {
+                              "hash": "",
+                              "pathname": "/",
+                              "search": "",
+                              "state": undefined,
+                            }
+                          }
+                          match={
+                            Object {
+                              "isExact": true,
+                              "params": Object {},
+                              "path": "/",
+                              "url": "/",
+                            }
+                          }
+                        >
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={true}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
+                          >
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              to="/"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/"
+                              >
+                                <Link
+                                  aria-current="page"
+                                  className="categories-footItem categories-footItem-selected"
+                                  replace={false}
+                                  style={Object {}}
+                                  to="/"
+                                >
+                                  <a
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
+                              exact={true}
+                              key="1"
+                              to="/articles/1"
+                            >
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
+                              >
+                                <Link
+                                  aria-current={null}
+                                  className="categories-footItem"
+                                  replace={false}
+                                  to="/articles/1"
+                                >
+                                  <a
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
+                  </div>
+                </div>
+              </Footer>
+              <Brand>
+                <div
+                  className="brandFooter"
+                >
+                  <div
+                    className="container Footer-brand"
+                  >
+                    <p>
+                      2018 Copyright of metis team
+                    </p>
+                    <div>
+                      <i
+                        className="fab fa-facebook-square space"
+                      />
+                      <i
+                        className="fab fa-twitter space"
+                      />
+                      <i
+                        className="fab fa-google-plus-g space"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </Brand>
+            </footer>
+          </Footer>
+        </div>
+      </Articles>
+    </Router>
+  </BrowserRouter>
+</Provider>
+`;

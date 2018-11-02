@@ -35,3 +35,13 @@ export const getSingleArticle = articleId => (dispatch) => {
       }
     });
 };
+
+export const shareArticle = (sharePlatform, articleId) => dispatch =>
+	axios
+		.post(`/articles/${articleId}/share`, sharePlatform)
+		.then(response => {
+			console.log(response);
+		})
+		.catch(error => {
+			console.log(error);
+		});

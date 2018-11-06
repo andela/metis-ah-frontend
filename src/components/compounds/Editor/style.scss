@@ -1,6 +1,6 @@
 .ArticleTitle{
   margin: 10px auto;
-  font-size: 200%;
+  font-size: 30px;
   width: 100%;
   outline: none;
   border: 0px;
@@ -13,7 +13,7 @@
 
 .ArticleDesc{
   margin: 10px auto;
-  font-size: 150%;
+  font-size: 25px;
   width: 100%;
   outline: none;
   border: 0px;
@@ -30,4 +30,9 @@
   display: flex;
   flex-direction: column;
   min-height: 70vh;
+
+  #ArticleBodyLabel {
+    font-size: 20px;
+    color: #bbb;
+  }
 }

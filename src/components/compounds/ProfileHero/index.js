@@ -38,13 +38,12 @@ class ProfileHero extends Component {
 
   handleUpdateUser = (e) => {
     e.preventDefault();
-    const { updateUserProfile, userId, fetchUserProfile } = this.props;
+    const { updateUserProfile } = this.props;
     const FD = new FormData(e.target);
     this.setState(() => ({
       modalIsOpen: false
     }));
-    updateUserProfile(FD);
-    return fetchUserProfile(userId);
+    return updateUserProfile(FD);
   }
 
   render() {

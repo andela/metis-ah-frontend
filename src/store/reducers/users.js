@@ -34,7 +34,7 @@ export default function (state = initialState, action) {
     case UPDATE_PROFILE_SUCCESS:
       return {
         ...state,
-        ...action.payload.user[1],
+        ...action.payload.user,
         loading: false
       };
     case UPDATE_PROFILE_ERROR:

@@ -373,6 +373,7 @@ exports[`create article page test should render the create article page correctl
                   type="text"
                   value=""
                 />
+                <br />
                 <textarea
                   className="ArticleDesc"
                   maxLength="150"
@@ -381,6 +382,12 @@ exports[`create article page test should render the create article page correctl
                   type="text"
                   value=""
                 />
+                <br />
+                <h1
+                  id="ArticleBodyLabel"
+                >
+                  Enter Article Body Below
+                </h1>
                 <ArticleEditor
                   articleData=""
                   articleOnChangeHandler={[Function]}
@@ -419,6 +426,7 @@ exports[`create article page test should render the create article page correctl
                     />
                   </div>
                 </ArticleEditor>
+                <br />
               </div>
             </Editor>
             <ImageUploadButton

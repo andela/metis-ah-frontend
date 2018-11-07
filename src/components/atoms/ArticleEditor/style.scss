@@ -8,7 +8,7 @@
     &:not(.ck-editor__nested-editable) {
       &.ck-rounded-corners {
         border: 1px #000;
-        border-radius: 0 !important;
+        border-radius: 4px !important;
       }
 
       &.ck-focused {

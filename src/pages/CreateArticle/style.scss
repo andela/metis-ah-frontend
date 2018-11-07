@@ -2,6 +2,7 @@
 .Main{
   max-width: 740px;
   padding: 5% 20px;
+  position: relative;
 }
 
 .navCover{
@@ -11,7 +12,7 @@
 .publish{
   display: block;
   margin: 50px auto;
-  box-shadow: 2px 2px 4px #ccc;
+  // box-shadow: 2px 2px 4px #ccc;
 
   &:hover{
     box-shadow: 1px 1px 2px #ccc;
@@ -22,7 +23,11 @@
 
 
 .autoSave{
-  float: right;
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  color: rgb(173, 169, 169);
+  font-style: italic;
 }
 
 

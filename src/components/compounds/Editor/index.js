@@ -15,11 +15,15 @@ const Editor = (props) => {
   return (
     <div className="Inputs">
       <input type="text" value={articleTitle} onChange={articleTitleHandler} className="ArticleTitle" placeholder="Title" />
+      <br />
       <textarea type="text" maxLength="150" value={articleDescription} onChange={articleDescriptionHandler} className="ArticleDesc" placeholder="Description" />
+      <br />
+      <h1 id="ArticleBodyLabel">Enter Article Body Below</h1>
       <ArticleEditor
         articleData={articleBody}
         articleOnChangeHandler={articleBodyHandler}
       />
+      <br />
     </div>
   );
 };

@@ -20,15 +20,19 @@ const UserMenu = (props) => {
 };
 
 UserMenu.propTypes = {
-  showUserMenu: PropTypes.bool.isRequired,
+  showUserMenu: PropTypes.bool,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   logout: PropTypes.func.isRequired,
-  id: PropTypes.string.isRequired
+  id: PropTypes.number
 };
 
+UserMenu.defaultProps = {
+  showUserMenu: false,
+  id: 0
+};
 const mapStateToProps = state => ({
   showUserMenu: state.authUser.showUserMenu,
-  id: state.authUser.user.userId ? state.authUser.user.userId : state.authUser.user.id
+  id: state.authUser.user.id
 });
 
 const mapDispatchToProps = dispatch => ({

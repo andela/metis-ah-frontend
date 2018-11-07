@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
@@ -99,13 +100,16 @@ const mapDispatchToProps = dispatch => ({
 });
 
 ArticleContainer.propTypes = {
-  articles: PropTypes.arrayOf(PropTypes.object).isRequired,
+  articles: PropTypes.arrayOf(PropTypes.object),
   loading: PropTypes.bool.isRequired,
-  match: PropTypes.object.isRequired,
+  match: PropTypes.objectOf(PropTypes.any).isRequired,
   getArticles: PropTypes.func.isRequired,
   categories: PropTypes.arrayOf(PropTypes.object).isRequired
 };
 
+ArticleContainer.defaultProps = {
+  articles: []
+};
 export default withRouter(
   connect(
     mapStateToProps,

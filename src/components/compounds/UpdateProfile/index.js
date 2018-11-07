@@ -108,6 +108,6 @@ UpdateProfile.propTypes = {
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   bio: PropTypes.string.isRequired,
-  interests: PropTypes.arrayOf.isRequired,
+  interests: PropTypes.arrayOf(PropTypes.string).isRequired,
 };
 export default UpdateProfile;

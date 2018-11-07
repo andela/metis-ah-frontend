@@ -63,10 +63,16 @@ class ArticleCardBanner extends Component {
 ArticleCardBanner.propTypes = {
   item: PropTypes.shape({
     title: PropTypes.string.isRequired,
-    description: PropTypes.string.isRequired,
-    createdAt: PropTypes.string.isRequired,
+    description: PropTypes.string,    
+    createdAt: PropTypes.string,
     imageUrl: PropTypes.string.isRequired,
-  }).isRequired,
+  }),
+};
+
+ArticleCardBanner.defaultProps = {
+  item: {
+    description: ''
+  }
 };
 
 export default withRouter(ArticleCardBanner);

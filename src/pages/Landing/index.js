@@ -68,8 +68,14 @@ Landing.propTypes = {
   }).isRequired,
   setHeroContentNow: PropTypes.func.isRequired,
   history: PropTypes.shape({
-    push: PropTypes.func.isRequired
-  }).isRequired
+    push: PropTypes.func
+  })
+};
+
+Landing.defaultProps = {
+  history: {
+    push: () => ''
+  }
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Landing);

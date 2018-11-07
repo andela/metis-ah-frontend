@@ -131,19 +131,26 @@ const mapStateToProps = ({ users }, ownProps) => ({
 
 ProfileHero.propTypes = {
   updateUserProfile: PropTypes.func.isRequired,
-  fetchUserProfile: PropTypes.func.isRequired,
-  userId: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
   image: PropTypes.string.isRequired,
   username: PropTypes.string.isRequired,
   email: PropTypes.string.isRequired,
   bio: PropTypes.string.isRequired,
-  bookmarks: PropTypes.arrayOf.isRequired,
-  followed: PropTypes.arrayOf.isRequired,
-  follower: PropTypes.arrayOf.isRequired,
-  articles: PropTypes.arrayOf.isRequired,
-  interests: PropTypes.arrayOf.isRequired,
-  ratings: PropTypes.arrayOf.isRequired,
+  bookmarks: PropTypes.arrayOf(PropTypes.object),
+  followed: PropTypes.arrayOf(PropTypes.object),
+  follower: PropTypes.arrayOf(PropTypes.object),
+  articles: PropTypes.arrayOf(PropTypes.object),
+  interests: PropTypes.arrayOf(PropTypes.string),
+  ratings: PropTypes.arrayOf(PropTypes.object),
+};
+
+ProfileHero.defaultProps = {
+  interests: [],
+  followed: [],
+  follower: [],
+  articles: [],
+  ratings: [],
+  bookmarks: []
 };
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileHero);

@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types';
+import uuid from 'uuid';
 
 const loadInterests = interests => interests.map(
   interest => (
-    <button type="button" className="btn btn-default btn--tag FontSize--18" title={interest}>
+    <button type="button" className="btn btn-default btn--tag FontSize--18" title={interest} key={uuid()}>
       {interest}
     </button>
   )

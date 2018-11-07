@@ -190,6 +190,7 @@ exports[`article container component test should render the article container co
                           "replace": [Function],
                         }
                       }
+                      id={0}
                       img="rectangle1"
                       location={
                         Object {
@@ -287,6 +288,7 @@ exports[`article container component test should render the article container co
                           "replace": [Function],
                         }
                       }
+                      id={0}
                       img="rectangle2"
                       location={
                         Object {

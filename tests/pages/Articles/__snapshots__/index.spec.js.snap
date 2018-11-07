@@ -631,8 +631,22 @@ exports[`article page test should render the article page correctly 1`] = `
                         className="fas fa-exclamation notification-icon"
                       />
                       <p>
-                        This category has no articles
+                        Oops!, No Article currently exits in this category.
+                        <br />
+                        We would like you to be the first to write in this category
                       </p>
+                      <br />
+                      <Link
+                        replace={false}
+                        to="/articles/new"
+                      >
+                        <a
+                          href="/articles/new"
+                          onClick={[Function]}
+                        >
+                          WRITE
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </ArticleContainer>

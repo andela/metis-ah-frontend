@@ -43,8 +43,6 @@ export const getUser = id => (dispatch) => {
         type: GET_PROFILE_SUCCESS,
         payload: res.data.data.user,
       });
-      dispatch(resetCurrentUser(res.data.data.user));
-      localStorage.setItem('user', JSON.stringify(res.data.data));
     })
     .catch((err) => {
       const error = (err.response === undefined)
@@ -55,10 +53,12 @@ export const getUser = id => (dispatch) => {
     });
 };
 
-export const updateUser = formData => (dispatch) => {
+export const updateUser = (formData, history) => (dispatch) => {
   showLoading(dispatch, UPDATE_PROFILE);
   axios.put('https://metis-ah-staging.herokuapp.com/api/v1/users/update', formData)
     .then((res) => {
+      dispatch(resetCurrentUser(res.data.data.user));
+      localStorage.setItem('user', JSON.stringify(res.data.data.user));
       dispatch({
         type: UPDATE_PROFILE_SUCCESS,
         payload: res.data.data
@@ -68,12 +68,13 @@ export const updateUser = formData => (dispatch) => {
     })
     .catch((err) => {
       showLoading(dispatch, UPDATE_PROFILE);
-      const failed = (err.response === undefined) ? 'Fail to process your request' : err.response.data.data.message;
-      const error = (err.response === undefined) ? 'An error occur please try again' : err.response.data.data.messagese;
-      dispatch({
-        type: UPDATE_PROFILE_ERROR,
-        payload: error || failed
-      });
-      alert.error((error) || failed);
+      if (err.response.status === 401) {
+        dispatch({
+          type: UPDATE_PROFILE_ERROR,
+          payload: "You're not signed in, please login"
+        });
+        alert.success("You're not signed in, Please login");
+        return history.push('/');
+      }
     });
 };

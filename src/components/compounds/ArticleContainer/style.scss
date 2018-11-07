@@ -28,18 +28,32 @@
 		border-radius: 5px;
 		display: flex;
 		flex-direction: column;
-		width: 380px;
-		padding: 1%;
+		width: 600px;
+		padding: 15px 8px;
 		margin: auto;
 		align-items: center;
-		box-shadow: 0 2px 4px rgba(0,0,0,0.11), 0 2px 4px rgba(0,0,0,0.18);
+		box-shadow: 0 1px 3px 1px rgba(0,0,0,0.06);
 		.notification-icon {
 			font-size: 30px;
 			color: #13b47a;
 		}
 		p {
-			font-size: 20px;
+			font-size: 16px;
 			padding-top: 15px;
+			text-align: center;
+		}
+		a {
+			color: white;
+			background: #4dd6a5;
+			padding: 3px 20px;
+			border-radius: 20px;
+			border: 1px solid transparent;
+		}
+
+		a:hover {
+			color: #4dd6a5;
+			background: transparent;
+			border: 1px solid #13b47a;
 		}
   }
 
@@ -53,7 +67,7 @@
 	}
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 620px) {
 	.article-inner-container {
 		.article-container-card {
 			width: 280px;

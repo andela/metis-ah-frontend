@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { withRouter } from 'react-router-dom';
+import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ArticleCard from 'Components/atoms/ArticleCard';
@@ -71,12 +71,18 @@ class ArticleContainer extends Component {
         {mappedArticleCards}
         {articles.length < 1 && (loading && <div className="article-loader" />)}
         {articles.length < 1
-					&& (!loading && (
-						<div className="article-container-card">
-  <i className="fas fa-exclamation notification-icon" />
-  <p>This category has no articles</p>
-						</div>
-					))}
+          && (!loading && (
+            <div className="article-container-card">
+              <i className="fas fa-exclamation notification-icon" />
+              <p>
+                Oops!, No Article currently exits in this category.
+                <br />
+                We would like you to be the first to write in this category
+              </p>
+              <br />
+              <Link to="/articles/new">WRITE</Link>
+            </div>
+          ))}
       </div>
     );
   }

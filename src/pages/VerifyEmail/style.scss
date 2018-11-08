@@ -60,7 +60,7 @@
   }
 
   .interests-section {
-    margin: 10px 2px 2px 2px;
+    padding: 70px 0 40px 0;
     max-width: 1200px;
     display: flex;
     flex-direction: row;
@@ -96,9 +96,13 @@
   }
 
   .central {
-    margin: 5% auto;
+    margin-bottom: 40px;
+    padding: 10px 40px;
   }
-
+  .App__Button.central {
+    width: auto;
+    min-height: auto;
+  }
   .central:disabled,
   .central:hover:disabled {
     background: none;

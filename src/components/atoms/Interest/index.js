@@ -16,7 +16,7 @@ class Interest extends Component {
       <button
         type="button"
         {...props}
-        className={`interest ${selected ? 'selected' : 'not-selected'}`}
+        className={`btn btn-default btn--tag FontSize--18 ${selected ? 'selected' : ''}`}
         onClick={() => {
           this.setState({
             selected: !selected,

@@ -8,8 +8,12 @@ import convert from 'react-html-parser';
 import Loader from 'Components/atoms/ArticleLoader';
 import { getSingleArticle } from 'Actions/singleArticle';
 import TagsDisplay from 'Components/atoms/TagsDisplay';
-import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
+import ToggleForm from 'Atoms/ToggleForm';
+import MediaSignupSection from 'Atoms/Button/Media';
+import Modal from 'Atoms/Modal';
+import { closeModal, userFail } from 'Actions/authUser';
 import { SHARE_BASE_URL } from '../../../config.json';
+import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
 
 import './style.scss';
 /**
@@ -22,69 +26,86 @@ export class SingleArticle extends Component {
 
   componentDidMount() {
     const { params: { articleId } } = this.props.match;
-    const { getArticle } = this.props;
-    getArticle(articleId);
+    const { getSingleArticle } = this.props;
+    getSingleArticle(articleId);
   }
 
- showMenu = () => {
-   this.setState(state => ({
-     menu: !state.menu,
-   }));
- }
+  showMenu = () => {
+    this.setState(state => ({
+      menu: !state.menu,
+    }));
+  }
 
- render() {
-   const {
-     menu
-   } = this.state;
-   const { article, loading, location: { pathname } } = this.props;
-   const shareUrl = `${SHARE_BASE_URL}${pathname}`;
-   return (
-     <div className="single">
-       <div className="navCover">
-         <nav className="navbar container Landing-Page-Header" role="navigation" aria-label="main navigation">
-           <BrandContainer showMenu={this.showMenu} menu={menu} />
-           <SearchAndProfile menu={menu} />
-         </nav>
-       </div>
-       {loading && <Loader /> }
-       {article
+  closeModalHandler = () => {
+    const { closeModal, userFail } = this.props;
+    closeModal();
+    userFail();
+  };
+
+  render() {
+    const {
+      menu
+    } = this.state;
+    const {
+      article, loading, location: { pathname }, isModalOpen
+    } = this.props;
+    const shareUrl = `${SHARE_BASE_URL}${pathname}`;
+    return (
+      <div className="single">
+        {
+          isModalOpen ? (
+            <Modal>
+              <MediaSignupSection />
+              <ToggleForm />
+            </Modal>
+          ) : null
+        }
+        <div className="navCover">
+          <nav className="navbar container Landing-Page-Header" role="navigation" aria-label="main navigation">
+            <BrandContainer showMenu={this.showMenu} menu={menu} />
+            <SearchAndProfile menu={menu} />
+          </nav>
+        </div>
+        {loading && <Loader />}
+        {article
           && (
-          <div>
-            <Header
-              title={article.articleData.title}
-              img={article.articleData.imageUrl}
-              createdDate={article.articleData.createdDate}
-              profile={article.metadata.author.imageUrl}
-              author={article.metadata.author.username}
-            />
-            <div className="Main container">
-              {convert(article.articleData.body)}
-              <TagsDisplay tags={article.metadata.tags} />
-              <ShareArticleDisplay
+            <div>
+              <Header
                 title={article.articleData.title}
-                shareUrl={shareUrl}
-                articleId={article.articleData.id}
+                img={article.articleData.imageUrl}
+                createdDate={article.articleData.createdDate}
+                profile={article.metadata.author.imageUrl}
+                author={article.metadata.author.username}
               />
+              <div className="Main container">
+                {convert(article.articleData.body)}
+                <TagsDisplay tags={article.metadata.tags} />
+                <ShareArticleDisplay
+                  title={article.articleData.title}
+                  shareUrl={shareUrl}
+                  articleId={article.articleData.id}
+                />
+              </div>
             </div>
-          </div>
           )
-          }
-       <footer className="Main-Footer">
-         <FooterBrand />
-       </footer>
-     </div>
+        }
+        <footer className="Main-Footer">
+          <FooterBrand />
+        </footer>
+      </div>
 
-   );
- }
+    );
+  }
 }
 const mapStateToProps = state => ({
   article: state.singleArticle.article,
   error: state.singleArticle.error,
   loading: state.singleArticle.loading,
+  isModalOpen: state.authUser.modalOpen,
 });
 
-const mapDispatchToProps = dispatch => ({
-  getArticle: articleId => dispatch(getSingleArticle(articleId)),
-});
-
-export default connect(mapStateToProps, mapDispatchToProps)(SingleArticle);
+export default connect(mapStateToProps, {
+  getSingleArticle,
+  closeModal,
+  userFail
+})(SingleArticle);

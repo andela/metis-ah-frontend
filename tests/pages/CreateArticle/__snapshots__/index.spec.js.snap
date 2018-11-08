@@ -42,6 +42,11 @@ exports[`create article page test should render the create article page correctl
           error={null}
           getAllCategories={[Function]}
           getAllTags={[Function]}
+          history={
+            Object {
+              "push": [Function],
+            }
+          }
           loading={false}
           saveArticle={[Function]}
           tags={Array []}
@@ -287,6 +292,7 @@ exports[`create article page test should render the create article page correctl
                                                   "replace": [Function],
                                                 }
                                               }
+                                              id={0}
                                               location={
                                                 Object {
                                                   "hash": "",
@@ -304,6 +310,7 @@ exports[`create article page test should render the create article page correctl
                                                   "url": "/",
                                                 }
                                               }
+                                              showUserMenu={false}
                                             >
                                               <div
                                                 aria-label="profile menu"

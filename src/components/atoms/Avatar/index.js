@@ -21,11 +21,15 @@ const Avatar = (props) => {
   );
 };
 
+Avatar.defaultProps = {
+  updatedImage: avatarImage,
+};
+
 Avatar.propTypes = {
   className: PropTypes.string,
   toggle: PropTypes.func.isRequired,
   image: PropTypes.string.isRequired,
-  updatedImage: PropTypes.string.isRequired,
+  updatedImage: PropTypes.string,
 };
 
 Avatar.defaultProps = {

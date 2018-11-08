@@ -50,7 +50,11 @@ ProfileContainer.propTypes = {
   userId: PropTypes.string.isRequired,
   loading: PropTypes.bool.isRequired,
   getUserInfo: PropTypes.func.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
+};
+
+ProfileContainer.defaultProps = {
+  id: 0
 };
 
 const mapDispatchToProps = dispatch => ({

@@ -32,10 +32,16 @@ export const CategorySelect = (props) => {
 
 CategorySelect.propTypes = {
   selectedCategory: PropTypes
-    .shape({ value: PropTypes.number, label: PropTypes.string }).isRequired,
+    .shape({ value: PropTypes.number, label: PropTypes.string }),
   categories: PropTypes
     .arrayOf(PropTypes.shape({ id: PropTypes.number, name: PropTypes.string })).isRequired,
   handler: PropTypes.func.isRequired
+};
+CategorySelect.defaultProps = {
+  selectedCategory: {
+    value: '',
+    label: ''
+  }
 };
 
 export default CategorySelect;

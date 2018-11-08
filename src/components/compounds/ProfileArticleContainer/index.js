@@ -41,7 +41,10 @@ ArticleContainer.propTypes = {
   image: PropTypes.string.isRequired,
   firstname: PropTypes.string.isRequired,
   lastname: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired
+  description: PropTypes.string
 };
 
+ArticleContainer.defaultProps = {
+  description: ''
+};
 export default ArticleContainer;

@@ -24,12 +24,16 @@ const ArticleCard = ({
 
 ArticleCard.propTypes = {
   title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
+  description: PropTypes.string,
   name: PropTypes.string.isRequired,
   time: PropTypes.string.isRequired,
   img: PropTypes.string.isRequired,
-  id: PropTypes.number.isRequired,
+  id: PropTypes.number,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
+};
+ArticleCard.defaultProps = {
+  description: '',
+  id: 0
 };
 
 export default withRouter(ArticleCard);

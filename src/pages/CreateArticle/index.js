@@ -202,14 +202,18 @@ export class CreateArticle extends Component {
 
 CreateArticle.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.shape({ name: PropTypes.string })).isRequired,
-  error: PropTypes.string.isRequired,
+  error: PropTypes.string,
   loading: PropTypes.bool.isRequired,
   categories: PropTypes
     .arrayOf(PropTypes.shape({ id: PropTypes.number, name: PropTypes.string })).isRequired,
   saveArticle: PropTypes.func.isRequired,
-  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
+  history: PropTypes.shape({ push: PropTypes.func }),
   getAllTags: PropTypes.func.isRequired,
   getAllCategories: PropTypes.func.isRequired
+};
+CreateArticle.defaultProps = {
+  error: '',
+  history: { push: () => '' }
 };
 
 const mapStateToProps = state => ({

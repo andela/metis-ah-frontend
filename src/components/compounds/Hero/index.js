@@ -81,13 +81,17 @@ Hero.propTypes = {
     className: PropTypes.string
   }).isRequired,
   isAuth: PropTypes.bool.isRequired,
-  modalOpen: PropTypes.bool.isRequired,
+  modalOpen: PropTypes.bool,
   showModalHandler: PropTypes.func.isRequired,
   closeModalHandle: PropTypes.func.isRequired,
   userfail: PropTypes.func.isRequired,
   history: PropTypes.shape({
     push: PropTypes.func.isRequired
   }).isRequired
+};
+
+Hero.defaultProps = {
+  modalOpen: false
 };
 
 export default withRouter(connect(mapStateToProps, mapDispatchToProps)(Radium(Hero)));

@@ -16,15 +16,42 @@
 
 .interest:hover {
   outline: none;
-  box-shadow: 1px 1px 2px #333;
   cursor: pointer;
 }
 
-.selected {
+button.selected {
   background: #4dd6a5;
-  box-shadow: 1px 1px 2px #333;
+  color: #ffffff;
 }
 
+button  {
+  outline: none;
+
+}
 .not-selected {
   background: #f7f7f7;
+}
+
+.btn {
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding: 10px 40px;
+  border-radius: 50px;
+  font-family: 'Source Sans Pro', sans-serif;
+  margin-right: 7px;
+  margin-bottom: 7px;
+  text-transform: lowercase;
+
+}
+.btn-default {
+  background-color: #ffffff;
+  border: solid 1px #e0e0e0;
+  color: rgba(0, 0, 0, 0.54);
+}
+.FontSize--18 {
+  font-size: 18px;
+
 }

@@ -10,7 +10,7 @@ const NavBar = (props) => {
   const { isAuth, history } = props;
   return (
     <div className="buttons">
-      <WriteButton history={ history }  />
+      <WriteButton history={history} />
       { !isAuth && <LoginButton />}
       { isAuth && <Avatar />}
     </div>
@@ -18,12 +18,12 @@ const NavBar = (props) => {
 };
 
 NavBar.propTypes = {
-  isAuth: PropTypes.bool.isRequired
+  isAuth: PropTypes.bool.isRequired,
+  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
+
 };
 
 const mapStateToProps = state => ({
-  isAuth: state.authUser.isAuthenticated,
-  history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
-
+  isAuth: state.authUser.isAuthenticated
 });
 export default connect(mapStateToProps)(withRouter(NavBar));

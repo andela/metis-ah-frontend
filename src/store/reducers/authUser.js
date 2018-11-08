@@ -6,14 +6,12 @@ const {
   MODAL_SHOW,
   MODAL_CLOSE,
   RESET_CURRENT_USER,
-  TOGGLE_USER_MENU,
   LOGOUT
 } = constants;
 
 const initialState = {
   user: {},
   isAuthenticated: false,
-  showUserMenu: false,
   loading: false,
   modalOpen: false
 };
@@ -51,11 +49,6 @@ const authUserReducer = (state = initialState, action) => {
       return {
         ...state,
         modalOpen: true
-      };
-    case TOGGLE_USER_MENU:
-      return {
-        ...state,
-        showUserMenu: !state.showUserMenu
       };
     case LOGOUT:
       return {

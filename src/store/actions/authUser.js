@@ -48,10 +48,6 @@ export const resetCurrentUser = user => ({
   payload: user,
 });
 
-export const toggleMenu = () => ({
-  type: TOGGLE_USER_MENU,
-});
-
 export const logoutUser = (history) => {
   localStorage.clear();
   history.push('/');
@@ -128,15 +124,15 @@ export const socialAuth = (media, code, history) => (dispatch) => {
       }
   }
 };
-export const verifyAccount = verifyToken => (dispatch) => axios.put(`/users/verify/${verifyToken}`)
-    .then((response) => {
-      localStorage.setItem('user', JSON.stringify(response.data.data));
-      setAxiosHeader(response.data.data.token);
-      localStorage.setItem('userToken', response.data.data.token);
-      localStorage.setItem('expireAt', expireAt);
-      toastr.success('Your account has been verified');
-      dispatch(setCurrentUser(response.data));
-    })
-    .catch(() => {
-      toastr.error('Could not verify you account at this time');
-    });
+export const verifyAccount = verifyToken => dispatch => axios.put(`/users/verify/${verifyToken}`)
+  .then((response) => {
+    localStorage.setItem('user', JSON.stringify(response.data.data));
+    setAxiosHeader(response.data.data.token);
+    localStorage.setItem('userToken', response.data.data.token);
+    localStorage.setItem('expireAt', expireAt);
+    toastr.success('Your account has been verified');
+    dispatch(setCurrentUser(response.data));
+  })
+  .catch(() => {
+    toastr.error('Could not verify you account at this time');
+  });

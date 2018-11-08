@@ -7,19 +7,33 @@ import avatarImage from '../../../static/images/placeholder.png';
 
 import './style.scss';
 
-const Avatar = (props) => {
-  const {
-    toggle, className, image, updatedImage
-  } = props;
-  return (
-    <div>
-      <button type="button" className={className} onClick={e => toggle(e)}>
-        <img className="image" alt="avatar" src={updatedImage || image} />
-      </button>
-      <UserMenu />
-    </div>
-  );
-};
+class Avatar extends React.Component {
+  state = {
+    isDropDownVisible: false
+  }
+
+  toggleDropdown = () => {
+    this.setState({
+      isDropDownVisible: !this.state.isDropDownVisible
+    });
+  }
+
+  render() {
+    const {
+      className, image, updatedImage
+    } = this.props;
+
+    return (
+      <div id="user-profile-menu">
+        <button type="button" className={className} onClick={this.toggleDropdown}>
+          <img className="image" alt="avatar" src={updatedImage || image} />
+          <i className="fas fa-chevron-down" />
+        </button>
+        {this.state.isDropDownVisible ? <UserMenu /> : null}
+      </div>
+    );
+  }
+}
 
 Avatar.defaultProps = {
   updatedImage: avatarImage,
@@ -27,7 +41,6 @@ Avatar.defaultProps = {
 
 Avatar.propTypes = {
   className: PropTypes.string,
-  toggle: PropTypes.func.isRequired,
   image: PropTypes.string.isRequired,
   updatedImage: PropTypes.string,
 };
@@ -36,13 +49,9 @@ Avatar.defaultProps = {
   className: 'atom__avatar',
 };
 
-const mapDispatchToProps = dispatch => ({
-  toggle: () => dispatch(toggleMenu()),
-});
-
 const mapStateToProps = state => ({
   image: state.authUser.user.image || avatarImage,
   updatedImage: (state.user !== undefined) ? state.user.image : null
 });
 
-export default connect(mapStateToProps, mapDispatchToProps)(Avatar);
+export default connect(mapStateToProps)(Avatar);

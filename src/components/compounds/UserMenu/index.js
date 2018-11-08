@@ -9,29 +9,26 @@ import './style.scss';
 
 const UserMenu = (props) => {
   const {
-    showUserMenu, history, logout, id
+    history, logout, id
   } = props;
   return (
-    <div className={`user-menu ${showUserMenu ? 'user-menu--show' : 'user-menu--hide'}`} aria-label="profile menu">
-      <UserMenuItem onClick={() => history.push(`/users/${id}`)}>Profile</UserMenuItem>
-      <UserMenuItem onClick={() => logout(history)}>logout</UserMenuItem>
+    <div className="user-menu" aria-label="profile menu">
+      <UserMenuItem id="profile-button" onClick={() => history.push(`/users/${id}`)}>Profile</UserMenuItem>
+      <UserMenuItem id="logout-button" onClick={() => logout(history)}>Logout</UserMenuItem>
     </div>
   );
 };
 
 UserMenu.propTypes = {
-  showUserMenu: PropTypes.bool,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   logout: PropTypes.func.isRequired,
   id: PropTypes.number
 };
 
 UserMenu.defaultProps = {
-  showUserMenu: false,
   id: 0
 };
 const mapStateToProps = state => ({
-  showUserMenu: state.authUser.showUserMenu,
   id: state.authUser.user.id
 });
 

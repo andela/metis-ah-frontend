@@ -132,7 +132,6 @@ exports[`create article page test should render the create article page correctl
                       <Connect(withRouter(NavBar))>
                         <withRouter(NavBar)
                           dispatch={[Function]}
-                          history={[Function]}
                           isAuth={true}
                         >
                           <Route>
@@ -215,11 +214,13 @@ exports[`create article page test should render the create article page correctl
                                 <Connect(Avatar)>
                                   <Avatar
                                     className="atom__avatar"
+                                    dispatch={[Function]}
                                     image="imageUrl.jpg"
-                                    toggle={[Function]}
                                     updatedImage={null}
                                   >
-                                    <div>
+                                    <div
+                                      id="user-profile-menu"
+                                    >
                                       <button
                                         className="atom__avatar"
                                         onClick={[Function]}
@@ -230,121 +231,10 @@ exports[`create article page test should render the create article page correctl
                                           className="image"
                                           src="imageUrl.jpg"
                                         />
+                                        <i
+                                          className="fas fa-chevron-down"
+                                        />
                                       </button>
-                                      <withRouter(Connect(UserMenu))>
-                                        <Route>
-                                          <Connect(UserMenu)
-                                            history={
-                                              Object {
-                                                "action": "POP",
-                                                "block": [Function],
-                                                "createHref": [Function],
-                                                "go": [Function],
-                                                "goBack": [Function],
-                                                "goForward": [Function],
-                                                "length": 1,
-                                                "listen": [Function],
-                                                "location": Object {
-                                                  "hash": "",
-                                                  "pathname": "/",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                },
-                                                "push": [Function],
-                                                "replace": [Function],
-                                              }
-                                            }
-                                            location={
-                                              Object {
-                                                "hash": "",
-                                                "pathname": "/",
-                                                "search": "",
-                                                "state": undefined,
-                                              }
-                                            }
-                                            match={
-                                              Object {
-                                                "isExact": true,
-                                                "params": Object {},
-                                                "path": "/",
-                                                "url": "/",
-                                              }
-                                            }
-                                          >
-                                            <UserMenu
-                                              history={
-                                                Object {
-                                                  "action": "POP",
-                                                  "block": [Function],
-                                                  "createHref": [Function],
-                                                  "go": [Function],
-                                                  "goBack": [Function],
-                                                  "goForward": [Function],
-                                                  "length": 1,
-                                                  "listen": [Function],
-                                                  "location": Object {
-                                                    "hash": "",
-                                                    "pathname": "/",
-                                                    "search": "",
-                                                    "state": undefined,
-                                                  },
-                                                  "push": [Function],
-                                                  "replace": [Function],
-                                                }
-                                              }
-                                              id={0}
-                                              location={
-                                                Object {
-                                                  "hash": "",
-                                                  "pathname": "/",
-                                                  "search": "",
-                                                  "state": undefined,
-                                                }
-                                              }
-                                              logout={[Function]}
-                                              match={
-                                                Object {
-                                                  "isExact": true,
-                                                  "params": Object {},
-                                                  "path": "/",
-                                                  "url": "/",
-                                                }
-                                              }
-                                              showUserMenu={false}
-                                            >
-                                              <div
-                                                aria-label="profile menu"
-                                                className="user-menu user-menu--hide"
-                                              >
-                                                <UserMenuItem
-                                                  className="profile__menu__item"
-                                                  onClick={[Function]}
-                                                >
-                                                  <button
-                                                    className="profile__menu__item"
-                                                    onClick={[Function]}
-                                                    type="button"
-                                                  >
-                                                    Profile
-                                                  </button>
-                                                </UserMenuItem>
-                                                <UserMenuItem
-                                                  className="profile__menu__item"
-                                                  onClick={[Function]}
-                                                >
-                                                  <button
-                                                    className="profile__menu__item"
-                                                    onClick={[Function]}
-                                                    type="button"
-                                                  >
-                                                    logout
-                                                  </button>
-                                                </UserMenuItem>
-                                              </div>
-                                            </UserMenu>
-                                          </Connect(UserMenu)>
-                                        </Route>
-                                      </withRouter(Connect(UserMenu))>
                                     </div>
                                   </Avatar>
                                 </Connect(Avatar)>

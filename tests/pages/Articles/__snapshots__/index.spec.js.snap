@@ -121,7 +121,6 @@ exports[`article page test should render the article page correctly 1`] = `
                           <Connect(withRouter(NavBar))>
                             <withRouter(NavBar)
                               dispatch={[Function]}
-                              history={[Function]}
                               isAuth={false}
                             >
                               <Route>

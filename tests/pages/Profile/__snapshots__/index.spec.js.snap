@@ -615,7 +615,6 @@ exports[`Profile page test profile page to 1`] = `
                         <Connect(withRouter(NavBar))>
                           <withRouter(NavBar)
                             dispatch={[Function]}
-                            history={[Function]}
                             isAuth={false}
                           >
                             <Route>
@@ -1524,7 +1523,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="1fff4688-fbae-4e14-8f12-4a45c1096124"
+                        key="0c9a0be1-de44-44ea-8239-d3d8bb333a7f"
                         title="runing"
                         type="button"
                       >
@@ -1532,7 +1531,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="9bd5d69b-9c88-4318-91bf-f76243f0236b"
+                        key="4928953b-e5cc-4ebb-839f-caf8c279a017"
                         title=" singing"
                         type="button"
                       >
@@ -1540,7 +1539,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="df8cce97-f187-41e7-9139-bd634916bc06"
+                        key="368168e9-3915-4aba-8933-d327331687ee"
                         title=" climbing"
                         type="button"
                       >
@@ -1548,7 +1547,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="574ceb33-58aa-4fcd-86f9-db511098a679"
+                        key="b7c355d4-0a9f-4950-90c6-fce0414ede5c"
                         title=" jumping"
                         type="button"
                       >
@@ -1948,7 +1947,6 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                         <Connect(withRouter(NavBar))>
                           <withRouter(NavBar)
                             dispatch={[Function]}
-                            history={[Function]}
                             isAuth={false}
                           >
                             <Route>

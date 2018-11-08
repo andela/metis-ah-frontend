@@ -29,7 +29,7 @@ const App = () => (
         <Route exact path="/auth/reset-password" component={ResetPassword} />
         <ProtectedRoute path="/articles/new" component={AsyncCreateArticle} />
         <Route path="/articles/:category" exact component={AsyncArticles} />
-        <ProtectedRoute path="/articles/:articleId/view" component={SingleArticle} />
+        <Route path="/articles/:articleId/view" component={SingleArticle} />
         <Route path="/successSignup" component={SuccessSignupMessage} />
         <ProtectedRoute path="/users/:userId" component={ProfilePage} />
         <Route component={NotFound} />

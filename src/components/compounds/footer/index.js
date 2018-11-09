@@ -6,7 +6,7 @@ import './style.scss';
 
 const Footer = () => (
   <footer className="Main-Footer">
-    <FooterCategories />
+    <FooterCategories getElementById="footer_burger" />
     <FooterBrand />
   </footer>
 );

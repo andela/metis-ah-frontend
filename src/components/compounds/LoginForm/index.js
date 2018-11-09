@@ -78,7 +78,7 @@ class LoginForm extends Component {
     const { loading, closeModalAction } = this.props;
     return (
       <div>
-        <button type="button" onClick={closeModalAction} className="closer login_close">&times;</button>
+        <button type="button" onClick={closeModalAction} className="login_close">&times;</button>
         <div className="FormGroup">
           <form className="signupForm" onSubmit={this.handleSubmitEvent}>
             <div className="field control has-icons-right">

@@ -89,7 +89,7 @@ class Signup extends Component {
     const { loading, closeModalAction } = this.props;
     return (
       <div>
-        <button type="button" onClick={closeModalAction} className="closer signup_close">&times;</button>
+        <button type="button" onClick={closeModalAction} className="signup_close">&times;</button>
         <div className="FormGroup">
           <form className="signupForm" onSubmit={this.handleSubmitEvent}>
             <div className="field control has-icons-right">
@@ -151,7 +151,7 @@ class Signup extends Component {
               </div>
             </div>
             <Button className="button is-fullWidth is-medium signBtn signup_button" disabled={loading}>
-                REGISTER
+              REGISTER
             </Button>
           </form>
         </div>

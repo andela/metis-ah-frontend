@@ -24,7 +24,7 @@ class Tab extends Component {
       <div className="form_tab">
         <button id="tab_Register" type="button" className="tab_register_button" onClick={this.showRegisterForm}>REGISTER</button>
         <button id="tab_Login" type="button" className="tab_login_button" onClick={this.showLoginForm}>LOGIN</button>
-        <div>
+        <div id="ah-form-container">
           {toggle ? <Signup /> : <Login />}
         </div>
       </div>

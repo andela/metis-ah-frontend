@@ -11,7 +11,7 @@ const {
   RESET_PASSWORD_SUCCESS
 } = constants;
 
-const clientUrl = 'https://metis-ah-frontend-staging.herokuapp.com';
+const clientUrl = 'https://metis-ah-frontend.herokuapp.com';
 
 
 export const resetPassword = email => async (dispatch) => {

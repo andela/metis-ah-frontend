@@ -61,7 +61,7 @@ export const createUser = (postData, history) => (dispatch) => {
   dispatch(userStarted());
   return axios.post('/users/auth/signup', {
     ...postData,
-    verifyURL: 'https://metis-ah-frontend-staging.herokuapp.com',
+    verifyURL: 'https://metis-ah-frontend.herokuapp.com',
   })
     .then((response) => {
       toastr.success(response.data.data.message);

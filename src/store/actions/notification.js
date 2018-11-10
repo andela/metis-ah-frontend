@@ -1,8 +1,6 @@
 /* eslint-disable */
 import axios from "axios";
 import constants from "../constants";
-import axios from 'axios';
-import constants from '../constants';
 
 const {
   GET_NOTIFICATION_STARTED,
@@ -29,11 +27,7 @@ const getNotificationsLoading = isLoading => ({
   payload: isLoading
 });
 
-const getNotificationStarted = () => ({
-  type: GET_NOTIFICATION_STARTED,
-});
-
-const getNoficationSuccess = notification => ({
+const getNotificationsSuccess = notification => ({
   type: GET_NOTIFICATION_SUCCESS,
   payload: notification
 });
@@ -196,7 +190,3 @@ export const deleteAllNotifications = () => dispatch => {
       dispatch(deleteAllNotificationsError(error));
     });
 };
-export const getNotification = () => dispatch => {
-  dispatch(getNotificationStarted(true));
-  return axios.get('/')
-}

@@ -1,0 +1,18 @@
+.notification-icon > svg {
+  font-size: 1.9em;
+  color: #bbb;
+  margin: 0 1.2em;
+}
+
+a {
+  color: #bbb;
+  text-decoration: none;
+
+  &:hover {
+    color: #bbb;
+  }
+}
+
+.count {
+  background: green;
+}

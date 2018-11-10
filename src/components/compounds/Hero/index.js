@@ -4,8 +4,7 @@ import Button from 'Components/atoms/Button';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
-import ToggleForm from '../../atoms/ToggleForm';
-import MediaSignupSection from '../../atoms/Button/Media';
+
 import Modal from '../../atoms/Modal';
 import { showModal, closeModal, userFail } from '../../../store/actions/authUser';
 import './style.scss';
@@ -48,10 +47,7 @@ class Hero extends Component {
         }
         {
           modalOpen && (
-            <Modal>
-              <MediaSignupSection />
-              <ToggleForm />
-            </Modal>
+            <Modal />
           )
         }
       </div>

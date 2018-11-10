@@ -4,7 +4,7 @@ describe('THE FORM TEST', () => {
     cy.contains('GET STARTED').click();
 
     cy.get('input[name="username"]')
-      .type('Author name');
+      .type('Author Name');
 
     cy.get('input[id="email_id"]')
       .type('fake@email.com');
@@ -18,7 +18,12 @@ describe('THE FORM TEST', () => {
     cy.get('.signup_button')
       .click();
 
-    cy.get('.signup_close')
+    cy.get('.toast.toast-error .toast-close-button')
       .click();
+
+    cy.get('#tab_Login').click();
+
+    cy.get('.Backdrop')
+      .click('left');
   });
 });

@@ -1,14 +1,15 @@
 .Social-Login {
   width: 250px;
   height: 45px;
-  border-radius: 4px;
+  border-radius: 25px;
   color: #ffffff;
   font-family: Roboto;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   text-decoration: none;
   display: flex;
-  margin: 5px auto;
+  margin: 6px auto;
+  border: 0;
 }
 
 .facebook {
@@ -16,7 +17,7 @@
 }
 
 .google {
-  background-color: #de5245;
+  background-color: #eb5548;
 }
 
 .twitter {
@@ -30,18 +31,17 @@
   }
 
   .icon {
-    width: 65px;
+    width: 100px;
     border-radius: 4px;
     font-size: 27px;
   }
 
   .font {
-    width: 236px;
     border-radius: 4px;
   }
 }
 
 .Social-Login:hover {
   cursor: pointer;
-  color: #95deff;
+  opacity: 0.8;
 }

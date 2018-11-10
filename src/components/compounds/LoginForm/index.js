@@ -94,9 +94,9 @@ class LoginForm extends Component {
               <br />
             </div>
             <div className="field">
-              <div className="control is-expanded ">
+              <div className="control is-expanded show-password-toggle-group">
                 <button type="button" onClick={this.showPassword} className="ShowPassword">
-                  { showPassword ? 'Hide Password' : 'Show Password'}
+                  {showPassword ? 'hide password' : 'show password'}
                 </button>
                 <Input
                   type={showPassword ? 'text' : 'password'}
@@ -110,7 +110,7 @@ class LoginForm extends Component {
             </div>
             <Link id="forget-password" to="/auth/reset-password">Forget password?</Link>
             <Button className="button is-fullWidth is-medium signBtn login_button" disabled={loading}>
-                LOGIN
+              LOGIN
               <i className={`${loading ? 'fas fa-spinner fa-spin' : ''} spin`} />
             </Button>
           </form>

@@ -1,35 +1,20 @@
-// .tab_register_button,
-// .tab_login_button {
-//     padding: 16px;
-//     color: #0c0cf7;
-//     border: none;
-//     background: transparent;
-//     font-size: 20px;
-//     cursor: pointer;
-// }
-
-.tab_register_button {
-    border-right: 1px solid rgba(0, 0, 0, 0.1);
-}
-
-.tab_register_button:active,
-.tab_register_button:focus,
-.tab_login_button:active,
-.tab_login_button:focus {
-    outline: none;
+.tab_register_button.tab_Active, .tab_login_button.tab_Active {
     background: white;
 }
 
-// .tab_register_button:active,
-// .tab_register_button:focus, {
-//     border-right: 1px solid #2323ff;
-// }
+#auth-modal-header {
+    color: black;
+    font-size: 24px;
+    font-weight: bold;
+}
+p#auth-modal-desc {
+    color: rgb(161, 161, 161);
+}
 
-// .tab_login_button:active,
-// .tab_login_button:focus {
-//     border-left: 1px solid #2323ff;
-// }
-
+.form_tab{
+    margin-top: 40px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
 .tab_register_button,
 .tab_login_button {
     border: 1px solid transparent;
@@ -37,15 +22,31 @@
     padding: 12px 0;
     font-size: 15px;
     background: rgba(0, 0, 0, 0.06);
-}
-.tab_register_button:not(:focus) ,
-.tab_login_button:not(:focus) {
-    background: rgba(0, 0, 0, 0.06);
+    outline: 0;
+    cursor: pointer;
 }
 
+.bordered {
+    border-bottom: 1px solid  rgba(0, 0, 0, 0.1);
+}
 
+.tab_register_button {
+    border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
 
-.form_tab{
-    margin-top:50px;
-    border-top: 1px solid rgba(0, 0, 0, 0.1);
+#or {
+    color: rgb(88, 87, 87);
+    margin-top: 30px;
+}
+
+@media(min-width: 700px) {
+    #ah-form-container {
+        padding: 0 20%;
+    }
+}
+
+@media (max-width: 970px) and (min-width: 700px) {
+    #ah-form-container {
+        padding: 0 10%;
+    }
 }

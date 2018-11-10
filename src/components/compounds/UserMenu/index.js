@@ -9,11 +9,20 @@ import './style.scss';
 
 const UserMenu = (props) => {
   const {
-    history, logout, id
+    history, logout, id, handleSelect
   } = props;
   return (
     <div className="user-menu" aria-label="profile menu">
-      <UserMenuItem id="profile-button" onClick={() => history.push(`/users/${id}`)}>Profile</UserMenuItem>
+      <UserMenuItem
+        id="profile-button"
+        onClick={() => {
+          handleSelect();
+          return history.push(`/users/${id}`);
+        }}
+      >
+        Profile
+
+      </UserMenuItem>
       <UserMenuItem id="logout-button" onClick={() => logout(history)}>Logout</UserMenuItem>
     </div>
   );
@@ -22,7 +31,8 @@ const UserMenu = (props) => {
 UserMenu.propTypes = {
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired,
   logout: PropTypes.func.isRequired,
-  id: PropTypes.number
+  id: PropTypes.number,
+  handleSelect: PropTypes.func.isRequired
 };
 
 UserMenu.defaultProps = {

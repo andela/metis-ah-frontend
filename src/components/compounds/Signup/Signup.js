@@ -102,7 +102,6 @@ class Signup extends Component {
                 name="username"
                 className="input is-medium is-medium"
               />
-              <br />
             </div>
             <div className="field control has-icons-right">
               <Input
@@ -114,42 +113,38 @@ class Signup extends Component {
                 name="email"
                 className="input is-medium"
               />
-              <br />
             </div>
-            <div className="field control is-fullWidth" />
-            <div className="field is-horizontal">
-              <div className="field-body PasswordSection">
-                <div className="field">
-                  <div className="control is-expanded ">
-                    <button type="button" onClick={this.showPassword} className="ShowPassword">
-                      {showPassword ? 'Hide Password' : 'Show Password'}
-                    </button>
-                    <Input
-                      label="Password"
-                      id="password_id"
-                      type={showPassword ? 'text' : 'password'}
-                      name="password"
-                      onChange={this.handleChangeEvent}
-                      value={newUser.password}
-                      className="input is-medium"
-                    />
-                  </div>
-                </div>
-                <div className="field">
-                  <div className="control is-expanded ">
-                    <Input
-                      label="Confirm Password"
-                      id="confirm_pass_id"
-                      type={showPassword ? 'text' : 'password'}
-                      name="confirmPassword"
-                      onChange={this.handleChangeEvent}
-                      value={newUser.confirmPassword}
-                      className="input is-medium"
-                    />
-                  </div>
-                </div>
+
+            <div className="field">
+              <div className="control is-expanded show-password-toggle-group">
+                <button type="button" onClick={this.showPassword} className="ShowPassword">
+                  {showPassword ? 'hide password' : 'show password'}
+                </button>
+                <Input
+                  label="Password"
+                  id="password_id"
+                  type={showPassword ? 'text' : 'password'}
+                  name="password"
+                  onChange={this.handleChangeEvent}
+                  value={newUser.password}
+                  className="input is-medium"
+                />
               </div>
             </div>
+            <div className="field">
+              <div className="control is-expanded ">
+                <Input
+                  label="Confirm Password"
+                  id="confirm_pass_id"
+                  type={showPassword ? 'text' : 'password'}
+                  name="confirmPassword"
+                  onChange={this.handleChangeEvent}
+                  value={newUser.confirmPassword}
+                  className="input is-medium"
+                />
+              </div>
+            </div>
+
             <Button className="button is-fullWidth is-medium signBtn signup_button" disabled={loading}>
               REGISTER
             </Button>

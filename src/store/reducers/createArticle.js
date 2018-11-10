@@ -20,7 +20,7 @@ const articleReducer = (state = initialState, action) => {
       return {
         ...state,
         loading: true,
-        error: null
+        error: null 
       };
 
     case SAVE_ARTICLE_SUCCESS:

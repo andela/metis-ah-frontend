@@ -1,18 +1,24 @@
-import React from 'react';
-import { connect } from 'react-redux';
-import { withRouter } from 'react-router-dom';
-import PropTypes from 'prop-types';
-import LoginButton from 'Components/atoms/LoginButton';
-import WriteButton from 'Components/atoms/WriteButton';
-import Avatar from 'Components/atoms/Avatar';
+import React, { Fragment } from "react";
+import { connect } from "react-redux";
+import { withRouter } from "react-router-dom";
+import PropTypes from "prop-types";
+import LoginButton from "Components/atoms/LoginButton";
+import WriteButton from "Components/atoms/WriteButton";
+import Avatar from "Components/atoms/Avatar";
+import Notification from "../Notification";
 
-const NavBar = (props) => {
+const NavBar = props => {
   const { isAuth, history } = props;
   return (
     <div className="buttons">
       <WriteButton history={history} />
-      { !isAuth && <LoginButton />}
-      { isAuth && <Avatar />}
+      {!isAuth && <LoginButton />}
+      {isAuth && (
+        <Fragment>
+          <Notification />
+          <Avatar />
+        </Fragment>
+      )}
     </div>
   );
 };
@@ -20,7 +26,6 @@ const NavBar = (props) => {
 NavBar.propTypes = {
   isAuth: PropTypes.bool.isRequired,
   history: PropTypes.shape({ push: PropTypes.func.isRequired }).isRequired
-
 };
 
 const mapStateToProps = state => ({

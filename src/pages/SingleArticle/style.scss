@@ -12,4 +12,16 @@ min-height: 100vh;
 .navCover{
   box-shadow: 0px 2px 2px #ccc;
 }
+  .Main-comment-container {
+    margin: 0;
+    padding: 0;
+    background: rgba(0,0,0,0.03);
+
+    #comment-box{
+      max-width: 740px;
+      padding: 5% 20px;
+      flex: 1;
+      margin: 0 auto;
+    }
+  }
 }

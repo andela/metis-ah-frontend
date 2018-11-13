@@ -11,6 +11,7 @@ import TagsDisplay from 'Components/atoms/TagsDisplay';
 
 import Modal from 'Atoms/Modal';
 import { closeModal, userFail } from 'Actions/authUser';
+import { CommentBox } from 'Components/compounds/CommentBox';
 import { SHARE_BASE_URL } from '../../../config.json';
 import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
 
@@ -81,6 +82,9 @@ export class SingleArticle extends Component {
                   shareUrl={shareUrl}
                   articleId={article.articleData.id}
                 />
+              </div>
+              <div className="Main-comment-container">
+                <CommentBox />
               </div>
             </div>
           )

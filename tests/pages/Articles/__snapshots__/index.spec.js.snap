@@ -364,65 +364,47 @@ exports[`article page test should render the article page correctly 1`] = `
               <MinorNav>
                 <nav
                   aria-label="categories navigation"
-                  className="nav-Categories"
+                  className="navbar is-active nav-Categories"
                   role="navigation"
                 >
                   <div
-                    className="Categories-container container"
+                    className="navbar-brand"
                   >
-                    <withRouter(Connect(Categories))>
-                      <Route>
-                        <Connect(Categories)
-                          history={
-                            Object {
-                              "action": "POP",
-                              "block": [Function],
-                              "createHref": [Function],
-                              "go": [Function],
-                              "goBack": [Function],
-                              "goForward": [Function],
-                              "length": 1,
-                              "listen": [Function],
-                              "location": Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                              "push": [Function],
-                              "replace": [Function],
-                            }
-                          }
-                          location={
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            }
-                          }
-                          match={
-                            Object {
-                              "isExact": true,
-                              "params": Object {},
-                              "path": "/",
-                              "url": "/",
-                            }
-                          }
-                        >
-                          <Categories
-                            categories={
-                              Array [
-                                Object {
-                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
-                                  "id": 1,
-                                  "name": "FASHION",
-                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
-                                },
-                              ]
-                            }
-                            footer={false}
-                            getCategoriesData={[Function]}
+                    <h1
+                      className="navbar-item category--brand"
+                    >
+                      Categories
+                    </h1>
+                    <a
+                      aria-expanded="false"
+                      aria-label="menu"
+                      className="navbar-burger burger"
+                      data-target="navbarBasicExample"
+                      id="js_burger"
+                      onClick={[Function]}
+                      role="button"
+                    >
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                      <span
+                        aria-hidden="true"
+                      />
+                    </a>
+                  </div>
+                  <div
+                    className="navbar-menu"
+                    id="js_categoryNav"
+                  >
+                    <div
+                      className="Categories-container container"
+                    >
+                      <withRouter(Connect(Categories))>
+                        <Route>
+                          <Connect(Categories)
                             history={
                               Object {
                                 "action": "POP",
@@ -459,71 +441,122 @@ exports[`article page test should render the article page correctly 1`] = `
                                 "url": "/",
                               }
                             }
-                            selected="HOME"
                           >
-                            <NavLink
-                              activeClassName="categories-selected"
-                              aria-current="page"
-                              className="categories-item"
-                              exact={true}
-                              to="/"
+                            <Categories
+                              categories={
+                                Array [
+                                  Object {
+                                    "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                    "id": 1,
+                                    "name": "FASHION",
+                                    "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                  },
+                                ]
+                              }
+                              footer={false}
+                              getCategoriesData={[Function]}
+                              history={
+                                Object {
+                                  "action": "POP",
+                                  "block": [Function],
+                                  "createHref": [Function],
+                                  "go": [Function],
+                                  "goBack": [Function],
+                                  "goForward": [Function],
+                                  "length": 1,
+                                  "listen": [Function],
+                                  "location": Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  },
+                                  "push": [Function],
+                                  "replace": [Function],
+                                }
+                              }
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                              match={
+                                Object {
+                                  "isExact": true,
+                                  "params": Object {},
+                                  "path": "/",
+                                  "url": "/",
+                                }
+                              }
+                              selected="HOME"
                             >
-                              <Route
+                              <NavLink
+                                activeClassName="categories-selected"
+                                aria-current="page"
+                                className="categories-item"
                                 exact={true}
-                                path="\\\\/"
+                                to="/"
                               >
-                                <Link
-                                  aria-current="page"
-                                  className="categories-item categories-selected"
-                                  replace={false}
-                                  style={Object {}}
-                                  to="/"
+                                <Route
+                                  exact={true}
+                                  path="\\\\/"
                                 >
-                                  <a
+                                  <Link
                                     aria-current="page"
                                     className="categories-item categories-selected"
-                                    href="/"
-                                    onClick={[Function]}
+                                    replace={false}
                                     style={Object {}}
+                                    to="/"
                                   >
-                                    HOME
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                            <NavLink
-                              activeClassName="categories-selected"
-                              aria-current="page"
-                              className="categories-item"
-                              exact={true}
-                              key="1"
-                              to="/articles/1"
-                            >
-                              <Route
+                                    <a
+                                      aria-current="page"
+                                      className="categories-item categories-selected"
+                                      href="/"
+                                      onClick={[Function]}
+                                      style={Object {}}
+                                    >
+                                      HOME
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                              <NavLink
+                                activeClassName="categories-selected"
+                                aria-current="page"
+                                className="categories-item"
                                 exact={true}
-                                path="\\\\/articles\\\\/1"
+                                key="1"
+                                to="/articles/1"
                               >
-                                <Link
-                                  aria-current={null}
-                                  className="categories-item"
-                                  replace={false}
-                                  to="/articles/1"
+                                <Route
+                                  exact={true}
+                                  path="\\\\/articles\\\\/1"
                                 >
-                                  <a
+                                  <Link
                                     aria-current={null}
                                     className="categories-item"
-                                    href="/articles/1"
-                                    onClick={[Function]}
+                                    replace={false}
+                                    to="/articles/1"
                                   >
-                                    FASHION
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                          </Categories>
-                        </Connect(Categories)>
-                      </Route>
-                    </withRouter(Connect(Categories))>
+                                    <a
+                                      aria-current={null}
+                                      className="categories-item"
+                                      href="/articles/1"
+                                      onClick={[Function]}
+                                    >
+                                      FASHION
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                            </Categories>
+                          </Connect(Categories)>
+                        </Route>
+                      </withRouter(Connect(Categories))>
+                    </div>
                   </div>
                 </nav>
               </MinorNav>

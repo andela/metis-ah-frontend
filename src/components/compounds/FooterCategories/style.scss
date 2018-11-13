@@ -11,3 +11,62 @@
     overflow-x: scroll;
   }
 }
+
+.category--brand {
+  display: none
+}
+@media(max-width: 1086px) {
+  .footer-nav-categories {
+    display: block;
+  
+    .Categories-container {
+      height: auto;
+      display: block;
+      overflow-x: hidden;
+    }
+    .categories-item  {
+      display: block;
+      width: 100%;
+    }
+  }
+  
+  .categories-footItem {
+    display: block;
+    width: 100%;
+    color: #4dd6a5;
+  }
+  .footer-navbar-brand {
+    .category--brand {
+      display: block;
+      color: #ffffff;
+      line-height: 40px;
+    }
+    button {
+      background-color: #4dd5a5;
+      color: #ffffff;
+      outline: none;
+      border: 0;
+    }
+  }
+}
+
+button.caret2 {
+  outline: none;
+  border: 0;
+  svg {
+    color: #ffffff;
+  }
+}
+
+button.navbar-burger.caret2 {
+  span {
+    background: transparent;
+  }
+}
+
+button.navbar-burger.caret2.is-active {
+  span:nth-child(1) {
+    -webkit-transform: translateY(15px) rotate(180deg);
+    transform: translateY(15px) rotate(180deg);
+  }
+}

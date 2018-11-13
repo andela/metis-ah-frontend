@@ -1,12 +1,18 @@
 .share-container {
   display: flex;
-
+  height: auto;
+  justify-content: flex-end;
+  width: 50%;
   .SocialMediaShareButton {
     padding-left: 10px;
     cursor: pointer;
+  }
+}
 
-    &:hover {
-      padding-top: 5px;
-    }
+@media(max-width: 425px) {
+  .share-container {
+    width: 100%;
+    justify-content: space-around;
+    margin-top: 10px;
   }
 }

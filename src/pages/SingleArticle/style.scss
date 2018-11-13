@@ -25,3 +25,13 @@ min-height: 100vh;
     }
   }
 }
+
+.ArticleActions {
+  display: flex;
+}
+
+@media(max-width: 425px) {
+  .ArticleActions {
+    flex-direction: column;
+  }
+}

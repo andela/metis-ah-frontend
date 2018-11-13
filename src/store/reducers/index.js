@@ -13,6 +13,7 @@ import createArticle from './createArticle';
 import users from './users';
 import singleArticle from './singleArticle';
 import commentReducer from './commentReducer';
+import likeDislike from './likedislike';
 
 const rootReducer = combineReducers({
   mock,
@@ -26,7 +27,8 @@ const rootReducer = combineReducers({
   createArticle,
   users,
   singleArticle,
-  commentReducer
+  commentReducer,
+  likeDislike
 });
 
 export default rootReducer;

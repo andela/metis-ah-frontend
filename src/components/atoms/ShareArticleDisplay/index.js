@@ -29,23 +29,23 @@ class ShareArticleDisplay extends React.Component {
     return (
       <div className="share-container">
         <FacebookShareButton url={shareUrl} quote={title} onShareWindowClose={() => this.shareWindowClose('Facebook')}>
-          <FacebookIcon size={32} round />
+          <FacebookIcon size={28} round />
         </FacebookShareButton>
 
         <TwitterShareButton url={shareUrl} title={title} onShareWindowClose={() => this.shareWindowClose('Twitter')}>
-          <TwitterIcon size={32} round />
+          <TwitterIcon size={28} round />
         </TwitterShareButton>
 
         <WhatsappShareButton url={shareUrl} title={title} onShareWindowClose={() => this.shareWindowClose('Whatsapp')}>
-          <WhatsappIcon size={32} round separator="::" />
+          <WhatsappIcon size={28} round separator="::" />
         </WhatsappShareButton>
 
         <LinkedinShareButton url={shareUrl} title={title} onShareWindowClose={() => this.shareWindowClose('Linkedin')}>
-          <LinkedinIcon size={32} round />
+          <LinkedinIcon size={28} round />
         </LinkedinShareButton>
 
         <EmailShareButton url={shareUrl} subject={title} onShareWindowClose={() => this.shareWindowClose('Email')}>
-          <EmailIcon size={32} round />
+          <EmailIcon size={28} round />
         </EmailShareButton>
       </div>
     );

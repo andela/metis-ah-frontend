@@ -16,6 +16,7 @@ import { SHARE_BASE_URL } from '../../../config.json';
 import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
 
 import './style.scss';
+import LikeAndDisLike from '../../components/compounds/LikeDislike/index.js';
 /**
  * SingleArticle
  */
@@ -77,11 +78,14 @@ export class SingleArticle extends Component {
               <div className="Main container">
                 {convert(article.articleData.body)}
                 <TagsDisplay tags={article.metadata.tags} />
-                <ShareArticleDisplay
-                  title={article.articleData.title}
-                  shareUrl={shareUrl}
-                  articleId={article.articleData.id}
-                />
+                <div className="ArticleActions">
+                  <LikeAndDisLike />
+                  <ShareArticleDisplay
+                    title={article.articleData.title}
+                    shareUrl={shareUrl}
+                    articleId={article.articleData.id}
+                  />
+                </div>
               </div>
               <div className="Main-comment-container">
                 <CommentBox />

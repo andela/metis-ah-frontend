@@ -18,6 +18,14 @@ const url = `${process.env.BASE_URL}/users/auth/signup`;
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
+const store = mockStore({
+  authUser: {
+    modalOpen: false,
+    isAuthenticated: false,
+    loading: false
+  },
+});
+
 describe('<Signup />', () => {
   beforeEach(() => {
     moxios.install();
@@ -69,13 +77,6 @@ describe('<Signup />', () => {
 
   describe('render()', () => {
     test('renders the component', () => {
-      const store = mockStore({
-        authUser: {
-          modalOpen: false,
-          isAuthenticated: false,
-          loading: false
-        },
-      });
       const wrapper = mount(
         <Provider store={store}>
           <BrowserRouter>
@@ -93,7 +94,13 @@ describe('<Signup />', () => {
 
   describe('<Modal />', () => {
     test('renders the component', () => {
-      const wrap = mount(<Modal />);
+      const wrap = mount(
+        <Provider store={store}>
+          <BrowserRouter>
+            <Modal />
+          </BrowserRouter>
+        </Provider>
+      );
 
       expect(wrap.exists()).toBe(true);
       expect(wrap.find('div').exists()).toBe(true);

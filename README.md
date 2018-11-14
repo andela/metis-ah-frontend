@@ -14,7 +14,7 @@ by leveraging the modern web.
 This project creates a platform for Authors to create and share articles. It is equally a platform that allows users to read articles, react to them and socialize with one another.
 
 ### Website url
-[viev live app](https://metis-ah-frontend.herokuapp.com/)
+[view live app](https://metis-ah-frontend.herokuapp.com/)
 
 
 ## Documentation

@@ -8,8 +8,7 @@ import convert from 'react-html-parser';
 import Loader from 'Components/atoms/ArticleLoader';
 import { getSingleArticle } from 'Actions/singleArticle';
 import TagsDisplay from 'Components/atoms/TagsDisplay';
-import ToggleForm from 'Atoms/ToggleForm';
-import MediaSignupSection from 'Atoms/Button/Media';
+
 import Modal from 'Atoms/Modal';
 import { closeModal, userFail } from 'Actions/authUser';
 import { SHARE_BASE_URL } from '../../../config.json';
@@ -54,10 +53,7 @@ export class SingleArticle extends Component {
       <div className="single">
         {
           isModalOpen ? (
-            <Modal>
-              <MediaSignupSection />
-              <ToggleForm />
-            </Modal>
+            <Modal />
           ) : null
         }
         <div className="navCover">

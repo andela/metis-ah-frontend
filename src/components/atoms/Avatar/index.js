@@ -29,7 +29,7 @@ class Avatar extends React.Component {
           <img className="image" alt="avatar" src={updatedImage || image} />
           <i className="fas fa-chevron-down" />
         </button>
-        {this.state.isDropDownVisible ? <UserMenu /> : null}
+        {this.state.isDropDownVisible ? <UserMenu handleSelect={this.toggleDropdown} /> : null}
       </div>
     );
   }

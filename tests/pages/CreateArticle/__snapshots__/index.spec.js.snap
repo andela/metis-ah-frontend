@@ -254,10 +254,8 @@ exports[`create article page test should render the create article page correctl
                                       <Notification
                                         count={0}
                                         deleteNotification={[Function]}
-                                        deleteNotifications={[Function]}
                                         error=""
                                         fetchAllNotifications={[Function]}
-                                        fetchAllUnreadNotifications={[Function]}
                                         history={
                                           Object {
                                             "action": "POP",
@@ -286,7 +284,6 @@ exports[`create article page test should render the create article page correctl
                                             "state": undefined,
                                           }
                                         }
-                                        markAllNotificationsAsRead={[Function]}
                                         markNotificationAsRead={[Function]}
                                         match={
                                           Object {
@@ -300,10 +297,10 @@ exports[`create article page test should render the create article page correctl
                                       >
                                         <div
                                           className="notification-group"
-                                          onClick={[Function]}
                                         >
                                           <span
                                             className="notification-icon"
+                                            onClick={[Function]}
                                             role="button"
                                           >
                                             <FaBell>

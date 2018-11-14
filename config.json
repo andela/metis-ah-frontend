@@ -1,7 +1,11 @@
 {
-	"BASE_URL": "https://metis-ah-staging.herokuapp.com/api/v1",
-	"CK_TOKEN_URL": "https://35340.cke-cs.com/token/dev/yRNNKituMZdoyc55k73dmbbuduzYRAcYVLe43epJpiw2egV8hB2YvMB02XL2",
-	"CK_UPLOAD_URL": "https://35340.cke-cs.com/easyimage/upload/",
-	"SHARE_BASE_URL": "https://metis-ah-frontend.herokuapp.com",
-	"LOCAL_SHARE_BASE_URL": "localhost:3500/api/v1"
+  "BASE_URL": "https://metis-ah-staging.herokuapp.com/api/v1",
+  "CK_TOKEN_URL": "https://35891.cke-cs.com/token/dev/JgOseweW3sfyei1vXZidnKoDeaMug9F6A33feL1h1Hzmeg05hcepwToKhtYv",
+  "CK_UPLOAD_URL": "https://35891.cke-cs.com/easyimage/upload/",
+  "SHARE_BASE_URL": "https://metis-ah-frontend.herokuapp.com",
+  "LOCAL_SHARE_BASE_URL": "localhost:3500/api/v1",
+  "PUSHER_APP_ID": "595046",
+  "PUSHER_APP_KEY": "e58dca338c2be2e30b22",
+  "PUSHER_APP_SECRET": "4dd30ef2ee75e9957a38",
+  "PUSHER_APP_CLUSTER": "eu"
 }

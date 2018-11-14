@@ -71,6 +71,9 @@ typings/
 # editor
 .vscode
 
+# package-lock
+./package-lock.json
+
 src/components/compounds/featuredArticles
 src/components/compounds/footer
 src/components/compounds/header

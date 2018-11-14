@@ -7,10 +7,14 @@ import Pusher from "pusher-js";
 import toastr from "toastr";
 import { PUSHER_APP_KEY, PUSHER_APP_CLUSTER } from "../../../../config.json";
 import {
+  getAllNotifications,
   getAllUnreadNotifications,
+  markAsRead,
+  markAllAsRead,
   deleteOneNotification,
-  markNotificationAsRead
+  deleteAllNotifications
 } from "../../../store/actions/notification";
+import rubbishBin from "../../../static/images/rubbishBin.png";
 import "./style.scss";
 
 const pusher = new Pusher(PUSHER_APP_KEY, {
@@ -24,7 +28,6 @@ class Notification extends Component {
   };
 
   componentDidMount() {
-    // document.addEventListener("click", this.handleFocusOut);
     const { fetchAllNotifications, userId } = this.props;
     const channel = pusher.subscribe(`notify-${userId}`);
     channel.bind(`channel-${userId}`, data => {
@@ -34,54 +37,87 @@ class Notification extends Component {
     fetchAllNotifications();
   }
 
-  handleFocusOut = event => {
-
-      this.setState({
-        notificationVisible: false
-      });
-    
-  };
-
-  toggleVisibility = event => {
+  toggleVisibility = () => {
     this.setState(prevState => ({
       notificationVisible: !prevState.notificationVisible
     }));
   };
 
-  markNotificationAsRead = event => {
+  static getDerivedStateFromProps(props, state) {
+    if (props.count !== state.count) {
+      return { count: props.count };
+    }
+    return null;
+  }
+
+  fetchAllNotifications = () => {
+    const { fetchAllNotifications } = this.props;
+    fetchAllNotifications();
+  };
+
+  markAsRead = async event => {
+    const {
+      markNotificationAsRead,
+      fetchAllNotifications,
+      history
+    } = this.props;
+    const { id, notifiableid, action, isread } = event.target.dataset;
+
+    if (action === "user") {
+      history.push(`/users/${notifiableid}`);
+    } else if (action === "article") {
+      history.push(`/articles/${notifiableid}/view`);
+    }
+    await markNotificationAsRead(id);
+    fetchAllNotifications();
+  };
+
+  markAllNotificationsAsRead = async () => {
+    const { markAllNotificationsAsRead, fetchAllNotifications } = this.props;
+    await markAllNotificationsAsRead();
+    fetchAllNotifications();
+  };
+
+  deleteNotification = async event => {
     this.setState({
       notificationVisible: false
     });
-    const { markAsRead, history } = this.props;
-    const { id, action } = event.target.dataset;
-
-    if (action === "user") {
-      markAsRead(id);
-      history.push(`/users/${id}`);
-    }
-    if (action === "article") {
-      markAsRead(id);
-      history.push(`/articles/${id}/view`);
-    }
+    const { deleteNotification, fetchAllNotifications } = this.props;
+    const { id } = event.target.dataset;
+    await deleteNotification(id);
+    
+    setTimeout(() => {
+      fetchAllNotifications(); 
+    }, 2000); 
+    
   };
 
-  setWrapperRef = node => {
-    this.wrapperRef = node;
+  deleteAllNotifications = () => {
+    const { deleteNotifications } = this.props;
+    deleteNotifications();
   };
 
   render() {
     const { count, notifications } = this.props;
     const { notificationVisible } = this.state;
 
+    const sortedNotifications = notifications => {
+      const unReadNotifications = notifications.filter(notification => {
+        return notification.isRead === false;
+      });
+      const readNotifications = notifications.filter(notification => {
+        return notification.isRead === true;
+      });
+      return [...unReadNotifications, ...readNotifications];
+    };
+
+    const newNotifications = sortedNotifications(notifications);
+
     return (
       <Fragment>
-        <div className="notification-group">
+        <div className="notification-group" onClick={this.toggleVisibility}>
           {/* eslint-disable-next-line */}
-          <span
-            className="notification-icon"
-            onClick={this.toggleVisibility}
-            role="button"
-          >
+          <span className="notification-icon" role="button">
             <FaBell />
           </span>
           {count === 0 ? null : (
@@ -90,43 +126,52 @@ class Notification extends Component {
             </span>
           )}
         </div>
-        <div
-          className={notificationVisible ? "notifications" : ""}
-          ref={this.setWrapperRef}
-        >
+        <div className={notificationVisible ? "notifications" : ""}>
           {notificationVisible ? (
             <div>
-              {notifications.length === 0 ? (
+              {newNotifications.length === 0 ? (
                 <h3 className="notif-heading-unstyled">No notifications</h3>
               ) : (
-                <h3 className="notif-heading">Notifications</h3>
+                <div className="notification-header">
+                  <h3 className="notif-heading">Notifications</h3>
+                  <div className="notif-actions">
+                    <span onClick={this.markAllNotificationsAsRead}>
+                      Mark All as read
+                    </span>
+                    <span onClick={this.deleteAllNotifications}>Clear All</span>
+                  </div>
+                </div>
               )}
 
-              {notifications.map(notification => (
-                <div key="notification.id">
+              {newNotifications.map(notification => (
+                <div key={notification.id}>
                   <div className="notification-item">
-                    <p className="date">
-                      {new Date(notification.createdAt).toLocaleDateString()}
+                    <div className="notification-item__header">
+                      <p className="date">
+                        {new Date(notification.createdAt).toLocaleDateString()}
+                      </p>
+                      <div className="mark_delete">
+                        <img
+                          className="delete_btn"
+                          onClick={this.deleteNotification}
+                          data-id={notification.id}
+                          src={rubbishBin}
+                          alt="delete button"
+                        />
+                      </div>
+                    </div>
+                    <p
+                      className={
+                        notification.isRead ? "action" : "action-unread"
+                      }
+                      onClick={this.markAsRead}
+                      data-notifiableid={notification.notifiableId}
+                      data-id={notification.id}
+                      data-action={notification.notifiable}
+                      data-isread={notification.isRead}
+                    >
+                      {notification.action}
                     </p>
-                    {notification.notifiable === "user" ? (
-                      <p
-                        className="action"
-                        onClick={this.markNotificationAsRead}
-                        data-id={notification.notifiableId}
-                        data-action={notification.notifiable}
-                      >
-                        {notification.action}
-                      </p>
-                    ) : (
-                      <p
-                        className="action"
-                        onClick={this.markNotificationAsRead}
-                        data-id={notification.notifiableId}
-                        data-action={notification.notifiable}
-                      >
-                        {notification.action}
-                      </p>
-                    )}
                   </div>
                 </div>
               ))}
@@ -146,24 +191,34 @@ Notification.propTypes = {
 
 const mapStateToProps = state => {
   const { notification, authUser } = state;
-  const { notifications, count, error } = notification;
+  const { notifications, count, error, loading } = notification;
   return {
     notifications,
     count,
     error,
+    loading,
     userId: authUser.user.id
   };
 };
 
 const mapDispatchToProps = dispatch => ({
-  fetchAllNotifications() {
+  fetchAllUnreadNotifications() {
     dispatch(getAllUnreadNotifications());
+  },
+  fetchAllNotifications() {
+    dispatch(getAllNotifications());
+  },
+  markNotificationAsRead(id) {
+    dispatch(markAsRead(id));
+  },
+  markAllNotificationsAsRead() {
+    dispatch(markAllAsRead());
   },
   deleteNotification(id) {
     dispatch(deleteOneNotification(id));
   },
-  markAsRead(id) {
-    dispatch(markNotificationAsRead(id));
+  deleteNotifications() {
+    dispatch(deleteAllNotifications());
   }
 });
 

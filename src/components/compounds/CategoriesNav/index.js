@@ -13,7 +13,7 @@ class MinorNav extends Component {
 
   render() {
     return (
-      <nav className="navbar is-active nav-Categories" role="navigation" aria-label="categories navigation">
+      <nav className="navbar is-active nav-Categories" role="navigation" aria-label="categories navigation" style={{zIndex: 0}}>
         <div className="navbar-brand">
           <h1 className="navbar-item category--brand">
             Categories

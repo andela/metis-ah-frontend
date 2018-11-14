@@ -10,6 +10,7 @@
 
 .notification-group {
   position: relative;
+  cursor: pointer;
 }
 
 a {
@@ -22,7 +23,7 @@ a {
 }
 
 .count {
-  background: #4CD6A5;
+  background: #f74444;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -30,7 +31,7 @@ a {
   font-size: 0.6em;
   box-shadow: 2px 2px 4px #ddd;
   top: -5px;
-  right: 30px;
+  right: 24px;
   position: absolute;
 
   span {
@@ -46,39 +47,107 @@ a {
   color: #444;
   position: absolute;
   top: 67px;
-  left: 20px;
-  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
+  right: 3em;
+  box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14),
+    0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.4);
   min-height: 5em;
+  max-height: 27em;
   overflow: scroll;
-  width: 18em;
+  width: 24em;
+  transition: 0.2s all ease-in-out;
+  // border-top: 1.5px solid #4CD6A5;
 
   .notification-item {
     border-top: 1px solid #eee;
     border-bottom: 1px solid #eee;
-    // padding: 10px 0;
     padding: 1em;
+    color: rgb(113, 113, 113);
+    font-size: 0.9em;
 
     &:hover {
-      background-color: #f0f0f0;
-    }
-
-    .date {
-      font-size: 11px;
+      background-color: rgb(245, 245, 245);
     }
 
     .action {
-      font-size: 0.9em;
+      cursor: pointer;
+    }
+
+    .action-unread {
+      color: rgb(42, 42, 42);
       cursor: pointer;
     }
   }
 }
 
 .notif-heading {
-  padding: 1em 0 1em 1em;
-  background: #EEEEEE;
+  font-weight: bold;
 }
 
 .notif-heading-unstyled {
   padding: 1.4em 0 1em 1em;
   text-align: center;
+}
+
+.notification-header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 0.5em 1em;
+  background: rgb(255, 255, 255);
+  border-bottom: solid 1px #dddfe2;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  font-size: 0.86em;
+
+  .notif-actions {
+    justify-self: end;
+    cursor: pointer;
+
+    :first-child {
+      margin-right: 10px;
+      color: #05a16a;
+    }
+
+    :nth-child(2) {
+      color: rgb(243, 103, 103);
+    }
+  }
+}
+
+.notification-item__header {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  font-size: 0.8em;
+
+  .date {
+    color: rgb(163, 163, 163);
+  }
+
+  .mark_delete {
+    justify-self: end;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    align-items: center;
+
+    .markAsRead {
+      justify-self: end;
+      margin-right: 10px;
+      cursor: pointer;
+      color: #05a16a;
+      
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .delete_btn {
+      color: rgb(161, 161, 161);
+      justify-self: end;
+      font-size: 1.5em;
+      cursor: pointer;
+      transition: 0.3s all ease-in-out;
+      width: 13px;
+      height: auto;;
+    }
+  }
 }

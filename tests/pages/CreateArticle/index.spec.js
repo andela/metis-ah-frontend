@@ -21,6 +21,11 @@ const initialState = {
     user: {
       image: 'imageUrl.jpg'
     }
+  },
+  notification: {
+    notifications: [], 
+    count: 0, 
+    error: ''
   }
 };
 
@@ -34,7 +39,7 @@ const innerState = {
   articleBanner: null,
   autoSave: false,
   error: null,
-  bannerName: null
+  bannerName: null,
 };
 
 

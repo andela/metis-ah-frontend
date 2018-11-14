@@ -13,7 +13,7 @@ const ProfilePage = (props) => {
     <div className="profile" id="profile">
       <header>
         <NavbarTop />
-        <CategoryNav />
+        <CategoryNav getElementById="top-categories" />
       </header>
       <ProfileContainer userId={userId} />
       <Footer />

@@ -7,7 +7,7 @@ import './index.scss';
 
 const ArticleContainer = (props) => {
   const {
-    articles, image, firstname, lastname, description
+    articles, image, firstname, lastname, description, articleMessage
   } = props;
   return (
     <div className="ProfileArticle">
@@ -27,7 +27,7 @@ const ArticleContainer = (props) => {
                     key={uuid()}
                   />
                 ))
-                : <h1 className="is-size-4 no--article">You have not created any article yet</h1>
+                : <h1 className="is-size-4 no--article">{articleMessage}</h1>
             }
         </div>
         {articles.length === 0 || <Pagination />}

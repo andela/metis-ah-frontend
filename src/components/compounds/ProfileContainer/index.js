@@ -16,7 +16,13 @@ class ProfileContainer extends Component {
   }
 
   render() {
-    const { loading, id } = this.props;
+    const { loading, id, loggedInUserId, userId } = this.props;
+    let message;
+    if (loggedInUserId !== userId) {
+      message = 'No article created yet'
+    } else {
+      message = 'You have not created any article'
+    }
     return (
       <div className="container ProfileContainer">
         {
@@ -26,7 +32,7 @@ class ProfileContainer extends Component {
                 <ProfileHero {...this.props} />
                 <ProfileBio {...this.props} />
                 <ProfileInterest {...this.props} />
-                <ArticleContainer {...this.props} />
+                <ArticleContainer articleMessage={message} {...this.props} />
               </React.Fragment>
             )
             : (
@@ -61,8 +67,9 @@ const mapDispatchToProps = dispatch => ({
   getUserInfo: userId => dispatch(getUser(userId))
 });
 
-const mapStateToProps = ({ users }) => ({
-  ...users
+const mapStateToProps = ({ users, authUser }) => ({
+  ...users,
+  loggedInUserId: authUser.user.id
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(ProfileContainer);

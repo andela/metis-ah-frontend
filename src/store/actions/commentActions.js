@@ -42,7 +42,9 @@ export const getComments = articleId => async (dispatch) => {
   try {
     const response = await axios.get(`/articles/${articleId}/comments`);
 
-    Alert.success(response.data.data.message);
+    if (!response.data.data.comments.length > 0) {
+      Alert.info('No comments have been added to this article. Be the first to comment');
+    }
     return dispatch({
       type: VIEW_COMMENTS_SUCCESS,
       comments: response.data.data.comments

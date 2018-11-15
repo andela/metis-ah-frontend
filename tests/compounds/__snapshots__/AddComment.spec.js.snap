@@ -1,0 +1,71 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ADD COMMENT TESTS should match snapshot 1`] = `
+<div
+  id="add-comment-view"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <textarea
+      cols="30"
+      name="content"
+      onChange={[Function]}
+      placeholder="Write a comment"
+      rows="10"
+      value=""
+    />
+    <div
+      className="input-container"
+    >
+      <i
+        className=""
+        id="spinner"
+      />
+      <InputField
+        disabled={false}
+        label=""
+        name=""
+        style={null}
+        type="submit"
+        value="Comment"
+      />
+    </div>
+  </form>
+</div>
+`;
+
+exports[`ADD COMMENT TESTS should match snapshot when content is empty 1`] = `
+<div
+  id="add-comment-view"
+>
+  <form
+    onSubmit={[Function]}
+  >
+    <textarea
+      cols="30"
+      name="content"
+      onChange={[Function]}
+      placeholder="Write a comment"
+      rows="10"
+      value=""
+    />
+    <div
+      className="input-container"
+    >
+      <i
+        className=""
+        id="spinner"
+      />
+      <InputField
+        disabled={false}
+        label=""
+        name=""
+        style={null}
+        type="submit"
+        value="Comment"
+      />
+    </div>
+  </form>
+</div>
+`;

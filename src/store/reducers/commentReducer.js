@@ -13,7 +13,8 @@ const {
 const initialState = {
   comment: {},
   comments: [],
-  isCommentLoading: false
+  isCreateCommentLoading: false,
+  isFetchCommentLoading: false
 };
 
 const commentReducer = (state = initialState, action) => {
@@ -21,36 +22,36 @@ const commentReducer = (state = initialState, action) => {
     case CREATE_COMMENT_STARTED:
       return {
         ...state,
-        isCommentLoading: true
+        isCreateCommentLoading: true
       };
     case CREATE_COMMENT_SUCCESS:
       return {
         ...state,
         comment: action.comment,
         comments: [action.comment, ...state.comments],
-        isCommentLoading: false
+        isCreateCommentLoading: false
       };
     case CREATE_COMMENT_FAILED:
       return {
         ...state,
-        isCommentLoading: false
+        isCreateCommentLoading: false
       };
 
     case VIEW_COMMENTS_STARTED:
       return {
         ...state,
-        isCommentLoading: true
+        isFetchCommentLoading: true
       };
     case VIEW_COMMENTS_SUCCESS:
       return {
         ...state,
         comments: action.comments,
-        isCommentLoading: false
+        isFetchCommentLoading: false
       };
     case VIEW_COMMENTS_FAILED:
       return {
         ...state,
-        isCommentLoading: false
+        isFetchCommentLoading: false
       };
     case CLEAR_COMMENT:
       return {

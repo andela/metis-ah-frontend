@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { withRouter } from 'react-router';
+import { withRouter } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import { addComment } from 'Actions/commentActions';
@@ -11,12 +11,10 @@ import Alert from 'Utils/helpers/alert';
 import './style.scss';
 
 export class AddComment extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      content: ''
-    };
-  }
+  state = {
+    content: ''
+  };
+
 
   handleChange = (event) => {
     this.setState({
@@ -47,6 +45,7 @@ export class AddComment extends React.Component {
 
   render() {
     const { content } = this.state;
+    const { isCreateCommentLoading } = this.props;
     return (
       <div id="add-comment-view">
         <form onSubmit={this.handleSubmit}>
@@ -58,11 +57,13 @@ export class AddComment extends React.Component {
             cols="30"
             value={content}
           />
-          <br />
           <div className="input-container">
+            <i id="spinner" className={isCreateCommentLoading ? 'fas fa-spinner fa-spin' : ''} />
             <InputField
               type="submit"
               value="Comment"
+              style={isCreateCommentLoading ? { opacity: 0.3 } : null}
+              disabled={isCreateCommentLoading}
             />
           </div>
         </form>
@@ -71,18 +72,24 @@ export class AddComment extends React.Component {
   }
 }
 
+AddComment.defaultProps = {
+  isCreateCommentLoading: false
+};
+
 AddComment.propTypes = {
   match: PropTypes.objectOf(PropTypes.any).isRequired,
   addComment: PropTypes.func.isRequired,
   showModal: PropTypes.func.isRequired,
-  isAuth: PropTypes.bool.isRequired
+  isAuth: PropTypes.bool.isRequired,
+  isCreateCommentLoading: PropTypes.bool
 };
 
 const mapStateToProps = state => ({
-  isAuth: state.authUser.isAuthenticated
+  isAuth: state.authUser.isAuthenticated,
+  isCreateCommentLoading: state.commentReducer.isCreateCommentLoading
 });
 
-export default withRouter(connect(mapStateToProps, {
-  addComment,
-  showModal
-})(AddComment));
+export default withRouter(connect(
+  mapStateToProps,
+  { addComment, showModal }
+)(AddComment));

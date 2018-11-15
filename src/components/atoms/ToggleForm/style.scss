@@ -6,9 +6,11 @@
     color: black;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
 }
 p#auth-modal-desc {
     color: rgb(161, 161, 161);
+    text-align: center;
 }
 
 .form_tab{
@@ -37,6 +39,7 @@ p#auth-modal-desc {
 #or {
     color: rgb(88, 87, 87);
     margin-top: 30px;
+    text-align: center;
 }
 
 @media(min-width: 700px) {

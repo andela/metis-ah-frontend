@@ -724,69 +724,50 @@ exports[`Profile page test profile page to 1`] = `
                 </SearchAndProfile>
               </nav>
             </NavbarTop>
-            <Footer>
-              <div
-                className="footer-nav-categories"
+            <Footer
+              getElementById="top-categories"
+            >
+              <nav
+                aria-label="categories navigation"
+                className="navbar footer-nav-categories"
+                role="navigation"
               >
                 <div
-                  className="container container"
+                  className="navbar-brand footer-navbar-brand"
                 >
-                  <withRouter(Connect(Categories))
-                    footer={true}
+                  <h1
+                    className="navbar-item category--brand"
                   >
-                    <Route>
-                      <Connect(Categories)
-                        footer={true}
-                        history={
-                          Object {
-                            "action": "POP",
-                            "block": [Function],
-                            "createHref": [Function],
-                            "go": [Function],
-                            "goBack": [Function],
-                            "goForward": [Function],
-                            "length": 1,
-                            "listen": [Function],
-                            "location": Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                            "push": [Function],
-                            "replace": [Function],
-                          }
-                        }
-                        location={
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          }
-                        }
-                        match={
-                          Object {
-                            "isExact": true,
-                            "params": Object {},
-                            "path": "/",
-                            "url": "/",
-                          }
-                        }
-                      >
-                        <Categories
-                          categories={
-                            Array [
-                              Object {
-                                "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
-                                "id": 1,
-                                "name": "FASHION",
-                                "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
-                              },
-                            ]
-                          }
+                    Categories
+                  </h1>
+                  <button
+                    aria-expanded="false"
+                    aria-label="menu"
+                    className="navbar-burger burger caret2"
+                    data-target="top-categories"
+                    onClick={[Function]}
+                    type="button"
+                  >
+                    <span>
+                      <i
+                        className="fas fa-angle-down fa-2x"
+                      />
+                    </span>
+                  </button>
+                </div>
+                <div
+                  className="navbar-menu"
+                  id="top-categories"
+                >
+                  <div
+                    className="Categories-container container"
+                  >
+                    <withRouter(Connect(Categories))
+                      footer={true}
+                    >
+                      <Route>
+                        <Connect(Categories)
                           footer={true}
-                          getCategoriesData={[Function]}
                           history={
                             Object {
                               "action": "POP",
@@ -823,73 +804,124 @@ exports[`Profile page test profile page to 1`] = `
                               "url": "/",
                             }
                           }
-                          selected="HOME"
                         >
-                          <NavLink
-                            activeClassName="categories-footItem-selected"
-                            aria-current="page"
-                            className="categories-footItem"
-                            exact={true}
-                            to="/"
+                          <Categories
+                            categories={
+                              Array [
+                                Object {
+                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                  "id": 1,
+                                  "name": "FASHION",
+                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                },
+                              ]
+                            }
+                            footer={true}
+                            getCategoriesData={[Function]}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                            selected="HOME"
                           >
-                            <Route
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
                               exact={true}
-                              path="\\\\/"
+                              to="/"
                             >
-                              <Link
-                                aria-current="page"
-                                className="categories-footItem categories-footItem-selected"
-                                replace={false}
-                                style={Object {}}
-                                to="/"
+                              <Route
+                                exact={true}
+                                path="\\\\/"
                               >
-                                <a
+                                <Link
                                   aria-current="page"
                                   className="categories-footItem categories-footItem-selected"
-                                  href="/"
-                                  onClick={[Function]}
+                                  replace={false}
                                   style={Object {}}
+                                  to="/"
                                 >
-                                  HOME
-                                </a>
-                              </Link>
-                            </Route>
-                          </NavLink>
-                          <NavLink
-                            activeClassName="categories-footItem-selected"
-                            aria-current="page"
-                            className="categories-footItem"
-                            exact={true}
-                            key="1"
-                            to="/articles/1"
-                          >
-                            <Route
+                                  <a
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    href="/"
+                                    onClick={[Function]}
+                                    style={Object {}}
+                                  >
+                                    HOME
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                            <NavLink
+                              activeClassName="categories-footItem-selected"
+                              aria-current="page"
+                              className="categories-footItem"
                               exact={true}
-                              path="\\\\/articles\\\\/1"
+                              key="1"
+                              to="/articles/1"
                             >
-                              <Link
-                                aria-current={null}
-                                className="categories-footItem"
-                                replace={false}
-                                to="/articles/1"
+                              <Route
+                                exact={true}
+                                path="\\\\/articles\\\\/1"
                               >
-                                <a
+                                <Link
                                   aria-current={null}
                                   className="categories-footItem"
-                                  href="/articles/1"
-                                  onClick={[Function]}
+                                  replace={false}
+                                  to="/articles/1"
                                 >
-                                  FASHION
-                                </a>
-                              </Link>
-                            </Route>
-                          </NavLink>
-                        </Categories>
-                      </Connect(Categories)>
-                    </Route>
-                  </withRouter(Connect(Categories))>
+                                  <a
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    href="/articles/1"
+                                    onClick={[Function]}
+                                  >
+                                    FASHION
+                                  </a>
+                                </Link>
+                              </Route>
+                            </NavLink>
+                          </Categories>
+                        </Connect(Categories)>
+                      </Route>
+                    </withRouter(Connect(Categories))>
+                  </div>
                 </div>
-              </div>
+              </nav>
             </Footer>
           </header>
           <Connect(ProfileContainer)
@@ -1523,7 +1555,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="40c9e2ed-5137-40b6-a6e6-11ab68d62cea"
+                        key="75304fd4-c18b-4f48-aa04-7729826bb350"
                         title="runing"
                         type="button"
                       >
@@ -1531,7 +1563,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="4c4f9330-c171-4503-954d-efc10dee144e"
+                        key="d8e4b6a3-ca13-448d-aec9-3b36816e9dbd"
                         title=" singing"
                         type="button"
                       >
@@ -1539,7 +1571,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="8431c601-2b46-4d92-b4e1-7b154cabf447"
+                        key="b5a2375d-42d3-4251-a790-ec99b1aaf712"
                         title=" climbing"
                         type="button"
                       >
@@ -1547,7 +1579,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="397e0b3c-3ca4-49aa-8adb-1e5b51f0d0d8"
+                        key="c1858d45-1713-4701-b8c4-2851d182412e"
                         title=" jumping"
                         type="button"
                       >
@@ -1618,69 +1650,50 @@ exports[`Profile page test profile page to 1`] = `
             <footer
               className="Main-Footer"
             >
-              <Footer>
-                <div
-                  className="footer-nav-categories"
+              <Footer
+                getElementById="footer_burger"
+              >
+                <nav
+                  aria-label="categories navigation"
+                  className="navbar footer-nav-categories"
+                  role="navigation"
                 >
                   <div
-                    className="container container"
+                    className="navbar-brand footer-navbar-brand"
                   >
-                    <withRouter(Connect(Categories))
-                      footer={true}
+                    <h1
+                      className="navbar-item category--brand"
                     >
-                      <Route>
-                        <Connect(Categories)
-                          footer={true}
-                          history={
-                            Object {
-                              "action": "POP",
-                              "block": [Function],
-                              "createHref": [Function],
-                              "go": [Function],
-                              "goBack": [Function],
-                              "goForward": [Function],
-                              "length": 1,
-                              "listen": [Function],
-                              "location": Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                              "push": [Function],
-                              "replace": [Function],
-                            }
-                          }
-                          location={
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            }
-                          }
-                          match={
-                            Object {
-                              "isExact": true,
-                              "params": Object {},
-                              "path": "/",
-                              "url": "/",
-                            }
-                          }
-                        >
-                          <Categories
-                            categories={
-                              Array [
-                                Object {
-                                  "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
-                                  "id": 1,
-                                  "name": "FASHION",
-                                  "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
-                                },
-                              ]
-                            }
+                      Categories
+                    </h1>
+                    <button
+                      aria-expanded="false"
+                      aria-label="menu"
+                      className="navbar-burger burger caret2"
+                      data-target="footer_burger"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        <i
+                          className="fas fa-angle-down fa-2x"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    className="navbar-menu"
+                    id="footer_burger"
+                  >
+                    <div
+                      className="Categories-container container"
+                    >
+                      <withRouter(Connect(Categories))
+                        footer={true}
+                      >
+                        <Route>
+                          <Connect(Categories)
                             footer={true}
-                            getCategoriesData={[Function]}
                             history={
                               Object {
                                 "action": "POP",
@@ -1717,73 +1730,124 @@ exports[`Profile page test profile page to 1`] = `
                                 "url": "/",
                               }
                             }
-                            selected="HOME"
                           >
-                            <NavLink
-                              activeClassName="categories-footItem-selected"
-                              aria-current="page"
-                              className="categories-footItem"
-                              exact={true}
-                              to="/"
+                            <Categories
+                              categories={
+                                Array [
+                                  Object {
+                                    "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                    "id": 1,
+                                    "name": "FASHION",
+                                    "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                  },
+                                ]
+                              }
+                              footer={true}
+                              getCategoriesData={[Function]}
+                              history={
+                                Object {
+                                  "action": "POP",
+                                  "block": [Function],
+                                  "createHref": [Function],
+                                  "go": [Function],
+                                  "goBack": [Function],
+                                  "goForward": [Function],
+                                  "length": 1,
+                                  "listen": [Function],
+                                  "location": Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  },
+                                  "push": [Function],
+                                  "replace": [Function],
+                                }
+                              }
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                              match={
+                                Object {
+                                  "isExact": true,
+                                  "params": Object {},
+                                  "path": "/",
+                                  "url": "/",
+                                }
+                              }
+                              selected="HOME"
                             >
-                              <Route
+                              <NavLink
+                                activeClassName="categories-footItem-selected"
+                                aria-current="page"
+                                className="categories-footItem"
                                 exact={true}
-                                path="\\\\/"
+                                to="/"
                               >
-                                <Link
-                                  aria-current="page"
-                                  className="categories-footItem categories-footItem-selected"
-                                  replace={false}
-                                  style={Object {}}
-                                  to="/"
+                                <Route
+                                  exact={true}
+                                  path="\\\\/"
                                 >
-                                  <a
+                                  <Link
                                     aria-current="page"
                                     className="categories-footItem categories-footItem-selected"
-                                    href="/"
-                                    onClick={[Function]}
+                                    replace={false}
                                     style={Object {}}
+                                    to="/"
                                   >
-                                    HOME
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                            <NavLink
-                              activeClassName="categories-footItem-selected"
-                              aria-current="page"
-                              className="categories-footItem"
-                              exact={true}
-                              key="1"
-                              to="/articles/1"
-                            >
-                              <Route
+                                    <a
+                                      aria-current="page"
+                                      className="categories-footItem categories-footItem-selected"
+                                      href="/"
+                                      onClick={[Function]}
+                                      style={Object {}}
+                                    >
+                                      HOME
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                              <NavLink
+                                activeClassName="categories-footItem-selected"
+                                aria-current="page"
+                                className="categories-footItem"
                                 exact={true}
-                                path="\\\\/articles\\\\/1"
+                                key="1"
+                                to="/articles/1"
                               >
-                                <Link
-                                  aria-current={null}
-                                  className="categories-footItem"
-                                  replace={false}
-                                  to="/articles/1"
+                                <Route
+                                  exact={true}
+                                  path="\\\\/articles\\\\/1"
                                 >
-                                  <a
+                                  <Link
                                     aria-current={null}
                                     className="categories-footItem"
-                                    href="/articles/1"
-                                    onClick={[Function]}
+                                    replace={false}
+                                    to="/articles/1"
                                   >
-                                    FASHION
-                                  </a>
-                                </Link>
-                              </Route>
-                            </NavLink>
-                          </Categories>
-                        </Connect(Categories)>
-                      </Route>
-                    </withRouter(Connect(Categories))>
+                                    <a
+                                      aria-current={null}
+                                      className="categories-footItem"
+                                      href="/articles/1"
+                                      onClick={[Function]}
+                                    >
+                                      FASHION
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                            </Categories>
+                          </Connect(Categories)>
+                        </Route>
+                      </withRouter(Connect(Categories))>
+                    </div>
                   </div>
-                </div>
+                </nav>
               </Footer>
               <Brand>
                 <div
@@ -2056,233 +2120,43 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                 </SearchAndProfile>
               </nav>
             </NavbarTop>
-            <Footer>
-              <div
-                className="footer-nav-categories"
+            <Footer
+              getElementById="top-categories"
+            >
+              <nav
+                aria-label="categories navigation"
+                className="navbar footer-nav-categories"
+                role="navigation"
               >
                 <div
-                  className="container container"
+                  className="navbar-brand footer-navbar-brand"
                 >
-                  <withRouter(Connect(Categories))
-                    footer={true}
+                  <h1
+                    className="navbar-item category--brand"
                   >
-                    <Route>
-                      <Connect(Categories)
-                        footer={true}
-                        history={
-                          Object {
-                            "action": "POP",
-                            "block": [Function],
-                            "createHref": [Function],
-                            "go": [Function],
-                            "goBack": [Function],
-                            "goForward": [Function],
-                            "length": 1,
-                            "listen": [Function],
-                            "location": Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            },
-                            "push": [Function],
-                            "replace": [Function],
-                          }
-                        }
-                        location={
-                          Object {
-                            "hash": "",
-                            "pathname": "/",
-                            "search": "",
-                            "state": undefined,
-                          }
-                        }
-                        match={
-                          Object {
-                            "isExact": true,
-                            "params": Object {},
-                            "path": "/",
-                            "url": "/",
-                          }
-                        }
-                      >
-                        <Categories
-                          categories={
-                            Array [
-                              Object {
-                                "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
-                                "id": 1,
-                                "name": "FASHION",
-                                "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
-                              },
-                            ]
-                          }
-                          footer={true}
-                          getCategoriesData={[Function]}
-                          history={
-                            Object {
-                              "action": "POP",
-                              "block": [Function],
-                              "createHref": [Function],
-                              "go": [Function],
-                              "goBack": [Function],
-                              "goForward": [Function],
-                              "length": 1,
-                              "listen": [Function],
-                              "location": Object {
-                                "hash": "",
-                                "pathname": "/",
-                                "search": "",
-                                "state": undefined,
-                              },
-                              "push": [Function],
-                              "replace": [Function],
-                            }
-                          }
-                          location={
-                            Object {
-                              "hash": "",
-                              "pathname": "/",
-                              "search": "",
-                              "state": undefined,
-                            }
-                          }
-                          match={
-                            Object {
-                              "isExact": true,
-                              "params": Object {},
-                              "path": "/",
-                              "url": "/",
-                            }
-                          }
-                          selected="HOME"
-                        >
-                          <NavLink
-                            activeClassName="categories-footItem-selected"
-                            aria-current="page"
-                            className="categories-footItem"
-                            exact={true}
-                            to="/"
-                          >
-                            <Route
-                              exact={true}
-                              path="\\\\/"
-                            >
-                              <Link
-                                aria-current="page"
-                                className="categories-footItem categories-footItem-selected"
-                                replace={false}
-                                style={Object {}}
-                                to="/"
-                              >
-                                <a
-                                  aria-current="page"
-                                  className="categories-footItem categories-footItem-selected"
-                                  href="/"
-                                  onClick={[Function]}
-                                  style={Object {}}
-                                >
-                                  HOME
-                                </a>
-                              </Link>
-                            </Route>
-                          </NavLink>
-                          <NavLink
-                            activeClassName="categories-footItem-selected"
-                            aria-current="page"
-                            className="categories-footItem"
-                            exact={true}
-                            key="1"
-                            to="/articles/1"
-                          >
-                            <Route
-                              exact={true}
-                              path="\\\\/articles\\\\/1"
-                            >
-                              <Link
-                                aria-current={null}
-                                className="categories-footItem"
-                                replace={false}
-                                to="/articles/1"
-                              >
-                                <a
-                                  aria-current={null}
-                                  className="categories-footItem"
-                                  href="/articles/1"
-                                  onClick={[Function]}
-                                >
-                                  FASHION
-                                </a>
-                              </Link>
-                            </Route>
-                          </NavLink>
-                        </Categories>
-                      </Connect(Categories)>
-                    </Route>
-                  </withRouter(Connect(Categories))>
-                </div>
-              </div>
-            </Footer>
-          </header>
-          <Connect(ProfileContainer)
-            userId="1"
-          >
-            <ProfileContainer
-              getUserInfo={[Function]}
-              id={0}
-              loading={true}
-              profile={Object {}}
-              userId="1"
-            >
-              <div
-                className="container ProfileContainer"
-              >
-                <div
-                  className="loading"
-                >
-                  <Loader
-                    color="#4dd6a5"
-                    height="100"
-                    type="Triangle"
-                    width="100"
+                    Categories
+                  </h1>
+                  <button
+                    aria-expanded="false"
+                    aria-label="menu"
+                    className="navbar-burger burger caret2"
+                    data-target="top-categories"
+                    onClick={[Function]}
+                    type="button"
                   >
-                    <div>
-                      <Triangle
-                        color="#4dd6a5"
-                        height="100"
-                        type="Triangle"
-                        width="100"
-                      >
-                        <svg
-                          height="100"
-                          id="triangle"
-                          viewBox="-3 -4 39 39"
-                          width="100"
-                        >
-                          <polygon
-                            fill="transparent"
-                            points="16,0 32,32 0,32"
-                            stroke="#4dd6a5"
-                            strokeWidth="1"
-                          />
-                        </svg>
-                      </Triangle>
-                    </div>
-                  </Loader>
+                    <span>
+                      <i
+                        className="fas fa-angle-down fa-2x"
+                      />
+                    </span>
+                  </button>
                 </div>
-              </div>
-            </ProfileContainer>
-          </Connect(ProfileContainer)>
-          <Footer>
-            <footer
-              className="Main-Footer"
-            >
-              <Footer>
                 <div
-                  className="footer-nav-categories"
+                  className="navbar-menu"
+                  id="top-categories"
                 >
                   <div
-                    className="container container"
+                    className="Categories-container container"
                   >
                     <withRouter(Connect(Categories))
                       footer={true}
@@ -2443,6 +2317,260 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                     </withRouter(Connect(Categories))>
                   </div>
                 </div>
+              </nav>
+            </Footer>
+          </header>
+          <Connect(ProfileContainer)
+            userId="1"
+          >
+            <ProfileContainer
+              getUserInfo={[Function]}
+              id={0}
+              loading={true}
+              profile={Object {}}
+              userId="1"
+            >
+              <div
+                className="container ProfileContainer"
+              >
+                <div
+                  className="loading"
+                >
+                  <Loader
+                    color="#4dd6a5"
+                    height="100"
+                    type="Triangle"
+                    width="100"
+                  >
+                    <div>
+                      <Triangle
+                        color="#4dd6a5"
+                        height="100"
+                        type="Triangle"
+                        width="100"
+                      >
+                        <svg
+                          height="100"
+                          id="triangle"
+                          viewBox="-3 -4 39 39"
+                          width="100"
+                        >
+                          <polygon
+                            fill="transparent"
+                            points="16,0 32,32 0,32"
+                            stroke="#4dd6a5"
+                            strokeWidth="1"
+                          />
+                        </svg>
+                      </Triangle>
+                    </div>
+                  </Loader>
+                </div>
+              </div>
+            </ProfileContainer>
+          </Connect(ProfileContainer)>
+          <Footer>
+            <footer
+              className="Main-Footer"
+            >
+              <Footer
+                getElementById="footer_burger"
+              >
+                <nav
+                  aria-label="categories navigation"
+                  className="navbar footer-nav-categories"
+                  role="navigation"
+                >
+                  <div
+                    className="navbar-brand footer-navbar-brand"
+                  >
+                    <h1
+                      className="navbar-item category--brand"
+                    >
+                      Categories
+                    </h1>
+                    <button
+                      aria-expanded="false"
+                      aria-label="menu"
+                      className="navbar-burger burger caret2"
+                      data-target="footer_burger"
+                      onClick={[Function]}
+                      type="button"
+                    >
+                      <span>
+                        <i
+                          className="fas fa-angle-down fa-2x"
+                        />
+                      </span>
+                    </button>
+                  </div>
+                  <div
+                    className="navbar-menu"
+                    id="footer_burger"
+                  >
+                    <div
+                      className="Categories-container container"
+                    >
+                      <withRouter(Connect(Categories))
+                        footer={true}
+                      >
+                        <Route>
+                          <Connect(Categories)
+                            footer={true}
+                            history={
+                              Object {
+                                "action": "POP",
+                                "block": [Function],
+                                "createHref": [Function],
+                                "go": [Function],
+                                "goBack": [Function],
+                                "goForward": [Function],
+                                "length": 1,
+                                "listen": [Function],
+                                "location": Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                },
+                                "push": [Function],
+                                "replace": [Function],
+                              }
+                            }
+                            location={
+                              Object {
+                                "hash": "",
+                                "pathname": "/",
+                                "search": "",
+                                "state": undefined,
+                              }
+                            }
+                            match={
+                              Object {
+                                "isExact": true,
+                                "params": Object {},
+                                "path": "/",
+                                "url": "/",
+                              }
+                            }
+                          >
+                            <Categories
+                              categories={
+                                Array [
+                                  Object {
+                                    "description": "It has become appallingly obvious that our technology has exceeded our humanity.",
+                                    "id": 1,
+                                    "name": "FASHION",
+                                    "poster": "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png",
+                                  },
+                                ]
+                              }
+                              footer={true}
+                              getCategoriesData={[Function]}
+                              history={
+                                Object {
+                                  "action": "POP",
+                                  "block": [Function],
+                                  "createHref": [Function],
+                                  "go": [Function],
+                                  "goBack": [Function],
+                                  "goForward": [Function],
+                                  "length": 1,
+                                  "listen": [Function],
+                                  "location": Object {
+                                    "hash": "",
+                                    "pathname": "/",
+                                    "search": "",
+                                    "state": undefined,
+                                  },
+                                  "push": [Function],
+                                  "replace": [Function],
+                                }
+                              }
+                              location={
+                                Object {
+                                  "hash": "",
+                                  "pathname": "/",
+                                  "search": "",
+                                  "state": undefined,
+                                }
+                              }
+                              match={
+                                Object {
+                                  "isExact": true,
+                                  "params": Object {},
+                                  "path": "/",
+                                  "url": "/",
+                                }
+                              }
+                              selected="HOME"
+                            >
+                              <NavLink
+                                activeClassName="categories-footItem-selected"
+                                aria-current="page"
+                                className="categories-footItem"
+                                exact={true}
+                                to="/"
+                              >
+                                <Route
+                                  exact={true}
+                                  path="\\\\/"
+                                >
+                                  <Link
+                                    aria-current="page"
+                                    className="categories-footItem categories-footItem-selected"
+                                    replace={false}
+                                    style={Object {}}
+                                    to="/"
+                                  >
+                                    <a
+                                      aria-current="page"
+                                      className="categories-footItem categories-footItem-selected"
+                                      href="/"
+                                      onClick={[Function]}
+                                      style={Object {}}
+                                    >
+                                      HOME
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                              <NavLink
+                                activeClassName="categories-footItem-selected"
+                                aria-current="page"
+                                className="categories-footItem"
+                                exact={true}
+                                key="1"
+                                to="/articles/1"
+                              >
+                                <Route
+                                  exact={true}
+                                  path="\\\\/articles\\\\/1"
+                                >
+                                  <Link
+                                    aria-current={null}
+                                    className="categories-footItem"
+                                    replace={false}
+                                    to="/articles/1"
+                                  >
+                                    <a
+                                      aria-current={null}
+                                      className="categories-footItem"
+                                      href="/articles/1"
+                                      onClick={[Function]}
+                                    >
+                                      FASHION
+                                    </a>
+                                  </Link>
+                                </Route>
+                              </NavLink>
+                            </Categories>
+                          </Connect(Categories)>
+                        </Route>
+                      </withRouter(Connect(Categories))>
+                    </div>
+                  </div>
+                </nav>
               </Footer>
               <Brand>
                 <div

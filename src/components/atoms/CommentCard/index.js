@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
 import { Link } from 'react-router-dom';
 import timePast from 'time_past';
+import _ from 'underscore';
 
 const CommentCard = (props) => {
   const { comment } = props;
@@ -10,7 +11,7 @@ const CommentCard = (props) => {
     <Fragment>
       <div id="comments-view">
         <div className="comment-body">
-          {comment.content}
+          {_.unescape(comment.content)}
         </div>
         <div className="comment-footer">
           <img src={comment.user.image || userImage} alt="userImage" />

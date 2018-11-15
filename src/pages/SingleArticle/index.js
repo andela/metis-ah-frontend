@@ -14,9 +14,9 @@ import { closeModal, userFail } from 'Actions/authUser';
 import CommentBox from 'Components/compounds/CommentBox';
 import { SHARE_BASE_URL } from '../../../config.json';
 import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
-
-import './style.scss';
 import LikeAndDisLike from '../../components/compounds/LikeDislike/index.js';
+import ProtectedRoute from '../../components/HOC/ProtectedRoute';
+import './style.scss';
 /**
  * SingleArticle
  */

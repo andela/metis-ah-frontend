@@ -1,5 +1,4 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React from 'react';
 import './style.scss';
 
 const TagsDisplay = (props) => {
@@ -12,7 +11,7 @@ const TagsDisplay = (props) => {
         {tags}
     </div>
     )
-  )
-}
+  );
+};
 
-export default TagsDisplay
+export default TagsDisplay;

@@ -114,6 +114,7 @@
     "time_past": "^1.0.4",
     "toastr": "^2.1.4",
     "uglifyjs-webpack-plugin": "^2.0.1",
+    "underscore": "^1.9.1",
     "url-loader": "^1.1.1",
     "uuid": "^3.3.2",
     "webpack": "^4.20.1",

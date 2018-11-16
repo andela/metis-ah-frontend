@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CommentsView Tests should match snapshot 1`] = `
+<Fragment>
+  <div
+    aria-hidden="true"
+    disabled={false}
+    id="comments-view-button"
+    onClick={[Function]}
+    style={null}
+  >
+    <h1>
+      <i
+        className=""
+        id="spinner"
+      />
+       
+      View Comments
+    </h1>
+  </div>
+  <CommentCard
+    comment={
+      Object {
+        "articleId": 170,
+        "content": "Thanks",
+        "createdAt": "2018-11-13T16:13:29.901Z",
+        "edited": false,
+        "id": 9,
+        "updatedAt": "2018-11-13T16:13:29.901Z",
+        "user": Object {
+          "firstname": "JAY",
+          "id": 11,
+          "image": "http://res.cloudinary.com/dbsxxymfz/image/upload/v1541429992/es8jfxtycdfjvec6ha1a.png",
+          "lastname": "OBI",
+          "username": "johngorithm",
+        },
+        "userId": 11,
+      }
+    }
+    key="9"
+  />
+</Fragment>
+`;

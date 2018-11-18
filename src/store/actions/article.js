@@ -14,9 +14,10 @@ export const getArticleStarted = () => ({
   type: FETCH_ARTICLE_START
 });
 
-export const getArticleSuccess = articles => ({
+export const getArticleSuccess = (articles, metadata) => ({
   type: FETCH_ARTICLE_SUCCESS,
-  articles
+  articles,
+  metadata
 });
 
 export const getArticleFail = error => ({
@@ -24,7 +25,7 @@ export const getArticleFail = error => ({
   error
 });
 
-export const getArticle = (categoryId, heroContent) => (dispatch) => {
+export const getArticle = (categoryId, heroContent, page) => (dispatch) => {
   dispatch(getArticleStarted());
   dispatch(setHeroContent({
     ...heroContent,
@@ -32,10 +33,10 @@ export const getArticle = (categoryId, heroContent) => (dispatch) => {
     className: 'article-hero'
   }));
   return axios
-    .get(`/categories/${categoryId}`)
+    .get(`/categories/${categoryId}?page=${page}`)
     .then((response) => {
       const { data } = response.data;
-      dispatch(getArticleSuccess(data.articles));
+      dispatch(getArticleSuccess(data.articles, data.metadata));
       if (!heroContent) {
         dispatch(setHeroContent({
           ...data.category,

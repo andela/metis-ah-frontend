@@ -30,7 +30,7 @@ exports[`CommentCard Tests it matches snapshot 1`] = `
       <p
         className="time-ago"
       >
-        2 days ago
+        5 days ago
       </p>
     </div>
   </div>
@@ -67,7 +67,7 @@ exports[`CommentCard Tests it renders username when firstname and lastname are u
       <p
         className="time-ago"
       >
-        2 days ago
+        5 days ago
       </p>
     </div>
   </div>

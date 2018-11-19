@@ -16,7 +16,7 @@ const initialState = {
   message: null
 }
 };
-
+ 
 const history = {
   push: jest.fn()
 };

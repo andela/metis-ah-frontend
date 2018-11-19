@@ -19,7 +19,7 @@ const initialState = {
   },
   loading: false,
   articles: [],
-  metaData: {},
+  metadata: {},
   error: ''
 };
 
@@ -42,7 +42,8 @@ const article = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.error,
-        articles: []
+        articles: [],
+        metadata: {}
       };
     case SET_HERO_CONTENT:
       return {

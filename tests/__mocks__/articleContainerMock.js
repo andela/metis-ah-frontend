@@ -43,6 +43,12 @@ const initialState = {
         poster: 'https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png'
       }
     ]
+  },
+  metadata: {
+    totalArticles: 11,
+    currentPage: 2,
+    limit: 10,
+    totalPages: 2
   }
 };
 

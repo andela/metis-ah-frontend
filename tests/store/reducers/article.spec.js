@@ -30,7 +30,8 @@ describe('article reducer test', () => {
     expect(state).toEqual({
       ...mockData,
       articles: action.articles,
-      loading: false
+      metadata: action.metadata,
+      loading: false,
     });
   });
 

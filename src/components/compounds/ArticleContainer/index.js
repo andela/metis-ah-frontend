@@ -4,7 +4,6 @@ import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import ReactPaginate from 'react-paginate';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
 import ArticleCard from 'Components/atoms/ArticleCard';
 import { getArticle } from 'Actions/article';
 import sortArrayContent from '../../util/helper';
@@ -92,20 +91,19 @@ class ArticleContainer extends Component {
               <Link to="/articles/new">WRITE</Link>
             </div>
           ))}
-        {loading ? null : (
-          <ReactPaginate
-            previousLabel={<FaAngleLeft />}
-            previousLinkClassName="prev-icon"
-            nextLabel={<FaAngleRight />}
-            nextLinkClassName="next-icon"
-            breakLabel="..."
-            onPageChange={this.handlePageClick}
-            pageCount={metadata.totalPages}
-            containerClassName="pagination"
-            pageRangeDisplayed={5}
-            activeLinkClassName="active"
-          />
-        )}
+
+        <ReactPaginate
+          previousLabel={<span>Prev</span>}
+          previousLinkClassName="prev-icon"
+          nextLabel={<span>Next</span>}
+          nextLinkClassName="next-icon"
+          breakLabel="..."
+          onPageChange={this.handlePageClick}
+          pageCount={metadata.totalPages}
+          containerClassName="pagination"
+          pageRangeDisplayed={5}
+          activeLinkClassName="activePage"
+        />
       </div>
     );
   }

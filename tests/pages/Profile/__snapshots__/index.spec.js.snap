@@ -1555,7 +1555,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="6225380f-2a5e-4bdb-9239-6765cfe7799b"
+                        key="3aa10a2d-8861-456f-a14d-8cc216895dfb"
                         title="runing"
                         type="button"
                       >
@@ -1563,7 +1563,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="50b270a4-aeea-424c-8a57-65516d4c3ab4"
+                        key="c2eb10b0-8e03-477c-aac1-26ae3f97e026"
                         title=" singing"
                         type="button"
                       >
@@ -1571,7 +1571,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="1bd3b4d3-54d1-4e31-9278-5c77849fa898"
+                        key="26659315-0168-4b15-8e89-27c2777f9987"
                         title=" climbing"
                         type="button"
                       >
@@ -1579,7 +1579,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="1db9b5a8-fcd1-446d-83db-e7a2451d3143"
+                        key="6be8ecc2-ee1f-4029-8cff-60d9726dd76d"
                         title=" jumping"
                         type="button"
                       >
@@ -2350,19 +2350,23 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                         type="Triangle"
                         width="100"
                       >
-                        <svg
-                          height="100"
-                          id="triangle"
-                          viewBox="-3 -4 39 39"
-                          width="100"
+                        <div
+                          className="svg"
                         >
-                          <polygon
-                            fill="transparent"
-                            points="16,0 32,32 0,32"
-                            stroke="#4dd6a5"
-                            strokeWidth="1"
-                          />
-                        </svg>
+                          <svg
+                            height="100"
+                            id="triangle"
+                            viewBox="-3 -4 39 39"
+                            width="100"
+                          >
+                            <polygon
+                              fill="transparent"
+                              points="16,0 32,32 0,32"
+                              stroke="#4dd6a5"
+                              strokeWidth="1"
+                            />
+                          </svg>
+                        </div>
                       </Triangle>
                     </div>
                   </Loader>

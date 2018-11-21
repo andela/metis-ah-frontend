@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import { withRouter, Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
+import ReactPaginate from 'react-paginate';
 import ArticleCard from 'Components/atoms/ArticleCard';
 import { getArticle } from 'Actions/article';
 import sortArrayContent from '../../util/helper';
@@ -42,8 +43,14 @@ class ArticleContainer extends Component {
     return null;
   }
 
+  handlePageClick = (pageNumber) => {
+    const { getArticles, match, categories } = this.props;
+    const heroContent = sortArrayContent(categories, match.params.category);
+    getArticles(match.params.category, heroContent, pageNumber.selected + 1);
+  }
+
   render() {
-    const { articles, loading } = this.props;
+    const { articles, metadata, loading } = this.props;
 
     const mappedArticleCards = articles.map((article) => {
       const {
@@ -84,6 +91,19 @@ class ArticleContainer extends Component {
               <Link to="/articles/new">WRITE</Link>
             </div>
           ))}
+
+        <ReactPaginate
+          previousLabel={<span>Prev</span>}
+          previousLinkClassName="prev-icon"
+          nextLabel={<span>Next</span>}
+          nextLinkClassName="next-icon"
+          breakLabel="..."
+          onPageChange={this.handlePageClick}
+          pageCount={metadata.totalPages}
+          containerClassName="pagination"
+          pageRangeDisplayed={5}
+          activeLinkClassName="activePage"
+        />
       </div>
     );
   }
@@ -92,11 +112,12 @@ class ArticleContainer extends Component {
 const mapStateToProps = state => ({
   loading: state.article.loading,
   articles: state.article.articles,
+  metadata: state.article.metadata,
   categories: state.categories.categories
 });
 
 const mapDispatchToProps = dispatch => ({
-  getArticles: (categoryId, heroContent) => dispatch(getArticle(categoryId, heroContent))
+  getArticles: (categoryId, heroContent, page) => dispatch(getArticle(categoryId, heroContent, page))
 });
 
 ArticleContainer.propTypes = {
@@ -104,11 +125,13 @@ ArticleContainer.propTypes = {
   loading: PropTypes.bool.isRequired,
   match: PropTypes.objectOf(PropTypes.any).isRequired,
   getArticles: PropTypes.func.isRequired,
-  categories: PropTypes.arrayOf(PropTypes.object).isRequired
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+  metadata: PropTypes.objectOf(PropTypes.any)
 };
 
 ArticleContainer.defaultProps = {
-  articles: []
+  articles: [],
+  metadata: {}
 };
 export default withRouter(
   connect(

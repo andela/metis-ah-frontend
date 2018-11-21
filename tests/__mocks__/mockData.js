@@ -11,7 +11,8 @@ const initialState = {
   },
   loading: false,
   articles: [],
-  error: ''
+  error: '',
+  metadata: {}
 };
 
 export default initialState;

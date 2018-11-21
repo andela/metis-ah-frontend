@@ -19,6 +19,7 @@ const initialState = {
   },
   loading: false,
   articles: [],
+  metadata: {},
   error: ''
 };
 
@@ -33,6 +34,7 @@ const article = (state = initialState, action) => {
       return {
         ...state,
         articles: action.articles,
+        metadata: action.metadata,
         loading: false
       };
     case FETCH_ARTICLE_FAIL:
@@ -40,7 +42,8 @@ const article = (state = initialState, action) => {
         ...state,
         loading: false,
         error: action.error,
-        articles: []
+        articles: [],
+        metadata: {}
       };
     case SET_HERO_CONTENT:
       return {

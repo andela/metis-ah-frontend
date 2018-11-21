@@ -1,3 +1,9 @@
+$primary-color: #4DD6A5;
+
+* {
+	outline: none;
+}
+
 .article-inner-container {
 	padding: 55px 10px;
 	flex: 1;
@@ -84,5 +90,60 @@
 @media screen and (max-width: 768px) {
 	.article-inner-container {
 		padding: 35px 15px;
+	}
+}
+
+.pagination {
+	font-size: 14px;
+	justify-content: center;
+	margin-top: 2em;
+	padding: 15px 0;
+	border-radius: 4px;
+
+	li:first-child {
+		margin-right: 10px;
+	}
+
+	li:last-child {
+		margin-left: 10px;
+	}
+
+	li {
+		margin: 0 5px;
+		transition: 0.1s all ease-in-out;
+		border-radius: 5px;
+		width: 30px;
+		height: 30px;
+		line-height: 30px;
+		font-weight: bold;
+
+		a {
+			color: #777;
+			display: block;
+		}
+
+		.activePage {
+			background: $primary-color;
+			border-radius: 5px;
+			color: white;
+		}
+
+		&.disabled {
+			cursor: no-drop !important;
+			color: #a3a3a3;
+			
+			[role=button] {
+				cursor: no-drop !important;
+				color: #c3c3c3;
+			}
+		}
+
+		.prev-icon {
+			width: 40px;
+		}
+
+		.next-icon {
+			width: 40px;
+		}
 	}
 }

@@ -9,9 +9,21 @@ const {
   VIEW_COMMENTS_STARTED,
   VIEW_COMMENTS_SUCCESS,
   VIEW_COMMENTS_FAILED,
-  CLEAR_COMMENT
+  CLEAR_COMMENT,
+  LIKE_COMMENT_STARTED,
+  LIKE_COMMENT_SUCCESS,
+  LIKE_COMMENT_FAILURE
 } = constants;
 
+const likeCommentStarted = () => ({ type: LIKE_COMMENT_STARTED });
+const likeCommentSuccess = (message) => ({
+  type: LIKE_COMMENT_SUCCESS,
+  payload: message
+});
+const likeCommentFailure = error => ({
+  type: LIKE_COMMENT_FAILURE,
+  payload: error
+});
 
 export const addComment = (content, articleId) => async (dispatch) => {
   dispatch({
@@ -60,3 +72,23 @@ export const getComments = articleId => async (dispatch) => {
 export const clearComment = () => ({
   type: CLEAR_COMMENT
 });
+
+export const likeComment = (articleId, commentId) => dispatch => {
+  dispatch(likeCommentStarted());
+  return axios
+    .post(
+      `/articles/${articleId}/comments/like`,
+      { id: commentId, type: "comment" }
+    )
+    .then(response => {
+      if (response.data.status === "success") {
+        dispatch(likeCommentSuccess(response.data.data));
+      }
+    })
+    .catch(error => {
+      if (error.response) {
+        dispatch(likeCommentFailure(error.response.data.data));
+      }
+      dispatch(likeCommentFailure(error));
+    });
+};

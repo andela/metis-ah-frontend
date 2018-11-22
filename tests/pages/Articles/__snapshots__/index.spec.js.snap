@@ -1169,7 +1169,7 @@ exports[`article page test should render the article page correctly 1`] = `
                     className="container Footer-brand"
                   >
                     <p>
-                      2018 Copyright of metis team
+                      2018 Copyright of Metis Team
                     </p>
                     <div>
                       <i

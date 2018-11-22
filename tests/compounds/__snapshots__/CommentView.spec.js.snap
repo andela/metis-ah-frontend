@@ -18,7 +18,8 @@ exports[`CommentsView Tests should match snapshot 1`] = `
       View Comments
     </h1>
   </div>
-  <CommentCard
+  <Connect(CommentCard)
+    articleId={170}
     comment={
       Object {
         "articleId": 170,
@@ -37,6 +38,7 @@ exports[`CommentsView Tests should match snapshot 1`] = `
         "userId": 11,
       }
     }
+    commentId={9}
     key="9"
   />
 </Fragment>

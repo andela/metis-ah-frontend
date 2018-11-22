@@ -86,7 +86,7 @@ AddComment.propTypes = {
 
 const mapStateToProps = state => ({
   isAuth: state.authUser.isAuthenticated,
-  isCreateCommentLoading: state.commentReducer.isCreateCommentLoading
+  isCreateCommentLoading: state.comments.isCreateCommentLoading
 });
 
 export default withRouter(connect(

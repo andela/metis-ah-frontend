@@ -8,6 +8,6 @@ describe('FooterBrand', () => {
     const wrapper = shallow(<FooterBrand />);
 
     expect(wrapper.hasClass('brandFooter')).toEqual(true);
-    expect(wrapper.find('p').text()).toEqual('2018 Copyright of metis team');
+    expect(wrapper.find('p').text()).toEqual('2018 Copyright of Metis Team');
   });
 });

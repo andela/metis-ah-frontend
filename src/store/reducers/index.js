@@ -15,6 +15,8 @@ import singleArticle from './singleArticle';
 import comments from './comments';
 import reaction from './reaction';
 import notification from './notification';
+import reportArticle from './reportArticle';
+import rateArticle from './rateArticle';
 
 const rootReducer = combineReducers({
   mock,
@@ -30,7 +32,9 @@ const rootReducer = combineReducers({
   singleArticle,
   comments,
   reaction,
-  notification
+  notification,
+  reportArticle,
+  rateArticle
 });
 
 export default rootReducer;

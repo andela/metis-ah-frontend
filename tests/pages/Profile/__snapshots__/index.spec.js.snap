@@ -1555,7 +1555,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="54e0be46-f549-4447-8150-fc6ce864de94"
+                        key="a6eb8ac4-af97-4436-97a3-9605dae43d89"
                         title="runing"
                         type="button"
                       >
@@ -1563,7 +1563,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="7bbb7bf5-4a7b-4922-ab62-825fe929a67e"
+                        key="24dfba2d-0efb-432f-bc20-e568c0fcfc1a"
                         title=" singing"
                         type="button"
                       >
@@ -1571,7 +1571,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="e725d54c-9c70-4e60-89fc-95deec7be87f"
+                        key="2c8f9cbb-96d3-485a-83c9-4ef64e1802f6"
                         title=" climbing"
                         type="button"
                       >
@@ -1579,7 +1579,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="4135a083-d88a-4b9c-a6ce-587a25504c4c"
+                        key="f4eeac42-a451-4179-9059-6abcb88d2cc2"
                         title=" jumping"
                         type="button"
                       >
@@ -1857,7 +1857,7 @@ exports[`Profile page test profile page to 1`] = `
                     className="container Footer-brand"
                   >
                     <p>
-                      2018 Copyright of metis team
+                      2018 Copyright of Metis Team
                     </p>
                     <div>
                       <i
@@ -2584,7 +2584,7 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                     className="container Footer-brand"
                   >
                     <p>
-                      2018 Copyright of metis team
+                      2018 Copyright of Metis Team
                     </p>
                     <div>
                       <i

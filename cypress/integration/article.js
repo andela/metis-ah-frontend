@@ -9,6 +9,6 @@ describe('THE FORM TEST', () => {
     }
 
     cy.wait(7000);
-    cy.contains('metis team').scrollIntoView();
+    cy.contains('Metis Team').scrollIntoView();
   });
 });

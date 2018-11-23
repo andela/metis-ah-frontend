@@ -1,3 +1,5 @@
+$primary-color: #4dd6a5;
+
 #comments-view-button {
   border: 1px solid green;
   padding: 30px 10px;
@@ -5,29 +7,27 @@
   border-radius: 4px;
   background: white;
   color: #4dd6a5;
-  border: 1px solid rgba(0,0,0,0.09);
+  border: 1px solid rgba(0, 0, 0, 0.09);
   cursor: pointer;
 }
 
 #comments-view {
   margin-top: 50px;
-  border: 1px solid rgba(0,0,0,0.09);
+  border: 1px solid rgba(0, 0, 0, 0.09);
   border-radius: 4px;
   background: white;
 
   .comment-body {
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
-    padding: 30px 10px;
+    padding: 10px;
     font-size: 16px;
-    border-bottom: 1px solid rgba(0,0,0,0.09);
   }
 
   .comment-footer {
     padding: 10px;
     position: relative;
     height: 68px;
-    background: rgba(0,0,0,0.02);
 
     p {
       margin: 0;
@@ -51,6 +51,7 @@
       top: 50%;
       left: 60px;
       transform: translate(0, -50%);
+      font-size: 13.5px;
 
       a {
         color: #4dd6a5;
@@ -60,11 +61,57 @@
       }
     }
     .time-ago {
+      font-size: 13.5px;
       position: absolute;
       right: 10px;
       top: 50%;
       transform: translate(0, -50%);
-      color: rgba(0,0,0,0.4);
+      color: rgba(0, 0, 0, 0.4);
     }
+  }
+}
+.comment__likes {
+  padding-left: 15px;
+  padding-bottom: 10px;
+  cursor: pointer;
+  outline: none;
+
+  .like {
+    border: 1px solid #ccc;
+    padding: 1px 7px;
+    border-radius: 10px;
+
+    svg {
+      font-size: 15px;
+      color: $primary-color;
+    }
+  }
+
+  .active {
+    background-color: #4dd6a5;
+    color: #ffffff;
+    border: none;
+    svg {
+      color: #ffffff;
+    }
+  }
+}
+
+.like_color {
+    color: $primary-color;
+}
+
+.likes_count {
+  margin-left: 5px;
+  color: #999;
+  font-size: 11px;
+}
+
+.like:active {
+  transform: translateY(4px);
+  background-color: #4dd6a5;
+  color: #ffffff;
+  svg {
+    color: #ffffff;
   }
 }

@@ -1,75 +1,51 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`CommentCard Tests it matches snapshot 1`] = `
-<Fragment>
-  <div
-    id="comments-view"
-  >
-    <div
-      className="comment-body"
-    >
-      Thanks
-    </div>
-    <div
-      className="comment-footer"
-    >
-      <img
-        alt="userImage"
-        src="http://res.cloudinary.com/dbsxxymfz/image/upload/v1541429992/es8jfxtycdfjvec6ha1a.png"
-      />
-      <p
-        className="userName"
-      >
-        <Link
-          replace={false}
-          to="/users/11"
-        >
-          JAY OBI
-        </Link>
-      </p>
-      <p
-        className="time-ago"
-      >
-        1 week ago
-      </p>
-    </div>
-  </div>
-</Fragment>
+<Connect(CommentCard)
+  comment={
+    Object {
+      "articleId": 170,
+      "content": "Thanks",
+      "createdAt": "2018-11-13T16:13:29.901Z",
+      "edited": false,
+      "id": 9,
+      "likeCount": 0,
+      "likes": Array [],
+      "updatedAt": "2018-11-13T16:13:29.901Z",
+      "user": Object {
+        "firstname": "JAY",
+        "id": 11,
+        "image": "http://res.cloudinary.com/dbsxxymfz/image/upload/v1541429992/es8jfxtycdfjvec6ha1a.png",
+        "lastname": "OBI",
+        "username": "johngorithm",
+      },
+      "userId": 11,
+    }
+  }
+/>
 `;
 
 exports[`CommentCard Tests it renders username when firstname and lastname are undefined 1`] = `
-<Fragment>
-  <div
-    id="comments-view"
-  >
-    <div
-      className="comment-body"
-    >
-      Thanks
-    </div>
-    <div
-      className="comment-footer"
-    >
-      <img
-        alt="userImage"
-        src="https://res.cloudinary.com/dbsxxymfz/image/upload/v1536757459/dummy-profile.png"
-      />
-      <p
-        className="userName"
-      >
-        <Link
-          replace={false}
-          to="/users/11"
-        >
-          undefined undefined
-        </Link>
-      </p>
-      <p
-        className="time-ago"
-      >
-        1 week ago
-      </p>
-    </div>
-  </div>
-</Fragment>
+<Connect(CommentCard)
+  comment={
+    Object {
+      "articleId": 170,
+      "content": "Thanks",
+      "createdAt": "2018-11-13T16:13:29.901Z",
+      "edited": false,
+      "id": 9,
+      "likeCount": 0,
+      "likes": Array [],
+      "updatedAt": "2018-11-13T16:13:29.901Z",
+      "user": Object {
+        "firstname": undefined,
+        "id": 11,
+        "image": undefined,
+        "lastname": undefined,
+        "username": "johngorithm",
+      },
+      "userId": 11,
+    }
+  }
+/>
 `;

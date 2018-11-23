@@ -1555,7 +1555,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="54e0be46-f549-4447-8150-fc6ce864de94"
+                        key="dd8c1d79-dcfe-4f61-8f86-6ab746325506"
                         title="runing"
                         type="button"
                       >
@@ -1563,7 +1563,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="7bbb7bf5-4a7b-4922-ab62-825fe929a67e"
+                        key="52a8891e-c6c5-468c-afb6-0bc5df9baad0"
                         title=" singing"
                         type="button"
                       >
@@ -1571,7 +1571,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="e725d54c-9c70-4e60-89fc-95deec7be87f"
+                        key="0c5fa0ef-155a-4ca1-b73e-f527dea05d2f"
                         title=" climbing"
                         type="button"
                       >
@@ -1579,7 +1579,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="4135a083-d88a-4b9c-a6ce-587a25504c4c"
+                        key="f9421e72-cfc6-457c-8607-d7092fb8e842"
                         title=" jumping"
                         type="button"
                       >
@@ -1589,6 +1589,7 @@ exports[`Profile page test profile page to 1`] = `
                   </div>
                 </Interests>
                 <ArticleContainer
+                  articleMessage="No article created yet"
                   articles={Array []}
                   bio="Hello, I am a senior software developer who lives in toronto canada"
                   bookmarks={Array []}
@@ -1637,7 +1638,7 @@ exports[`Profile page test profile page to 1`] = `
                         <h1
                           className="is-size-4 no--article"
                         >
-                          You have not created any article yet
+                          No article created yet
                         </h1>
                       </div>
                     </div>

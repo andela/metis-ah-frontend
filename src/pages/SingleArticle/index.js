@@ -1,37 +1,37 @@
-import React, { Component } from "react";
-import { connect } from "react-redux";
-import BrandContainer from "Components/compounds/BrandContainer";
-import SearchAndProfile from "Components/compounds/SearchAndProfile";
-import Header from "Components/atoms/SingleArticleHeader";
-import FooterBrand from "Components/compounds/FooterBrand";
-import convert from "react-html-parser";
-import Loader from "Components/atoms/ArticleLoader";
-import { getSingleArticle } from "Actions/singleArticle";
-import TagsDisplay from "Components/atoms/TagsDisplay";
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import BrandContainer from 'Components/compounds/BrandContainer';
+import SearchAndProfile from 'Components/compounds/SearchAndProfile';
+import Header from 'Components/atoms/SingleArticleHeader';
+import FooterBrand from 'Components/compounds/FooterBrand';
+import convert from 'react-html-parser';
+import Loader from 'Components/atoms/ArticleLoader';
+import { getSingleArticle } from 'Actions/singleArticle';
+import TagsDisplay from 'Components/atoms/TagsDisplay';
 
-import Modal from "Atoms/Modal";
-import { closeModal, userFail } from "Actions/authUser";
-import CommentBox from "Components/compounds/CommentBox";
-import { SHARE_BASE_URL } from "../../../config.json";
-import ShareArticleDisplay from "../../components/atoms/ShareArticleDisplay";
-import LikeAndDisLike from "../../components/compounds/LikeDislike/index.js";
-import ProtectedRoute from "../../components/HOC/ProtectedRoute";
-import RateArticle from "../../components/compounds/RateArticle";
-import ReportArticle from "../../components/compounds/ReportArticle";
-import "./style.scss";
-import { showModal } from "../../store/actions/authUser.js";
+import Modal from 'Atoms/Modal';
+import { closeModal, userFail } from 'Actions/authUser';
+import CommentBox from 'Components/compounds/CommentBox';
+import { SHARE_BASE_URL } from '../../../config.json';
+import ShareArticleDisplay from '../../components/atoms/ShareArticleDisplay';
+import LikeAndDisLike from '../../components/compounds/LikeDislike/index.js';
+import ProtectedRoute from '../../components/HOC/ProtectedRoute';
+import ReportArticle from '../../components/compounds/ReportArticle';
+import './style.scss';
+import flag from '../../static/images/flag.svg';
+import { showModal } from '../../store/actions/authUser.js';
 /**
  * SingleArticle
  */
 export class SingleArticle extends Component {
   state = {
     menu: false,
-    showReportModal: false
+    showReportModal: false,
   };
 
   componentDidMount() {
     const {
-      params: { articleId }
+      params: { articleId },
     } = this.props.match;
     const { getSingleArticle } = this.props;
     getSingleArticle(articleId);
@@ -39,19 +39,19 @@ export class SingleArticle extends Component {
 
   handleShowModal = () => {
     this.setState({
-      showReportModal: true
+      showReportModal: true,
     });
   };
 
   handleCloseModal = () => {
     this.setState({
-      showReportModal: false
+      showReportModal: false,
     });
   };
 
   showMenu = () => {
     this.setState(state => ({
-      menu: !state.menu
+      menu: !state.menu,
     }));
   };
 
@@ -68,10 +68,8 @@ export class SingleArticle extends Component {
       loading,
       location: { pathname },
       isModalOpen,
-      userRating
     } = this.props;
     const shareUrl = `${SHARE_BASE_URL}${pathname}`;
-
     return (
       <div className="single">
         {isModalOpen ? <Modal /> : null}
@@ -115,15 +113,6 @@ export class SingleArticle extends Component {
                   articleId={article.articleData.id}
                 />
               </div>
-              <RateArticle
-                articleId={article.articleData.id}
-                stars={userRating}
-                rating={
-                  article.articleData.rating === null
-                    ? 0
-                    : article.articleData.rating
-                }
-              />
             </div>
             <div className="Main-comment-container">
               <CommentBox />
@@ -148,7 +137,6 @@ const mapStateToProps = state => ({
   error: state.singleArticle.error,
   loading: state.singleArticle.loading,
   isModalOpen: state.authUser.modalOpen,
-  userRating: state.rateArticle.userRating
 });
 
 export default connect(
@@ -156,6 +144,6 @@ export default connect(
   {
     getSingleArticle,
     closeModal,
-    userFail
+    userFail,
   }
 )(SingleArticle);

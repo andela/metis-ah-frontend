@@ -1,22 +1,30 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import ReactDOM from "react-dom";
-import Alert from "Utils/helpers/alert";
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import ReactDOM from 'react-dom';
+import Select from 'react-select';
+import Alert from 'Utils/helpers/alert';
 
 import {
   reportArticle,
-  clearMessage
-} from "../../../store/actions/reportArticle";
-import "./style.scss";
+  clearMessage,
+} from '../../../store/actions/reportArticle';
+import './style.scss';
 
-const modalRoot = document.getElementById("modal");
+const modalRoot = document.getElementById('modal');
+
+const options = [
+  { value: 'Discrimination', label: 'Discrimination' },
+  { value: 'Plagiarism', label: 'Plagiarism' },
+  { value: 'Sexual Content', label: 'Sexual Content' },
+  { value: 'Offensive Language', label: 'Offensive Language' },
+];
 
 class ReportArticle extends Component {
-  el = document.createElement("div");
+  el = document.createElement('div');
 
   state = {
-    reasonForReport: "",
-    description: ""
+    reasonForReport: null,
+    description: '',
   };
 
   componentDidMount() {
@@ -29,15 +37,13 @@ class ReportArticle extends Component {
     modalRoot.removeChild(this.el);
   }
 
-  handleChange = event => {
-    this.setState({
-      reasonForReport: event.target.value
-    });
+  handleChange = reasonForReport => {
+    this.setState({ reasonForReport });
   };
 
   updateReportBody = event => {
     this.setState({
-      description: event.target.value
+      description: event.target.value,
     });
   };
 
@@ -46,14 +52,14 @@ class ReportArticle extends Component {
     const { makeReport, articleId, closeModal } = this.props;
     const { reasonForReport, description } = this.state;
 
-    if (reasonForReport === "" || reasonForReport === undefined) {
-      return Alert.error("Please select reason for the report");
+    if (reasonForReport === '' || reasonForReport === undefined) {
+      return Alert.error('Please select reason for the report');
     }
-    if (description === "" || description === undefined) {
-      return Alert.error("Please add a short description of the report");
+    if (description === '' || description === undefined) {
+      return Alert.error('Please add a short description of the report');
     }
 
-    makeReport(articleId, reasonForReport, description).then(response => {
+    makeReport(articleId, reasonForReport.value, description).then(response => {
       if (response) {
         closeModal();
       }
@@ -79,53 +85,16 @@ class ReportArticle extends Component {
               <h2>Report Article</h2>
             </div>
             <div className="reportReasons">
-              <li>
-                <label>
-                  <input
-                    type="radio"
-                    checked={reasonForReport === "Discrimination"}
-                    onChange={this.handleChange}
-                    value="Discrimination"
-                  />
-                  Discrimination
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input
-                    type="radio"
-                    checked={reasonForReport === "Plagiarism"}
-                    onChange={this.handleChange}
-                    value="Plagiarism"
-                  />
-                  Plagiarism
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input
-                    type="radio"
-                    checked={reasonForReport === "Sexual Content"}
-                    onChange={this.handleChange}
-                    value="Sexual Content"
-                  />
-                  Sexual Content
-                </label>
-              </li>
-              <li>
-                <label>
-                  <input
-                    type="radio"
-                    checked={reasonForReport === "Offensive Language"}
-                    onChange={this.handleChange}
-                    value="Offensive Language"
-                  />
-                  Offensive Language
-                </label>
-              </li>
+              <label>Reason for Report</label>
+              <Select
+                options={options}
+                onChange={this.handleChange}
+                value={reasonForReport}
+              />
             </div>
             <div className="reportForm">
               <form onSubmit={this.handleSubmitReport}>
+                <label>Description of Report</label>
                 <textarea
                   onChange={this.updateReportBody}
                   className="reportBody"
@@ -163,7 +132,7 @@ const mapStateToProps = state => {
   return {
     message,
     error,
-    loading
+    loading,
   };
 };
 
@@ -173,7 +142,7 @@ const mapDispatchToProps = dispatch => ({
   },
   clearResponseMessage() {
     return dispatch(clearMessage());
-  }
+  },
 });
 
 export default connect(

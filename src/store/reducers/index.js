@@ -12,7 +12,7 @@ import resetPasswordReducer from './resetPasswordReducer';
 import createArticle from './createArticle';
 import users from './users';
 import singleArticle from './singleArticle';
-import commentReducer from './commentReducer';
+import comments from './comments';
 import reaction from './reaction';
 import notification from './notification';
 
@@ -28,7 +28,7 @@ const rootReducer = combineReducers({
   createArticle,
   users,
   singleArticle,
-  commentReducer,
+  comments,
   reaction,
   notification
 });

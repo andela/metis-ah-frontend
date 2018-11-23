@@ -1,7 +1,7 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import CommentBox from 'Components/compounds/CommentBox';
+import CommentBox from 'Components/compounds/CommentBox'
 
 
 describe('CommentBox Tests', () => {

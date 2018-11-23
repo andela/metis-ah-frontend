@@ -1,11 +1,11 @@
-import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
-import { getComments, clearComment } from 'Actions/commentActions';
-import { withRouter } from 'react-router-dom';
+import React, { Fragment } from "react";
+import { connect } from "react-redux";
+import { getComments, clearComment } from "Actions/commentActions";
+import { withRouter } from "react-router-dom";
 
-import './style.scss';
-import PropTypes from 'prop-types';
-import CommentCard from 'Atoms/CommentCard';
+import "./style.scss";
+import PropTypes from "prop-types";
+import CommentCard from "Atoms/CommentCard";
 
 export class CommentsView extends React.Component {
   state = {};
@@ -19,10 +19,11 @@ export class CommentsView extends React.Component {
     const { getComments, match } = this.props;
     const { articleId } = match.params;
     return getComments(articleId);
-  }
+  };
 
   render() {
-    const { comments, isFetchCommentLoading } = this.props;
+    const { comments, isFetchCommentLoading, loggedInUserId } = this.props;
+
     return (
       <Fragment>
         <div
@@ -33,15 +34,29 @@ export class CommentsView extends React.Component {
           disabled={isFetchCommentLoading}
         >
           <h1>
-            {<i id="spinner" className={isFetchCommentLoading ? 'fas fa-spinner fa-spin' : ''} />}
-            {' '}
+            {
+              <i
+                id="spinner"
+                className={
+                  isFetchCommentLoading ? "fas fa-spinner fa-spin" : ""
+                }
+              />
+            }{" "}
             View Comments
           </h1>
         </div>
 
-        {comments.length > 0 ? (
-          comments.map(comment => <CommentCard key={comment.id} comment={comment} />)
-        ) : null}
+        {comments.length > 0
+          ? comments.map(comment => (
+              <CommentCard
+                key={comment.id}
+                comment={comment}
+                articleId={comment.articleId}
+                commentId={comment.id}
+                loggedInUserId={loggedInUserId}
+              />
+            ))
+          : null}
       </Fragment>
     );
   }
@@ -61,11 +76,14 @@ CommentsView.propTypes = {
 };
 
 const mapStateToProps = state => ({
-  comments: state.commentReducer.comments,
-  isFetchCommentLoading: state.commentReducer.isFetchCommentLoading
+  comments: state.comments.comments,
+  isFetchCommentLoading: state.comments.isFetchCommentLoading,
+  loggedInUserId: state.authUser.user.id
 });
 
-export default withRouter(connect(
-  mapStateToProps,
-  { getComments, clearComment }
-)(CommentsView));
+export default withRouter(
+  connect(
+    mapStateToProps,
+    { getComments, clearComment }
+  )(CommentsView)
+);

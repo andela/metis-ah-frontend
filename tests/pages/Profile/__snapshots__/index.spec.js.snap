@@ -1858,7 +1858,7 @@ exports[`Profile page test profile page to 1`] = `
                     className="container Footer-brand"
                   >
                     <p>
-                      2018 Copyright of metis team
+                      2018 Copyright of Metis Team
                     </p>
                     <div>
                       <i
@@ -2585,7 +2585,7 @@ exports[`Should show loader when fetching data showing loading 1`] = `
                     className="container Footer-brand"
                   >
                     <p>
-                      2018 Copyright of metis team
+                      2018 Copyright of Metis Team
                     </p>
                     <div>
                       <i

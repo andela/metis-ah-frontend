@@ -3,8 +3,8 @@ import React from 'react';
 import { shallow } from 'enzyme';
 
 
-import { CommentsView } from 'Compounds/CommentsView';
-import CommentCard from 'Atoms/CommentCard';
+import { CommentsView } from '../../src/components/compounds/CommentsView';
+import CommentCard from '../../src/components/atoms/CommentCard';
 
 const mockFn = jest.fn();
 

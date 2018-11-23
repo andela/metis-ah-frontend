@@ -1,4 +1,4 @@
-import constants from '../constants';
+import constants from "../constants";
 
 const {
   CREATE_COMMENT_STARTED,
@@ -7,7 +7,10 @@ const {
   VIEW_COMMENTS_STARTED,
   VIEW_COMMENTS_SUCCESS,
   VIEW_COMMENTS_FAILED,
-  CLEAR_COMMENT
+  CLEAR_COMMENT,
+  LIKE_COMMENT_STARTED,
+  LIKE_COMMENT_SUCCESS,
+  LIKE_COMMENT_FAILURE
 } = constants;
 
 const initialState = {
@@ -17,7 +20,23 @@ const initialState = {
   isFetchCommentLoading: false
 };
 
-const commentReducer = (state = initialState, action) => {
+// filter the likes array to get likes that have true value
+const likesCount = comment => {
+  if (comment.likes.length > 0) {
+    return comment.likes.filter(reaction => {
+      return reaction.liked === true;
+    }).length;
+  }
+};
+
+// get the liksCount for each comment
+const mappedComments = comments =>
+  comments.map(comment => {
+    comment.likesCount = likesCount(comment);
+    return comment;
+  });
+
+const comments = (state = initialState, action) => {
   switch (action.type) {
     case CREATE_COMMENT_STARTED:
       return {
@@ -45,7 +64,7 @@ const commentReducer = (state = initialState, action) => {
     case VIEW_COMMENTS_SUCCESS:
       return {
         ...state,
-        comments: action.comments,
+        comments: mappedComments(action.comments),
         isFetchCommentLoading: false
       };
     case VIEW_COMMENTS_FAILED:
@@ -58,9 +77,24 @@ const commentReducer = (state = initialState, action) => {
         ...state,
         comments: []
       };
+    case LIKE_COMMENT_STARTED:
+      return {
+        ...state
+      };
+    case LIKE_COMMENT_SUCCESS:
+      return {
+        ...state,
+        message: action.payload,
+        comments: mappedComments(action.comments),
+      };
+    case LIKE_COMMENT_FAILURE:
+      return {
+        ...state,
+        error: action.payload
+      };
     default:
       return state;
   }
 };
 
-export default commentReducer;
+export default comments;

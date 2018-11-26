@@ -7,51 +7,57 @@ import configureStore from 'redux-mock-store';
 import ProfilePage from '../../../src/pages/Profile';
 import ProfileHero from '../../../src/components/compounds/ProfileHero';
 
+const user = {
+  id: 23,
+  username: "daniel",
+  firstname: "rasheed",
+  lastname: "Okpukoro",
+  email: "danielrasheed@gmail.com",
+};
+
 const initialState = {
   authUser: {
     modalOpen: false,
     isAuthenticated: false,
-    loading: false
+    loading: false,
+    user: user.id
   },
   users: {
     loading: false,
     profile: {},
 
     id: 14,
-    username: 'joeeasy',
-    firstname: 'jehonadab',
-    lastname: 'Okpukoro',
-    email: 'joeeasy@gmail.com',
-    bio: 'Hello, I am a senior software developer who lives in toronto canada',
-    image: 'http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg',
+    username: "joeeasy",
+    firstname: "jehonadab",
+    lastname: "Okpukoro",
+    email: "joeeasy@gmail.com",
+    bio: "Hello, I am a senior software developer who lives in toronto canada",
+    image:
+      "http://res.cloudinary.com/dbsxxymfz/image/upload/v1540713696/oozf6rndyrgptg3xoqy6.jpg",
     premium: null,
     isVerified: true,
-    interests: [
-      'runing',
-      ' singing',
-      ' climbing',
-      ' jumping'
-    ],
+    interests: ["runing", " singing", " climbing", " jumping"],
     roleId: 2,
-    createdAt: '2018-10-26T11:38:51.791Z',
-    updatedAt: '2018-10-28T11:01:55.505Z',
+    createdAt: "2018-10-26T11:38:51.791Z",
+    updatedAt: "2018-10-28T11:01:55.505Z",
     articles: [],
     ratings: [],
     bookmarks: [],
     followed: [],
     follower: []
-
   },
   categories: {
     categories: [
       {
-        description: 'It has become appallingly obvious that our technology has exceeded our humanity.',
+        description:
+          "It has become appallingly obvious that our technology has exceeded our humanity.",
         id: 1,
-        name: 'FASHION',
-        poster: 'https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png'
+        name: "FASHION",
+        poster:
+          "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png"
       }
     ],
-    selected: 'HOME',
+    selected: "HOME"
   }
 };
 
@@ -59,23 +65,25 @@ const initialState2 = {
   authUser: {
     modalOpen: false,
     isAuthenticated: false,
-    loading: false
+    loading: false,
+    user: user.id
   },
   users: {
     loading: true,
-    profile: {},
-
+    profile: {}
   },
   categories: {
     categories: [
       {
-        description: 'It has become appallingly obvious that our technology has exceeded our humanity.',
+        description:
+          "It has become appallingly obvious that our technology has exceeded our humanity.",
         id: 1,
-        name: 'FASHION',
-        poster: 'https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png'
+        name: "FASHION",
+        poster:
+          "https://res.cloudinary.com/dbsxxymfz/image/upload/v1539947552/eroooo_1.png"
       }
     ],
-    selected: 'HOME',
+    selected: "HOME"
   }
 };
 

@@ -16,9 +16,9 @@ import { SHARE_BASE_URL } from "../../../config.json";
 import ShareArticleDisplay from "../../components/atoms/ShareArticleDisplay";
 import LikeAndDisLike from "../../components/compounds/LikeDislike/index.js";
 import ProtectedRoute from "../../components/HOC/ProtectedRoute";
+import RateArticle from "../../components/compounds/RateArticle";
 import ReportArticle from "../../components/compounds/ReportArticle";
 import "./style.scss";
-import flag from "../../static/images/flag.svg";
 import { showModal } from "../../store/actions/authUser.js";
 /**
  * SingleArticle
@@ -46,8 +46,8 @@ export class SingleArticle extends Component {
   handleCloseModal = () => {
     this.setState({
       showReportModal: false
-    })
-  }
+    });
+  };
 
   showMenu = () => {
     this.setState(state => ({
@@ -67,9 +67,12 @@ export class SingleArticle extends Component {
       article,
       loading,
       location: { pathname },
-      isModalOpen
+      isModalOpen,
+      userRating
     } = this.props;
     const shareUrl = `${SHARE_BASE_URL}${pathname}`;
+    console.log("USER-RATING", userRating);
+
     return (
       <div className="single">
         {isModalOpen ? <Modal /> : null}
@@ -113,13 +116,27 @@ export class SingleArticle extends Component {
                   articleId={article.articleData.id}
                 />
               </div>
+              <RateArticle
+                articleId={article.articleData.id}
+                stars={userRating}
+                rating={
+                  article.articleData.rating === null
+                    ? 0
+                    : article.articleData.rating
+                }
+              />
             </div>
             <div className="Main-comment-container">
               <CommentBox />
             </div>
           </div>
         )}
-        {showReportModal ? <ReportArticle closeModal={this.handleCloseModal} articleId={article.articleData.id}/> : null}
+        {showReportModal ? (
+          <ReportArticle
+            closeModal={this.handleCloseModal}
+            articleId={article.articleData.id}
+          />
+        ) : null}
         <footer className="Main-Footer">
           <FooterBrand />
         </footer>
@@ -131,7 +148,8 @@ const mapStateToProps = state => ({
   article: state.singleArticle.article,
   error: state.singleArticle.error,
   loading: state.singleArticle.loading,
-  isModalOpen: state.authUser.modalOpen
+  isModalOpen: state.authUser.modalOpen,
+  userRating: state.rateArticle.userRating
 });
 
 export default connect(

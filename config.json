@@ -1,5 +1,5 @@
 {
-  "BASE_URL": "https://metis-ah-staging.herokuapp.com/api/v1",
+  "BASE_URL": "https://metis-ah-staging-pr-63.herokuapp.com/api/v1",
   "CK_TOKEN_URL": "https://35891.cke-cs.com/token/dev/JgOseweW3sfyei1vXZidnKoDeaMug9F6A33feL1h1Hzmeg05hcepwToKhtYv",
   "CK_UPLOAD_URL": "https://35891.cke-cs.com/easyimage/upload/",
   "SHARE_BASE_URL": "https://metis-ah-frontend.herokuapp.com",

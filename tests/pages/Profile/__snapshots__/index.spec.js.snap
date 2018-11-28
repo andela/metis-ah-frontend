@@ -1555,7 +1555,7 @@ exports[`Profile page test profile page to 1`] = `
                     >
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="b605a68a-58aa-4aed-9cb2-1ae81f8c4d0b"
+                        key="65a243f9-c55c-4779-a64e-ca438877ae7c"
                         title="runing"
                         type="button"
                       >
@@ -1563,7 +1563,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="9872f092-5007-4496-b160-e12a3d9b81aa"
+                        key="bdb5089d-6562-4a45-8dc3-b228d5dd1d82"
                         title=" singing"
                         type="button"
                       >
@@ -1571,7 +1571,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="163bf986-1790-4e00-b2eb-5a11653dec6e"
+                        key="80b418e7-35fc-43f8-9b55-96fa1a7e9db8"
                         title=" climbing"
                         type="button"
                       >
@@ -1579,7 +1579,7 @@ exports[`Profile page test profile page to 1`] = `
                       </button>
                       <button
                         className="btn btn-default btn--tag FontSize--18"
-                        key="0f594e6e-011c-4fed-906b-8ffd86242d55"
+                        key="641b2c6a-a6b6-47d3-9512-f8cdc6f8e5d2"
                         title=" jumping"
                         type="button"
                       >

@@ -1,6 +1,6 @@
 /* eslint-disable */
-import axios from "axios";
-import constants from "../constants";
+import axios from 'axios';
+import constants from '../constants';
 
 const {
   GET_NOTIFICATION_STARTED,
@@ -15,77 +15,77 @@ const {
   DELETE_ONE_NOTIFICATION_ERROR,
   DELETE_ALL_NOTIFICATIONS_STARTED,
   DELETE_ALL_NOTIFICATIONS_SUCCESS,
-  DELETE_ALL_NOTIFICATIONS_ERROR
+  DELETE_ALL_NOTIFICATIONS_ERROR,
 } = constants;
 
 const getNotificationsStarted = () => ({
-  type: GET_NOTIFICATION_STARTED
+  type: GET_NOTIFICATION_STARTED,
 });
 
 const getNotificationsLoading = isLoading => ({
   type: GET_NOTIFICATION_LOADING,
-  payload: isLoading
+  payload: isLoading,
 });
 
 const getNotificationsSuccess = notification => ({
   type: GET_NOTIFICATION_SUCCESS,
-  payload: notification
+  payload: notification,
 });
 
 const getNotificationsError = error => ({
   type: GET_NOTIFICATION_ERROR,
-  payload: error
+  payload: error,
 });
 
 const markAsReadStarted = () => ({
-  type: MARK_NOTIFICATION_AS_READ_STARTED
+  type: MARK_NOTIFICATION_AS_READ_STARTED,
 });
 
 const markAsReadSuccess = message => ({
   type: MARK_NOTIFICATION_AS_READ_SUCCESS,
-  payload: message
+  payload: message,
 });
 
 const markAsReadError = error => ({
   type: MARK_NOTIFICATION_AS_READ_ERROR,
-  payload: error
+  payload: error,
 });
 
 const deleteOneNotificationStarted = () => ({
-  type: DELETE_ONE_NOTIFICATION_STARTED
+  type: DELETE_ONE_NOTIFICATION_STARTED,
 });
 
 const deleteOneNotificationSuccess = id => ({
   type: DELETE_ONE_NOTIFICATION_SUCCESS,
-  payload: id
+  payload: id,
 });
 
 const deleteOneNotificationError = error => ({
   type: DELETE_ONE_NOTIFICATION_ERROR,
-  payload: error
+  payload: error,
 });
 
 const deleteAllNotificationsStarted = () => ({
-  type: DELETE_ALL_NOTIFICATIONS_STARTED
+  type: DELETE_ALL_NOTIFICATIONS_STARTED,
 });
 
 const deleteAllNotificationsSuccess = message => ({
   type: DELETE_ALL_NOTIFICATIONS_SUCCESS,
-  payload: message
+  payload: message,
 });
 
 const deleteAllNotificationsError = error => ({
   type: DELETE_ALL_NOTIFICATIONS_ERROR,
-  payload: error
+  payload: error,
 });
 
 export const getAllNotifications = () => dispatch => {
   dispatch(getNotificationsLoading(true));
   return axios
-    .get("/notifications/history")
+    .get('/notifications/history')
     .then(response => {
       dispatch(getNotificationsLoading(false));
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         dispatch(getNotificationsSuccess(response.data.data));
       }
     })
@@ -95,7 +95,7 @@ export const getAllNotifications = () => dispatch => {
         dispatch(getNotificationsError(error.response.message));
       }
       return dispatch(
-        getNotificationsError({ error: "Server unreachable at the moment" })
+        getNotificationsError({ error: 'Server unreachable at the moment' })
       );
     });
 };
@@ -103,16 +103,16 @@ export const getAllNotifications = () => dispatch => {
 export const getAllUnreadNotifications = () => dispatch => {
   dispatch(getNotificationsStarted());
   return axios
-    .get("/notifications")
+    .get('/notifications')
     .then(response => {
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         return dispatch(getNotificationsSuccess(response.data.data));
       }
       return response;
     })
     .catch(() => {
       dispatch(
-        getNotificationsError({ error: "Server unreachable at the moment" })
+        getNotificationsError({ error: 'Server unreachable at the moment' })
       );
     });
 };
@@ -122,7 +122,7 @@ export const markAsRead = notificationId => dispatch => {
   return axios
     .put(`/notifications/${notificationId}`)
     .then(response => {
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         dispatch(markAsReadSuccess(response.data.data));
       }
     })
@@ -137,17 +137,17 @@ export const markAsRead = notificationId => dispatch => {
 export const markAllAsRead = () => dispatch => {
   dispatch(markAsReadStarted());
   return axios
-    .put("/notifications")
+    .put('/notifications')
     .then(response => {
-      if (response.data.status === "success") {
-        dispatch(markAsReadSuccess())
+      if (response.data.status === 'success') {
+        dispatch(markAsReadSuccess());
       }
     })
     .catch(error => {
       if (error.response) {
         dispatch(markAsReadError(error.response.data.message));
       }
-      dispatch(markAsReadError({ error: "Server unreachable at the moment" }));
+      dispatch(markAsReadError({ error: 'Server unreachable at the moment' }));
     });
 };
 
@@ -156,7 +156,7 @@ export const deleteOneNotification = notificationId => dispatch => {
   return axios
     .delete(`/notifications/${notificationId}`)
     .then(response => {
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         dispatch(deleteOneNotificationSuccess(notificationId));
       }
     })
@@ -166,7 +166,7 @@ export const deleteOneNotification = notificationId => dispatch => {
       }
       dispatch(
         deleteOneNotificationError({
-          error: "Server unreachable at the moment"
+          error: 'Server unreachable at the moment',
         })
       );
     });
@@ -175,9 +175,9 @@ export const deleteOneNotification = notificationId => dispatch => {
 export const deleteAllNotifications = () => dispatch => {
   dispatch(deleteAllNotificationsStarted());
   return axios
-    .delete("/notifications")
+    .delete('/notifications')
     .then(response => {
-      if (response.data.status === "success") {
+      if (response.data.status === 'success') {
         dispatch(deleteAllNotificationsSuccess(response.data.data));
         getAllNotifications();
       }

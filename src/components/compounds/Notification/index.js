@@ -1,30 +1,30 @@
-import React, { Component, Fragment } from "react";
-import { connect } from "react-redux";
-import { withRouter } from "react-router";
-import { FaBell } from "react-icons/fa";
-import PropTypes from "prop-types";
-import Pusher from "pusher-js";
-import toastr from "toastr";
-import { PUSHER_APP_KEY, PUSHER_APP_CLUSTER } from "../../../../config.json";
+import React, { Component, Fragment } from 'react';
+import { connect } from 'react-redux';
+import { withRouter } from 'react-router';
+import { FaBell } from 'react-icons/fa';
+import PropTypes from 'prop-types';
+import Pusher from 'pusher-js';
+import toastr from 'toastr';
+import { PUSHER_APP_KEY, PUSHER_APP_CLUSTER } from '../../../../config.json';
 import {
   getAllNotifications,
   getAllUnreadNotifications,
   markAsRead,
   markAllAsRead,
   deleteOneNotification,
-  deleteAllNotifications
-} from "../../../store/actions/notification";
-import rubbishBin from "../../../static/images/rubbishBin.png";
-import "./style.scss";
+  deleteAllNotifications,
+} from '../../../store/actions/notification';
+import rubbishBin from '../../../static/images/rubbishBin.png';
+import './style.scss';
 
 const pusher = new Pusher(PUSHER_APP_KEY, {
   cluster: PUSHER_APP_CLUSTER,
-  encrypted: true
+  encrypted: true,
 });
 
 class Notification extends Component {
   state = {
-    notificationVisible: false
+    notificationVisible: false,
   };
 
   componentDidMount() {
@@ -39,7 +39,7 @@ class Notification extends Component {
 
   toggleVisibility = () => {
     this.setState(prevState => ({
-      notificationVisible: !prevState.notificationVisible
+      notificationVisible: !prevState.notificationVisible,
     }));
   };
 
@@ -59,13 +59,13 @@ class Notification extends Component {
     const {
       markNotificationAsRead,
       fetchAllNotifications,
-      history
+      history,
     } = this.props;
     const { id, notifiableid, action, isread } = event.target.dataset;
 
-    if (action === "user") {
+    if (action === 'user') {
       history.push(`/users/${notifiableid}`);
-    } else if (action === "article") {
+    } else if (action === 'article') {
       history.push(`/articles/${notifiableid}/view`);
     }
     await markNotificationAsRead(id);
@@ -80,16 +80,15 @@ class Notification extends Component {
 
   deleteNotification = async event => {
     this.setState({
-      notificationVisible: false
+      notificationVisible: false,
     });
     const { deleteNotification, fetchAllNotifications } = this.props;
     const { id } = event.target.dataset;
     await deleteNotification(id);
-    
+
     setTimeout(() => {
-      fetchAllNotifications(); 
-    }, 2000); 
-    
+      fetchAllNotifications();
+    }, 2000);
   };
 
   deleteAllNotifications = () => {
@@ -126,7 +125,7 @@ class Notification extends Component {
             </span>
           )}
         </div>
-        <div className={notificationVisible ? "notifications" : ""}>
+        <div className={notificationVisible ? 'notifications' : ''}>
           {notificationVisible ? (
             <div>
               {newNotifications.length === 0 ? (
@@ -162,7 +161,7 @@ class Notification extends Component {
                     </div>
                     <p
                       className={
-                        notification.isRead ? "action" : "action-unread"
+                        notification.isRead ? 'action' : 'action-unread'
                       }
                       onClick={this.markAsRead}
                       data-notifiableid={notification.notifiableId}
@@ -186,7 +185,7 @@ class Notification extends Component {
 Notification.propTypes = {
   count: PropTypes.number.isRequired,
   fetchAllNotifications: PropTypes.func.isRequired,
-  notifications: PropTypes.arrayOf(PropTypes.object).isRequired
+  notifications: PropTypes.arrayOf(PropTypes.object).isRequired,
 };
 
 const mapStateToProps = state => {
@@ -197,7 +196,7 @@ const mapStateToProps = state => {
     count,
     error,
     loading,
-    userId: authUser.user.id
+    userId: authUser.user.id,
   };
 };
 
@@ -219,7 +218,7 @@ const mapDispatchToProps = dispatch => ({
   },
   deleteNotifications() {
     dispatch(deleteAllNotifications());
-  }
+  },
 });
 
 export default withRouter(

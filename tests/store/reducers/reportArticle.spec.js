@@ -1,42 +1,42 @@
-import reportArticle from "../../../src/store/reducers/reportArticle";
+import reportArticle from '../../../src/store/reducers/reportArticle';
 
 const initialState = {
-  error: "",
+  error: '',
   loading: false,
-  message: ""
+  message: '',
 };
 
 const reportArticleSuccess = {
   loading: false,
-  error: "",
-  message: "This case has been recorded and will be reviewed"
+  error: '',
+  message: 'This case has been recorded and will be reviewed',
 };
 const reportArticleError = {
   loading: false,
-  error: "You have reported this article already",
-  message: ""
+  error: 'You have reported this article already',
+  message: '',
 };
 
-describe("Report Article reducer", () => {
-  it("should set the initial state", () => {
-    const state = reportArticle(undefined, { type: "@@INIT" });
+describe('Report Article reducer', () => {
+  it('should set the initial state', () => {
+    const state = reportArticle(undefined, { type: '@@INIT' });
     expect(state).toEqual(initialState);
   });
 
-  it("should handle report article action", () => {
+  it('should handle report article action', () => {
     const action = {
-      type: "REPORT_ARTICLE_SUCCESS",
-      payload: "This case has been recorded and will be reviewed"
+      type: 'REPORT_ARTICLE_SUCCESS',
+      payload: 'This case has been recorded and will be reviewed',
     };
 
     const state = reportArticle(undefined, action);
     expect(state).toEqual(reportArticleSuccess);
   });
 
-  it("should handle report article error", () => {
+  it('should handle report article error', () => {
     const action = {
-      type: "REPORT_ARTICLE_FAILURE",
-      payload: "You have reported this article already"
+      type: 'REPORT_ARTICLE_FAILURE',
+      payload: 'You have reported this article already',
     };
 
     const state = reportArticle(undefined, action);

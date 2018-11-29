@@ -1,23 +1,23 @@
 .single {
-display: flex;
-flex-direction: column;
-min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 
-  .Main{
-  max-width: 740px;
-  padding: 5% 20px;
-  flex: 1;
-}
+  .Main {
+    max-width: 740px;
+    padding: 5% 20px;
+    flex: 1;
+  }
 
-.navCover{
-  box-shadow: 0px 2px 2px #ccc;
-}
+  .navCover {
+    box-shadow: 0px 2px 2px #ccc;
+  }
   .Main-comment-container {
     margin: 0;
     padding: 0;
-    background: rgba(0,0,0,0.03);
+    background: rgba(0, 0, 0, 0.03);
 
-    #comment-box{
+    #comment-box {
       max-width: 740px;
       padding: 5% 20px;
       flex: 1;
@@ -30,8 +30,40 @@ min-height: 100vh;
   display: flex;
 }
 
-@media(max-width: 425px) {
+@media (max-width: 425px) {
   .ArticleActions {
     flex-direction: column;
   }
+}
+
+.report_article_icon {
+  -webkit-appearance: none;
+  background: #cc5652;
+  border-radius: 5px;
+  border: none;
+  color: white;
+  padding: 1px 6px;
+  justify-self: end;
+
+  line-height: 30px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.3s background ease-in-out;
+
+  .flag-icon {
+    height: auto;
+    color: white;
+    margin-right: 4px;
+  }
+
+  &:active, &:hover {
+    background: #d13e39;
+  }
+
+}
+
+.tagsAndReportArticle {
+  margin: 32px 10px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }

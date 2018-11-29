@@ -71,7 +71,6 @@ export class SingleArticle extends Component {
       userRating
     } = this.props;
     const shareUrl = `${SHARE_BASE_URL}${pathname}`;
-    console.log("USER-RATING", userRating);
 
     return (
       <div className="single">

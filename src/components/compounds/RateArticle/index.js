@@ -11,13 +11,6 @@ class RateArticle extends Component {
     dynamicValue: this.props.stars
   };
 
-  componentDidMount() {
-    const { fetchUserRating, userId, articleId } = this.props;
-    if (userId !== undefined) {
-      fetchUserRating(articleId);
-    }
-  }
-
   handleClick = rating => {
     const { articleId, rateSingleArticle, userId } = this.props;
     if (userId === undefined) {
@@ -82,7 +75,7 @@ class RateArticle extends Component {
             </span>
           </div>
           <div>
-            <p className="sizeMedium">Have you rated this article before?</p>
+            <p className="sizeMedium">Rate this article</p>
             <p>{starCollection}</p>
           </div>
         </div>
@@ -105,9 +98,6 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => ({
   rateSingleArticle(articleId, rating) {
     return dispatch(rateArticle(articleId, rating));
-  },
-  fetchUserRating(articleId) {
-    return dispatch(getUserRating(articleId));
   }
 });
 

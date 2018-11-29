@@ -1927,6 +1927,7 @@ exports[`create article page test should render the create article page correctl
                                   getValue={[Function]}
                                   hasValue={false}
                                   isDisabled={false}
+                                  isFocused={false}
                                   isMulti={true}
                                   isRtl={false}
                                   key="placeholder"

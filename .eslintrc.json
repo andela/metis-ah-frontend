@@ -1,7 +1,7 @@
 {
-  "extends": ["airbnb", "prettier", "prettier/react"],
+  "extends": ["airbnb", "prettier"],
   "parser": "babel-eslint",
-  "plugins": ["cypress", "jest", "prettier"],
+  "plugins": ["cypress", "jest"],
   "env": {
     "browser": true,
     "cypress/globals": true
@@ -20,7 +20,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "quotes": [2, "single", { "avoidEscape": true }],
+    "quotes": ["error", "double", { "avoidEscape": true }],
     "one-var": 0,
     "import/no-named-as-default": 0,
     "one-var-declaration-per-line": 0,
@@ -34,12 +34,6 @@
       2,
       {
         "commonjs": true
-      }
-    ],
-    "prettier/prettier": [
-      {
-      "trailingComma": "es5",
-      "singleQuote": true
       }
     ]
   },

@@ -1,16 +1,16 @@
-import constants from "../constants";
+import constants from '../constants';
 
 const {
   REPORT_ARTICLE_LOADING,
   REPORT_ARTICLE_SUCCESS,
   REPORT_ARTICLE_FAILURE,
-  CLEAR_REPORT_ARTICLE_MESSAGE
+  CLEAR_REPORT_ARTICLE_MESSAGE,
 } = constants;
 
 const initialState = {
-  message: "",
-  error: "",
-  loading: false
+  message: '',
+  error: '',
+  loading: false,
 };
 
 const reportArticle = (state = initialState, action) => {
@@ -18,25 +18,25 @@ const reportArticle = (state = initialState, action) => {
     case REPORT_ARTICLE_LOADING:
       return {
         ...state,
-        loading: action.payload
+        loading: action.payload,
       };
     case REPORT_ARTICLE_SUCCESS:
       return {
         ...state,
-        message: action.payload
+        message: action.payload,
       };
     case REPORT_ARTICLE_FAILURE:
       return {
         ...state,
-        error: action.payload
+        error: action.payload,
       };
     case CLEAR_REPORT_ARTICLE_MESSAGE:
       return {
         ...state,
         loading: false,
         error: '',
-        message: ''
-      }
+        message: '',
+      };
     default:
       return state;
   }
